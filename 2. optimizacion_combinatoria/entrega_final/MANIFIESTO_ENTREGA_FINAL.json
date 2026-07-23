@@ -1,0 +1,17 @@
+{
+  "fecha_cierre": "2026-07-22",
+  "metodo_ganador": "GA",
+  "mejor_costo_tour": 4303.602999,
+  "n_ciudades": 96,
+  "formula_peso": "peajes(euros) + gasolina(euros) + (tiempo(min)/60) * 12.02",
+  "archivos": [
+    "README_ENTREGA_FINAL.md",
+    "resultado_final_ga.json",
+    "resumen_final_ga.json",
+    "tour_expandido_final_ga.json",
+    "mejor_solucion_combinatoria.gif",
+    "comparativo_aco_vs_ga.md",
+    "visualizacion_mejor_solucion.svg",
+    "convergencia_aco_final.svg"
+  ]
+}

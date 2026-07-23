@@ -1,0 +1,17 @@
+{
+  "mejor_costo_tour": 4471.569332,
+  "iteraciones": 250,
+  "hormigas": 40,
+  "seed": 42,
+  "n_ciudades": 96,
+  "tour_cerrado": 97,
+  "vehiculo_referencia": {
+    "name": "Renault Clio",
+    "fuel_type": "gasolina",
+    "segment": "compacto",
+    "note": "Vehiculo de referencia para justificar el recorrido. El componente de combustible se toma desde la columna gasolina(euros) del dataset."
+  },
+  "tarifa_vendedor_eur_h": 12.02,
+  "salario_referencia": "SMIC Francia 2026",
+  "formula_peso": "peajes(euros) + gasolina(euros) + (tiempo(min)/60) * 12.02"
+}

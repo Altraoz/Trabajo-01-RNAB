@@ -1,0 +1,16 @@
+{
+  "ciudades": 96,
+  "conexiones_directas": 242,
+  "peso_minimo": 11.968667,
+  "peso_maximo": 346.074667,
+  "peso_promedio": 50.013442,
+  "formula_peso": "peajes(euros) + gasolina(euros) + (tiempo(min)/60) * 12.02",
+  "vehiculo_referencia": {
+    "name": "Renault Clio",
+    "fuel_type": "gasolina",
+    "segment": "compacto",
+    "note": "Vehiculo de referencia para justificar el recorrido. El componente de combustible se toma desde la columna gasolina(euros) del dataset."
+  },
+  "tarifa_vendedor_eur_h": 12.02,
+  "salario_referencia": "SMIC Francia 2026"
+}

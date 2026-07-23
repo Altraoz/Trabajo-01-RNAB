@@ -1,0 +1,1703 @@
+{
+  "tour_tsp_indices": [
+    0,
+    4,
+    19,
+    20,
+    5,
+    3,
+    83,
+    12,
+    84,
+    30,
+    34,
+    66,
+    10,
+    8,
+    32,
+    65,
+    64,
+    40,
+    33,
+    37,
+    41,
+    45,
+    28,
+    27,
+    95,
+    75,
+    94,
+    93,
+    92,
+    78,
+    91,
+    77,
+    89,
+    9,
+    55,
+    52,
+    70,
+    25,
+    90,
+    68,
+    67,
+    88,
+    54,
+    57,
+    7,
+    51,
+    1,
+    59,
+    62,
+    80,
+    60,
+    76,
+    50,
+    13,
+    61,
+    72,
+    49,
+    53,
+    35,
+    22,
+    29,
+    56,
+    44,
+    85,
+    16,
+    79,
+    86,
+    15,
+    24,
+    47,
+    46,
+    82,
+    31,
+    81,
+    11,
+    48,
+    14,
+    18,
+    87,
+    23,
+    36,
+    17,
+    58,
+    63,
+    2,
+    71,
+    39,
+    21,
+    74,
+    73,
+    38,
+    26,
+    6,
+    43,
+    42,
+    69,
+    0
+  ],
+  "tour_tsp_nombres": [
+    "Bourg-en-Bresse",
+    "Gap",
+    "Ajaccio",
+    "Bastia",
+    "Nice",
+    "Digne-les-Bains",
+    "Toulon",
+    "Marseille",
+    "Avignon",
+    "Nîmes",
+    "Montpellier",
+    "Perpignan",
+    "Carcassonne",
+    "Foix",
+    "Auch",
+    "Tarbes",
+    "Pau",
+    "Mont-de-Marsan",
+    "Bordeaux",
+    "Tours",
+    "Blois",
+    "Orléans",
+    "Chartres",
+    "Évreux",
+    "Cergy",
+    "Paris",
+    "Créteil",
+    "Bobigny",
+    "Nanterre",
+    "Versailles",
+    "Évry-Courcouronnes",
+    "Melun",
+    "Auxerre",
+    "Troyes",
+    "Bar-le-Duc",
+    "Chaumont",
+    "Vesoul",
+    "Besançon",
+    "Belfort",
+    "Colmar",
+    "Strasbourg",
+    "Épinal",
+    "Nancy",
+    "Metz",
+    "Charleville-Mézières",
+    "Châlons-en-Champagne",
+    "Laon",
+    "Lille",
+    "Arras",
+    "Amiens",
+    "Beauvais",
+    "Rouen",
+    "Saint-Lô",
+    "Caen",
+    "Alençon",
+    "Le Mans",
+    "Angers",
+    "Laval",
+    "Rennes",
+    "Saint-Brieuc",
+    "Quimper",
+    "Vannes",
+    "Nantes",
+    "La Roche-sur-Yon",
+    "La Rochelle",
+    "Niort",
+    "Poitiers",
+    "Angoulême",
+    "Périgueux",
+    "Agen",
+    "Cahors",
+    "Montauban",
+    "Toulouse",
+    "Albi",
+    "Rodez",
+    "Mende",
+    "Aurillac",
+    "Tulle",
+    "Limoges",
+    "Guéret",
+    "Châteauroux",
+    "Bourges",
+    "Nevers",
+    "Clermont-Ferrand",
+    "Moulins",
+    "Mâcon",
+    "Lons-le-Saunier",
+    "Dijon",
+    "Annecy",
+    "Chambéry",
+    "Grenoble",
+    "Valence",
+    "Privas",
+    "Le Puy-en-Velay",
+    "Saint-Étienne",
+    "Lyon",
+    "Bourg-en-Bresse"
+  ],
+  "tramos_expandidos": [
+    {
+      "origen_indice": 0,
+      "destino_indice": 4,
+      "ruta_indices": [
+        0,
+        74,
+        73,
+        38,
+        4
+      ],
+      "costo_tramo": 147.731334,
+      "ruta_nombres": [
+        "Bourg-en-Bresse",
+        "Annecy",
+        "Chambéry",
+        "Grenoble",
+        "Gap"
+      ]
+    },
+    {
+      "origen_indice": 4,
+      "destino_indice": 19,
+      "ruta_indices": [
+        4,
+        3,
+        5,
+        19
+      ],
+      "costo_tramo": 296.891,
+      "ruta_nombres": [
+        "Gap",
+        "Digne-les-Bains",
+        "Nice",
+        "Ajaccio"
+      ]
+    },
+    {
+      "origen_indice": 19,
+      "destino_indice": 20,
+      "ruta_indices": [
+        19,
+        20
+      ],
+      "costo_tramo": 75.034333,
+      "ruta_nombres": [
+        "Ajaccio",
+        "Bastia"
+      ]
+    },
+    {
+      "origen_indice": 20,
+      "destino_indice": 5,
+      "ruta_indices": [
+        20,
+        5
+      ],
+      "costo_tramo": 219.296333,
+      "ruta_nombres": [
+        "Bastia",
+        "Nice"
+      ]
+    },
+    {
+      "origen_indice": 5,
+      "destino_indice": 3,
+      "ruta_indices": [
+        5,
+        3
+      ],
+      "costo_tramo": 70.05,
+      "ruta_nombres": [
+        "Nice",
+        "Digne-les-Bains"
+      ]
+    },
+    {
+      "origen_indice": 3,
+      "destino_indice": 83,
+      "ruta_indices": [
+        3,
+        83
+      ],
+      "costo_tramo": 75.541667,
+      "ruta_nombres": [
+        "Digne-les-Bains",
+        "Toulon"
+      ]
+    },
+    {
+      "origen_indice": 83,
+      "destino_indice": 12,
+      "ruta_indices": [
+        83,
+        12
+      ],
+      "costo_tramo": 51.097,
+      "ruta_nombres": [
+        "Toulon",
+        "Marseille"
+      ]
+    },
+    {
+      "origen_indice": 12,
+      "destino_indice": 84,
+      "ruta_indices": [
+        12,
+        84
+      ],
+      "costo_tramo": 30.518333,
+      "ruta_nombres": [
+        "Marseille",
+        "Avignon"
+      ]
+    },
+    {
+      "origen_indice": 84,
+      "destino_indice": 30,
+      "ruta_indices": [
+        84,
+        30
+      ],
+      "costo_tramo": 25.316667,
+      "ruta_nombres": [
+        "Avignon",
+        "Nîmes"
+      ]
+    },
+    {
+      "origen_indice": 30,
+      "destino_indice": 34,
+      "ruta_indices": [
+        30,
+        34
+      ],
+      "costo_tramo": 25.956333,
+      "ruta_nombres": [
+        "Nîmes",
+        "Montpellier"
+      ]
+    },
+    {
+      "origen_indice": 34,
+      "destino_indice": 66,
+      "ruta_indices": [
+        34,
+        66
+      ],
+      "costo_tramo": 63.433333,
+      "ruta_nombres": [
+        "Montpellier",
+        "Perpignan"
+      ]
+    },
+    {
+      "origen_indice": 66,
+      "destino_indice": 10,
+      "ruta_indices": [
+        66,
+        10
+      ],
+      "costo_tramo": 45.504333,
+      "ruta_nombres": [
+        "Perpignan",
+        "Carcassonne"
+      ]
+    },
+    {
+      "origen_indice": 10,
+      "destino_indice": 8,
+      "ruta_indices": [
+        10,
+        8
+      ],
+      "costo_tramo": 44.045667,
+      "ruta_nombres": [
+        "Carcassonne",
+        "Foix"
+      ]
+    },
+    {
+      "origen_indice": 8,
+      "destino_indice": 32,
+      "ruta_indices": [
+        8,
+        31,
+        32
+      ],
+      "costo_tramo": 65.122667,
+      "ruta_nombres": [
+        "Foix",
+        "Toulouse",
+        "Auch"
+      ]
+    },
+    {
+      "origen_indice": 32,
+      "destino_indice": 65,
+      "ruta_indices": [
+        32,
+        65
+      ],
+      "costo_tramo": 35.445667,
+      "ruta_nombres": [
+        "Auch",
+        "Tarbes"
+      ]
+    },
+    {
+      "origen_indice": 65,
+      "destino_indice": 64,
+      "ruta_indices": [
+        65,
+        64
+      ],
+      "costo_tramo": 24.096,
+      "ruta_nombres": [
+        "Tarbes",
+        "Pau"
+      ]
+    },
+    {
+      "origen_indice": 64,
+      "destino_indice": 40,
+      "ruta_indices": [
+        64,
+        40
+      ],
+      "costo_tramo": 51.506,
+      "ruta_nombres": [
+        "Pau",
+        "Mont-de-Marsan"
+      ]
+    },
+    {
+      "origen_indice": 40,
+      "destino_indice": 33,
+      "ruta_indices": [
+        40,
+        33
+      ],
+      "costo_tramo": 60.771333,
+      "ruta_nombres": [
+        "Mont-de-Marsan",
+        "Bordeaux"
+      ]
+    },
+    {
+      "origen_indice": 33,
+      "destino_indice": 37,
+      "ruta_indices": [
+        33,
+        15,
+        86,
+        37
+      ],
+      "costo_tramo": 132.847,
+      "ruta_nombres": [
+        "Bordeaux",
+        "Angoulême",
+        "Poitiers",
+        "Tours"
+      ]
+    },
+    {
+      "origen_indice": 37,
+      "destino_indice": 41,
+      "ruta_indices": [
+        37,
+        41
+      ],
+      "costo_tramo": 29.456333,
+      "ruta_nombres": [
+        "Tours",
+        "Blois"
+      ]
+    },
+    {
+      "origen_indice": 41,
+      "destino_indice": 45,
+      "ruta_indices": [
+        41,
+        45
+      ],
+      "costo_tramo": 28.696,
+      "ruta_nombres": [
+        "Blois",
+        "Orléans"
+      ]
+    },
+    {
+      "origen_indice": 45,
+      "destino_indice": 28,
+      "ruta_indices": [
+        45,
+        28
+      ],
+      "costo_tramo": 37.783667,
+      "ruta_nombres": [
+        "Orléans",
+        "Chartres"
+      ]
+    },
+    {
+      "origen_indice": 28,
+      "destino_indice": 27,
+      "ruta_indices": [
+        28,
+        27
+      ],
+      "costo_tramo": 35.445667,
+      "ruta_nombres": [
+        "Chartres",
+        "Évreux"
+      ]
+    },
+    {
+      "origen_indice": 27,
+      "destino_indice": 95,
+      "ruta_indices": [
+        27,
+        95
+      ],
+      "costo_tramo": 36.604333,
+      "ruta_nombres": [
+        "Évreux",
+        "Cergy"
+      ]
+    },
+    {
+      "origen_indice": 95,
+      "destino_indice": 75,
+      "ruta_indices": [
+        95,
+        75
+      ],
+      "costo_tramo": 27.62,
+      "ruta_nombres": [
+        "Cergy",
+        "Paris"
+      ]
+    },
+    {
+      "origen_indice": 75,
+      "destino_indice": 94,
+      "ruta_indices": [
+        75,
+        94
+      ],
+      "costo_tramo": 11.968667,
+      "ruta_nombres": [
+        "Paris",
+        "Créteil"
+      ]
+    },
+    {
+      "origen_indice": 94,
+      "destino_indice": 93,
+      "ruta_indices": [
+        94,
+        93
+      ],
+      "costo_tramo": 15.191,
+      "ruta_nombres": [
+        "Créteil",
+        "Bobigny"
+      ]
+    },
+    {
+      "origen_indice": 93,
+      "destino_indice": 92,
+      "ruta_indices": [
+        93,
+        92
+      ],
+      "costo_tramo": 15.651333,
+      "ruta_nombres": [
+        "Bobigny",
+        "Nanterre"
+      ]
+    },
+    {
+      "origen_indice": 92,
+      "destino_indice": 78,
+      "ruta_indices": [
+        92,
+        78
+      ],
+      "costo_tramo": 18.108333,
+      "ruta_nombres": [
+        "Nanterre",
+        "Versailles"
+      ]
+    },
+    {
+      "origen_indice": 78,
+      "destino_indice": 91,
+      "ruta_indices": [
+        78,
+        91
+      ],
+      "costo_tramo": 23.477,
+      "ruta_nombres": [
+        "Versailles",
+        "Évry-Courcouronnes"
+      ]
+    },
+    {
+      "origen_indice": 91,
+      "destino_indice": 77,
+      "ruta_indices": [
+        91,
+        77
+      ],
+      "costo_tramo": 12.429,
+      "ruta_nombres": [
+        "Évry-Courcouronnes",
+        "Melun"
+      ]
+    },
+    {
+      "origen_indice": 77,
+      "destino_indice": 89,
+      "ruta_indices": [
+        77,
+        89
+      ],
+      "costo_tramo": 48.009333,
+      "ruta_nombres": [
+        "Melun",
+        "Auxerre"
+      ]
+    },
+    {
+      "origen_indice": 89,
+      "destino_indice": 9,
+      "ruta_indices": [
+        89,
+        9
+      ],
+      "costo_tramo": 39.128333,
+      "ruta_nombres": [
+        "Auxerre",
+        "Troyes"
+      ]
+    },
+    {
+      "origen_indice": 9,
+      "destino_indice": 55,
+      "ruta_indices": [
+        9,
+        55
+      ],
+      "costo_tramo": 37.482,
+      "ruta_nombres": [
+        "Troyes",
+        "Bar-le-Duc"
+      ]
+    },
+    {
+      "origen_indice": 55,
+      "destino_indice": 52,
+      "ruta_indices": [
+        55,
+        52
+      ],
+      "costo_tramo": 37.287,
+      "ruta_nombres": [
+        "Bar-le-Duc",
+        "Chaumont"
+      ]
+    },
+    {
+      "origen_indice": 52,
+      "destino_indice": 70,
+      "ruta_indices": [
+        52,
+        70
+      ],
+      "costo_tramo": 44.652333,
+      "ruta_nombres": [
+        "Chaumont",
+        "Vesoul"
+      ]
+    },
+    {
+      "origen_indice": 70,
+      "destino_indice": 25,
+      "ruta_indices": [
+        70,
+        25
+      ],
+      "costo_tramo": 21.635667,
+      "ruta_nombres": [
+        "Vesoul",
+        "Besançon"
+      ]
+    },
+    {
+      "origen_indice": 25,
+      "destino_indice": 90,
+      "ruta_indices": [
+        25,
+        70,
+        90
+      ],
+      "costo_tramo": 46.954,
+      "ruta_nombres": [
+        "Besançon",
+        "Vesoul",
+        "Belfort"
+      ]
+    },
+    {
+      "origen_indice": 90,
+      "destino_indice": 68,
+      "ruta_indices": [
+        90,
+        68
+      ],
+      "costo_tramo": 28.418333,
+      "ruta_nombres": [
+        "Belfort",
+        "Colmar"
+      ]
+    },
+    {
+      "origen_indice": 68,
+      "destino_indice": 67,
+      "ruta_indices": [
+        68,
+        67
+      ],
+      "costo_tramo": 26.699333,
+      "ruta_nombres": [
+        "Colmar",
+        "Strasbourg"
+      ]
+    },
+    {
+      "origen_indice": 67,
+      "destino_indice": 88,
+      "ruta_indices": [
+        67,
+        88
+      ],
+      "costo_tramo": 64.764,
+      "ruta_nombres": [
+        "Strasbourg",
+        "Épinal"
+      ]
+    },
+    {
+      "origen_indice": 88,
+      "destino_indice": 54,
+      "ruta_indices": [
+        88,
+        54
+      ],
+      "costo_tramo": 29.001,
+      "ruta_nombres": [
+        "Épinal",
+        "Nancy"
+      ]
+    },
+    {
+      "origen_indice": 54,
+      "destino_indice": 57,
+      "ruta_indices": [
+        54,
+        57
+      ],
+      "costo_tramo": 21.635667,
+      "ruta_nombres": [
+        "Nancy",
+        "Metz"
+      ]
+    },
+    {
+      "origen_indice": 57,
+      "destino_indice": 7,
+      "ruta_indices": [
+        57,
+        7
+      ],
+      "costo_tramo": 63.065667,
+      "ruta_nombres": [
+        "Metz",
+        "Charleville-Mézières"
+      ]
+    },
+    {
+      "origen_indice": 7,
+      "destino_indice": 51,
+      "ruta_indices": [
+        7,
+        51
+      ],
+      "costo_tramo": 40.287,
+      "ruta_nombres": [
+        "Charleville-Mézières",
+        "Châlons-en-Champagne"
+      ]
+    },
+    {
+      "origen_indice": 51,
+      "destino_indice": 1,
+      "ruta_indices": [
+        51,
+        1
+      ],
+      "costo_tramo": 46.026667,
+      "ruta_nombres": [
+        "Châlons-en-Champagne",
+        "Laon"
+      ]
+    },
+    {
+      "origen_indice": 1,
+      "destino_indice": 59,
+      "ruta_indices": [
+        1,
+        59
+      ],
+      "costo_tramo": 59.435,
+      "ruta_nombres": [
+        "Laon",
+        "Lille"
+      ]
+    },
+    {
+      "origen_indice": 59,
+      "destino_indice": 62,
+      "ruta_indices": [
+        59,
+        62
+      ],
+      "costo_tramo": 22.096,
+      "ruta_nombres": [
+        "Lille",
+        "Arras"
+      ]
+    },
+    {
+      "origen_indice": 62,
+      "destino_indice": 80,
+      "ruta_indices": [
+        62,
+        80
+      ],
+      "costo_tramo": 41.044,
+      "ruta_nombres": [
+        "Arras",
+        "Amiens"
+      ]
+    },
+    {
+      "origen_indice": 80,
+      "destino_indice": 60,
+      "ruta_indices": [
+        80,
+        60
+      ],
+      "costo_tramo": 28.377,
+      "ruta_nombres": [
+        "Amiens",
+        "Beauvais"
+      ]
+    },
+    {
+      "origen_indice": 60,
+      "destino_indice": 76,
+      "ruta_indices": [
+        60,
+        76
+      ],
+      "costo_tramo": 42.350667,
+      "ruta_nombres": [
+        "Beauvais",
+        "Rouen"
+      ]
+    },
+    {
+      "origen_indice": 76,
+      "destino_indice": 50,
+      "ruta_indices": [
+        76,
+        13,
+        50
+      ],
+      "costo_tramo": 50.636666,
+      "ruta_nombres": [
+        "Rouen",
+        "Caen",
+        "Saint-Lô"
+      ]
+    },
+    {
+      "origen_indice": 50,
+      "destino_indice": 13,
+      "ruta_indices": [
+        50,
+        13
+      ],
+      "costo_tramo": 25.318333,
+      "ruta_nombres": [
+        "Saint-Lô",
+        "Caen"
+      ]
+    },
+    {
+      "origen_indice": 13,
+      "destino_indice": 61,
+      "ruta_indices": [
+        13,
+        61
+      ],
+      "costo_tramo": 25.318333,
+      "ruta_nombres": [
+        "Caen",
+        "Alençon"
+      ]
+    },
+    {
+      "origen_indice": 61,
+      "destino_indice": 72,
+      "ruta_indices": [
+        61,
+        72
+      ],
+      "costo_tramo": 27.937333,
+      "ruta_nombres": [
+        "Alençon",
+        "Le Mans"
+      ]
+    },
+    {
+      "origen_indice": 72,
+      "destino_indice": 49,
+      "ruta_indices": [
+        72,
+        49
+      ],
+      "costo_tramo": 40.582,
+      "ruta_nombres": [
+        "Le Mans",
+        "Angers"
+      ]
+    },
+    {
+      "origen_indice": 49,
+      "destino_indice": 53,
+      "ruta_indices": [
+        49,
+        53
+      ],
+      "costo_tramo": 31.302667,
+      "ruta_nombres": [
+        "Angers",
+        "Laval"
+      ]
+    },
+    {
+      "origen_indice": 53,
+      "destino_indice": 35,
+      "ruta_indices": [
+        53,
+        35
+      ],
+      "costo_tramo": 32.582,
+      "ruta_nombres": [
+        "Laval",
+        "Rennes"
+      ]
+    },
+    {
+      "origen_indice": 35,
+      "destino_indice": 22,
+      "ruta_indices": [
+        35,
+        22
+      ],
+      "costo_tramo": 30.842333,
+      "ruta_nombres": [
+        "Rennes",
+        "Saint-Brieuc"
+      ]
+    },
+    {
+      "origen_indice": 22,
+      "destino_indice": 29,
+      "ruta_indices": [
+        22,
+        29
+      ],
+      "costo_tramo": 49.716,
+      "ruta_nombres": [
+        "Saint-Brieuc",
+        "Quimper"
+      ]
+    },
+    {
+      "origen_indice": 29,
+      "destino_indice": 56,
+      "ruta_indices": [
+        29,
+        56
+      ],
+      "costo_tramo": 36.826667,
+      "ruta_nombres": [
+        "Quimper",
+        "Vannes"
+      ]
+    },
+    {
+      "origen_indice": 56,
+      "destino_indice": 44,
+      "ruta_indices": [
+        56,
+        44
+      ],
+      "costo_tramo": 41.43,
+      "ruta_nombres": [
+        "Vannes",
+        "Nantes"
+      ]
+    },
+    {
+      "origen_indice": 44,
+      "destino_indice": 85,
+      "ruta_indices": [
+        44,
+        85
+      ],
+      "costo_tramo": 29.359667,
+      "ruta_nombres": [
+        "Nantes",
+        "La Roche-sur-Yon"
+      ]
+    },
+    {
+      "origen_indice": 85,
+      "destino_indice": 16,
+      "ruta_indices": [
+        85,
+        16
+      ],
+      "costo_tramo": 38.847333,
+      "ruta_nombres": [
+        "La Roche-sur-Yon",
+        "La Rochelle"
+      ]
+    },
+    {
+      "origen_indice": 16,
+      "destino_indice": 79,
+      "ruta_indices": [
+        16,
+        79
+      ],
+      "costo_tramo": 25.778667,
+      "ruta_nombres": [
+        "La Rochelle",
+        "Niort"
+      ]
+    },
+    {
+      "origen_indice": 79,
+      "destino_indice": 86,
+      "ruta_indices": [
+        79,
+        86
+      ],
+      "costo_tramo": 35.061333,
+      "ruta_nombres": [
+        "Niort",
+        "Poitiers"
+      ]
+    },
+    {
+      "origen_indice": 86,
+      "destino_indice": 15,
+      "ruta_indices": [
+        86,
+        15
+      ],
+      "costo_tramo": 40.509333,
+      "ruta_nombres": [
+        "Poitiers",
+        "Angoulême"
+      ]
+    },
+    {
+      "origen_indice": 15,
+      "destino_indice": 24,
+      "ruta_indices": [
+        15,
+        24
+      ],
+      "costo_tramo": 40.049,
+      "ruta_nombres": [
+        "Angoulême",
+        "Périgueux"
+      ]
+    },
+    {
+      "origen_indice": 24,
+      "destino_indice": 47,
+      "ruta_indices": [
+        24,
+        47
+      ],
+      "costo_tramo": 58.002,
+      "ruta_nombres": [
+        "Périgueux",
+        "Agen"
+      ]
+    },
+    {
+      "origen_indice": 47,
+      "destino_indice": 46,
+      "ruta_indices": [
+        47,
+        46
+      ],
+      "costo_tramo": 40.509333,
+      "ruta_nombres": [
+        "Agen",
+        "Cahors"
+      ]
+    },
+    {
+      "origen_indice": 46,
+      "destino_indice": 82,
+      "ruta_indices": [
+        46,
+        82
+      ],
+      "costo_tramo": 27.877,
+      "ruta_nombres": [
+        "Cahors",
+        "Montauban"
+      ]
+    },
+    {
+      "origen_indice": 82,
+      "destino_indice": 31,
+      "ruta_indices": [
+        82,
+        31
+      ],
+      "costo_tramo": 25.756333,
+      "ruta_nombres": [
+        "Montauban",
+        "Toulouse"
+      ]
+    },
+    {
+      "origen_indice": 31,
+      "destino_indice": 81,
+      "ruta_indices": [
+        31,
+        81
+      ],
+      "costo_tramo": 27.478667,
+      "ruta_nombres": [
+        "Toulouse",
+        "Albi"
+      ]
+    },
+    {
+      "origen_indice": 81,
+      "destino_indice": 11,
+      "ruta_indices": [
+        81,
+        11
+      ],
+      "costo_tramo": 41.43,
+      "ruta_nombres": [
+        "Albi",
+        "Rodez"
+      ]
+    },
+    {
+      "origen_indice": 11,
+      "destino_indice": 48,
+      "ruta_indices": [
+        11,
+        48
+      ],
+      "costo_tramo": 41.43,
+      "ruta_nombres": [
+        "Rodez",
+        "Mende"
+      ]
+    },
+    {
+      "origen_indice": 48,
+      "destino_indice": 14,
+      "ruta_indices": [
+        48,
+        14
+      ],
+      "costo_tramo": 60.764,
+      "ruta_nombres": [
+        "Mende",
+        "Aurillac"
+      ]
+    },
+    {
+      "origen_indice": 14,
+      "destino_indice": 18,
+      "ruta_indices": [
+        14,
+        18
+      ],
+      "costo_tramo": 35.906,
+      "ruta_nombres": [
+        "Aurillac",
+        "Tulle"
+      ]
+    },
+    {
+      "origen_indice": 18,
+      "destino_indice": 87,
+      "ruta_indices": [
+        18,
+        87
+      ],
+      "costo_tramo": 30.382,
+      "ruta_nombres": [
+        "Tulle",
+        "Limoges"
+      ]
+    },
+    {
+      "origen_indice": 87,
+      "destino_indice": 23,
+      "ruta_indices": [
+        87,
+        23
+      ],
+      "costo_tramo": 29.461333,
+      "ruta_nombres": [
+        "Limoges",
+        "Guéret"
+      ]
+    },
+    {
+      "origen_indice": 23,
+      "destino_indice": 36,
+      "ruta_indices": [
+        23,
+        36
+      ],
+      "costo_tramo": 36.826667,
+      "ruta_nombres": [
+        "Guéret",
+        "Châteauroux"
+      ]
+    },
+    {
+      "origen_indice": 36,
+      "destino_indice": 17,
+      "ruta_indices": [
+        36,
+        17
+      ],
+      "costo_tramo": 36.344,
+      "ruta_nombres": [
+        "Châteauroux",
+        "Bourges"
+      ]
+    },
+    {
+      "origen_indice": 17,
+      "destino_indice": 58,
+      "ruta_indices": [
+        17,
+        58
+      ],
+      "costo_tramo": 34.064667,
+      "ruta_nombres": [
+        "Bourges",
+        "Nevers"
+      ]
+    },
+    {
+      "origen_indice": 58,
+      "destino_indice": 63,
+      "ruta_indices": [
+        58,
+        2,
+        63
+      ],
+      "costo_tramo": 38.668,
+      "ruta_nombres": [
+        "Nevers",
+        "Moulins",
+        "Clermont-Ferrand"
+      ]
+    },
+    {
+      "origen_indice": 63,
+      "destino_indice": 2,
+      "ruta_indices": [
+        63,
+        2
+      ],
+      "costo_tramo": 15.191,
+      "ruta_nombres": [
+        "Clermont-Ferrand",
+        "Moulins"
+      ]
+    },
+    {
+      "origen_indice": 2,
+      "destino_indice": 71,
+      "ruta_indices": [
+        2,
+        71
+      ],
+      "costo_tramo": 48.773,
+      "ruta_nombres": [
+        "Moulins",
+        "Mâcon"
+      ]
+    },
+    {
+      "origen_indice": 71,
+      "destino_indice": 39,
+      "ruta_indices": [
+        71,
+        39
+      ],
+      "costo_tramo": 38.742333,
+      "ruta_nombres": [
+        "Mâcon",
+        "Lons-le-Saunier"
+      ]
+    },
+    {
+      "origen_indice": 39,
+      "destino_indice": 21,
+      "ruta_indices": [
+        39,
+        21
+      ],
+      "costo_tramo": 38.002667,
+      "ruta_nombres": [
+        "Lons-le-Saunier",
+        "Dijon"
+      ]
+    },
+    {
+      "origen_indice": 21,
+      "destino_indice": 74,
+      "ruta_indices": [
+        21,
+        39,
+        0,
+        74
+      ],
+      "costo_tramo": 111.525334,
+      "ruta_nombres": [
+        "Dijon",
+        "Lons-le-Saunier",
+        "Bourg-en-Bresse",
+        "Annecy"
+      ]
+    },
+    {
+      "origen_indice": 74,
+      "destino_indice": 73,
+      "ruta_indices": [
+        74,
+        73
+      ],
+      "costo_tramo": 27.696,
+      "ruta_nombres": [
+        "Annecy",
+        "Chambéry"
+      ]
+    },
+    {
+      "origen_indice": 73,
+      "destino_indice": 38,
+      "ruta_indices": [
+        73,
+        38
+      ],
+      "costo_tramo": 25.573667,
+      "ruta_nombres": [
+        "Chambéry",
+        "Grenoble"
+      ]
+    },
+    {
+      "origen_indice": 38,
+      "destino_indice": 26,
+      "ruta_indices": [
+        38,
+        26
+      ],
+      "costo_tramo": 38.92,
+      "ruta_nombres": [
+        "Grenoble",
+        "Valence"
+      ]
+    },
+    {
+      "origen_indice": 26,
+      "destino_indice": 6,
+      "ruta_indices": [
+        26,
+        6
+      ],
+      "costo_tramo": 23.796,
+      "ruta_nombres": [
+        "Valence",
+        "Privas"
+      ]
+    },
+    {
+      "origen_indice": 6,
+      "destino_indice": 43,
+      "ruta_indices": [
+        6,
+        43
+      ],
+      "costo_tramo": 49.716,
+      "ruta_nombres": [
+        "Privas",
+        "Le Puy-en-Velay"
+      ]
+    },
+    {
+      "origen_indice": 43,
+      "destino_indice": 42,
+      "ruta_indices": [
+        43,
+        42
+      ],
+      "costo_tramo": 27.62,
+      "ruta_nombres": [
+        "Le Puy-en-Velay",
+        "Saint-Étienne"
+      ]
+    },
+    {
+      "origen_indice": 42,
+      "destino_indice": 69,
+      "ruta_indices": [
+        42,
+        69
+      ],
+      "costo_tramo": 29.001,
+      "ruta_nombres": [
+        "Saint-Étienne",
+        "Lyon"
+      ]
+    },
+    {
+      "origen_indice": 69,
+      "destino_indice": 0,
+      "ruta_indices": [
+        69,
+        0
+      ],
+      "costo_tramo": 41.063,
+      "ruta_nombres": [
+        "Lyon",
+        "Bourg-en-Bresse"
+      ]
+    }
+  ],
+  "recorrido_real_indices": [
+    0,
+    74,
+    73,
+    38,
+    4,
+    3,
+    5,
+    19,
+    20,
+    5,
+    3,
+    83,
+    12,
+    84,
+    30,
+    34,
+    66,
+    10,
+    8,
+    31,
+    32,
+    65,
+    64,
+    40,
+    33,
+    15,
+    86,
+    37,
+    41,
+    45,
+    28,
+    27,
+    95,
+    75,
+    94,
+    93,
+    92,
+    78,
+    91,
+    77,
+    89,
+    9,
+    55,
+    52,
+    70,
+    25,
+    70,
+    90,
+    68,
+    67,
+    88,
+    54,
+    57,
+    7,
+    51,
+    1,
+    59,
+    62,
+    80,
+    60,
+    76,
+    13,
+    50,
+    13,
+    61,
+    72,
+    49,
+    53,
+    35,
+    22,
+    29,
+    56,
+    44,
+    85,
+    16,
+    79,
+    86,
+    15,
+    24,
+    47,
+    46,
+    82,
+    31,
+    81,
+    11,
+    48,
+    14,
+    18,
+    87,
+    23,
+    36,
+    17,
+    58,
+    2,
+    63,
+    2,
+    71,
+    39,
+    21,
+    39,
+    0,
+    74,
+    73,
+    38,
+    26,
+    6,
+    43,
+    42,
+    69,
+    0
+  ],
+  "recorrido_real_nombres": [
+    "Bourg-en-Bresse",
+    "Annecy",
+    "Chambéry",
+    "Grenoble",
+    "Gap",
+    "Digne-les-Bains",
+    "Nice",
+    "Ajaccio",
+    "Bastia",
+    "Nice",
+    "Digne-les-Bains",
+    "Toulon",
+    "Marseille",
+    "Avignon",
+    "Nîmes",
+    "Montpellier",
+    "Perpignan",
+    "Carcassonne",
+    "Foix",
+    "Toulouse",
+    "Auch",
+    "Tarbes",
+    "Pau",
+    "Mont-de-Marsan",
+    "Bordeaux",
+    "Angoulême",
+    "Poitiers",
+    "Tours",
+    "Blois",
+    "Orléans",
+    "Chartres",
+    "Évreux",
+    "Cergy",
+    "Paris",
+    "Créteil",
+    "Bobigny",
+    "Nanterre",
+    "Versailles",
+    "Évry-Courcouronnes",
+    "Melun",
+    "Auxerre",
+    "Troyes",
+    "Bar-le-Duc",
+    "Chaumont",
+    "Vesoul",
+    "Besançon",
+    "Vesoul",
+    "Belfort",
+    "Colmar",
+    "Strasbourg",
+    "Épinal",
+    "Nancy",
+    "Metz",
+    "Charleville-Mézières",
+    "Châlons-en-Champagne",
+    "Laon",
+    "Lille",
+    "Arras",
+    "Amiens",
+    "Beauvais",
+    "Rouen",
+    "Caen",
+    "Saint-Lô",
+    "Caen",
+    "Alençon",
+    "Le Mans",
+    "Angers",
+    "Laval",
+    "Rennes",
+    "Saint-Brieuc",
+    "Quimper",
+    "Vannes",
+    "Nantes",
+    "La Roche-sur-Yon",
+    "La Rochelle",
+    "Niort",
+    "Poitiers",
+    "Angoulême",
+    "Périgueux",
+    "Agen",
+    "Cahors",
+    "Montauban",
+    "Toulouse",
+    "Albi",
+    "Rodez",
+    "Mende",
+    "Aurillac",
+    "Tulle",
+    "Limoges",
+    "Guéret",
+    "Châteauroux",
+    "Bourges",
+    "Nevers",
+    "Moulins",
+    "Clermont-Ferrand",
+    "Moulins",
+    "Mâcon",
+    "Lons-le-Saunier",
+    "Dijon",
+    "Lons-le-Saunier",
+    "Bourg-en-Bresse",
+    "Annecy",
+    "Chambéry",
+    "Grenoble",
+    "Valence",
+    "Privas",
+    "Le Puy-en-Velay",
+    "Saint-Étienne",
+    "Lyon",
+    "Bourg-en-Bresse"
+  ],
+  "costo_total_tour": 4303.602999,
+  "n_saltos_tsp": 96,
+  "n_saltos_reales": 109
+}

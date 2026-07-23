@@ -1,0 +1,5322 @@
+{
+  "0": {
+    "ciudad": "Bourg-en-Bresse",
+    "vecinos": [
+      {
+        "destino_indice": 39,
+        "destino_ciudad": "Lons-le-Saunier",
+        "peso": 32.459667,
+        "distancia": 74.0,
+        "tiempo(min)": 59.0,
+        "peajes(euros)": 5.3,
+        "gasolina(euros)": 15.34,
+        "costo_vendedor(euros)": 11.819667
+      },
+      {
+        "destino_indice": 69,
+        "destino_ciudad": "Lyon",
+        "peso": 41.063,
+        "distancia": 84.0,
+        "tiempo(min)": 69.0,
+        "peajes(euros)": 9.3,
+        "gasolina(euros)": 17.94,
+        "costo_vendedor(euros)": 13.823
+      },
+      {
+        "destino_indice": 71,
+        "destino_ciudad": "Mâcon",
+        "peso": 41.063,
+        "distancia": 84.0,
+        "tiempo(min)": 69.0,
+        "peajes(euros)": 9.3,
+        "gasolina(euros)": 17.94,
+        "costo_vendedor(euros)": 13.823
+      },
+      {
+        "destino_indice": 74,
+        "destino_ciudad": "Annecy",
+        "peso": 41.063,
+        "distancia": 84.0,
+        "tiempo(min)": 69.0,
+        "peajes(euros)": 9.3,
+        "gasolina(euros)": 17.94,
+        "costo_vendedor(euros)": 13.823
+      }
+    ]
+  },
+  "1": {
+    "ciudad": "Laon",
+    "vecinos": [
+      {
+        "destino_indice": 7,
+        "destino_ciudad": "Charleville-Mézières",
+        "peso": 46.954,
+        "distancia": 112.0,
+        "tiempo(min)": 102.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 26.52,
+        "costo_vendedor(euros)": 20.434
+      },
+      {
+        "destino_indice": 51,
+        "destino_ciudad": "Châlons-en-Champagne",
+        "peso": 46.026667,
+        "distancia": 115.0,
+        "tiempo(min)": 80.0,
+        "peajes(euros)": 9.2,
+        "gasolina(euros)": 20.8,
+        "costo_vendedor(euros)": 16.026667
+      },
+      {
+        "destino_indice": 59,
+        "destino_ciudad": "Lille",
+        "peso": 59.435,
+        "distancia": 159.0,
+        "tiempo(min)": 105.0,
+        "peajes(euros)": 11.1,
+        "gasolina(euros)": 27.3,
+        "costo_vendedor(euros)": 21.035
+      },
+      {
+        "destino_indice": 60,
+        "destino_ciudad": "Beauvais",
+        "peso": 51.557333,
+        "distancia": 135.0,
+        "tiempo(min)": 112.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.12,
+        "costo_vendedor(euros)": 22.437333
+      },
+      {
+        "destino_indice": 62,
+        "destino_ciudad": "Arras",
+        "peso": 49.788667,
+        "distancia": 131.0,
+        "tiempo(min)": 86.0,
+        "peajes(euros)": 10.2,
+        "gasolina(euros)": 22.36,
+        "costo_vendedor(euros)": 17.228667
+      },
+      {
+        "destino_indice": 77,
+        "destino_ciudad": "Melun",
+        "peso": 67.303667,
+        "distancia": 177.0,
+        "tiempo(min)": 131.0,
+        "peajes(euros)": 7.0,
+        "gasolina(euros)": 34.06,
+        "costo_vendedor(euros)": 26.243667
+      },
+      {
+        "destino_indice": 80,
+        "destino_ciudad": "Amiens",
+        "peso": 50.93,
+        "distancia": 127.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 9.5,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 93,
+        "destino_ciudad": "Bobigny",
+        "peso": 44.652333,
+        "distancia": 128.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 95,
+        "destino_ciudad": "Cergy",
+        "peso": 52.938333,
+        "distancia": 157.0,
+        "tiempo(min)": 115.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.9,
+        "costo_vendedor(euros)": 23.038333
+      }
+    ]
+  },
+  "2": {
+    "ciudad": "Moulins",
+    "vecinos": [
+      {
+        "destino_indice": 17,
+        "destino_ciudad": "Bourges",
+        "peso": 41.43,
+        "distancia": 101.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 23,
+        "destino_ciudad": "Guéret",
+        "peso": 48.031667,
+        "distancia": 146.0,
+        "tiempo(min)": 95.0,
+        "peajes(euros)": 4.3,
+        "gasolina(euros)": 24.7,
+        "costo_vendedor(euros)": 19.031667
+      },
+      {
+        "destino_indice": 58,
+        "destino_ciudad": "Nevers",
+        "peso": 23.477,
+        "distancia": 57.0,
+        "tiempo(min)": 51.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 13.26,
+        "costo_vendedor(euros)": 10.217
+      },
+      {
+        "destino_indice": 63,
+        "destino_ciudad": "Clermont-Ferrand",
+        "peso": 15.191,
+        "distancia": 19.0,
+        "tiempo(min)": 33.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 8.58,
+        "costo_vendedor(euros)": 6.611
+      },
+      {
+        "destino_indice": 69,
+        "destino_ciudad": "Lyon",
+        "peso": 74.65,
+        "distancia": 193.0,
+        "tiempo(min)": 150.0,
+        "peajes(euros)": 5.6,
+        "gasolina(euros)": 39.0,
+        "costo_vendedor(euros)": 30.05
+      },
+      {
+        "destino_indice": 71,
+        "destino_ciudad": "Mâcon",
+        "peso": 48.773,
+        "distancia": 144.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 3.2,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      }
+    ]
+  },
+  "3": {
+    "ciudad": "Digne-les-Bains",
+    "vecinos": [
+      {
+        "destino_indice": 4,
+        "destino_ciudad": "Gap",
+        "peso": 38.564667,
+        "distancia": 87.0,
+        "tiempo(min)": 74.0,
+        "peajes(euros)": 4.5,
+        "gasolina(euros)": 19.24,
+        "costo_vendedor(euros)": 14.824667
+      },
+      {
+        "destino_indice": 5,
+        "destino_ciudad": "Nice",
+        "peso": 70.05,
+        "distancia": 148.0,
+        "tiempo(min)": 150.0,
+        "peajes(euros)": 1.0,
+        "gasolina(euros)": 39.0,
+        "costo_vendedor(euros)": 30.05
+      },
+      {
+        "destino_indice": 83,
+        "destino_ciudad": "Toulon",
+        "peso": 75.541667,
+        "distancia": 193.0,
+        "tiempo(min)": 125.0,
+        "peajes(euros)": 18.0,
+        "gasolina(euros)": 32.5,
+        "costo_vendedor(euros)": 25.041667
+      },
+      {
+        "destino_indice": 84,
+        "destino_ciudad": "Avignon",
+        "peso": 73.981333,
+        "distancia": 194.0,
+        "tiempo(min)": 124.0,
+        "peajes(euros)": 16.9,
+        "gasolina(euros)": 32.24,
+        "costo_vendedor(euros)": 24.841333
+      }
+    ]
+  },
+  "4": {
+    "ciudad": "Gap",
+    "vecinos": [
+      {
+        "destino_indice": 3,
+        "destino_ciudad": "Digne-les-Bains",
+        "peso": 38.564667,
+        "distancia": 87.0,
+        "tiempo(min)": 74.0,
+        "peajes(euros)": 4.5,
+        "gasolina(euros)": 19.24,
+        "costo_vendedor(euros)": 14.824667
+      },
+      {
+        "destino_indice": 5,
+        "destino_ciudad": "Nice",
+        "peso": 126.785667,
+        "distancia": 327.0,
+        "tiempo(min)": 197.0,
+        "peajes(euros)": 36.1,
+        "gasolina(euros)": 51.22,
+        "costo_vendedor(euros)": 39.465667
+      },
+      {
+        "destino_indice": 6,
+        "destino_ciudad": "Privas",
+        "peso": 82.86,
+        "distancia": 168.0,
+        "tiempo(min)": 180.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 46.8,
+        "costo_vendedor(euros)": 36.06
+      },
+      {
+        "destino_indice": 26,
+        "destino_ciudad": "Valence",
+        "peso": 86.794667,
+        "distancia": 193.0,
+        "tiempo(min)": 164.0,
+        "peajes(euros)": 11.3,
+        "gasolina(euros)": 42.64,
+        "costo_vendedor(euros)": 32.854667
+      },
+      {
+        "destino_indice": 38,
+        "destino_ciudad": "Grenoble",
+        "peso": 53.398667,
+        "distancia": 111.0,
+        "tiempo(min)": 116.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 30.16,
+        "costo_vendedor(euros)": 23.238667
+      },
+      {
+        "destino_indice": 84,
+        "destino_ciudad": "Avignon",
+        "peso": 88.527667,
+        "distancia": 236.0,
+        "tiempo(min)": 143.0,
+        "peajes(euros)": 22.7,
+        "gasolina(euros)": 37.18,
+        "costo_vendedor(euros)": 28.647667
+      }
+    ]
+  },
+  "5": {
+    "ciudad": "Nice",
+    "vecinos": [
+      {
+        "destino_indice": 3,
+        "destino_ciudad": "Digne-les-Bains",
+        "peso": 70.05,
+        "distancia": 148.0,
+        "tiempo(min)": 150.0,
+        "peajes(euros)": 1.0,
+        "gasolina(euros)": 39.0,
+        "costo_vendedor(euros)": 30.05
+      },
+      {
+        "destino_indice": 4,
+        "destino_ciudad": "Gap",
+        "peso": 126.785667,
+        "distancia": 327.0,
+        "tiempo(min)": 197.0,
+        "peajes(euros)": 36.1,
+        "gasolina(euros)": 51.22,
+        "costo_vendedor(euros)": 39.465667
+      },
+      {
+        "destino_indice": 19,
+        "destino_ciudad": "Ajaccio",
+        "peso": 188.276333,
+        "distancia": 258.0,
+        "tiempo(min)": 409.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 106.34,
+        "costo_vendedor(euros)": 81.936333
+      },
+      {
+        "destino_indice": 20,
+        "destino_ciudad": "Bastia",
+        "peso": 219.296333,
+        "distancia": 398.0,
+        "tiempo(min)": 469.0,
+        "peajes(euros)": 3.4,
+        "gasolina(euros)": 121.94,
+        "costo_vendedor(euros)": 93.956333
+      },
+      {
+        "destino_indice": 83,
+        "destino_ciudad": "Toulon",
+        "peso": 62.212667,
+        "distancia": 150.0,
+        "tiempo(min)": 98.0,
+        "peajes(euros)": 17.1,
+        "gasolina(euros)": 25.48,
+        "costo_vendedor(euros)": 19.632667
+      }
+    ]
+  },
+  "6": {
+    "ciudad": "Privas",
+    "vecinos": [
+      {
+        "destino_indice": 4,
+        "destino_ciudad": "Gap",
+        "peso": 82.86,
+        "distancia": 168.0,
+        "tiempo(min)": 180.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 46.8,
+        "costo_vendedor(euros)": 36.06
+      },
+      {
+        "destino_indice": 26,
+        "destino_ciudad": "Valence",
+        "peso": 23.796,
+        "distancia": 42.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 1.7,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      },
+      {
+        "destino_indice": 42,
+        "destino_ciudad": "Saint-Étienne",
+        "peso": 66.298667,
+        "distancia": 162.0,
+        "tiempo(min)": 116.0,
+        "peajes(euros)": 12.9,
+        "gasolina(euros)": 30.16,
+        "costo_vendedor(euros)": 23.238667
+      },
+      {
+        "destino_indice": 43,
+        "destino_ciudad": "Le Puy-en-Velay",
+        "peso": 49.716,
+        "distancia": 94.0,
+        "tiempo(min)": 108.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.08,
+        "costo_vendedor(euros)": 21.636
+      },
+      {
+        "destino_indice": 48,
+        "destino_ciudad": "Mende",
+        "peso": 67.669,
+        "distancia": 137.0,
+        "tiempo(min)": 147.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 38.22,
+        "costo_vendedor(euros)": 29.449
+      },
+      {
+        "destino_indice": 84,
+        "destino_ciudad": "Avignon",
+        "peso": 49.988667,
+        "distancia": 123.0,
+        "tiempo(min)": 86.0,
+        "peajes(euros)": 10.4,
+        "gasolina(euros)": 22.36,
+        "costo_vendedor(euros)": 17.228667
+      }
+    ]
+  },
+  "7": {
+    "ciudad": "Charleville-Mézières",
+    "vecinos": [
+      {
+        "destino_indice": 1,
+        "destino_ciudad": "Laon",
+        "peso": 46.954,
+        "distancia": 112.0,
+        "tiempo(min)": 102.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 26.52,
+        "costo_vendedor(euros)": 20.434
+      },
+      {
+        "destino_indice": 51,
+        "destino_ciudad": "Châlons-en-Champagne",
+        "peso": 40.287,
+        "distancia": 128.0,
+        "tiempo(min)": 81.0,
+        "peajes(euros)": 3.0,
+        "gasolina(euros)": 21.06,
+        "costo_vendedor(euros)": 16.227
+      },
+      {
+        "destino_indice": 55,
+        "destino_ciudad": "Bar-le-Duc",
+        "peso": 61.502,
+        "distancia": 190.0,
+        "tiempo(min)": 126.0,
+        "peajes(euros)": 3.5,
+        "gasolina(euros)": 32.76,
+        "costo_vendedor(euros)": 25.242
+      },
+      {
+        "destino_indice": 57,
+        "destino_ciudad": "Metz",
+        "peso": 63.065667,
+        "distancia": 203.0,
+        "tiempo(min)": 137.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 35.62,
+        "costo_vendedor(euros)": 27.445667
+      },
+      {
+        "destino_indice": 59,
+        "destino_ciudad": "Lille",
+        "peso": 69.970667,
+        "distancia": 220.0,
+        "tiempo(min)": 152.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 39.52,
+        "costo_vendedor(euros)": 30.450667
+      }
+    ]
+  },
+  "8": {
+    "ciudad": "Foix",
+    "vecinos": [
+      {
+        "destino_indice": 10,
+        "destino_ciudad": "Carcassonne",
+        "peso": 44.045667,
+        "distancia": 124.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 8.6,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 31,
+        "destino_ciudad": "Toulouse",
+        "peso": 34.740667,
+        "distancia": 89.0,
+        "tiempo(min)": 62.0,
+        "peajes(euros)": 6.2,
+        "gasolina(euros)": 16.12,
+        "costo_vendedor(euros)": 12.420667
+      },
+      {
+        "destino_indice": 65,
+        "destino_ciudad": "Tarbes",
+        "peso": 64.260667,
+        "distancia": 154.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 8.1,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 66,
+        "destino_ciudad": "Perpignan",
+        "peso": 81.784667,
+        "distancia": 235.0,
+        "tiempo(min)": 134.0,
+        "peajes(euros)": 20.1,
+        "gasolina(euros)": 34.84,
+        "costo_vendedor(euros)": 26.844667
+      }
+    ]
+  },
+  "9": {
+    "ciudad": "Troyes",
+    "vecinos": [
+      {
+        "destino_indice": 51,
+        "destino_ciudad": "Châlons-en-Champagne",
+        "peso": 81.784667,
+        "distancia": 235.0,
+        "tiempo(min)": 134.0,
+        "peajes(euros)": 20.1,
+        "gasolina(euros)": 34.84,
+        "costo_vendedor(euros)": 26.844667
+      },
+      {
+        "destino_indice": 52,
+        "destino_ciudad": "Chaumont",
+        "peso": 81.784667,
+        "distancia": 235.0,
+        "tiempo(min)": 134.0,
+        "peajes(euros)": 20.1,
+        "gasolina(euros)": 34.84,
+        "costo_vendedor(euros)": 26.844667
+      },
+      {
+        "destino_indice": 55,
+        "destino_ciudad": "Bar-le-Duc",
+        "peso": 37.482,
+        "distancia": 103.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 7.1,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 77,
+        "destino_ciudad": "Melun",
+        "peso": 46.947333,
+        "distancia": 124.0,
+        "tiempo(min)": 82.0,
+        "peajes(euros)": 9.2,
+        "gasolina(euros)": 21.32,
+        "costo_vendedor(euros)": 16.427333
+      },
+      {
+        "destino_indice": 89,
+        "destino_ciudad": "Auxerre",
+        "peso": 39.128333,
+        "distancia": 76.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      }
+    ]
+  },
+  "10": {
+    "ciudad": "Carcassonne",
+    "vecinos": [
+      {
+        "destino_indice": 8,
+        "destino_ciudad": "Foix",
+        "peso": 44.045667,
+        "distancia": 124.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 8.6,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 31,
+        "destino_ciudad": "Toulouse",
+        "peso": 39.682,
+        "distancia": 95.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 9.3,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 34,
+        "destino_ciudad": "Montpellier",
+        "peso": 63.793667,
+        "distancia": 157.0,
+        "tiempo(min)": 101.0,
+        "peajes(euros)": 17.3,
+        "gasolina(euros)": 26.26,
+        "costo_vendedor(euros)": 20.233667
+      },
+      {
+        "destino_indice": 66,
+        "destino_ciudad": "Perpignan",
+        "peso": 45.504333,
+        "distancia": 114.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 11.9,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      },
+      {
+        "destino_indice": 81,
+        "destino_ciudad": "Albi",
+        "peso": 45.504333,
+        "distancia": 114.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 11.9,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      }
+    ]
+  },
+  "11": {
+    "ciudad": "Rodez",
+    "vecinos": [
+      {
+        "destino_indice": 14,
+        "destino_ciudad": "Aurillac",
+        "peso": 25.318333,
+        "distancia": 72.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 34,
+        "destino_ciudad": "Montpellier",
+        "peso": 47.414333,
+        "distancia": 103.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      },
+      {
+        "destino_indice": 46,
+        "destino_ciudad": "Cahors",
+        "peso": 47.414333,
+        "distancia": 103.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      },
+      {
+        "destino_indice": 48,
+        "destino_ciudad": "Mende",
+        "peso": 41.43,
+        "distancia": 108.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 81,
+        "destino_ciudad": "Albi",
+        "peso": 41.43,
+        "distancia": 108.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 82,
+        "destino_ciudad": "Montauban",
+        "peso": 51.097,
+        "distancia": 150.0,
+        "tiempo(min)": 111.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.86,
+        "costo_vendedor(euros)": 22.237
+      }
+    ]
+  },
+  "12": {
+    "ciudad": "Marseille",
+    "vecinos": [
+      {
+        "destino_indice": 30,
+        "destino_ciudad": "Nîmes",
+        "peso": 51.097,
+        "distancia": 150.0,
+        "tiempo(min)": 111.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.86,
+        "costo_vendedor(euros)": 22.237
+      },
+      {
+        "destino_indice": 83,
+        "destino_ciudad": "Toulon",
+        "peso": 51.097,
+        "distancia": 150.0,
+        "tiempo(min)": 111.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.86,
+        "costo_vendedor(euros)": 22.237
+      },
+      {
+        "destino_indice": 84,
+        "destino_ciudad": "Avignon",
+        "peso": 30.518333,
+        "distancia": 64.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 5.2,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      }
+    ]
+  },
+  "13": {
+    "ciudad": "Caen",
+    "vecinos": [
+      {
+        "destino_indice": 27,
+        "destino_ciudad": "Évreux",
+        "peso": 57.552333,
+        "distancia": 155.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 12.9,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 50,
+        "destino_ciudad": "Saint-Lô",
+        "peso": 25.318333,
+        "distancia": 75.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 61,
+        "destino_ciudad": "Alençon",
+        "peso": 25.318333,
+        "distancia": 75.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 76,
+        "destino_ciudad": "Rouen",
+        "peso": 25.318333,
+        "distancia": 75.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      }
+    ]
+  },
+  "14": {
+    "ciudad": "Aurillac",
+    "vecinos": [
+      {
+        "destino_indice": 11,
+        "destino_ciudad": "Rodez",
+        "peso": 25.318333,
+        "distancia": 72.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 18,
+        "destino_ciudad": "Tulle",
+        "peso": 35.906,
+        "distancia": 83.0,
+        "tiempo(min)": 78.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.28,
+        "costo_vendedor(euros)": 15.626
+      },
+      {
+        "destino_indice": 43,
+        "destino_ciudad": "Le Puy-en-Velay",
+        "peso": 71.351667,
+        "distancia": 172.0,
+        "tiempo(min)": 155.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 40.3,
+        "costo_vendedor(euros)": 31.051667
+      },
+      {
+        "destino_indice": 46,
+        "destino_ciudad": "Cahors",
+        "peso": 60.764,
+        "distancia": 136.0,
+        "tiempo(min)": 132.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 34.32,
+        "costo_vendedor(euros)": 26.444
+      },
+      {
+        "destino_indice": 48,
+        "destino_ciudad": "Mende",
+        "peso": 60.764,
+        "distancia": 151.0,
+        "tiempo(min)": 132.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 34.32,
+        "costo_vendedor(euros)": 26.444
+      },
+      {
+        "destino_indice": 63,
+        "destino_ciudad": "Clermont-Ferrand",
+        "peso": 67.669,
+        "distancia": 171.0,
+        "tiempo(min)": 147.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 38.22,
+        "costo_vendedor(euros)": 29.449
+      }
+    ]
+  },
+  "15": {
+    "ciudad": "Angoulême",
+    "vecinos": [
+      {
+        "destino_indice": 16,
+        "destino_ciudad": "La Rochelle",
+        "peso": 59.379667,
+        "distancia": 155.0,
+        "tiempo(min)": 119.0,
+        "peajes(euros)": 4.6,
+        "gasolina(euros)": 30.94,
+        "costo_vendedor(euros)": 23.839667
+      },
+      {
+        "destino_indice": 24,
+        "destino_ciudad": "Périgueux",
+        "peso": 40.049,
+        "distancia": 87.0,
+        "tiempo(min)": 87.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.62,
+        "costo_vendedor(euros)": 17.429
+      },
+      {
+        "destino_indice": 33,
+        "destino_ciudad": "Bordeaux",
+        "peso": 44.192,
+        "distancia": 123.0,
+        "tiempo(min)": 96.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.96,
+        "costo_vendedor(euros)": 19.232
+      },
+      {
+        "destino_indice": 79,
+        "destino_ciudad": "Niort",
+        "peso": 45.112667,
+        "distancia": 119.0,
+        "tiempo(min)": 98.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.48,
+        "costo_vendedor(euros)": 19.632667
+      },
+      {
+        "destino_indice": 86,
+        "destino_ciudad": "Poitiers",
+        "peso": 40.509333,
+        "distancia": 116.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 87,
+        "destino_ciudad": "Limoges",
+        "peso": 39.128333,
+        "distancia": 109.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      }
+    ]
+  },
+  "16": {
+    "ciudad": "La Rochelle",
+    "vecinos": [
+      {
+        "destino_indice": 15,
+        "destino_ciudad": "Angoulême",
+        "peso": 59.379667,
+        "distancia": 155.0,
+        "tiempo(min)": 119.0,
+        "peajes(euros)": 4.6,
+        "gasolina(euros)": 30.94,
+        "costo_vendedor(euros)": 23.839667
+      },
+      {
+        "destino_indice": 33,
+        "destino_ciudad": "Bordeaux",
+        "peso": 74.660667,
+        "distancia": 189.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 18.5,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 79,
+        "destino_ciudad": "Niort",
+        "peso": 25.778667,
+        "distancia": 66.0,
+        "tiempo(min)": 56.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.56,
+        "costo_vendedor(euros)": 11.218667
+      },
+      {
+        "destino_indice": 85,
+        "destino_ciudad": "La Roche-sur-Yon",
+        "peso": 38.847333,
+        "distancia": 85.0,
+        "tiempo(min)": 82.0,
+        "peajes(euros)": 1.1,
+        "gasolina(euros)": 21.32,
+        "costo_vendedor(euros)": 16.427333
+      }
+    ]
+  },
+  "17": {
+    "ciudad": "Bourges",
+    "vecinos": [
+      {
+        "destino_indice": 2,
+        "destino_ciudad": "Moulins",
+        "peso": 41.43,
+        "distancia": 101.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 23,
+        "destino_ciudad": "Guéret",
+        "peso": 59.436667,
+        "distancia": 173.0,
+        "tiempo(min)": 110.0,
+        "peajes(euros)": 8.8,
+        "gasolina(euros)": 28.6,
+        "costo_vendedor(euros)": 22.036667
+      },
+      {
+        "destino_indice": 36,
+        "destino_ciudad": "Châteauroux",
+        "peso": 36.344,
+        "distancia": 102.0,
+        "tiempo(min)": 72.0,
+        "peajes(euros)": 3.2,
+        "gasolina(euros)": 18.72,
+        "costo_vendedor(euros)": 14.424
+      },
+      {
+        "destino_indice": 37,
+        "destino_ciudad": "Tours",
+        "peso": 65.955667,
+        "distancia": 166.0,
+        "tiempo(min)": 107.0,
+        "peajes(euros)": 16.7,
+        "gasolina(euros)": 27.82,
+        "costo_vendedor(euros)": 21.435667
+      },
+      {
+        "destino_indice": 41,
+        "destino_ciudad": "Blois",
+        "peso": 49.511,
+        "distancia": 116.0,
+        "tiempo(min)": 93.0,
+        "peajes(euros)": 6.7,
+        "gasolina(euros)": 24.18,
+        "costo_vendedor(euros)": 18.631
+      },
+      {
+        "destino_indice": 45,
+        "destino_ciudad": "Orléans",
+        "peso": 49.511,
+        "distancia": 116.0,
+        "tiempo(min)": 93.0,
+        "peajes(euros)": 6.7,
+        "gasolina(euros)": 24.18,
+        "costo_vendedor(euros)": 18.631
+      },
+      {
+        "destino_indice": 58,
+        "destino_ciudad": "Nevers",
+        "peso": 34.064667,
+        "distancia": 67.0,
+        "tiempo(min)": 74.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 19.24,
+        "costo_vendedor(euros)": 14.824667
+      },
+      {
+        "destino_indice": 89,
+        "destino_ciudad": "Auxerre",
+        "peso": 66.345,
+        "distancia": 144.0,
+        "tiempo(min)": 135.0,
+        "peajes(euros)": 4.2,
+        "gasolina(euros)": 35.1,
+        "costo_vendedor(euros)": 27.045
+      }
+    ]
+  },
+  "18": {
+    "ciudad": "Tulle",
+    "vecinos": [
+      {
+        "destino_indice": 14,
+        "destino_ciudad": "Aurillac",
+        "peso": 35.906,
+        "distancia": 83.0,
+        "tiempo(min)": 78.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.28,
+        "costo_vendedor(euros)": 15.626
+      },
+      {
+        "destino_indice": 23,
+        "destino_ciudad": "Guéret",
+        "peso": 52.478,
+        "distancia": 174.0,
+        "tiempo(min)": 114.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.64,
+        "costo_vendedor(euros)": 22.838
+      },
+      {
+        "destino_indice": 24,
+        "destino_ciudad": "Périgueux",
+        "peso": 45.426667,
+        "distancia": 108.0,
+        "tiempo(min)": 80.0,
+        "peajes(euros)": 8.6,
+        "gasolina(euros)": 20.8,
+        "costo_vendedor(euros)": 16.026667
+      },
+      {
+        "destino_indice": 63,
+        "destino_ciudad": "Clermont-Ferrand",
+        "peso": 59.714333,
+        "distancia": 144.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 12.3,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      },
+      {
+        "destino_indice": 87,
+        "destino_ciudad": "Limoges",
+        "peso": 30.382,
+        "distancia": 90.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      }
+    ]
+  },
+  "19": {
+    "ciudad": "Ajaccio",
+    "vecinos": [
+      {
+        "destino_indice": 5,
+        "destino_ciudad": "Nice",
+        "peso": 188.276333,
+        "distancia": 258.0,
+        "tiempo(min)": 409.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 106.34,
+        "costo_vendedor(euros)": 81.936333
+      },
+      {
+        "destino_indice": 20,
+        "destino_ciudad": "Bastia",
+        "peso": 75.034333,
+        "distancia": 150.0,
+        "tiempo(min)": 163.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 42.38,
+        "costo_vendedor(euros)": 32.654333
+      },
+      {
+        "destino_indice": 83,
+        "destino_ciudad": "Toulon",
+        "peso": 346.074667,
+        "distancia": 696.0,
+        "tiempo(min)": 704.0,
+        "peajes(euros)": 22.0,
+        "gasolina(euros)": 183.04,
+        "costo_vendedor(euros)": 141.034667
+      }
+    ]
+  },
+  "20": {
+    "ciudad": "Bastia",
+    "vecinos": [
+      {
+        "destino_indice": 5,
+        "destino_ciudad": "Nice",
+        "peso": 219.296333,
+        "distancia": 398.0,
+        "tiempo(min)": 469.0,
+        "peajes(euros)": 3.4,
+        "gasolina(euros)": 121.94,
+        "costo_vendedor(euros)": 93.956333
+      },
+      {
+        "destino_indice": 19,
+        "destino_ciudad": "Ajaccio",
+        "peso": 75.034333,
+        "distancia": 150.0,
+        "tiempo(min)": 163.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 42.38,
+        "costo_vendedor(euros)": 32.654333
+      },
+      {
+        "destino_indice": 83,
+        "destino_ciudad": "Toulon",
+        "peso": 272.421333,
+        "distancia": 548.0,
+        "tiempo(min)": 544.0,
+        "peajes(euros)": 22.0,
+        "gasolina(euros)": 141.44,
+        "costo_vendedor(euros)": 108.981333
+      }
+    ]
+  },
+  "21": {
+    "ciudad": "Dijon",
+    "vecinos": [
+      {
+        "destino_indice": 25,
+        "destino_ciudad": "Besançon",
+        "peso": 41.604333,
+        "distancia": 98.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 8.0,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      },
+      {
+        "destino_indice": 39,
+        "destino_ciudad": "Lons-le-Saunier",
+        "peso": 38.002667,
+        "distancia": 98.0,
+        "tiempo(min)": 68.0,
+        "peajes(euros)": 6.7,
+        "gasolina(euros)": 17.68,
+        "costo_vendedor(euros)": 13.622667
+      },
+      {
+        "destino_indice": 52,
+        "destino_ciudad": "Chaumont",
+        "peso": 41.044,
+        "distancia": 109.0,
+        "tiempo(min)": 72.0,
+        "peajes(euros)": 7.9,
+        "gasolina(euros)": 18.72,
+        "costo_vendedor(euros)": 14.424
+      },
+      {
+        "destino_indice": 58,
+        "destino_ciudad": "Nevers",
+        "peso": 78.717,
+        "distancia": 182.0,
+        "tiempo(min)": 171.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 44.46,
+        "costo_vendedor(euros)": 34.257
+      },
+      {
+        "destino_indice": 70,
+        "destino_ciudad": "Vesoul",
+        "peso": 50.811,
+        "distancia": 136.0,
+        "tiempo(min)": 93.0,
+        "peajes(euros)": 8.0,
+        "gasolina(euros)": 24.18,
+        "costo_vendedor(euros)": 18.631
+      },
+      {
+        "destino_indice": 89,
+        "destino_ciudad": "Auxerre",
+        "peso": 57.414333,
+        "distancia": 151.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 10.0,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      }
+    ]
+  },
+  "22": {
+    "ciudad": "Saint-Brieuc",
+    "vecinos": [
+      {
+        "destino_indice": 29,
+        "destino_ciudad": "Quimper",
+        "peso": 49.716,
+        "distancia": 154.0,
+        "tiempo(min)": 108.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.08,
+        "costo_vendedor(euros)": 21.636
+      },
+      {
+        "destino_indice": 35,
+        "destino_ciudad": "Rennes",
+        "peso": 30.842333,
+        "distancia": 98.0,
+        "tiempo(min)": 67.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 17.42,
+        "costo_vendedor(euros)": 13.422333
+      },
+      {
+        "destino_indice": 50,
+        "destino_ciudad": "Saint-Lô",
+        "peso": 56.160667,
+        "distancia": 196.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 56,
+        "destino_ciudad": "Vannes",
+        "peso": 43.271333,
+        "distancia": 118.0,
+        "tiempo(min)": 94.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.44,
+        "costo_vendedor(euros)": 18.831333
+      }
+    ]
+  },
+  "23": {
+    "ciudad": "Guéret",
+    "vecinos": [
+      {
+        "destino_indice": 2,
+        "destino_ciudad": "Moulins",
+        "peso": 48.031667,
+        "distancia": 146.0,
+        "tiempo(min)": 95.0,
+        "peajes(euros)": 4.3,
+        "gasolina(euros)": 24.7,
+        "costo_vendedor(euros)": 19.031667
+      },
+      {
+        "destino_indice": 17,
+        "destino_ciudad": "Bourges",
+        "peso": 59.436667,
+        "distancia": 173.0,
+        "tiempo(min)": 110.0,
+        "peajes(euros)": 8.8,
+        "gasolina(euros)": 28.6,
+        "costo_vendedor(euros)": 22.036667
+      },
+      {
+        "destino_indice": 18,
+        "destino_ciudad": "Tulle",
+        "peso": 52.478,
+        "distancia": 174.0,
+        "tiempo(min)": 114.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.64,
+        "costo_vendedor(euros)": 22.838
+      },
+      {
+        "destino_indice": 36,
+        "destino_ciudad": "Châteauroux",
+        "peso": 36.826667,
+        "distancia": 121.0,
+        "tiempo(min)": 80.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.8,
+        "costo_vendedor(euros)": 16.026667
+      },
+      {
+        "destino_indice": 63,
+        "destino_ciudad": "Clermont-Ferrand",
+        "peso": 63.578,
+        "distancia": 176.0,
+        "tiempo(min)": 114.0,
+        "peajes(euros)": 11.1,
+        "gasolina(euros)": 29.64,
+        "costo_vendedor(euros)": 22.838
+      },
+      {
+        "destino_indice": 86,
+        "destino_ciudad": "Poitiers",
+        "peso": 61.684667,
+        "distancia": 147.0,
+        "tiempo(min)": 134.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 34.84,
+        "costo_vendedor(euros)": 26.844667
+      },
+      {
+        "destino_indice": 87,
+        "destino_ciudad": "Limoges",
+        "peso": 29.461333,
+        "distancia": 90.0,
+        "tiempo(min)": 64.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.64,
+        "costo_vendedor(euros)": 12.821333
+      }
+    ]
+  },
+  "24": {
+    "ciudad": "Périgueux",
+    "vecinos": [
+      {
+        "destino_indice": 15,
+        "destino_ciudad": "Angoulême",
+        "peso": 40.049,
+        "distancia": 87.0,
+        "tiempo(min)": 87.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.62,
+        "costo_vendedor(euros)": 17.429
+      },
+      {
+        "destino_indice": 18,
+        "destino_ciudad": "Tulle",
+        "peso": 45.426667,
+        "distancia": 108.0,
+        "tiempo(min)": 80.0,
+        "peajes(euros)": 8.6,
+        "gasolina(euros)": 20.8,
+        "costo_vendedor(euros)": 16.026667
+      },
+      {
+        "destino_indice": 33,
+        "destino_ciudad": "Bordeaux",
+        "peso": 52.109333,
+        "distancia": 136.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 11.6,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 46,
+        "destino_ciudad": "Cahors",
+        "peso": 51.557333,
+        "distancia": 171.0,
+        "tiempo(min)": 112.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.12,
+        "costo_vendedor(euros)": 22.437333
+      },
+      {
+        "destino_indice": 47,
+        "destino_ciudad": "Agen",
+        "peso": 58.002,
+        "distancia": 136.0,
+        "tiempo(min)": 126.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 32.76,
+        "costo_vendedor(euros)": 25.242
+      },
+      {
+        "destino_indice": 87,
+        "destino_ciudad": "Limoges",
+        "peso": 46.033333,
+        "distancia": 99.0,
+        "tiempo(min)": 100.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 26.0,
+        "costo_vendedor(euros)": 20.033333
+      }
+    ]
+  },
+  "25": {
+    "ciudad": "Besançon",
+    "vecinos": [
+      {
+        "destino_indice": 21,
+        "destino_ciudad": "Dijon",
+        "peso": 41.604333,
+        "distancia": 98.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 8.0,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      },
+      {
+        "destino_indice": 39,
+        "destino_ciudad": "Lons-le-Saunier",
+        "peso": 35.445667,
+        "distancia": 84.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 70,
+        "destino_ciudad": "Vesoul",
+        "peso": 21.635667,
+        "distancia": 50.0,
+        "tiempo(min)": 47.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.22,
+        "costo_vendedor(euros)": 9.415667
+      }
+    ]
+  },
+  "26": {
+    "ciudad": "Valence",
+    "vecinos": [
+      {
+        "destino_indice": 4,
+        "destino_ciudad": "Gap",
+        "peso": 86.794667,
+        "distancia": 193.0,
+        "tiempo(min)": 164.0,
+        "peajes(euros)": 11.3,
+        "gasolina(euros)": 42.64,
+        "costo_vendedor(euros)": 32.854667
+      },
+      {
+        "destino_indice": 6,
+        "destino_ciudad": "Privas",
+        "peso": 23.796,
+        "distancia": 42.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 1.7,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      },
+      {
+        "destino_indice": 38,
+        "destino_ciudad": "Grenoble",
+        "peso": 38.92,
+        "distancia": 92.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 11.3,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      },
+      {
+        "destino_indice": 42,
+        "destino_ciudad": "Saint-Étienne",
+        "peso": 48.128333,
+        "distancia": 122.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 9.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      },
+      {
+        "destino_indice": 84,
+        "destino_ciudad": "Avignon",
+        "peso": 52.228333,
+        "distancia": 129.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 13.1,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      }
+    ]
+  },
+  "27": {
+    "ciudad": "Évreux",
+    "vecinos": [
+      {
+        "destino_indice": 13,
+        "destino_ciudad": "Caen",
+        "peso": 57.552333,
+        "distancia": 155.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 12.9,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 28,
+        "destino_ciudad": "Chartres",
+        "peso": 35.445667,
+        "distancia": 85.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 61,
+        "destino_ciudad": "Alençon",
+        "peso": 44.652333,
+        "distancia": 115.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 76,
+        "destino_ciudad": "Rouen",
+        "peso": 26.797667,
+        "distancia": 58.0,
+        "tiempo(min)": 53.0,
+        "peajes(euros)": 2.4,
+        "gasolina(euros)": 13.78,
+        "costo_vendedor(euros)": 10.617667
+      },
+      {
+        "destino_indice": 95,
+        "destino_ciudad": "Cergy",
+        "peso": 36.604333,
+        "distancia": 79.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 3.0,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      }
+    ]
+  },
+  "28": {
+    "ciudad": "Chartres",
+    "vecinos": [
+      {
+        "destino_indice": 27,
+        "destino_ciudad": "Évreux",
+        "peso": 35.445667,
+        "distancia": 85.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 45,
+        "destino_ciudad": "Orléans",
+        "peso": 37.783667,
+        "distancia": 81.0,
+        "tiempo(min)": 71.0,
+        "peajes(euros)": 5.1,
+        "gasolina(euros)": 18.46,
+        "costo_vendedor(euros)": 14.223667
+      },
+      {
+        "destino_indice": 72,
+        "destino_ciudad": "Le Mans",
+        "peso": 51.949,
+        "distancia": 121.0,
+        "tiempo(min)": 87.0,
+        "peajes(euros)": 11.9,
+        "gasolina(euros)": 22.62,
+        "costo_vendedor(euros)": 17.429
+      },
+      {
+        "destino_indice": 78,
+        "destino_ciudad": "Versailles",
+        "peso": 41.144,
+        "distancia": 86.0,
+        "tiempo(min)": 72.0,
+        "peajes(euros)": 8.0,
+        "gasolina(euros)": 18.72,
+        "costo_vendedor(euros)": 14.424
+      }
+    ]
+  },
+  "29": {
+    "ciudad": "Quimper",
+    "vecinos": [
+      {
+        "destino_indice": 22,
+        "destino_ciudad": "Saint-Brieuc",
+        "peso": 49.716,
+        "distancia": 154.0,
+        "tiempo(min)": 108.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.08,
+        "costo_vendedor(euros)": 21.636
+      },
+      {
+        "destino_indice": 35,
+        "destino_ciudad": "Rennes",
+        "peso": 64.446667,
+        "distancia": 214.0,
+        "tiempo(min)": 140.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 36.4,
+        "costo_vendedor(euros)": 28.046667
+      },
+      {
+        "destino_indice": 56,
+        "destino_ciudad": "Vannes",
+        "peso": 36.826667,
+        "distancia": 121.0,
+        "tiempo(min)": 80.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.8,
+        "costo_vendedor(euros)": 16.026667
+      }
+    ]
+  },
+  "30": {
+    "ciudad": "Nîmes",
+    "vecinos": [
+      {
+        "destino_indice": 12,
+        "destino_ciudad": "Marseille",
+        "peso": 51.097,
+        "distancia": 150.0,
+        "tiempo(min)": 111.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.86,
+        "costo_vendedor(euros)": 22.237
+      },
+      {
+        "destino_indice": 34,
+        "destino_ciudad": "Montpellier",
+        "peso": 25.956333,
+        "distancia": 52.0,
+        "tiempo(min)": 49.0,
+        "peajes(euros)": 3.4,
+        "gasolina(euros)": 12.74,
+        "costo_vendedor(euros)": 9.816333
+      },
+      {
+        "destino_indice": 48,
+        "destino_ciudad": "Mende",
+        "peso": 69.510333,
+        "distancia": 146.0,
+        "tiempo(min)": 151.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 39.26,
+        "costo_vendedor(euros)": 30.250333
+      },
+      {
+        "destino_indice": 84,
+        "destino_ciudad": "Avignon",
+        "peso": 25.316667,
+        "distancia": 51.0,
+        "tiempo(min)": 50.0,
+        "peajes(euros)": 2.3,
+        "gasolina(euros)": 13.0,
+        "costo_vendedor(euros)": 10.016667
+      }
+    ]
+  },
+  "31": {
+    "ciudad": "Toulouse",
+    "vecinos": [
+      {
+        "destino_indice": 8,
+        "destino_ciudad": "Foix",
+        "peso": 34.740667,
+        "distancia": 89.0,
+        "tiempo(min)": 62.0,
+        "peajes(euros)": 6.2,
+        "gasolina(euros)": 16.12,
+        "costo_vendedor(euros)": 12.420667
+      },
+      {
+        "destino_indice": 10,
+        "destino_ciudad": "Carcassonne",
+        "peso": 39.682,
+        "distancia": 95.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 9.3,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 32,
+        "destino_ciudad": "Auch",
+        "peso": 30.382,
+        "distancia": 80.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 65,
+        "destino_ciudad": "Tarbes",
+        "peso": 56.854,
+        "distancia": 155.0,
+        "tiempo(min)": 102.0,
+        "peajes(euros)": 9.9,
+        "gasolina(euros)": 26.52,
+        "costo_vendedor(euros)": 20.434
+      },
+      {
+        "destino_indice": 81,
+        "destino_ciudad": "Albi",
+        "peso": 27.478667,
+        "distancia": 75.0,
+        "tiempo(min)": 56.0,
+        "peajes(euros)": 1.7,
+        "gasolina(euros)": 14.56,
+        "costo_vendedor(euros)": 11.218667
+      },
+      {
+        "destino_indice": 82,
+        "destino_ciudad": "Montauban",
+        "peso": 25.756333,
+        "distancia": 53.0,
+        "tiempo(min)": 49.0,
+        "peajes(euros)": 3.2,
+        "gasolina(euros)": 12.74,
+        "costo_vendedor(euros)": 9.816333
+      }
+    ]
+  },
+  "32": {
+    "ciudad": "Auch",
+    "vecinos": [
+      {
+        "destino_indice": 31,
+        "destino_ciudad": "Toulouse",
+        "peso": 30.382,
+        "distancia": 80.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 40,
+        "destino_ciudad": "Mont-de-Marsan",
+        "peso": 45.573,
+        "distancia": 104.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      },
+      {
+        "destino_indice": 47,
+        "destino_ciudad": "Agen",
+        "peso": 36.366333,
+        "distancia": 74.0,
+        "tiempo(min)": 79.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.54,
+        "costo_vendedor(euros)": 15.826333
+      },
+      {
+        "destino_indice": 65,
+        "destino_ciudad": "Tarbes",
+        "peso": 35.445667,
+        "distancia": 73.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 82,
+        "destino_ciudad": "Montauban",
+        "peso": 39.128333,
+        "distancia": 86.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      }
+    ]
+  },
+  "33": {
+    "ciudad": "Bordeaux",
+    "vecinos": [
+      {
+        "destino_indice": 15,
+        "destino_ciudad": "Angoulême",
+        "peso": 44.192,
+        "distancia": 123.0,
+        "tiempo(min)": 96.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.96,
+        "costo_vendedor(euros)": 19.232
+      },
+      {
+        "destino_indice": 16,
+        "destino_ciudad": "La Rochelle",
+        "peso": 74.660667,
+        "distancia": 189.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 18.5,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 24,
+        "destino_ciudad": "Périgueux",
+        "peso": 52.109333,
+        "distancia": 136.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 11.6,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 40,
+        "destino_ciudad": "Mont-de-Marsan",
+        "peso": 60.771333,
+        "distancia": 134.0,
+        "tiempo(min)": 94.0,
+        "peajes(euros)": 17.5,
+        "gasolina(euros)": 24.44,
+        "costo_vendedor(euros)": 18.831333
+      },
+      {
+        "destino_indice": 47,
+        "destino_ciudad": "Agen",
+        "peso": 53.43,
+        "distancia": 140.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 12.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      }
+    ]
+  },
+  "34": {
+    "ciudad": "Montpellier",
+    "vecinos": [
+      {
+        "destino_indice": 10,
+        "destino_ciudad": "Carcassonne",
+        "peso": 63.793667,
+        "distancia": 157.0,
+        "tiempo(min)": 101.0,
+        "peajes(euros)": 17.3,
+        "gasolina(euros)": 26.26,
+        "costo_vendedor(euros)": 20.233667
+      },
+      {
+        "destino_indice": 11,
+        "destino_ciudad": "Rodez",
+        "peso": 47.414333,
+        "distancia": 103.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      },
+      {
+        "destino_indice": 30,
+        "destino_ciudad": "Nîmes",
+        "peso": 25.956333,
+        "distancia": 52.0,
+        "tiempo(min)": 49.0,
+        "peajes(euros)": 3.4,
+        "gasolina(euros)": 12.74,
+        "costo_vendedor(euros)": 9.816333
+      },
+      {
+        "destino_indice": 48,
+        "destino_ciudad": "Mende",
+        "peso": 80.088,
+        "distancia": 200.0,
+        "tiempo(min)": 144.0,
+        "peajes(euros)": 13.8,
+        "gasolina(euros)": 37.44,
+        "costo_vendedor(euros)": 28.848
+      },
+      {
+        "destino_indice": 66,
+        "destino_ciudad": "Perpignan",
+        "peso": 63.433333,
+        "distancia": 161.0,
+        "tiempo(min)": 100.0,
+        "peajes(euros)": 17.4,
+        "gasolina(euros)": 26.0,
+        "costo_vendedor(euros)": 20.033333
+      }
+    ]
+  },
+  "35": {
+    "ciudad": "Rennes",
+    "vecinos": [
+      {
+        "destino_indice": 22,
+        "destino_ciudad": "Saint-Brieuc",
+        "peso": 30.842333,
+        "distancia": 98.0,
+        "tiempo(min)": 67.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 17.42,
+        "costo_vendedor(euros)": 13.422333
+      },
+      {
+        "destino_indice": 29,
+        "destino_ciudad": "Quimper",
+        "peso": 64.446667,
+        "distancia": 214.0,
+        "tiempo(min)": 140.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 36.4,
+        "costo_vendedor(euros)": 28.046667
+      },
+      {
+        "destino_indice": 44,
+        "destino_ciudad": "Nantes",
+        "peso": 40.509333,
+        "distancia": 110.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 49,
+        "destino_ciudad": "Angers",
+        "peso": 45.112667,
+        "distancia": 132.0,
+        "tiempo(min)": 98.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.48,
+        "costo_vendedor(euros)": 19.632667
+      },
+      {
+        "destino_indice": 50,
+        "destino_ciudad": "Saint-Lô",
+        "peso": 43.271333,
+        "distancia": 152.0,
+        "tiempo(min)": 94.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.44,
+        "costo_vendedor(euros)": 18.831333
+      },
+      {
+        "destino_indice": 53,
+        "destino_ciudad": "Laval",
+        "peso": 32.582,
+        "distancia": 82.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 2.2,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 56,
+        "destino_ciudad": "Vannes",
+        "peso": 39.128333,
+        "distancia": 112.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      }
+    ]
+  },
+  "36": {
+    "ciudad": "Châteauroux",
+    "vecinos": [
+      {
+        "destino_indice": 17,
+        "destino_ciudad": "Bourges",
+        "peso": 36.344,
+        "distancia": 102.0,
+        "tiempo(min)": 72.0,
+        "peajes(euros)": 3.2,
+        "gasolina(euros)": 18.72,
+        "costo_vendedor(euros)": 14.424
+      },
+      {
+        "destino_indice": 23,
+        "destino_ciudad": "Guéret",
+        "peso": 36.826667,
+        "distancia": 121.0,
+        "tiempo(min)": 80.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.8,
+        "costo_vendedor(euros)": 16.026667
+      },
+      {
+        "destino_indice": 37,
+        "destino_ciudad": "Tours",
+        "peso": 51.395333,
+        "distancia": 124.0,
+        "tiempo(min)": 106.0,
+        "peajes(euros)": 2.6,
+        "gasolina(euros)": 27.56,
+        "costo_vendedor(euros)": 21.235333
+      },
+      {
+        "destino_indice": 41,
+        "destino_ciudad": "Blois",
+        "peso": 44.192,
+        "distancia": 101.0,
+        "tiempo(min)": 96.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.96,
+        "costo_vendedor(euros)": 19.232
+      },
+      {
+        "destino_indice": 86,
+        "destino_ciudad": "Poitiers",
+        "peso": 57.081333,
+        "distancia": 128.0,
+        "tiempo(min)": 124.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 32.24,
+        "costo_vendedor(euros)": 24.841333
+      }
+    ]
+  },
+  "37": {
+    "ciudad": "Tours",
+    "vecinos": [
+      {
+        "destino_indice": 17,
+        "destino_ciudad": "Bourges",
+        "peso": 65.955667,
+        "distancia": 166.0,
+        "tiempo(min)": 107.0,
+        "peajes(euros)": 16.7,
+        "gasolina(euros)": 27.82,
+        "costo_vendedor(euros)": 21.435667
+      },
+      {
+        "destino_indice": 36,
+        "destino_ciudad": "Châteauroux",
+        "peso": 51.395333,
+        "distancia": 124.0,
+        "tiempo(min)": 106.0,
+        "peajes(euros)": 2.6,
+        "gasolina(euros)": 27.56,
+        "costo_vendedor(euros)": 21.235333
+      },
+      {
+        "destino_indice": 41,
+        "destino_ciudad": "Blois",
+        "peso": 29.456333,
+        "distancia": 66.0,
+        "tiempo(min)": 49.0,
+        "peajes(euros)": 6.9,
+        "gasolina(euros)": 12.74,
+        "costo_vendedor(euros)": 9.816333
+      },
+      {
+        "destino_indice": 49,
+        "destino_ciudad": "Angers",
+        "peso": 48.145667,
+        "distancia": 128.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 12.7,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 72,
+        "destino_ciudad": "Le Mans",
+        "peso": 48.145667,
+        "distancia": 128.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 12.7,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 86,
+        "destino_ciudad": "Poitiers",
+        "peso": 48.145667,
+        "distancia": 128.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 12.7,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      }
+    ]
+  },
+  "38": {
+    "ciudad": "Grenoble",
+    "vecinos": [
+      {
+        "destino_indice": 4,
+        "destino_ciudad": "Gap",
+        "peso": 53.398667,
+        "distancia": 111.0,
+        "tiempo(min)": 116.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 30.16,
+        "costo_vendedor(euros)": 23.238667
+      },
+      {
+        "destino_indice": 26,
+        "destino_ciudad": "Valence",
+        "peso": 38.92,
+        "distancia": 92.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 11.3,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      },
+      {
+        "destino_indice": 69,
+        "destino_ciudad": "Lyon",
+        "peso": 219.087,
+        "distancia": 577.0,
+        "tiempo(min)": 381.0,
+        "peajes(euros)": 43.7,
+        "gasolina(euros)": 99.06,
+        "costo_vendedor(euros)": 76.327
+      },
+      {
+        "destino_indice": 73,
+        "destino_ciudad": "Chambéry",
+        "peso": 25.573667,
+        "distancia": 57.0,
+        "tiempo(min)": 41.0,
+        "peajes(euros)": 6.7,
+        "gasolina(euros)": 10.66,
+        "costo_vendedor(euros)": 8.213667
+      }
+    ]
+  },
+  "39": {
+    "ciudad": "Lons-le-Saunier",
+    "vecinos": [
+      {
+        "destino_indice": 0,
+        "destino_ciudad": "Bourg-en-Bresse",
+        "peso": 32.459667,
+        "distancia": 74.0,
+        "tiempo(min)": 59.0,
+        "peajes(euros)": 5.3,
+        "gasolina(euros)": 15.34,
+        "costo_vendedor(euros)": 11.819667
+      },
+      {
+        "destino_indice": 21,
+        "destino_ciudad": "Dijon",
+        "peso": 38.002667,
+        "distancia": 98.0,
+        "tiempo(min)": 68.0,
+        "peajes(euros)": 6.7,
+        "gasolina(euros)": 17.68,
+        "costo_vendedor(euros)": 13.622667
+      },
+      {
+        "destino_indice": 25,
+        "destino_ciudad": "Besançon",
+        "peso": 35.445667,
+        "distancia": 84.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 71,
+        "destino_ciudad": "Mâcon",
+        "peso": 38.742333,
+        "distancia": 98.0,
+        "tiempo(min)": 67.0,
+        "peajes(euros)": 7.9,
+        "gasolina(euros)": 17.42,
+        "costo_vendedor(euros)": 13.422333
+      },
+      {
+        "destino_indice": 89,
+        "destino_ciudad": "Auxerre",
+        "peso": 90.529333,
+        "distancia": 251.0,
+        "tiempo(min)": 148.0,
+        "peajes(euros)": 22.4,
+        "gasolina(euros)": 38.48,
+        "costo_vendedor(euros)": 29.649333
+      }
+    ]
+  },
+  "40": {
+    "ciudad": "Mont-de-Marsan",
+    "vecinos": [
+      {
+        "destino_indice": 32,
+        "destino_ciudad": "Auch",
+        "peso": 45.573,
+        "distancia": 104.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      },
+      {
+        "destino_indice": 33,
+        "destino_ciudad": "Bordeaux",
+        "peso": 60.771333,
+        "distancia": 134.0,
+        "tiempo(min)": 94.0,
+        "peajes(euros)": 17.5,
+        "gasolina(euros)": 24.44,
+        "costo_vendedor(euros)": 18.831333
+      },
+      {
+        "destino_indice": 47,
+        "destino_ciudad": "Agen",
+        "peso": 48.173,
+        "distancia": 122.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 2.6,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      },
+      {
+        "destino_indice": 64,
+        "destino_ciudad": "Pau",
+        "peso": 51.506,
+        "distancia": 106.0,
+        "tiempo(min)": 78.0,
+        "peajes(euros)": 15.6,
+        "gasolina(euros)": 20.28,
+        "costo_vendedor(euros)": 15.626
+      }
+    ]
+  },
+  "41": {
+    "ciudad": "Blois",
+    "vecinos": [
+      {
+        "destino_indice": 17,
+        "destino_ciudad": "Bourges",
+        "peso": 49.511,
+        "distancia": 116.0,
+        "tiempo(min)": 93.0,
+        "peajes(euros)": 6.7,
+        "gasolina(euros)": 24.18,
+        "costo_vendedor(euros)": 18.631
+      },
+      {
+        "destino_indice": 36,
+        "destino_ciudad": "Châteauroux",
+        "peso": 44.192,
+        "distancia": 101.0,
+        "tiempo(min)": 96.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.96,
+        "costo_vendedor(euros)": 19.232
+      },
+      {
+        "destino_indice": 37,
+        "destino_ciudad": "Tours",
+        "peso": 29.456333,
+        "distancia": 66.0,
+        "tiempo(min)": 49.0,
+        "peajes(euros)": 6.9,
+        "gasolina(euros)": 12.74,
+        "costo_vendedor(euros)": 9.816333
+      },
+      {
+        "destino_indice": 45,
+        "destino_ciudad": "Orléans",
+        "peso": 28.696,
+        "distancia": 61.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 6.6,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      }
+    ]
+  },
+  "42": {
+    "ciudad": "Saint-Étienne",
+    "vecinos": [
+      {
+        "destino_indice": 6,
+        "destino_ciudad": "Privas",
+        "peso": 66.298667,
+        "distancia": 162.0,
+        "tiempo(min)": 116.0,
+        "peajes(euros)": 12.9,
+        "gasolina(euros)": 30.16,
+        "costo_vendedor(euros)": 23.238667
+      },
+      {
+        "destino_indice": 26,
+        "destino_ciudad": "Valence",
+        "peso": 48.128333,
+        "distancia": 122.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 9.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      },
+      {
+        "destino_indice": 43,
+        "destino_ciudad": "Le Puy-en-Velay",
+        "peso": 27.62,
+        "distancia": 74.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      },
+      {
+        "destino_indice": 63,
+        "destino_ciudad": "Clermont-Ferrand",
+        "peso": 56.373,
+        "distancia": 146.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 10.8,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      },
+      {
+        "destino_indice": 69,
+        "destino_ciudad": "Lyon",
+        "peso": 29.001,
+        "distancia": 64.0,
+        "tiempo(min)": 63.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.38,
+        "costo_vendedor(euros)": 12.621
+      }
+    ]
+  },
+  "43": {
+    "ciudad": "Le Puy-en-Velay",
+    "vecinos": [
+      {
+        "destino_indice": 6,
+        "destino_ciudad": "Privas",
+        "peso": 49.716,
+        "distancia": 94.0,
+        "tiempo(min)": 108.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.08,
+        "costo_vendedor(euros)": 21.636
+      },
+      {
+        "destino_indice": 14,
+        "destino_ciudad": "Aurillac",
+        "peso": 71.351667,
+        "distancia": 172.0,
+        "tiempo(min)": 155.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 40.3,
+        "costo_vendedor(euros)": 31.051667
+      },
+      {
+        "destino_indice": 42,
+        "destino_ciudad": "Saint-Étienne",
+        "peso": 27.62,
+        "distancia": 74.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      },
+      {
+        "destino_indice": 48,
+        "destino_ciudad": "Mende",
+        "peso": 40.509333,
+        "distancia": 89.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 63,
+        "destino_ciudad": "Clermont-Ferrand",
+        "peso": 51.557333,
+        "distancia": 128.0,
+        "tiempo(min)": 112.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.12,
+        "costo_vendedor(euros)": 22.437333
+      }
+    ]
+  },
+  "44": {
+    "ciudad": "Nantes",
+    "vecinos": [
+      {
+        "destino_indice": 35,
+        "destino_ciudad": "Rennes",
+        "peso": 40.509333,
+        "distancia": 110.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 49,
+        "destino_ciudad": "Angers",
+        "peso": 38.02,
+        "distancia": 90.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 10.4,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      },
+      {
+        "destino_indice": 56,
+        "destino_ciudad": "Vannes",
+        "peso": 41.43,
+        "distancia": 112.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 79,
+        "destino_ciudad": "Niort",
+        "peso": 57.352333,
+        "distancia": 144.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 12.7,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 85,
+        "destino_ciudad": "La Roche-sur-Yon",
+        "peso": 29.359667,
+        "distancia": 70.0,
+        "tiempo(min)": 59.0,
+        "peajes(euros)": 2.2,
+        "gasolina(euros)": 15.34,
+        "costo_vendedor(euros)": 11.819667
+      }
+    ]
+  },
+  "45": {
+    "ciudad": "Orléans",
+    "vecinos": [
+      {
+        "destino_indice": 17,
+        "destino_ciudad": "Bourges",
+        "peso": 49.511,
+        "distancia": 116.0,
+        "tiempo(min)": 93.0,
+        "peajes(euros)": 6.7,
+        "gasolina(euros)": 24.18,
+        "costo_vendedor(euros)": 18.631
+      },
+      {
+        "destino_indice": 28,
+        "destino_ciudad": "Chartres",
+        "peso": 37.783667,
+        "distancia": 81.0,
+        "tiempo(min)": 71.0,
+        "peajes(euros)": 5.1,
+        "gasolina(euros)": 18.46,
+        "costo_vendedor(euros)": 14.223667
+      },
+      {
+        "destino_indice": 41,
+        "destino_ciudad": "Blois",
+        "peso": 28.696,
+        "distancia": 61.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 6.6,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      },
+      {
+        "destino_indice": 89,
+        "destino_ciudad": "Auxerre",
+        "peso": 79.755667,
+        "distancia": 174.0,
+        "tiempo(min)": 107.0,
+        "peajes(euros)": 30.5,
+        "gasolina(euros)": 27.82,
+        "costo_vendedor(euros)": 21.435667
+      },
+      {
+        "destino_indice": 91,
+        "destino_ciudad": "Évry-Courcouronnes",
+        "peso": 51.207667,
+        "distancia": 122.0,
+        "tiempo(min)": 83.0,
+        "peajes(euros)": 13.0,
+        "gasolina(euros)": 21.58,
+        "costo_vendedor(euros)": 16.627667
+      }
+    ]
+  },
+  "46": {
+    "ciudad": "Cahors",
+    "vecinos": [
+      {
+        "destino_indice": 11,
+        "destino_ciudad": "Rodez",
+        "peso": 47.414333,
+        "distancia": 103.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      },
+      {
+        "destino_indice": 14,
+        "destino_ciudad": "Aurillac",
+        "peso": 60.764,
+        "distancia": 136.0,
+        "tiempo(min)": 132.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 34.32,
+        "costo_vendedor(euros)": 26.444
+      },
+      {
+        "destino_indice": 24,
+        "destino_ciudad": "Périgueux",
+        "peso": 51.557333,
+        "distancia": 171.0,
+        "tiempo(min)": 112.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.12,
+        "costo_vendedor(euros)": 22.437333
+      },
+      {
+        "destino_indice": 47,
+        "destino_ciudad": "Agen",
+        "peso": 40.509333,
+        "distancia": 86.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 81,
+        "destino_ciudad": "Albi",
+        "peso": 51.814333,
+        "distancia": 133.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 4.4,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      },
+      {
+        "destino_indice": 82,
+        "destino_ciudad": "Montauban",
+        "peso": 27.877,
+        "distancia": 60.0,
+        "tiempo(min)": 51.0,
+        "peajes(euros)": 4.4,
+        "gasolina(euros)": 13.26,
+        "costo_vendedor(euros)": 10.217
+      }
+    ]
+  },
+  "47": {
+    "ciudad": "Agen",
+    "vecinos": [
+      {
+        "destino_indice": 24,
+        "destino_ciudad": "Périgueux",
+        "peso": 58.002,
+        "distancia": 136.0,
+        "tiempo(min)": 126.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 32.76,
+        "costo_vendedor(euros)": 25.242
+      },
+      {
+        "destino_indice": 32,
+        "destino_ciudad": "Auch",
+        "peso": 36.366333,
+        "distancia": 74.0,
+        "tiempo(min)": 79.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.54,
+        "costo_vendedor(euros)": 15.826333
+      },
+      {
+        "destino_indice": 33,
+        "destino_ciudad": "Bordeaux",
+        "peso": 53.43,
+        "distancia": 140.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 12.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 40,
+        "destino_ciudad": "Mont-de-Marsan",
+        "peso": 48.173,
+        "distancia": 122.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 2.6,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      },
+      {
+        "destino_indice": 46,
+        "destino_ciudad": "Cahors",
+        "peso": 40.509333,
+        "distancia": 86.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 82,
+        "destino_ciudad": "Montauban",
+        "peso": 35.180333,
+        "distancia": 86.0,
+        "tiempo(min)": 61.0,
+        "peajes(euros)": 7.1,
+        "gasolina(euros)": 15.86,
+        "costo_vendedor(euros)": 12.220333
+      }
+    ]
+  },
+  "48": {
+    "ciudad": "Mende",
+    "vecinos": [
+      {
+        "destino_indice": 6,
+        "destino_ciudad": "Privas",
+        "peso": 67.669,
+        "distancia": 137.0,
+        "tiempo(min)": 147.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 38.22,
+        "costo_vendedor(euros)": 29.449
+      },
+      {
+        "destino_indice": 11,
+        "destino_ciudad": "Rodez",
+        "peso": 41.43,
+        "distancia": 108.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 14,
+        "destino_ciudad": "Aurillac",
+        "peso": 60.764,
+        "distancia": 151.0,
+        "tiempo(min)": 132.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 34.32,
+        "costo_vendedor(euros)": 26.444
+      },
+      {
+        "destino_indice": 30,
+        "destino_ciudad": "Nîmes",
+        "peso": 69.510333,
+        "distancia": 146.0,
+        "tiempo(min)": 151.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 39.26,
+        "costo_vendedor(euros)": 30.250333
+      },
+      {
+        "destino_indice": 34,
+        "destino_ciudad": "Montpellier",
+        "peso": 80.088,
+        "distancia": 200.0,
+        "tiempo(min)": 144.0,
+        "peajes(euros)": 13.8,
+        "gasolina(euros)": 37.44,
+        "costo_vendedor(euros)": 28.848
+      },
+      {
+        "destino_indice": 43,
+        "destino_ciudad": "Le Puy-en-Velay",
+        "peso": 40.509333,
+        "distancia": 89.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      }
+    ]
+  },
+  "49": {
+    "ciudad": "Angers",
+    "vecinos": [
+      {
+        "destino_indice": 35,
+        "destino_ciudad": "Rennes",
+        "peso": 45.112667,
+        "distancia": 132.0,
+        "tiempo(min)": 98.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.48,
+        "costo_vendedor(euros)": 19.632667
+      },
+      {
+        "destino_indice": 37,
+        "destino_ciudad": "Tours",
+        "peso": 48.145667,
+        "distancia": 128.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 12.7,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 44,
+        "destino_ciudad": "Nantes",
+        "peso": 38.02,
+        "distancia": 90.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 10.4,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      },
+      {
+        "destino_indice": 53,
+        "destino_ciudad": "Laval",
+        "peso": 31.302667,
+        "distancia": 81.0,
+        "tiempo(min)": 68.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 17.68,
+        "costo_vendedor(euros)": 13.622667
+      },
+      {
+        "destino_indice": 72,
+        "destino_ciudad": "Le Mans",
+        "peso": 40.582,
+        "distancia": 96.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 10.2,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 79,
+        "destino_ciudad": "Niort",
+        "peso": 71.560667,
+        "distancia": 194.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 15.4,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 85,
+        "destino_ciudad": "La Roche-sur-Yon",
+        "peso": 50.607667,
+        "distancia": 132.0,
+        "tiempo(min)": 83.0,
+        "peajes(euros)": 12.4,
+        "gasolina(euros)": 21.58,
+        "costo_vendedor(euros)": 16.627667
+      },
+      {
+        "destino_indice": 86,
+        "destino_ciudad": "Poitiers",
+        "peso": 59.383,
+        "distancia": 139.0,
+        "tiempo(min)": 129.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 33.54,
+        "costo_vendedor(euros)": 25.843
+      }
+    ]
+  },
+  "50": {
+    "ciudad": "Saint-Lô",
+    "vecinos": [
+      {
+        "destino_indice": 13,
+        "destino_ciudad": "Caen",
+        "peso": 25.318333,
+        "distancia": 75.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 22,
+        "destino_ciudad": "Saint-Brieuc",
+        "peso": 56.160667,
+        "distancia": 196.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 35,
+        "destino_ciudad": "Rennes",
+        "peso": 43.271333,
+        "distancia": 152.0,
+        "tiempo(min)": 94.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.44,
+        "costo_vendedor(euros)": 18.831333
+      },
+      {
+        "destino_indice": 53,
+        "destino_ciudad": "Laval",
+        "peso": 56.160667,
+        "distancia": 171.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 61,
+        "destino_ciudad": "Alençon",
+        "peso": 64.355667,
+        "distancia": 175.0,
+        "tiempo(min)": 107.0,
+        "peajes(euros)": 15.1,
+        "gasolina(euros)": 27.82,
+        "costo_vendedor(euros)": 21.435667
+      }
+    ]
+  },
+  "51": {
+    "ciudad": "Châlons-en-Champagne",
+    "vecinos": [
+      {
+        "destino_indice": 1,
+        "destino_ciudad": "Laon",
+        "peso": 46.026667,
+        "distancia": 115.0,
+        "tiempo(min)": 80.0,
+        "peajes(euros)": 9.2,
+        "gasolina(euros)": 20.8,
+        "costo_vendedor(euros)": 16.026667
+      },
+      {
+        "destino_indice": 7,
+        "destino_ciudad": "Charleville-Mézières",
+        "peso": 40.287,
+        "distancia": 128.0,
+        "tiempo(min)": 81.0,
+        "peajes(euros)": 3.0,
+        "gasolina(euros)": 21.06,
+        "costo_vendedor(euros)": 16.227
+      },
+      {
+        "destino_indice": 9,
+        "destino_ciudad": "Troyes",
+        "peso": 81.784667,
+        "distancia": 235.0,
+        "tiempo(min)": 134.0,
+        "peajes(euros)": 20.1,
+        "gasolina(euros)": 34.84,
+        "costo_vendedor(euros)": 26.844667
+      },
+      {
+        "destino_indice": 55,
+        "destino_ciudad": "Bar-le-Duc",
+        "peso": 27.62,
+        "distancia": 70.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      },
+      {
+        "destino_indice": 77,
+        "destino_ciudad": "Melun",
+        "peso": 76.341667,
+        "distancia": 220.0,
+        "tiempo(min)": 125.0,
+        "peajes(euros)": 18.8,
+        "gasolina(euros)": 32.5,
+        "costo_vendedor(euros)": 25.041667
+      },
+      {
+        "destino_indice": 93,
+        "destino_ciudad": "Bobigny",
+        "peso": 72.660667,
+        "distancia": 184.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 16.5,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 94,
+        "destino_ciudad": "Créteil",
+        "peso": 69.898667,
+        "distancia": 182.0,
+        "tiempo(min)": 116.0,
+        "peajes(euros)": 16.5,
+        "gasolina(euros)": 30.16,
+        "costo_vendedor(euros)": 23.238667
+      }
+    ]
+  },
+  "52": {
+    "ciudad": "Chaumont",
+    "vecinos": [
+      {
+        "destino_indice": 9,
+        "destino_ciudad": "Troyes",
+        "peso": 81.784667,
+        "distancia": 235.0,
+        "tiempo(min)": 134.0,
+        "peajes(euros)": 20.1,
+        "gasolina(euros)": 34.84,
+        "costo_vendedor(euros)": 26.844667
+      },
+      {
+        "destino_indice": 21,
+        "destino_ciudad": "Dijon",
+        "peso": 41.044,
+        "distancia": 109.0,
+        "tiempo(min)": 72.0,
+        "peajes(euros)": 7.9,
+        "gasolina(euros)": 18.72,
+        "costo_vendedor(euros)": 14.424
+      },
+      {
+        "destino_indice": 55,
+        "destino_ciudad": "Bar-le-Duc",
+        "peso": 37.287,
+        "distancia": 96.0,
+        "tiempo(min)": 81.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 21.06,
+        "costo_vendedor(euros)": 16.227
+      },
+      {
+        "destino_indice": 70,
+        "destino_ciudad": "Vesoul",
+        "peso": 44.652333,
+        "distancia": 111.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 88,
+        "destino_ciudad": "Épinal",
+        "peso": 49.793667,
+        "distancia": 126.0,
+        "tiempo(min)": 101.0,
+        "peajes(euros)": 3.3,
+        "gasolina(euros)": 26.26,
+        "costo_vendedor(euros)": 20.233667
+      }
+    ]
+  },
+  "53": {
+    "ciudad": "Laval",
+    "vecinos": [
+      {
+        "destino_indice": 35,
+        "destino_ciudad": "Rennes",
+        "peso": 32.582,
+        "distancia": 82.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 2.2,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 49,
+        "destino_ciudad": "Angers",
+        "peso": 31.302667,
+        "distancia": 81.0,
+        "tiempo(min)": 68.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 17.68,
+        "costo_vendedor(euros)": 13.622667
+      },
+      {
+        "destino_indice": 50,
+        "destino_ciudad": "Saint-Lô",
+        "peso": 56.160667,
+        "distancia": 171.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 61,
+        "destino_ciudad": "Alençon",
+        "peso": 49.687,
+        "distancia": 127.0,
+        "tiempo(min)": 81.0,
+        "peajes(euros)": 12.4,
+        "gasolina(euros)": 21.06,
+        "costo_vendedor(euros)": 16.227
+      },
+      {
+        "destino_indice": 72,
+        "destino_ciudad": "Le Mans",
+        "peso": 39.282,
+        "distancia": 86.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 8.9,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      }
+    ]
+  },
+  "54": {
+    "ciudad": "Nancy",
+    "vecinos": [
+      {
+        "destino_indice": 55,
+        "destino_ciudad": "Bar-le-Duc",
+        "peso": 33.604333,
+        "distancia": 84.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      },
+      {
+        "destino_indice": 57,
+        "destino_ciudad": "Metz",
+        "peso": 21.635667,
+        "distancia": 56.0,
+        "tiempo(min)": 47.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.22,
+        "costo_vendedor(euros)": 9.415667
+      },
+      {
+        "destino_indice": 67,
+        "destino_ciudad": "Strasbourg",
+        "peso": 57.859,
+        "distancia": 157.0,
+        "tiempo(min)": 117.0,
+        "peajes(euros)": 4.0,
+        "gasolina(euros)": 30.42,
+        "costo_vendedor(euros)": 23.439
+      },
+      {
+        "destino_indice": 88,
+        "destino_ciudad": "Épinal",
+        "peso": 29.001,
+        "distancia": 74.0,
+        "tiempo(min)": 63.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.38,
+        "costo_vendedor(euros)": 12.621
+      }
+    ]
+  },
+  "55": {
+    "ciudad": "Bar-le-Duc",
+    "vecinos": [
+      {
+        "destino_indice": 7,
+        "destino_ciudad": "Charleville-Mézières",
+        "peso": 61.502,
+        "distancia": 190.0,
+        "tiempo(min)": 126.0,
+        "peajes(euros)": 3.5,
+        "gasolina(euros)": 32.76,
+        "costo_vendedor(euros)": 25.242
+      },
+      {
+        "destino_indice": 9,
+        "destino_ciudad": "Troyes",
+        "peso": 37.482,
+        "distancia": 103.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 7.1,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 51,
+        "destino_ciudad": "Châlons-en-Champagne",
+        "peso": 27.62,
+        "distancia": 70.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      },
+      {
+        "destino_indice": 52,
+        "destino_ciudad": "Chaumont",
+        "peso": 37.287,
+        "distancia": 96.0,
+        "tiempo(min)": 81.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 21.06,
+        "costo_vendedor(euros)": 16.227
+      },
+      {
+        "destino_indice": 54,
+        "destino_ciudad": "Nancy",
+        "peso": 33.604333,
+        "distancia": 84.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      },
+      {
+        "destino_indice": 57,
+        "destino_ciudad": "Metz",
+        "peso": 48.690333,
+        "distancia": 125.0,
+        "tiempo(min)": 91.0,
+        "peajes(euros)": 6.8,
+        "gasolina(euros)": 23.66,
+        "costo_vendedor(euros)": 18.230333
+      }
+    ]
+  },
+  "56": {
+    "ciudad": "Vannes",
+    "vecinos": [
+      {
+        "destino_indice": 22,
+        "destino_ciudad": "Saint-Brieuc",
+        "peso": 43.271333,
+        "distancia": 118.0,
+        "tiempo(min)": 94.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.44,
+        "costo_vendedor(euros)": 18.831333
+      },
+      {
+        "destino_indice": 29,
+        "destino_ciudad": "Quimper",
+        "peso": 36.826667,
+        "distancia": 121.0,
+        "tiempo(min)": 80.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.8,
+        "costo_vendedor(euros)": 16.026667
+      },
+      {
+        "destino_indice": 35,
+        "destino_ciudad": "Rennes",
+        "peso": 39.128333,
+        "distancia": 112.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      },
+      {
+        "destino_indice": 44,
+        "destino_ciudad": "Nantes",
+        "peso": 41.43,
+        "distancia": 112.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      }
+    ]
+  },
+  "57": {
+    "ciudad": "Metz",
+    "vecinos": [
+      {
+        "destino_indice": 7,
+        "destino_ciudad": "Charleville-Mézières",
+        "peso": 63.065667,
+        "distancia": 203.0,
+        "tiempo(min)": 137.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 35.62,
+        "costo_vendedor(euros)": 27.445667
+      },
+      {
+        "destino_indice": 54,
+        "destino_ciudad": "Nancy",
+        "peso": 21.635667,
+        "distancia": 56.0,
+        "tiempo(min)": 47.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.22,
+        "costo_vendedor(euros)": 9.415667
+      },
+      {
+        "destino_indice": 55,
+        "destino_ciudad": "Bar-le-Duc",
+        "peso": 48.690333,
+        "distancia": 125.0,
+        "tiempo(min)": 91.0,
+        "peajes(euros)": 6.8,
+        "gasolina(euros)": 23.66,
+        "costo_vendedor(euros)": 18.230333
+      },
+      {
+        "destino_indice": 67,
+        "destino_ciudad": "Strasbourg",
+        "peso": 60.773,
+        "distancia": 163.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 15.2,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      },
+      {
+        "destino_indice": 88,
+        "destino_ciudad": "Épinal",
+        "peso": 42.811,
+        "distancia": 134.0,
+        "tiempo(min)": 93.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.18,
+        "costo_vendedor(euros)": 18.631
+      }
+    ]
+  },
+  "58": {
+    "ciudad": "Nevers",
+    "vecinos": [
+      {
+        "destino_indice": 2,
+        "destino_ciudad": "Moulins",
+        "peso": 23.477,
+        "distancia": 57.0,
+        "tiempo(min)": 51.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 13.26,
+        "costo_vendedor(euros)": 10.217
+      },
+      {
+        "destino_indice": 17,
+        "destino_ciudad": "Bourges",
+        "peso": 34.064667,
+        "distancia": 67.0,
+        "tiempo(min)": 74.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 19.24,
+        "costo_vendedor(euros)": 14.824667
+      },
+      {
+        "destino_indice": 21,
+        "destino_ciudad": "Dijon",
+        "peso": 78.717,
+        "distancia": 182.0,
+        "tiempo(min)": 171.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 44.46,
+        "costo_vendedor(euros)": 34.257
+      },
+      {
+        "destino_indice": 89,
+        "destino_ciudad": "Auxerre",
+        "peso": 49.716,
+        "distancia": 110.0,
+        "tiempo(min)": 108.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.08,
+        "costo_vendedor(euros)": 21.636
+      }
+    ]
+  },
+  "59": {
+    "ciudad": "Lille",
+    "vecinos": [
+      {
+        "destino_indice": 1,
+        "destino_ciudad": "Laon",
+        "peso": 59.435,
+        "distancia": 159.0,
+        "tiempo(min)": 105.0,
+        "peajes(euros)": 11.1,
+        "gasolina(euros)": 27.3,
+        "costo_vendedor(euros)": 21.035
+      },
+      {
+        "destino_indice": 7,
+        "destino_ciudad": "Charleville-Mézières",
+        "peso": 69.970667,
+        "distancia": 220.0,
+        "tiempo(min)": 152.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 39.52,
+        "costo_vendedor(euros)": 30.450667
+      },
+      {
+        "destino_indice": 62,
+        "destino_ciudad": "Arras",
+        "peso": 22.096,
+        "distancia": 54.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      }
+    ]
+  },
+  "60": {
+    "ciudad": "Beauvais",
+    "vecinos": [
+      {
+        "destino_indice": 1,
+        "destino_ciudad": "Laon",
+        "peso": 51.557333,
+        "distancia": 135.0,
+        "tiempo(min)": 112.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.12,
+        "costo_vendedor(euros)": 22.437333
+      },
+      {
+        "destino_indice": 76,
+        "destino_ciudad": "Rouen",
+        "peso": 42.350667,
+        "distancia": 81.0,
+        "tiempo(min)": 92.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.92,
+        "costo_vendedor(euros)": 18.430667
+      },
+      {
+        "destino_indice": 80,
+        "destino_ciudad": "Amiens",
+        "peso": 28.377,
+        "distancia": 62.0,
+        "tiempo(min)": 51.0,
+        "peajes(euros)": 4.9,
+        "gasolina(euros)": 13.26,
+        "costo_vendedor(euros)": 10.217
+      },
+      {
+        "destino_indice": 95,
+        "destino_ciudad": "Cergy",
+        "peso": 28.697667,
+        "distancia": 68.0,
+        "tiempo(min)": 53.0,
+        "peajes(euros)": 4.3,
+        "gasolina(euros)": 13.78,
+        "costo_vendedor(euros)": 10.617667
+      }
+    ]
+  },
+  "61": {
+    "ciudad": "Alençon",
+    "vecinos": [
+      {
+        "destino_indice": 13,
+        "destino_ciudad": "Caen",
+        "peso": 25.318333,
+        "distancia": 75.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 27,
+        "destino_ciudad": "Évreux",
+        "peso": 44.652333,
+        "distancia": 115.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 50,
+        "destino_ciudad": "Saint-Lô",
+        "peso": 64.355667,
+        "distancia": 175.0,
+        "tiempo(min)": 107.0,
+        "peajes(euros)": 15.1,
+        "gasolina(euros)": 27.82,
+        "costo_vendedor(euros)": 21.435667
+      },
+      {
+        "destino_indice": 53,
+        "destino_ciudad": "Laval",
+        "peso": 49.687,
+        "distancia": 127.0,
+        "tiempo(min)": 81.0,
+        "peajes(euros)": 12.4,
+        "gasolina(euros)": 21.06,
+        "costo_vendedor(euros)": 16.227
+      },
+      {
+        "destino_indice": 72,
+        "destino_ciudad": "Le Mans",
+        "peso": 27.937333,
+        "distancia": 55.0,
+        "tiempo(min)": 52.0,
+        "peajes(euros)": 4.0,
+        "gasolina(euros)": 13.52,
+        "costo_vendedor(euros)": 10.417333
+      }
+    ]
+  },
+  "62": {
+    "ciudad": "Arras",
+    "vecinos": [
+      {
+        "destino_indice": 1,
+        "destino_ciudad": "Laon",
+        "peso": 49.788667,
+        "distancia": 131.0,
+        "tiempo(min)": 86.0,
+        "peajes(euros)": 10.2,
+        "gasolina(euros)": 22.36,
+        "costo_vendedor(euros)": 17.228667
+      },
+      {
+        "destino_indice": 59,
+        "destino_ciudad": "Lille",
+        "peso": 22.096,
+        "distancia": 54.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      },
+      {
+        "destino_indice": 80,
+        "destino_ciudad": "Amiens",
+        "peso": 41.044,
+        "distancia": 99.0,
+        "tiempo(min)": 72.0,
+        "peajes(euros)": 7.9,
+        "gasolina(euros)": 18.72,
+        "costo_vendedor(euros)": 14.424
+      }
+    ]
+  },
+  "63": {
+    "ciudad": "Clermont-Ferrand",
+    "vecinos": [
+      {
+        "destino_indice": 2,
+        "destino_ciudad": "Moulins",
+        "peso": 15.191,
+        "distancia": 19.0,
+        "tiempo(min)": 33.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 8.58,
+        "costo_vendedor(euros)": 6.611
+      },
+      {
+        "destino_indice": 14,
+        "destino_ciudad": "Aurillac",
+        "peso": 67.669,
+        "distancia": 171.0,
+        "tiempo(min)": 147.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 38.22,
+        "costo_vendedor(euros)": 29.449
+      },
+      {
+        "destino_indice": 18,
+        "destino_ciudad": "Tulle",
+        "peso": 59.714333,
+        "distancia": 144.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 12.3,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      },
+      {
+        "destino_indice": 23,
+        "destino_ciudad": "Guéret",
+        "peso": 63.578,
+        "distancia": 176.0,
+        "tiempo(min)": 114.0,
+        "peajes(euros)": 11.1,
+        "gasolina(euros)": 29.64,
+        "costo_vendedor(euros)": 22.838
+      },
+      {
+        "destino_indice": 42,
+        "destino_ciudad": "Saint-Étienne",
+        "peso": 56.373,
+        "distancia": 146.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 10.8,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      },
+      {
+        "destino_indice": 43,
+        "destino_ciudad": "Le Puy-en-Velay",
+        "peso": 51.557333,
+        "distancia": 128.0,
+        "tiempo(min)": 112.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.12,
+        "costo_vendedor(euros)": 22.437333
+      },
+      {
+        "destino_indice": 69,
+        "destino_ciudad": "Lyon",
+        "peso": 68.778,
+        "distancia": 166.0,
+        "tiempo(min)": 114.0,
+        "peajes(euros)": 16.3,
+        "gasolina(euros)": 29.64,
+        "costo_vendedor(euros)": 22.838
+      }
+    ]
+  },
+  "64": {
+    "ciudad": "Pau",
+    "vecinos": [
+      {
+        "destino_indice": 40,
+        "destino_ciudad": "Mont-de-Marsan",
+        "peso": 51.506,
+        "distancia": 106.0,
+        "tiempo(min)": 78.0,
+        "peajes(euros)": 15.6,
+        "gasolina(euros)": 20.28,
+        "costo_vendedor(euros)": 15.626
+      },
+      {
+        "destino_indice": 65,
+        "destino_ciudad": "Tarbes",
+        "peso": 24.096,
+        "distancia": 43.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 2.0,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      }
+    ]
+  },
+  "65": {
+    "ciudad": "Tarbes",
+    "vecinos": [
+      {
+        "destino_indice": 8,
+        "destino_ciudad": "Foix",
+        "peso": 64.260667,
+        "distancia": 154.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 8.1,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 31,
+        "destino_ciudad": "Toulouse",
+        "peso": 56.854,
+        "distancia": 155.0,
+        "tiempo(min)": 102.0,
+        "peajes(euros)": 9.9,
+        "gasolina(euros)": 26.52,
+        "costo_vendedor(euros)": 20.434
+      },
+      {
+        "destino_indice": 32,
+        "destino_ciudad": "Auch",
+        "peso": 35.445667,
+        "distancia": 73.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 64,
+        "destino_ciudad": "Pau",
+        "peso": 24.096,
+        "distancia": 43.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 2.0,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      }
+    ]
+  },
+  "66": {
+    "ciudad": "Perpignan",
+    "vecinos": [
+      {
+        "destino_indice": 8,
+        "destino_ciudad": "Foix",
+        "peso": 81.784667,
+        "distancia": 235.0,
+        "tiempo(min)": 134.0,
+        "peajes(euros)": 20.1,
+        "gasolina(euros)": 34.84,
+        "costo_vendedor(euros)": 26.844667
+      },
+      {
+        "destino_indice": 10,
+        "destino_ciudad": "Carcassonne",
+        "peso": 45.504333,
+        "distancia": 114.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 11.9,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      },
+      {
+        "destino_indice": 34,
+        "destino_ciudad": "Montpellier",
+        "peso": 63.433333,
+        "distancia": 161.0,
+        "tiempo(min)": 100.0,
+        "peajes(euros)": 17.4,
+        "gasolina(euros)": 26.0,
+        "costo_vendedor(euros)": 20.033333
+      }
+    ]
+  },
+  "67": {
+    "ciudad": "Strasbourg",
+    "vecinos": [
+      {
+        "destino_indice": 54,
+        "destino_ciudad": "Nancy",
+        "peso": 57.859,
+        "distancia": 157.0,
+        "tiempo(min)": 117.0,
+        "peajes(euros)": 4.0,
+        "gasolina(euros)": 30.42,
+        "costo_vendedor(euros)": 23.439
+      },
+      {
+        "destino_indice": 57,
+        "destino_ciudad": "Metz",
+        "peso": 60.773,
+        "distancia": 163.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 15.2,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      },
+      {
+        "destino_indice": 68,
+        "destino_ciudad": "Colmar",
+        "peso": 26.699333,
+        "distancia": 77.0,
+        "tiempo(min)": 58.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.08,
+        "costo_vendedor(euros)": 11.619333
+      },
+      {
+        "destino_indice": 88,
+        "destino_ciudad": "Épinal",
+        "peso": 64.764,
+        "distancia": 158.0,
+        "tiempo(min)": 132.0,
+        "peajes(euros)": 4.0,
+        "gasolina(euros)": 34.32,
+        "costo_vendedor(euros)": 26.444
+      }
+    ]
+  },
+  "68": {
+    "ciudad": "Colmar",
+    "vecinos": [
+      {
+        "destino_indice": 67,
+        "destino_ciudad": "Strasbourg",
+        "peso": 26.699333,
+        "distancia": 77.0,
+        "tiempo(min)": 58.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.08,
+        "costo_vendedor(euros)": 11.619333
+      },
+      {
+        "destino_indice": 88,
+        "destino_ciudad": "Épinal",
+        "peso": 49.716,
+        "distancia": 92.0,
+        "tiempo(min)": 108.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.08,
+        "costo_vendedor(euros)": 21.636
+      },
+      {
+        "destino_indice": 90,
+        "destino_ciudad": "Belfort",
+        "peso": 28.418333,
+        "distancia": 72.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 3.1,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      }
+    ]
+  },
+  "69": {
+    "ciudad": "Lyon",
+    "vecinos": [
+      {
+        "destino_indice": 0,
+        "destino_ciudad": "Bourg-en-Bresse",
+        "peso": 41.063,
+        "distancia": 84.0,
+        "tiempo(min)": 69.0,
+        "peajes(euros)": 9.3,
+        "gasolina(euros)": 17.94,
+        "costo_vendedor(euros)": 13.823
+      },
+      {
+        "destino_indice": 2,
+        "destino_ciudad": "Moulins",
+        "peso": 74.65,
+        "distancia": 193.0,
+        "tiempo(min)": 150.0,
+        "peajes(euros)": 5.6,
+        "gasolina(euros)": 39.0,
+        "costo_vendedor(euros)": 30.05
+      },
+      {
+        "destino_indice": 38,
+        "destino_ciudad": "Grenoble",
+        "peso": 219.087,
+        "distancia": 577.0,
+        "tiempo(min)": 381.0,
+        "peajes(euros)": 43.7,
+        "gasolina(euros)": 99.06,
+        "costo_vendedor(euros)": 76.327
+      },
+      {
+        "destino_indice": 42,
+        "destino_ciudad": "Saint-Étienne",
+        "peso": 29.001,
+        "distancia": 64.0,
+        "tiempo(min)": 63.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.38,
+        "costo_vendedor(euros)": 12.621
+      },
+      {
+        "destino_indice": 63,
+        "destino_ciudad": "Clermont-Ferrand",
+        "peso": 68.778,
+        "distancia": 166.0,
+        "tiempo(min)": 114.0,
+        "peajes(euros)": 16.3,
+        "gasolina(euros)": 29.64,
+        "costo_vendedor(euros)": 22.838
+      },
+      {
+        "destino_indice": 71,
+        "destino_ciudad": "Mâcon",
+        "peso": 32.239,
+        "distancia": 72.0,
+        "tiempo(min)": 57.0,
+        "peajes(euros)": 6.0,
+        "gasolina(euros)": 14.82,
+        "costo_vendedor(euros)": 11.419
+      },
+      {
+        "destino_indice": 73,
+        "destino_ciudad": "Chambéry",
+        "peso": 53.449,
+        "distancia": 104.0,
+        "tiempo(min)": 87.0,
+        "peajes(euros)": 13.4,
+        "gasolina(euros)": 22.62,
+        "costo_vendedor(euros)": 17.429
+      }
+    ]
+  },
+  "70": {
+    "ciudad": "Vesoul",
+    "vecinos": [
+      {
+        "destino_indice": 21,
+        "destino_ciudad": "Dijon",
+        "peso": 50.811,
+        "distancia": 136.0,
+        "tiempo(min)": 93.0,
+        "peajes(euros)": 8.0,
+        "gasolina(euros)": 24.18,
+        "costo_vendedor(euros)": 18.631
+      },
+      {
+        "destino_indice": 25,
+        "destino_ciudad": "Besançon",
+        "peso": 21.635667,
+        "distancia": 50.0,
+        "tiempo(min)": 47.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.22,
+        "costo_vendedor(euros)": 9.415667
+      },
+      {
+        "destino_indice": 52,
+        "destino_ciudad": "Chaumont",
+        "peso": 44.652333,
+        "distancia": 111.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 88,
+        "destino_ciudad": "Épinal",
+        "peso": 29.921667,
+        "distancia": 89.0,
+        "tiempo(min)": 65.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.9,
+        "costo_vendedor(euros)": 13.021667
+      },
+      {
+        "destino_indice": 90,
+        "destino_ciudad": "Belfort",
+        "peso": 25.318333,
+        "distancia": 70.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      }
+    ]
+  },
+  "71": {
+    "ciudad": "Mâcon",
+    "vecinos": [
+      {
+        "destino_indice": 0,
+        "destino_ciudad": "Bourg-en-Bresse",
+        "peso": 41.063,
+        "distancia": 84.0,
+        "tiempo(min)": 69.0,
+        "peajes(euros)": 9.3,
+        "gasolina(euros)": 17.94,
+        "costo_vendedor(euros)": 13.823
+      },
+      {
+        "destino_indice": 2,
+        "destino_ciudad": "Moulins",
+        "peso": 48.773,
+        "distancia": 144.0,
+        "tiempo(min)": 99.0,
+        "peajes(euros)": 3.2,
+        "gasolina(euros)": 25.74,
+        "costo_vendedor(euros)": 19.833
+      },
+      {
+        "destino_indice": 39,
+        "destino_ciudad": "Lons-le-Saunier",
+        "peso": 38.742333,
+        "distancia": 98.0,
+        "tiempo(min)": 67.0,
+        "peajes(euros)": 7.9,
+        "gasolina(euros)": 17.42,
+        "costo_vendedor(euros)": 13.422333
+      },
+      {
+        "destino_indice": 69,
+        "destino_ciudad": "Lyon",
+        "peso": 32.239,
+        "distancia": 72.0,
+        "tiempo(min)": 57.0,
+        "peajes(euros)": 6.0,
+        "gasolina(euros)": 14.82,
+        "costo_vendedor(euros)": 11.419
+      },
+      {
+        "destino_indice": 89,
+        "destino_ciudad": "Auxerre",
+        "peso": 84.105333,
+        "distancia": 233.0,
+        "tiempo(min)": 136.0,
+        "peajes(euros)": 21.5,
+        "gasolina(euros)": 35.36,
+        "costo_vendedor(euros)": 27.245333
+      }
+    ]
+  },
+  "72": {
+    "ciudad": "Le Mans",
+    "vecinos": [
+      {
+        "destino_indice": 28,
+        "destino_ciudad": "Chartres",
+        "peso": 51.949,
+        "distancia": 121.0,
+        "tiempo(min)": 87.0,
+        "peajes(euros)": 11.9,
+        "gasolina(euros)": 22.62,
+        "costo_vendedor(euros)": 17.429
+      },
+      {
+        "destino_indice": 37,
+        "destino_ciudad": "Tours",
+        "peso": 48.145667,
+        "distancia": 128.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 12.7,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 49,
+        "destino_ciudad": "Angers",
+        "peso": 40.582,
+        "distancia": 96.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 10.2,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 53,
+        "destino_ciudad": "Laval",
+        "peso": 39.282,
+        "distancia": 86.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 8.9,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 61,
+        "destino_ciudad": "Alençon",
+        "peso": 27.937333,
+        "distancia": 55.0,
+        "tiempo(min)": 52.0,
+        "peajes(euros)": 4.0,
+        "gasolina(euros)": 13.52,
+        "costo_vendedor(euros)": 10.417333
+      }
+    ]
+  },
+  "73": {
+    "ciudad": "Chambéry",
+    "vecinos": [
+      {
+        "destino_indice": 38,
+        "destino_ciudad": "Grenoble",
+        "peso": 25.573667,
+        "distancia": 57.0,
+        "tiempo(min)": 41.0,
+        "peajes(euros)": 6.7,
+        "gasolina(euros)": 10.66,
+        "costo_vendedor(euros)": 8.213667
+      },
+      {
+        "destino_indice": 69,
+        "destino_ciudad": "Lyon",
+        "peso": 53.449,
+        "distancia": 104.0,
+        "tiempo(min)": 87.0,
+        "peajes(euros)": 13.4,
+        "gasolina(euros)": 22.62,
+        "costo_vendedor(euros)": 17.429
+      },
+      {
+        "destino_indice": 74,
+        "destino_ciudad": "Annecy",
+        "peso": 27.696,
+        "distancia": 52.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 5.6,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      }
+    ]
+  },
+  "74": {
+    "ciudad": "Annecy",
+    "vecinos": [
+      {
+        "destino_indice": 0,
+        "destino_ciudad": "Bourg-en-Bresse",
+        "peso": 41.063,
+        "distancia": 84.0,
+        "tiempo(min)": 69.0,
+        "peajes(euros)": 9.3,
+        "gasolina(euros)": 17.94,
+        "costo_vendedor(euros)": 13.823
+      },
+      {
+        "destino_indice": 73,
+        "destino_ciudad": "Chambéry",
+        "peso": 27.696,
+        "distancia": 52.0,
+        "tiempo(min)": 48.0,
+        "peajes(euros)": 5.6,
+        "gasolina(euros)": 12.48,
+        "costo_vendedor(euros)": 9.616
+      }
+    ]
+  },
+  "75": {
+    "ciudad": "Paris",
+    "vecinos": [
+      {
+        "destino_indice": 77,
+        "destino_ciudad": "Melun",
+        "peso": 28.080333,
+        "distancia": 58.0,
+        "tiempo(min)": 61.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.86,
+        "costo_vendedor(euros)": 12.220333
+      },
+      {
+        "destino_indice": 78,
+        "destino_ciudad": "Versailles",
+        "peso": 21.635667,
+        "distancia": 21.0,
+        "tiempo(min)": 47.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.22,
+        "costo_vendedor(euros)": 9.415667
+      },
+      {
+        "destino_indice": 91,
+        "destino_ciudad": "Évry-Courcouronnes",
+        "peso": 23.937333,
+        "distancia": 35.0,
+        "tiempo(min)": 52.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 13.52,
+        "costo_vendedor(euros)": 10.417333
+      },
+      {
+        "destino_indice": 92,
+        "destino_ciudad": "Nanterre",
+        "peso": 21.635667,
+        "distancia": 13.0,
+        "tiempo(min)": 47.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.22,
+        "costo_vendedor(euros)": 9.415667
+      },
+      {
+        "destino_indice": 93,
+        "destino_ciudad": "Bobigny",
+        "peso": 17.492667,
+        "distancia": 19.0,
+        "tiempo(min)": 38.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 9.88,
+        "costo_vendedor(euros)": 7.612667
+      },
+      {
+        "destino_indice": 94,
+        "destino_ciudad": "Créteil",
+        "peso": 11.968667,
+        "distancia": 15.0,
+        "tiempo(min)": 26.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 6.76,
+        "costo_vendedor(euros)": 5.208667
+      },
+      {
+        "destino_indice": 95,
+        "destino_ciudad": "Cergy",
+        "peso": 27.62,
+        "distancia": 39.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      }
+    ]
+  },
+  "76": {
+    "ciudad": "Rouen",
+    "vecinos": [
+      {
+        "destino_indice": 13,
+        "destino_ciudad": "Caen",
+        "peso": 25.318333,
+        "distancia": 75.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 27,
+        "destino_ciudad": "Évreux",
+        "peso": 26.797667,
+        "distancia": 58.0,
+        "tiempo(min)": 53.0,
+        "peajes(euros)": 2.4,
+        "gasolina(euros)": 13.78,
+        "costo_vendedor(euros)": 10.617667
+      },
+      {
+        "destino_indice": 60,
+        "destino_ciudad": "Beauvais",
+        "peso": 42.350667,
+        "distancia": 81.0,
+        "tiempo(min)": 92.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.92,
+        "costo_vendedor(euros)": 18.430667
+      },
+      {
+        "destino_indice": 80,
+        "destino_ciudad": "Amiens",
+        "peso": 42.947333,
+        "distancia": 120.0,
+        "tiempo(min)": 82.0,
+        "peajes(euros)": 5.2,
+        "gasolina(euros)": 21.32,
+        "costo_vendedor(euros)": 16.427333
+      }
+    ]
+  },
+  "77": {
+    "ciudad": "Melun",
+    "vecinos": [
+      {
+        "destino_indice": 1,
+        "destino_ciudad": "Laon",
+        "peso": 67.303667,
+        "distancia": 177.0,
+        "tiempo(min)": 131.0,
+        "peajes(euros)": 7.0,
+        "gasolina(euros)": 34.06,
+        "costo_vendedor(euros)": 26.243667
+      },
+      {
+        "destino_indice": 9,
+        "destino_ciudad": "Troyes",
+        "peso": 46.947333,
+        "distancia": 124.0,
+        "tiempo(min)": 82.0,
+        "peajes(euros)": 9.2,
+        "gasolina(euros)": 21.32,
+        "costo_vendedor(euros)": 16.427333
+      },
+      {
+        "destino_indice": 51,
+        "destino_ciudad": "Châlons-en-Champagne",
+        "peso": 76.341667,
+        "distancia": 220.0,
+        "tiempo(min)": 125.0,
+        "peajes(euros)": 18.8,
+        "gasolina(euros)": 32.5,
+        "costo_vendedor(euros)": 25.041667
+      },
+      {
+        "destino_indice": 75,
+        "destino_ciudad": "Paris",
+        "peso": 28.080333,
+        "distancia": 58.0,
+        "tiempo(min)": 61.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.86,
+        "costo_vendedor(euros)": 12.220333
+      },
+      {
+        "destino_indice": 89,
+        "destino_ciudad": "Auxerre",
+        "peso": 48.009333,
+        "distancia": 124.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 7.5,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 91,
+        "destino_ciudad": "Évry-Courcouronnes",
+        "peso": 12.429,
+        "distancia": 27.0,
+        "tiempo(min)": 27.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 7.02,
+        "costo_vendedor(euros)": 5.409
+      },
+      {
+        "destino_indice": 94,
+        "destino_ciudad": "Créteil",
+        "peso": 20.715,
+        "distancia": 37.0,
+        "tiempo(min)": 45.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 11.7,
+        "costo_vendedor(euros)": 9.015
+      }
+    ]
+  },
+  "78": {
+    "ciudad": "Versailles",
+    "vecinos": [
+      {
+        "destino_indice": 28,
+        "destino_ciudad": "Chartres",
+        "peso": 41.144,
+        "distancia": 86.0,
+        "tiempo(min)": 72.0,
+        "peajes(euros)": 8.0,
+        "gasolina(euros)": 18.72,
+        "costo_vendedor(euros)": 14.424
+      },
+      {
+        "destino_indice": 75,
+        "destino_ciudad": "Paris",
+        "peso": 21.635667,
+        "distancia": 21.0,
+        "tiempo(min)": 47.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.22,
+        "costo_vendedor(euros)": 9.415667
+      },
+      {
+        "destino_indice": 91,
+        "destino_ciudad": "Évry-Courcouronnes",
+        "peso": 23.477,
+        "distancia": 36.0,
+        "tiempo(min)": 51.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 13.26,
+        "costo_vendedor(euros)": 10.217
+      },
+      {
+        "destino_indice": 92,
+        "destino_ciudad": "Nanterre",
+        "peso": 18.108333,
+        "distancia": 14.0,
+        "tiempo(min)": 25.0,
+        "peajes(euros)": 6.6,
+        "gasolina(euros)": 6.5,
+        "costo_vendedor(euros)": 5.008333
+      },
+      {
+        "destino_indice": 94,
+        "destino_ciudad": "Créteil",
+        "peso": 21.175333,
+        "distancia": 30.0,
+        "tiempo(min)": 46.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 11.96,
+        "costo_vendedor(euros)": 9.215333
+      },
+      {
+        "destino_indice": 95,
+        "destino_ciudad": "Cergy",
+        "peso": 29.616667,
+        "distancia": 49.0,
+        "tiempo(min)": 50.0,
+        "peajes(euros)": 6.6,
+        "gasolina(euros)": 13.0,
+        "costo_vendedor(euros)": 10.016667
+      }
+    ]
+  },
+  "79": {
+    "ciudad": "Niort",
+    "vecinos": [
+      {
+        "destino_indice": 15,
+        "destino_ciudad": "Angoulême",
+        "peso": 45.112667,
+        "distancia": 119.0,
+        "tiempo(min)": 98.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.48,
+        "costo_vendedor(euros)": 19.632667
+      },
+      {
+        "destino_indice": 16,
+        "destino_ciudad": "La Rochelle",
+        "peso": 25.778667,
+        "distancia": 66.0,
+        "tiempo(min)": 56.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.56,
+        "costo_vendedor(euros)": 11.218667
+      },
+      {
+        "destino_indice": 44,
+        "destino_ciudad": "Nantes",
+        "peso": 57.352333,
+        "distancia": 144.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 12.7,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 49,
+        "destino_ciudad": "Angers",
+        "peso": 71.560667,
+        "distancia": 194.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 15.4,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 85,
+        "destino_ciudad": "La Roche-sur-Yon",
+        "peso": 37.683667,
+        "distancia": 92.0,
+        "tiempo(min)": 71.0,
+        "peajes(euros)": 5.0,
+        "gasolina(euros)": 18.46,
+        "costo_vendedor(euros)": 14.223667
+      },
+      {
+        "destino_indice": 86,
+        "destino_ciudad": "Poitiers",
+        "peso": 35.061333,
+        "distancia": 79.0,
+        "tiempo(min)": 64.0,
+        "peajes(euros)": 5.6,
+        "gasolina(euros)": 16.64,
+        "costo_vendedor(euros)": 12.821333
+      }
+    ]
+  },
+  "80": {
+    "ciudad": "Amiens",
+    "vecinos": [
+      {
+        "destino_indice": 1,
+        "destino_ciudad": "Laon",
+        "peso": 50.93,
+        "distancia": 127.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 9.5,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 60,
+        "destino_ciudad": "Beauvais",
+        "peso": 28.377,
+        "distancia": 62.0,
+        "tiempo(min)": 51.0,
+        "peajes(euros)": 4.9,
+        "gasolina(euros)": 13.26,
+        "costo_vendedor(euros)": 10.217
+      },
+      {
+        "destino_indice": 62,
+        "destino_ciudad": "Arras",
+        "peso": 41.044,
+        "distancia": 99.0,
+        "tiempo(min)": 72.0,
+        "peajes(euros)": 7.9,
+        "gasolina(euros)": 18.72,
+        "costo_vendedor(euros)": 14.424
+      },
+      {
+        "destino_indice": 76,
+        "destino_ciudad": "Rouen",
+        "peso": 42.947333,
+        "distancia": 120.0,
+        "tiempo(min)": 82.0,
+        "peajes(euros)": 5.2,
+        "gasolina(euros)": 21.32,
+        "costo_vendedor(euros)": 16.427333
+      },
+      {
+        "destino_indice": 95,
+        "destino_ciudad": "Cergy",
+        "peso": 48.407667,
+        "distancia": 123.0,
+        "tiempo(min)": 83.0,
+        "peajes(euros)": 10.2,
+        "gasolina(euros)": 21.58,
+        "costo_vendedor(euros)": 16.627667
+      }
+    ]
+  },
+  "81": {
+    "ciudad": "Albi",
+    "vecinos": [
+      {
+        "destino_indice": 10,
+        "destino_ciudad": "Carcassonne",
+        "peso": 45.504333,
+        "distancia": 114.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 11.9,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      },
+      {
+        "destino_indice": 11,
+        "destino_ciudad": "Rodez",
+        "peso": 41.43,
+        "distancia": 108.0,
+        "tiempo(min)": 90.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 23.4,
+        "costo_vendedor(euros)": 18.03
+      },
+      {
+        "destino_indice": 31,
+        "destino_ciudad": "Toulouse",
+        "peso": 27.478667,
+        "distancia": 75.0,
+        "tiempo(min)": 56.0,
+        "peajes(euros)": 1.7,
+        "gasolina(euros)": 14.56,
+        "costo_vendedor(euros)": 11.218667
+      },
+      {
+        "destino_indice": 46,
+        "destino_ciudad": "Cahors",
+        "peso": 51.814333,
+        "distancia": 133.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 4.4,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      },
+      {
+        "destino_indice": 82,
+        "destino_ciudad": "Montauban",
+        "peso": 29.921667,
+        "distancia": 74.0,
+        "tiempo(min)": 65.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.9,
+        "costo_vendedor(euros)": 13.021667
+      }
+    ]
+  },
+  "82": {
+    "ciudad": "Montauban",
+    "vecinos": [
+      {
+        "destino_indice": 11,
+        "destino_ciudad": "Rodez",
+        "peso": 51.097,
+        "distancia": 150.0,
+        "tiempo(min)": 111.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.86,
+        "costo_vendedor(euros)": 22.237
+      },
+      {
+        "destino_indice": 31,
+        "destino_ciudad": "Toulouse",
+        "peso": 25.756333,
+        "distancia": 53.0,
+        "tiempo(min)": 49.0,
+        "peajes(euros)": 3.2,
+        "gasolina(euros)": 12.74,
+        "costo_vendedor(euros)": 9.816333
+      },
+      {
+        "destino_indice": 32,
+        "destino_ciudad": "Auch",
+        "peso": 39.128333,
+        "distancia": 86.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      },
+      {
+        "destino_indice": 46,
+        "destino_ciudad": "Cahors",
+        "peso": 27.877,
+        "distancia": 60.0,
+        "tiempo(min)": 51.0,
+        "peajes(euros)": 4.4,
+        "gasolina(euros)": 13.26,
+        "costo_vendedor(euros)": 10.217
+      },
+      {
+        "destino_indice": 47,
+        "destino_ciudad": "Agen",
+        "peso": 35.180333,
+        "distancia": 86.0,
+        "tiempo(min)": 61.0,
+        "peajes(euros)": 7.1,
+        "gasolina(euros)": 15.86,
+        "costo_vendedor(euros)": 12.220333
+      },
+      {
+        "destino_indice": 81,
+        "destino_ciudad": "Albi",
+        "peso": 29.921667,
+        "distancia": 74.0,
+        "tiempo(min)": 65.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.9,
+        "costo_vendedor(euros)": 13.021667
+      }
+    ]
+  },
+  "83": {
+    "ciudad": "Toulon",
+    "vecinos": [
+      {
+        "destino_indice": 3,
+        "destino_ciudad": "Digne-les-Bains",
+        "peso": 75.541667,
+        "distancia": 193.0,
+        "tiempo(min)": 125.0,
+        "peajes(euros)": 18.0,
+        "gasolina(euros)": 32.5,
+        "costo_vendedor(euros)": 25.041667
+      },
+      {
+        "destino_indice": 5,
+        "destino_ciudad": "Nice",
+        "peso": 62.212667,
+        "distancia": 150.0,
+        "tiempo(min)": 98.0,
+        "peajes(euros)": 17.1,
+        "gasolina(euros)": 25.48,
+        "costo_vendedor(euros)": 19.632667
+      },
+      {
+        "destino_indice": 12,
+        "destino_ciudad": "Marseille",
+        "peso": 51.097,
+        "distancia": 150.0,
+        "tiempo(min)": 111.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.86,
+        "costo_vendedor(euros)": 22.237
+      },
+      {
+        "destino_indice": 19,
+        "destino_ciudad": "Ajaccio",
+        "peso": 346.074667,
+        "distancia": 696.0,
+        "tiempo(min)": 704.0,
+        "peajes(euros)": 22.0,
+        "gasolina(euros)": 183.04,
+        "costo_vendedor(euros)": 141.034667
+      },
+      {
+        "destino_indice": 20,
+        "destino_ciudad": "Bastia",
+        "peso": 272.421333,
+        "distancia": 548.0,
+        "tiempo(min)": 544.0,
+        "peajes(euros)": 22.0,
+        "gasolina(euros)": 141.44,
+        "costo_vendedor(euros)": 108.981333
+      }
+    ]
+  },
+  "84": {
+    "ciudad": "Avignon",
+    "vecinos": [
+      {
+        "destino_indice": 3,
+        "destino_ciudad": "Digne-les-Bains",
+        "peso": 73.981333,
+        "distancia": 194.0,
+        "tiempo(min)": 124.0,
+        "peajes(euros)": 16.9,
+        "gasolina(euros)": 32.24,
+        "costo_vendedor(euros)": 24.841333
+      },
+      {
+        "destino_indice": 4,
+        "destino_ciudad": "Gap",
+        "peso": 88.527667,
+        "distancia": 236.0,
+        "tiempo(min)": 143.0,
+        "peajes(euros)": 22.7,
+        "gasolina(euros)": 37.18,
+        "costo_vendedor(euros)": 28.647667
+      },
+      {
+        "destino_indice": 6,
+        "destino_ciudad": "Privas",
+        "peso": 49.988667,
+        "distancia": 123.0,
+        "tiempo(min)": 86.0,
+        "peajes(euros)": 10.4,
+        "gasolina(euros)": 22.36,
+        "costo_vendedor(euros)": 17.228667
+      },
+      {
+        "destino_indice": 12,
+        "destino_ciudad": "Marseille",
+        "peso": 30.518333,
+        "distancia": 64.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 5.2,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 26,
+        "destino_ciudad": "Valence",
+        "peso": 52.228333,
+        "distancia": 129.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 13.1,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      },
+      {
+        "destino_indice": 30,
+        "destino_ciudad": "Nîmes",
+        "peso": 25.316667,
+        "distancia": 51.0,
+        "tiempo(min)": 50.0,
+        "peajes(euros)": 2.3,
+        "gasolina(euros)": 13.0,
+        "costo_vendedor(euros)": 10.016667
+      }
+    ]
+  },
+  "85": {
+    "ciudad": "La Roche-sur-Yon",
+    "vecinos": [
+      {
+        "destino_indice": 16,
+        "destino_ciudad": "La Rochelle",
+        "peso": 38.847333,
+        "distancia": 85.0,
+        "tiempo(min)": 82.0,
+        "peajes(euros)": 1.1,
+        "gasolina(euros)": 21.32,
+        "costo_vendedor(euros)": 16.427333
+      },
+      {
+        "destino_indice": 44,
+        "destino_ciudad": "Nantes",
+        "peso": 29.359667,
+        "distancia": 70.0,
+        "tiempo(min)": 59.0,
+        "peajes(euros)": 2.2,
+        "gasolina(euros)": 15.34,
+        "costo_vendedor(euros)": 11.819667
+      },
+      {
+        "destino_indice": 49,
+        "destino_ciudad": "Angers",
+        "peso": 50.607667,
+        "distancia": 132.0,
+        "tiempo(min)": 83.0,
+        "peajes(euros)": 12.4,
+        "gasolina(euros)": 21.58,
+        "costo_vendedor(euros)": 16.627667
+      },
+      {
+        "destino_indice": 79,
+        "destino_ciudad": "Niort",
+        "peso": 37.683667,
+        "distancia": 92.0,
+        "tiempo(min)": 71.0,
+        "peajes(euros)": 5.0,
+        "gasolina(euros)": 18.46,
+        "costo_vendedor(euros)": 14.223667
+      }
+    ]
+  },
+  "86": {
+    "ciudad": "Poitiers",
+    "vecinos": [
+      {
+        "destino_indice": 15,
+        "destino_ciudad": "Angoulême",
+        "peso": 40.509333,
+        "distancia": 116.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      },
+      {
+        "destino_indice": 23,
+        "destino_ciudad": "Guéret",
+        "peso": 61.684667,
+        "distancia": 147.0,
+        "tiempo(min)": 134.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 34.84,
+        "costo_vendedor(euros)": 26.844667
+      },
+      {
+        "destino_indice": 36,
+        "destino_ciudad": "Châteauroux",
+        "peso": 57.081333,
+        "distancia": 128.0,
+        "tiempo(min)": 124.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 32.24,
+        "costo_vendedor(euros)": 24.841333
+      },
+      {
+        "destino_indice": 37,
+        "destino_ciudad": "Tours",
+        "peso": 48.145667,
+        "distancia": 128.0,
+        "tiempo(min)": 77.0,
+        "peajes(euros)": 12.7,
+        "gasolina(euros)": 20.02,
+        "costo_vendedor(euros)": 15.425667
+      },
+      {
+        "destino_indice": 49,
+        "destino_ciudad": "Angers",
+        "peso": 59.383,
+        "distancia": 139.0,
+        "tiempo(min)": 129.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 33.54,
+        "costo_vendedor(euros)": 25.843
+      },
+      {
+        "destino_indice": 79,
+        "destino_ciudad": "Niort",
+        "peso": 35.061333,
+        "distancia": 79.0,
+        "tiempo(min)": 64.0,
+        "peajes(euros)": 5.6,
+        "gasolina(euros)": 16.64,
+        "costo_vendedor(euros)": 12.821333
+      },
+      {
+        "destino_indice": 87,
+        "destino_ciudad": "Limoges",
+        "peso": 58.462333,
+        "distancia": 134.0,
+        "tiempo(min)": 127.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 33.02,
+        "costo_vendedor(euros)": 25.442333
+      }
+    ]
+  },
+  "87": {
+    "ciudad": "Limoges",
+    "vecinos": [
+      {
+        "destino_indice": 15,
+        "destino_ciudad": "Angoulême",
+        "peso": 39.128333,
+        "distancia": 109.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      },
+      {
+        "destino_indice": 18,
+        "destino_ciudad": "Tulle",
+        "peso": 30.382,
+        "distancia": 90.0,
+        "tiempo(min)": 66.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 17.16,
+        "costo_vendedor(euros)": 13.222
+      },
+      {
+        "destino_indice": 23,
+        "destino_ciudad": "Guéret",
+        "peso": 29.461333,
+        "distancia": 90.0,
+        "tiempo(min)": 64.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.64,
+        "costo_vendedor(euros)": 12.821333
+      },
+      {
+        "destino_indice": 24,
+        "destino_ciudad": "Périgueux",
+        "peso": 46.033333,
+        "distancia": 99.0,
+        "tiempo(min)": 100.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 26.0,
+        "costo_vendedor(euros)": 20.033333
+      },
+      {
+        "destino_indice": 86,
+        "destino_ciudad": "Poitiers",
+        "peso": 58.462333,
+        "distancia": 134.0,
+        "tiempo(min)": 127.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 33.02,
+        "costo_vendedor(euros)": 25.442333
+      }
+    ]
+  },
+  "88": {
+    "ciudad": "Épinal",
+    "vecinos": [
+      {
+        "destino_indice": 52,
+        "destino_ciudad": "Chaumont",
+        "peso": 49.793667,
+        "distancia": 126.0,
+        "tiempo(min)": 101.0,
+        "peajes(euros)": 3.3,
+        "gasolina(euros)": 26.26,
+        "costo_vendedor(euros)": 20.233667
+      },
+      {
+        "destino_indice": 54,
+        "destino_ciudad": "Nancy",
+        "peso": 29.001,
+        "distancia": 74.0,
+        "tiempo(min)": 63.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.38,
+        "costo_vendedor(euros)": 12.621
+      },
+      {
+        "destino_indice": 57,
+        "destino_ciudad": "Metz",
+        "peso": 42.811,
+        "distancia": 134.0,
+        "tiempo(min)": 93.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 24.18,
+        "costo_vendedor(euros)": 18.631
+      },
+      {
+        "destino_indice": 67,
+        "destino_ciudad": "Strasbourg",
+        "peso": 64.764,
+        "distancia": 158.0,
+        "tiempo(min)": 132.0,
+        "peajes(euros)": 4.0,
+        "gasolina(euros)": 34.32,
+        "costo_vendedor(euros)": 26.444
+      },
+      {
+        "destino_indice": 68,
+        "destino_ciudad": "Colmar",
+        "peso": 49.716,
+        "distancia": 92.0,
+        "tiempo(min)": 108.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.08,
+        "costo_vendedor(euros)": 21.636
+      },
+      {
+        "destino_indice": 70,
+        "destino_ciudad": "Vesoul",
+        "peso": 29.921667,
+        "distancia": 89.0,
+        "tiempo(min)": 65.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 16.9,
+        "costo_vendedor(euros)": 13.021667
+      },
+      {
+        "destino_indice": 90,
+        "destino_ciudad": "Belfort",
+        "peso": 36.366333,
+        "distancia": 114.0,
+        "tiempo(min)": 79.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.54,
+        "costo_vendedor(euros)": 15.826333
+      }
+    ]
+  },
+  "89": {
+    "ciudad": "Auxerre",
+    "vecinos": [
+      {
+        "destino_indice": 9,
+        "destino_ciudad": "Troyes",
+        "peso": 39.128333,
+        "distancia": 76.0,
+        "tiempo(min)": 85.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 22.1,
+        "costo_vendedor(euros)": 17.028333
+      },
+      {
+        "destino_indice": 17,
+        "destino_ciudad": "Bourges",
+        "peso": 66.345,
+        "distancia": 144.0,
+        "tiempo(min)": 135.0,
+        "peajes(euros)": 4.2,
+        "gasolina(euros)": 35.1,
+        "costo_vendedor(euros)": 27.045
+      },
+      {
+        "destino_indice": 21,
+        "destino_ciudad": "Dijon",
+        "peso": 57.414333,
+        "distancia": 151.0,
+        "tiempo(min)": 103.0,
+        "peajes(euros)": 10.0,
+        "gasolina(euros)": 26.78,
+        "costo_vendedor(euros)": 20.634333
+      },
+      {
+        "destino_indice": 39,
+        "destino_ciudad": "Lons-le-Saunier",
+        "peso": 90.529333,
+        "distancia": 251.0,
+        "tiempo(min)": 148.0,
+        "peajes(euros)": 22.4,
+        "gasolina(euros)": 38.48,
+        "costo_vendedor(euros)": 29.649333
+      },
+      {
+        "destino_indice": 45,
+        "destino_ciudad": "Orléans",
+        "peso": 79.755667,
+        "distancia": 174.0,
+        "tiempo(min)": 107.0,
+        "peajes(euros)": 30.5,
+        "gasolina(euros)": 27.82,
+        "costo_vendedor(euros)": 21.435667
+      },
+      {
+        "destino_indice": 58,
+        "destino_ciudad": "Nevers",
+        "peso": 49.716,
+        "distancia": 110.0,
+        "tiempo(min)": 108.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 28.08,
+        "costo_vendedor(euros)": 21.636
+      },
+      {
+        "destino_indice": 71,
+        "destino_ciudad": "Mâcon",
+        "peso": 84.105333,
+        "distancia": 233.0,
+        "tiempo(min)": 136.0,
+        "peajes(euros)": 21.5,
+        "gasolina(euros)": 35.36,
+        "costo_vendedor(euros)": 27.245333
+      },
+      {
+        "destino_indice": 77,
+        "destino_ciudad": "Melun",
+        "peso": 48.009333,
+        "distancia": 124.0,
+        "tiempo(min)": 88.0,
+        "peajes(euros)": 7.5,
+        "gasolina(euros)": 22.88,
+        "costo_vendedor(euros)": 17.629333
+      }
+    ]
+  },
+  "90": {
+    "ciudad": "Belfort",
+    "vecinos": [
+      {
+        "destino_indice": 68,
+        "destino_ciudad": "Colmar",
+        "peso": 28.418333,
+        "distancia": 72.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 3.1,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 70,
+        "destino_ciudad": "Vesoul",
+        "peso": 25.318333,
+        "distancia": 70.0,
+        "tiempo(min)": 55.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 14.3,
+        "costo_vendedor(euros)": 11.018333
+      },
+      {
+        "destino_indice": 88,
+        "destino_ciudad": "Épinal",
+        "peso": 36.366333,
+        "distancia": 114.0,
+        "tiempo(min)": 79.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 20.54,
+        "costo_vendedor(euros)": 15.826333
+      }
+    ]
+  },
+  "91": {
+    "ciudad": "Évry-Courcouronnes",
+    "vecinos": [
+      {
+        "destino_indice": 45,
+        "destino_ciudad": "Orléans",
+        "peso": 51.207667,
+        "distancia": 122.0,
+        "tiempo(min)": 83.0,
+        "peajes(euros)": 13.0,
+        "gasolina(euros)": 21.58,
+        "costo_vendedor(euros)": 16.627667
+      },
+      {
+        "destino_indice": 75,
+        "destino_ciudad": "Paris",
+        "peso": 23.937333,
+        "distancia": 35.0,
+        "tiempo(min)": 52.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 13.52,
+        "costo_vendedor(euros)": 10.417333
+      },
+      {
+        "destino_indice": 77,
+        "destino_ciudad": "Melun",
+        "peso": 12.429,
+        "distancia": 27.0,
+        "tiempo(min)": 27.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 7.02,
+        "costo_vendedor(euros)": 5.409
+      },
+      {
+        "destino_indice": 78,
+        "destino_ciudad": "Versailles",
+        "peso": 23.477,
+        "distancia": 36.0,
+        "tiempo(min)": 51.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 13.26,
+        "costo_vendedor(euros)": 10.217
+      },
+      {
+        "destino_indice": 94,
+        "destino_ciudad": "Créteil",
+        "peso": 20.254667,
+        "distancia": 33.0,
+        "tiempo(min)": 44.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 11.44,
+        "costo_vendedor(euros)": 8.814667
+      }
+    ]
+  },
+  "92": {
+    "ciudad": "Nanterre",
+    "vecinos": [
+      {
+        "destino_indice": 75,
+        "destino_ciudad": "Paris",
+        "peso": 21.635667,
+        "distancia": 13.0,
+        "tiempo(min)": 47.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 12.22,
+        "costo_vendedor(euros)": 9.415667
+      },
+      {
+        "destino_indice": 78,
+        "destino_ciudad": "Versailles",
+        "peso": 18.108333,
+        "distancia": 14.0,
+        "tiempo(min)": 25.0,
+        "peajes(euros)": 6.6,
+        "gasolina(euros)": 6.5,
+        "costo_vendedor(euros)": 5.008333
+      },
+      {
+        "destino_indice": 93,
+        "destino_ciudad": "Bobigny",
+        "peso": 15.651333,
+        "distancia": 24.0,
+        "tiempo(min)": 34.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 8.84,
+        "costo_vendedor(euros)": 6.811333
+      },
+      {
+        "destino_indice": 95,
+        "destino_ciudad": "Cergy",
+        "peso": 16.111667,
+        "distancia": 36.0,
+        "tiempo(min)": 35.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 9.1,
+        "costo_vendedor(euros)": 7.011667
+      }
+    ]
+  },
+  "93": {
+    "ciudad": "Bobigny",
+    "vecinos": [
+      {
+        "destino_indice": 1,
+        "destino_ciudad": "Laon",
+        "peso": 44.652333,
+        "distancia": 128.0,
+        "tiempo(min)": 97.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 25.22,
+        "costo_vendedor(euros)": 19.432333
+      },
+      {
+        "destino_indice": 51,
+        "destino_ciudad": "Châlons-en-Champagne",
+        "peso": 72.660667,
+        "distancia": 184.0,
+        "tiempo(min)": 122.0,
+        "peajes(euros)": 16.5,
+        "gasolina(euros)": 31.72,
+        "costo_vendedor(euros)": 24.440667
+      },
+      {
+        "destino_indice": 75,
+        "destino_ciudad": "Paris",
+        "peso": 17.492667,
+        "distancia": 19.0,
+        "tiempo(min)": 38.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 9.88,
+        "costo_vendedor(euros)": 7.612667
+      },
+      {
+        "destino_indice": 92,
+        "destino_ciudad": "Nanterre",
+        "peso": 15.651333,
+        "distancia": 24.0,
+        "tiempo(min)": 34.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 8.84,
+        "costo_vendedor(euros)": 6.811333
+      },
+      {
+        "destino_indice": 94,
+        "destino_ciudad": "Créteil",
+        "peso": 15.191,
+        "distancia": 19.0,
+        "tiempo(min)": 33.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 8.58,
+        "costo_vendedor(euros)": 6.611
+      }
+    ]
+  },
+  "94": {
+    "ciudad": "Créteil",
+    "vecinos": [
+      {
+        "destino_indice": 51,
+        "destino_ciudad": "Châlons-en-Champagne",
+        "peso": 69.898667,
+        "distancia": 182.0,
+        "tiempo(min)": 116.0,
+        "peajes(euros)": 16.5,
+        "gasolina(euros)": 30.16,
+        "costo_vendedor(euros)": 23.238667
+      },
+      {
+        "destino_indice": 75,
+        "destino_ciudad": "Paris",
+        "peso": 11.968667,
+        "distancia": 15.0,
+        "tiempo(min)": 26.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 6.76,
+        "costo_vendedor(euros)": 5.208667
+      },
+      {
+        "destino_indice": 77,
+        "destino_ciudad": "Melun",
+        "peso": 20.715,
+        "distancia": 37.0,
+        "tiempo(min)": 45.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 11.7,
+        "costo_vendedor(euros)": 9.015
+      },
+      {
+        "destino_indice": 78,
+        "destino_ciudad": "Versailles",
+        "peso": 21.175333,
+        "distancia": 30.0,
+        "tiempo(min)": 46.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 11.96,
+        "costo_vendedor(euros)": 9.215333
+      },
+      {
+        "destino_indice": 91,
+        "destino_ciudad": "Évry-Courcouronnes",
+        "peso": 20.254667,
+        "distancia": 33.0,
+        "tiempo(min)": 44.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 11.44,
+        "costo_vendedor(euros)": 8.814667
+      },
+      {
+        "destino_indice": 93,
+        "destino_ciudad": "Bobigny",
+        "peso": 15.191,
+        "distancia": 19.0,
+        "tiempo(min)": 33.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 8.58,
+        "costo_vendedor(euros)": 6.611
+      }
+    ]
+  },
+  "95": {
+    "ciudad": "Cergy",
+    "vecinos": [
+      {
+        "destino_indice": 1,
+        "destino_ciudad": "Laon",
+        "peso": 52.938333,
+        "distancia": 157.0,
+        "tiempo(min)": 115.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 29.9,
+        "costo_vendedor(euros)": 23.038333
+      },
+      {
+        "destino_indice": 27,
+        "destino_ciudad": "Évreux",
+        "peso": 36.604333,
+        "distancia": 79.0,
+        "tiempo(min)": 73.0,
+        "peajes(euros)": 3.0,
+        "gasolina(euros)": 18.98,
+        "costo_vendedor(euros)": 14.624333
+      },
+      {
+        "destino_indice": 60,
+        "destino_ciudad": "Beauvais",
+        "peso": 28.697667,
+        "distancia": 68.0,
+        "tiempo(min)": 53.0,
+        "peajes(euros)": 4.3,
+        "gasolina(euros)": 13.78,
+        "costo_vendedor(euros)": 10.617667
+      },
+      {
+        "destino_indice": 75,
+        "destino_ciudad": "Paris",
+        "peso": 27.62,
+        "distancia": 39.0,
+        "tiempo(min)": 60.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 15.6,
+        "costo_vendedor(euros)": 12.02
+      },
+      {
+        "destino_indice": 78,
+        "destino_ciudad": "Versailles",
+        "peso": 29.616667,
+        "distancia": 49.0,
+        "tiempo(min)": 50.0,
+        "peajes(euros)": 6.6,
+        "gasolina(euros)": 13.0,
+        "costo_vendedor(euros)": 10.016667
+      },
+      {
+        "destino_indice": 80,
+        "destino_ciudad": "Amiens",
+        "peso": 48.407667,
+        "distancia": 123.0,
+        "tiempo(min)": 83.0,
+        "peajes(euros)": 10.2,
+        "gasolina(euros)": 21.58,
+        "costo_vendedor(euros)": 16.627667
+      },
+      {
+        "destino_indice": 92,
+        "destino_ciudad": "Nanterre",
+        "peso": 16.111667,
+        "distancia": 36.0,
+        "tiempo(min)": 35.0,
+        "peajes(euros)": 0.0,
+        "gasolina(euros)": 9.1,
+        "costo_vendedor(euros)": 7.011667
+      }
+    ]
+  }
+}
