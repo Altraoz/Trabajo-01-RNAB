@@ -1,0 +1,34 @@
+[
+  {
+    "funcion": "schwefel",
+    "nombre_funcion": "Schwefel",
+    "metodo": "gradient",
+    "dimension": 2,
+    "n_corridas": 500,
+    "mejor_valor_final": -15.320704437402583,
+    "peor_valor_final": 1225.6343359268035,
+    "promedio_valor_final": 430.8051486810953,
+    "mediana_valor_final": 401.59510306391934,
+    "desviacion_valor_final": 317.5677675724844,
+    "promedio_evaluaciones": 10002.0,
+    "mediana_evaluaciones": 10002.0,
+    "promedio_iteraciones": 10000.0,
+    "mediana_iteraciones": 10000.0
+  },
+  {
+    "funcion": "schwefel",
+    "nombre_funcion": "Schwefel",
+    "metodo": "gradient",
+    "dimension": 3,
+    "n_corridas": 500,
+    "mejor_valor_final": -7.734811229131992,
+    "peor_valor_final": 1450.1563844436575,
+    "promedio_valor_final": 650.6067753744491,
+    "mediana_valor_final": 660.4839840801403,
+    "desviacion_valor_final": 354.56328819211365,
+    "promedio_evaluaciones": 10002.0,
+    "mediana_evaluaciones": 10002.0,
+    "promedio_iteraciones": 10000.0,
+    "mediana_iteraciones": 10000.0
+  }
+]

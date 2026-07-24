@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+  pre-render:
+    - powershell -ExecutionPolicy Bypass -File scripts/sync-notebooks.ps1
+  render:
+    - index.qmd
+    - notebooks/**/*.ipynb
+
+website:
+  title: "Trabajo Carlos"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Inicio
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: show

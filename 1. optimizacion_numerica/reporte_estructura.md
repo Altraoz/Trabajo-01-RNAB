@@ -10,7 +10,7 @@ Tambien se busca analizar el efecto de la dimension del problema, trabajando en 
 
 ### 2.1 Objetivo general
 
-Comparar el desempeno de metodos de optimizacion basados en gradiente y metodos heuristicos sobre funciones de prueba en 2D y 3D.
+Comparar el desempeno de metodos de optimizacion basados en gradiente y metodos heuristicos sobre funciones de prueba en 2D y 3D, distinguiendo los casos en los que la funcion trabajada en el proyecto admite una formulacion generalizada y los casos en que solo se usa su forma clasica bidimensional.
 
 ### 2.2 Objetivos especificos
 
@@ -67,8 +67,14 @@ $$f(x, y) = (4 - 2.1x^2 + \frac{x^4}{3})x^2 + xy + (-4 + 4y^2)y^2$$
 Consideraciones generales para las funciones objetivo:
 
 Dimension trabajada:
-- 2D
-- 3D, cuando aplique
+- `Rosenbrock`, `Rastrigin`, `Schwefel` y `Griewank`: 2D y 3D.
+- `Goldstein-Price` y funcion de las seis jorobas de camello: solo 2D.
+
+Justificacion metodologica:
+- El enunciado plantea trabajar en 2D y 3D; sin embargo, en este proyecto se distinguieron las funciones con formulacion generalizable de aquellas implementadas en su forma clasica bidimensional.
+- `Rosenbrock`, `Rastrigin`, `Schwefel` y `Griewank` se implementaron como funciones de tamano arbitrario, por lo que fue posible evaluarlas en 2D y 3D sin cambiar su definicion.
+- `Goldstein-Price` y `Six-Hump Camel` se implementaron unicamente en 2D, tanto en la funcion objetivo como en sus gradientes, porque la version usada en el proyecto corresponde a la formulacion canonica reportada usualmente para esas superficies de prueba.
+- Por esta razon, en el reporte final esos dos casos se presentan como experimentos bidimensionales y no como faltantes de implementacion.
 
 Implementacion:
 - Archivo: `funciones.py`
@@ -227,7 +233,9 @@ En esta seccion explicas exactamente como corriste los experimentos.
 ### 6.1 Configuracion general
 
 - Funciones evaluadas: Rosenbrock, Rastrigin, Schwefel, Griewank, Goldstein-Price y seis jorobas de camello.
-- Dimensiones: 2D y 3D, cuando aplique.
+- Dimensiones:
+  - 2D y 3D para `Rosenbrock`, `Rastrigin`, `Schwefel` y `Griewank`.
+  - 2D para `Goldstein-Price` y la funcion de las seis jorobas de camello.
 - Condicion inicial: aleatoria.
 - Numero de repeticiones: 100, 500 y 1000.
 - Metricas registradas:

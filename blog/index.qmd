@@ -1,0 +1,27 @@
+---
+title: "Reporte de Optimizacion"
+---
+
+# Reporte del trabajo
+
+Este sitio presenta los notebooks principales del proyecto de optimizacion sin alterar la estructura original del repositorio. La idea es usar Quarto como capa de presentacion para navegar los resultados finales de forma clara y ordenada.
+
+## Optimizacion numerica
+
+En esta seccion se agrupan los resultados principales del componente de optimizacion numerica.
+
+- [Comparacion final de metodos](notebooks/numerica/12_comparacion_final_metodos.ipynb)
+- [Analisis de resultados: gradiente](notebooks/numerica/gradiente/analisis_resultados.ipynb)
+- [Analisis de resultados: heuristicos](notebooks/numerica/heuristicos/analisis_resultados.ipynb)
+
+## Optimizacion combinatoria
+
+Aqui se encuentran los notebooks finales de preprocesamiento, optimizacion y analisis de resultados para la parte combinatoria.
+
+- [Preprocesamiento](notebooks/combinatoria/01_preprocesamiento.ipynb)
+- [Optimizacion](notebooks/combinatoria/02_optimizacion.ipynb)
+- [Resultados finales](notebooks/combinatoria/03_resultados_finales.ipynb)
+
+## Notas
+
+Los notebooks se mantienen en sus carpetas originales. Antes de cada `preview` o `render`, Quarto ejecuta un script que copia los notebooks finales a esta carpeta del sitio para poder publicarlos sin desordenar el proyecto.

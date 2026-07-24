@@ -1,0 +1,34 @@
+[
+  {
+    "funcion": "rosenbrock",
+    "nombre_funcion": "Rosenbrock",
+    "metodo": "gradient",
+    "dimension": 2,
+    "n_corridas": 500,
+    "mejor_valor_final": 0.000184978311194299,
+    "peor_valor_final": 5.6482551945418065,
+    "promedio_valor_final": 1.4943953065529618,
+    "mediana_valor_final": 0.745528848586569,
+    "desviacion_valor_final": 1.6455763231054292,
+    "promedio_evaluaciones": 1002.0,
+    "mediana_evaluaciones": 1002.0,
+    "promedio_iteraciones": 1000.0,
+    "mediana_iteraciones": 1000.0
+  },
+  {
+    "funcion": "rosenbrock",
+    "nombre_funcion": "Rosenbrock",
+    "metodo": "gradient",
+    "dimension": 3,
+    "n_corridas": 500,
+    "mejor_valor_final": 0.08696077490987025,
+    "peor_valor_final": 4.792868384790851,
+    "promedio_valor_final": 2.022776952870742,
+    "mediana_valor_final": 1.8732916605627103,
+    "desviacion_valor_final": 1.169809758261955,
+    "promedio_evaluaciones": 1002.0,
+    "mediana_evaluaciones": 1002.0,
+    "promedio_iteraciones": 1000.0,
+    "mediana_iteraciones": 1000.0
+  }
+]

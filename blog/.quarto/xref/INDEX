@@ -1,0 +1,23 @@
+{
+  "index.qmd": {
+    "index.html": "2849b264"
+  },
+  "notebooks/numerica/12_comparacion_final_metodos.ipynb": {
+    "12_comparacion_final_metodos.html": "ca1ad7b3"
+  },
+  "notebooks/combinatoria/01_preprocesamiento.ipynb": {
+    "01_preprocesamiento.html": "cd5baa23"
+  },
+  "notebooks/combinatoria/02_optimizacion.ipynb": {
+    "02_optimizacion.html": "6c40a2df"
+  },
+  "notebooks/combinatoria/03_resultados_finales.ipynb": {
+    "03_resultados_finales.html": "ab25a2a4"
+  },
+  "notebooks/numerica/gradiente/analisis_resultados.ipynb": {
+    "analisis_resultados.html": "b76999b0"
+  },
+  "notebooks/numerica/heuristicos/analisis_resultados.ipynb": {
+    "analisis_resultados.html": "0b2c66f2"
+  }
+}

@@ -1,0 +1,3 @@
+funcion,nombre_funcion,metodo,dimension,n_corridas,mejor_valor_final,peor_valor_final,promedio_valor_final,mediana_valor_final,desviacion_valor_final,promedio_evaluaciones,mediana_evaluaciones,promedio_iteraciones,mediana_iteraciones
+schwefel,Schwefel,gradient,2,500,-15.320704437402583,1225.6343359268035,430.8051486810953,401.59510306391934,317.5677675724844,10002.0,10002.0,10000.0,10000.0
+schwefel,Schwefel,gradient,3,500,-7.734811229131992,1450.1563844436575,650.6067753744491,660.4839840801403,354.56328819211365,10002.0,10002.0,10000.0,10000.0

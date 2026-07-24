@@ -1,0 +1,62 @@
+{
+  "modulo": "gradiente",
+  "funciones": [
+    "rosenbrock",
+    "schwefel",
+    "rastrigin",
+    "griewank",
+    "goldstein_price",
+    "six_hump_camel"
+  ],
+  "consumer_notebook": "analisis_resultados.ipynb",
+  "descripcion": "Datos generados sin graficas ni animaciones.",
+  "filtros_ejecucion": {
+    "selected_functions": [
+      "griewank",
+      "goldstein_price",
+      "six_hump_camel"
+    ],
+    "selected_dimensions": null,
+    "selected_n_corridas": [
+      100,
+      500
+    ],
+    "skip_existing_files": true
+  },
+  "directorios": {
+    "datos_base": "gradiente/datos"
+  },
+  "organizacion_corridas": "gradiente/datos/<funcion>/<archivo>.json|csv",
+  "organizacion_resumenes": "gradiente/datos/<funcion>/resumen_<funcion>.json|csv",
+  "campos_corridas": [
+    "funcion",
+    "nombre_funcion",
+    "corrida",
+    "semilla",
+    "metodo",
+    "dimension",
+    "limites",
+    "posicion_inicial",
+    "posicion_final",
+    "valor_final",
+    "iteraciones",
+    "evaluaciones",
+    "parametros"
+  ],
+  "campos_resumen": [
+    "funcion",
+    "nombre_funcion",
+    "metodo",
+    "dimension",
+    "n_corridas",
+    "mejor_valor_final",
+    "peor_valor_final",
+    "promedio_valor_final",
+    "mediana_valor_final",
+    "desviacion_valor_final",
+    "promedio_evaluaciones",
+    "mediana_evaluaciones",
+    "promedio_iteraciones",
+    "mediana_iteraciones"
+  ]
+}
