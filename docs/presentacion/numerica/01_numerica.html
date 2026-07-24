@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>01 Preprocesamiento – Trabajo Carlos</title>
+<title>Optimizacion numerica – Trabajo Carlos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,45 +26,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -108,9 +73,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -147,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">01 Preprocesamiento</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../presentacion/numerica/01_numerica.html">Presentacion</a></li><li class="breadcrumb-item"><a href="../../presentacion/numerica/01_numerica.html">Optimizacion numerica</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -195,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../presentacion/numerica/01_numerica.html" class="sidebar-item-text sidebar-link">
+  <a href="../../presentacion/numerica/01_numerica.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Optimizacion numerica</span></a>
   </div>
 </li>
@@ -217,20 +179,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dataset-original" id="toc-dataset-original" class="nav-link active" data-scroll-target="#dataset-original">Dataset original</a></li>
-  <li><a href="#funcion-de-costo" id="toc-funcion-de-costo" class="nav-link" data-scroll-target="#funcion-de-costo">Funcion de costo</a></li>
-  <li><a href="#construccion-de-aristas-ponderadas" id="toc-construccion-de-aristas-ponderadas" class="nav-link" data-scroll-target="#construccion-de-aristas-ponderadas">Construccion de aristas ponderadas</a></li>
-  <li><a href="#validaciones-rapidas" id="toc-validaciones-rapidas" class="nav-link" data-scroll-target="#validaciones-rapidas">Validaciones rapidas</a></li>
-  <li><a href="#salida-de-esta-etapa" id="toc-salida-de-esta-etapa" class="nav-link" data-scroll-target="#salida-de-esta-etapa">Salida de esta etapa</a></li>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a>
+  <ul class="collapse">
+  <li><a href="#lo-que-se-trabajo" id="toc-lo-que-se-trabajo" class="nav-link" data-scroll-target="#lo-que-se-trabajo">Lo que se trabajo</a></li>
+  <li><a href="#resultados-clave" id="toc-resultados-clave" class="nav-link" data-scroll-target="#resultados-clave">Resultados clave</a></li>
+  <li><a href="#cuadernos-de-soporte" id="toc-cuadernos-de-soporte" class="nav-link" data-scroll-target="#cuadernos-de-soporte">Cuadernos de soporte</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../presentacion/numerica/01_numerica.html">Presentacion</a></li><li class="breadcrumb-item"><a href="../../presentacion/numerica/01_numerica.html">Optimizacion numerica</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">01 Preprocesamiento</h1>
+<h1 class="title">Optimizacion numerica</h1>
 </div>
 
 
@@ -247,437 +210,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Este notebook prepara los datos base del problema de optimizacion combinatoria sobre las capitales departamentales de Francia.</p>
-<p>Objetivos de esta etapa: - cargar el dataset original de rutas directas - revisar la estructura de las variables disponibles - documentar la funcion de costo usada en el proyecto - construir las aristas ponderadas del grafo - exportar los artefactos reutilizables a <code>data/processed</code></p>
-<div id="1cf446d1" class="cell" data-execution_count="19">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>ROOT <span class="op">=</span> Path.cwd().resolve().parent <span class="cf">if</span> Path.cwd().name <span class="op">==</span> <span class="st">'notebooks'</span> <span class="cf">else</span> Path.cwd().resolve()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">str</span>(ROOT) <span class="kw">not</span> <span class="kw">in</span> sys.path:</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    sys.path.insert(<span class="dv">0</span>, <span class="bu">str</span>(ROOT))</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ROOT</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="19">
-<pre><code>WindowsPath('C:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/2. optimizacion_combinatoria')</code></pre>
-</div>
-</div>
-<div id="3ad4ad23" class="cell" data-execution_count="20">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.config_modelo_costo <span class="im">import</span> SMIC_HOURLY_EUR_2026, VEHICLE, cost_formula_label, model_metadata</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.core_paths <span class="im">import</span> PHASE1_DIR, RAW_CONNECTIONS_DATASET_PATH</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.core_preprocesamiento <span class="im">import</span> run_preprocessing</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<section id="dataset-original" class="level2">
-<h2 class="anchored" data-anchor-id="dataset-original">Dataset original</h2>
-<p>El archivo fuente contiene conexiones directas entre pares de ciudades, junto con distancia, tiempo, peajes y costo estimado de gasolina.</p>
-<div id="b8e8e112" class="cell" data-execution_count="21">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_raw <span class="op">=</span> pd.read_csv(RAW_CONNECTIONS_DATASET_PATH)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Ruta del dataset:'</span>, RAW_CONNECTIONS_DATASET_PATH)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Shape:'</span>, df_raw.shape)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>df_raw.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Ruta del dataset: C:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\2. optimizacion_combinatoria\data\raw\dataset_cities_france.csv
-Shape: (242, 9)</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="21">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">indice_inicio</th>
-<th data-quarto-table-cell-role="th">indice_destino</th>
-<th data-quarto-table-cell-role="th">ciudad_inicio</th>
-<th data-quarto-table-cell-role="th">ciudad_destino</th>
-<th data-quarto-table-cell-role="th">distancia</th>
-<th data-quarto-table-cell-role="th">tiempo(min)</th>
-<th data-quarto-table-cell-role="th">peajes(euros)</th>
-<th data-quarto-table-cell-role="th">gasolina(euros)</th>
-<th data-quarto-table-cell-role="th">Unnamed: 8</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>0</td>
-<td>39</td>
-<td>Bourg-en-Bresse</td>
-<td>Lons-le-Saunier</td>
-<td>74</td>
-<td>59</td>
-<td>5.3</td>
-<td>15.34</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>0</td>
-<td>69</td>
-<td>Bourg-en-Bresse</td>
-<td>Lyon</td>
-<td>84</td>
-<td>69</td>
-<td>9.3</td>
-<td>17.94</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>0</td>
-<td>71</td>
-<td>Bourg-en-Bresse</td>
-<td>Mâcon</td>
-<td>84</td>
-<td>69</td>
-<td>9.3</td>
-<td>17.94</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>0</td>
-<td>74</td>
-<td>Bourg-en-Bresse</td>
-<td>Annecy</td>
-<td>84</td>
-<td>69</td>
-<td>9.3</td>
-<td>17.94</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>1</td>
-<td>7</td>
-<td>Laon</td>
-<td>Charleville-Mézières</td>
-<td>112</td>
-<td>102</td>
-<td>0.0</td>
-<td>26.52</td>
-<td>NaN</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="ed582ea5" class="cell" data-execution_count="22">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_raw.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'pandas.DataFrame'&gt;
-RangeIndex: 242 entries, 0 to 241
-Data columns (total 9 columns):
- #   Column           Non-Null Count  Dtype  
----  ------           --------------  -----  
- 0   indice_inicio    242 non-null    int64  
- 1   indice_destino   242 non-null    int64  
- 2   ciudad_inicio    242 non-null    str    
- 3   ciudad_destino   242 non-null    str    
- 4   distancia        242 non-null    int64  
- 5   tiempo(min)      242 non-null    int64  
- 6   peajes(euros)    242 non-null    float64
- 7   gasolina(euros)  242 non-null    float64
- 8   Unnamed: 8       0 non-null      float64
-dtypes: float64(3), int64(4), str(2)
-memory usage: 17.1 KB</code></pre>
-</div>
-</div>
+<section id="objetivo" class="level1">
+<h1>Objetivo</h1>
+<p>Esta pagina resume la parte de optimizacion numerica del proyecto. La idea es mostrar el problema, el enfoque seguido y los resultados principales sin exponer todo el cuaderno de trabajo.</p>
+<section id="lo-que-se-trabajo" class="level2">
+<h2 class="anchored" data-anchor-id="lo-que-se-trabajo">Lo que se trabajo</h2>
+<ul>
+<li>Definicion de funciones objetivo y criterios de comparacion.</li>
+<li>Analisis con metodos basados en gradiente.</li>
+<li>Comparacion final entre enfoques numericos.</li>
+</ul>
 </section>
-<section id="funcion-de-costo" class="level2">
-<h2 class="anchored" data-anchor-id="funcion-de-costo">Funcion de costo</h2>
-<p>La funcion de costo alineada con el proyecto es:</p>
-<p><code>peajes(euros) + gasolina(euros) + (tiempo(min) / 60) * tarifa_vendedor</code></p>
-<p>Se usa como referencia un vendedor en carro con salario horario igual al SMIC de Francia 2026.</p>
-<div id="70a536a9" class="cell" data-execution_count="23">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>metadata <span class="op">=</span> model_metadata()</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Formula:'</span>, cost_formula_label())</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Tarifa vendedor EUR/h:'</span>, SMIC_HOURLY_EUR_2026)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vehiculo de referencia:'</span>, VEHICLE)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>metadata</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Formula: peajes(euros) + gasolina(euros) + (tiempo(min)/60) * 12.02
-Tarifa vendedor EUR/h: 12.02
-Vehiculo de referencia: VehicleSpec(name='Renault Clio', fuel_type='gasolina', segment='compacto', note='Vehiculo de referencia para justificar el recorrido. El componente de combustible se toma desde la columna gasolina(euros) del dataset.')</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="23">
-<pre><code>{'vehiculo_referencia': {'name': 'Renault Clio',
-  'fuel_type': 'gasolina',
-  'segment': 'compacto',
-  'note': 'Vehiculo de referencia para justificar el recorrido. El componente de combustible se toma desde la columna gasolina(euros) del dataset.'},
- 'tarifa_vendedor_eur_h': 12.02,
- 'salario_referencia': 'SMIC Francia 2026',
- 'formula_peso': 'peajes(euros) + gasolina(euros) + (tiempo(min)/60) * 12.02'}</code></pre>
-</div>
-</div>
+<section id="resultados-clave" class="level2">
+<h2 class="anchored" data-anchor-id="resultados-clave">Resultados clave</h2>
+<p>Aqui puedes dejar las conclusiones mas importantes del componente numerico: que metodo convergio mejor, con que funcion se observaron mas dificultades y cuales fueron los patrones destacados en las corridas.</p>
 </section>
-<section id="construccion-de-aristas-ponderadas" class="level2">
-<h2 class="anchored" data-anchor-id="construccion-de-aristas-ponderadas">Construccion de aristas ponderadas</h2>
-<p>Esta celda ejecuta el preprocesamiento reusable desde <code>src/</code> y deja la salida principal del paso: - <code>aristas_ponderadas.csv</code></p>
-<div id="a300ed3b" class="cell" data-execution_count="24">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>pre <span class="op">=</span> run_preprocessing()</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>pre[<span class="st">'summary'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="24">
-<pre><code>{'ciudades': 96,
- 'conexiones_directas': 242,
- 'peso_minimo': 11.968667,
- 'peso_maximo': 346.074667,
- 'peso_promedio': 50.013442,
- 'formula_peso': 'peajes(euros) + gasolina(euros) + (tiempo(min)/60) * 12.02',
- 'vehiculo_referencia': {'name': 'Renault Clio',
-  'fuel_type': 'gasolina',
-  'segment': 'compacto',
-  'note': 'Vehiculo de referencia para justificar el recorrido. El componente de combustible se toma desde la columna gasolina(euros) del dataset.'},
- 'tarifa_vendedor_eur_h': 12.02,
- 'salario_referencia': 'SMIC Francia 2026'}</code></pre>
-</div>
-</div>
-<div id="32355740" class="cell" data-execution_count="25">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_edges <span class="op">=</span> pd.DataFrame(pre[<span class="st">'edges'</span>])</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Salida principal:'</span>, pre[<span class="st">'weighted_edges_path'</span>])</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>df_edges.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Salida principal: C:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\2. optimizacion_combinatoria\data\processed\aristas_ponderadas.csv</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="25">
-<div>
+<section id="cuadernos-de-soporte" class="level2">
+<h2 class="anchored" data-anchor-id="cuadernos-de-soporte">Cuadernos de soporte</h2>
+<ul>
+<li><a href="../../notebooks/numerica/12_comparacion_final_metodos.html">Comparacion final de metodos</a></li>
+<li><a href="../../notebooks/numerica/gradiente/analisis_resultados.html">Analisis de resultados: gradiente</a></li>
+<li><a href="../../notebooks/numerica/heuristicos/analisis_resultados.html">Analisis de resultados: heuristicos</a></li>
+</ul>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">indice_inicio</th>
-<th data-quarto-table-cell-role="th">indice_destino</th>
-<th data-quarto-table-cell-role="th">ciudad_inicio</th>
-<th data-quarto-table-cell-role="th">ciudad_destino</th>
-<th data-quarto-table-cell-role="th">peso</th>
-<th data-quarto-table-cell-role="th">distancia</th>
-<th data-quarto-table-cell-role="th">tiempo(min)</th>
-<th data-quarto-table-cell-role="th">peajes(euros)</th>
-<th data-quarto-table-cell-role="th">gasolina(euros)</th>
-<th data-quarto-table-cell-role="th">costo_vendedor(euros)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>0</td>
-<td>39</td>
-<td>Bourg-en-Bresse</td>
-<td>Lons-le-Saunier</td>
-<td>32.459667</td>
-<td>74.0</td>
-<td>59.0</td>
-<td>5.3</td>
-<td>15.34</td>
-<td>11.819667</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>0</td>
-<td>69</td>
-<td>Bourg-en-Bresse</td>
-<td>Lyon</td>
-<td>41.063000</td>
-<td>84.0</td>
-<td>69.0</td>
-<td>9.3</td>
-<td>17.94</td>
-<td>13.823000</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>0</td>
-<td>71</td>
-<td>Bourg-en-Bresse</td>
-<td>Mâcon</td>
-<td>41.063000</td>
-<td>84.0</td>
-<td>69.0</td>
-<td>9.3</td>
-<td>17.94</td>
-<td>13.823000</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>0</td>
-<td>74</td>
-<td>Bourg-en-Bresse</td>
-<td>Annecy</td>
-<td>41.063000</td>
-<td>84.0</td>
-<td>69.0</td>
-<td>9.3</td>
-<td>17.94</td>
-<td>13.823000</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>1</td>
-<td>7</td>
-<td>Laon</td>
-<td>Charleville-Mézières</td>
-<td>46.954000</td>
-<td>112.0</td>
-<td>102.0</td>
-<td>0.0</td>
-<td>26.52</td>
-<td>20.434000</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="1343bee5" class="cell" data-execution_count="26">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df_edges[[<span class="st">'peso'</span>, <span class="st">'distancia'</span>, <span class="st">'tiempo(min)'</span>, <span class="st">'peajes(euros)'</span>, <span class="st">'gasolina(euros)'</span>, <span class="st">'costo_vendedor(euros)'</span>]].describe().T</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="26">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">count</th>
-<th data-quarto-table-cell-role="th">mean</th>
-<th data-quarto-table-cell-role="th">std</th>
-<th data-quarto-table-cell-role="th">min</th>
-<th data-quarto-table-cell-role="th">25%</th>
-<th data-quarto-table-cell-role="th">50%</th>
-<th data-quarto-table-cell-role="th">75%</th>
-<th data-quarto-table-cell-role="th">max</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">peso</th>
-<td>242.0</td>
-<td>50.013442</td>
-<td>34.706098</td>
-<td>11.968667</td>
-<td>32.837583</td>
-<td>44.8825</td>
-<td>57.517833</td>
-<td>346.074667</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">distancia</th>
-<td>242.0</td>
-<td>122.194215</td>
-<td>77.218069</td>
-<td>13.000000</td>
-<td>80.250000</td>
-<td>114.0000</td>
-<td>150.000000</td>
-<td>696.000000</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">tiempo(min)</th>
-<td>242.0</td>
-<td>96.855372</td>
-<td>68.782354</td>
-<td>25.000000</td>
-<td>65.250000</td>
-<td>87.0000</td>
-<td>110.750000</td>
-<td>704.000000</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">peajes(euros)</th>
-<td>242.0</td>
-<td>5.427686</td>
-<td>7.088330</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>2.6000</td>
-<td>9.300000</td>
-<td>43.700000</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">gasolina(euros)</th>
-<td>242.0</td>
-<td>25.182397</td>
-<td>17.883412</td>
-<td>6.500000</td>
-<td>16.965000</td>
-<td>22.6200</td>
-<td>28.795000</td>
-<td>183.040000</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">costo_vendedor(euros)</th>
-<td>242.0</td>
-<td>19.403360</td>
-<td>13.779398</td>
-<td>5.008333</td>
-<td>13.071750</td>
-<td>17.4290</td>
-<td>22.186917</td>
-<td>141.034667</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
 </section>
-<section id="validaciones-rapidas" class="level2">
-<h2 class="anchored" data-anchor-id="validaciones-rapidas">Validaciones rapidas</h2>
-<p>Chequeamos el numero de ciudades, conexiones directas y que el archivo procesado exista donde lo espera el resto del pipeline.</p>
-<div id="9de58d48" class="cell" data-execution_count="27">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Directorio de salida:'</span>, PHASE1_DIR)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Existe aristas_ponderadas.csv:'</span>, pre[<span class="st">'weighted_edges_path'</span>].exists())</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Numero de ciudades:'</span>, <span class="bu">len</span>(pre[<span class="st">'cities'</span>]))</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Numero de conexiones directas:'</span>, <span class="bu">len</span>(pre[<span class="st">'edges'</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Directorio de salida: C:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\2. optimizacion_combinatoria\data\processed
-Existe aristas_ponderadas.csv: True
-Numero de ciudades: 96
-Numero de conexiones directas: 242</code></pre>
-</div>
-</div>
-</section>
-<section id="salida-de-esta-etapa" class="level2">
-<h2 class="anchored" data-anchor-id="salida-de-esta-etapa">Salida de esta etapa</h2>
-<p>Con esto queda lista la base para el notebook <code>02_optimizacion.ipynb</code>, que construira las matrices completas y ejecutara los algoritmos ACO y GA sobre el problema ya preprocesado.</p>
-
-
 </section>
 
 </main> <!-- /main -->

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Carlos Daniel Urresty">
 
-<title>Reporte de Optimizacion – Trabajo Carlos</title>
+<title>Trabajo 01 Normalización: Optimización heurística – Trabajo Carlos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -45,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4e663f3a4ff1a491e18bd6a28adf0390.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,10 +75,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -104,38 +134,188 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Portada</a></li><li class="breadcrumb-item"><a href="./index.html">Trabajo 01 Normalización: Optimización heurística</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Portada</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Trabajo 01 Normalización: Optimización heurística</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Presentacion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./presentacion/numerica/01_numerica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimizacion numerica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./presentacion/combinatoria/01_combinatoria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimizacion combinatoria</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reporte-del-trabajo" id="toc-reporte-del-trabajo" class="nav-link active" data-scroll-target="#reporte-del-trabajo">Reporte del trabajo</a>
+  <li><a href="#estructura-del-blog" id="toc-estructura-del-blog" class="nav-link active" data-scroll-target="#estructura-del-blog">Estructura del Blog</a>
   <ul class="collapse">
-  <li><a href="#optimizacion-numerica" id="toc-optimizacion-numerica" class="nav-link" data-scroll-target="#optimizacion-numerica">Optimizacion numerica</a></li>
-  <li><a href="#optimizacion-combinatoria" id="toc-optimizacion-combinatoria" class="nav-link" data-scroll-target="#optimizacion-combinatoria">Optimizacion combinatoria</a></li>
+  <li><a href="#introduccion" id="toc-introduccion" class="nav-link" data-scroll-target="#introduccion">Introduccion</a></li>
+  </ul></li>
+  <li><a href="#parte-1-optimizacion-numerica" id="toc-parte-1-optimizacion-numerica" class="nav-link" data-scroll-target="#parte-1-optimizacion-numerica">Parte 1: Optimizacion Numerica</a>
+  <ul class="collapse">
+  <li><a href="#funciones-de-prueba" id="toc-funciones-de-prueba" class="nav-link" data-scroll-target="#funciones-de-prueba">2.1 Funciones de prueba</a>
+  <ul class="collapse">
+  <li><a href="#funcion-de-rosenbrock" id="toc-funcion-de-rosenbrock" class="nav-link" data-scroll-target="#funcion-de-rosenbrock">Funcion de Rosenbrock</a></li>
+  <li><a href="#funcion-de-rastrigin" id="toc-funcion-de-rastrigin" class="nav-link" data-scroll-target="#funcion-de-rastrigin">Funcion de Rastrigin</a></li>
+  <li><a href="#funcion-de-schwefel" id="toc-funcion-de-schwefel" class="nav-link" data-scroll-target="#funcion-de-schwefel">Funcion de Schwefel</a></li>
+  <li><a href="#funcion-de-griewank" id="toc-funcion-de-griewank" class="nav-link" data-scroll-target="#funcion-de-griewank">Funcion de Griewank</a></li>
+  <li><a href="#funcion-de-goldstein-price" id="toc-funcion-de-goldstein-price" class="nav-link" data-scroll-target="#funcion-de-goldstein-price">Funcion de Goldstein-Price</a></li>
+  <li><a href="#funcion-six-hump-camel" id="toc-funcion-six-hump-camel" class="nav-link" data-scroll-target="#funcion-six-hump-camel">Funcion Six-Hump Camel</a></li>
+  <li><a href="#graficos-de-superficie-y-contorno" id="toc-graficos-de-superficie-y-contorno" class="nav-link" data-scroll-target="#graficos-de-superficie-y-contorno">Graficos de superficie y contorno</a></li>
+  </ul></li>
+  <li><a href="#optimizacion-con-descenso-por-gradiente" id="toc-optimizacion-con-descenso-por-gradiente" class="nav-link" data-scroll-target="#optimizacion-con-descenso-por-gradiente">2.2 Optimizacion con Descenso por Gradiente</a>
+  <ul class="collapse">
+  <li><a href="#metodologia" id="toc-metodologia" class="nav-link" data-scroll-target="#metodologia">Metodologia</a></li>
+  <li><a href="#tabla-resumen-de-desempeno" id="toc-tabla-resumen-de-desempeno" class="nav-link" data-scroll-target="#tabla-resumen-de-desempeno">Tabla resumen de desempeno</a></li>
+  <li><a href="#histogramas-de-valor-final" id="toc-histogramas-de-valor-final" class="nav-link" data-scroll-target="#histogramas-de-valor-final">Histogramas de valor final</a></li>
+  <li><a href="#histogramas-de-evaluaciones" id="toc-histogramas-de-evaluaciones" class="nav-link" data-scroll-target="#histogramas-de-evaluaciones">Histogramas de evaluaciones</a></li>
+  <li><a href="#resultados-e-interpretacion-por-funcion" id="toc-resultados-e-interpretacion-por-funcion" class="nav-link" data-scroll-target="#resultados-e-interpretacion-por-funcion">Resultados e interpretacion por funcion</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#parte-2-optimizacion-combinatoria-tsp---96-departamentos-de-francia" id="toc-parte-2-optimizacion-combinatoria-tsp---96-departamentos-de-francia" class="nav-link" data-scroll-target="#parte-2-optimizacion-combinatoria-tsp---96-departamentos-de-francia">Parte 2: Optimizacion Combinatoria (TSP - 96 Departamentos de Francia)</a>
+  <ul class="collapse">
+  <li><a href="#descripcion-del-problema" id="toc-descripcion-del-problema" class="nav-link" data-scroll-target="#descripcion-del-problema">3.1 Descripcion del problema</a></li>
+  <li><a href="#algoritmos-utilizados" id="toc-algoritmos-utilizados" class="nav-link" data-scroll-target="#algoritmos-utilizados">3.2 Algoritmos utilizados</a>
+  <ul class="collapse">
+  <li><a href="#colonia-de-hormigas-aco" id="toc-colonia-de-hormigas-aco" class="nav-link" data-scroll-target="#colonia-de-hormigas-aco">Colonia de Hormigas (ACO)</a></li>
+  <li><a href="#algoritmos-geneticos-ga" id="toc-algoritmos-geneticos-ga" class="nav-link" data-scroll-target="#algoritmos-geneticos-ga">Algoritmos Geneticos (GA)</a></li>
+  </ul></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">3.3 Resultados</a></li>
+  <li><a href="#visualizacion" id="toc-visualizacion" class="nav-link" data-scroll-target="#visualizacion">3.4 Visualizacion</a>
+  <ul class="collapse">
+  <li><a href="#comparacion-visual-de-costos" id="toc-comparacion-visual-de-costos" class="nav-link" data-scroll-target="#comparacion-visual-de-costos">Comparacion visual de costos</a></li>
+  <li><a href="#gif-del-mejor-recorrido-en-francia" id="toc-gif-del-mejor-recorrido-en-francia" class="nav-link" data-scroll-target="#gif-del-mejor-recorrido-en-francia">GIF del mejor recorrido en Francia</a></li>
+  <li><a href="#curva-de-convergencia-del-metodo-ganador" id="toc-curva-de-convergencia-del-metodo-ganador" class="nav-link" data-scroll-target="#curva-de-convergencia-del-metodo-ganador">Curva de convergencia del metodo ganador</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#parte-4-uso-de-inteligencia-artificial-en-el-proyecto" id="toc-parte-4-uso-de-inteligencia-artificial-en-el-proyecto" class="nav-link" data-scroll-target="#parte-4-uso-de-inteligencia-artificial-en-el-proyecto">Parte 4: Uso de Inteligencia Artificial en el Proyecto</a>
+  <ul class="collapse">
+  <li><a href="#prompts-principales-utilizados" id="toc-prompts-principales-utilizados" class="nav-link" data-scroll-target="#prompts-principales-utilizados">4.1 Prompts principales utilizados</a>
+  <ul class="collapse">
+  <li><a href="#prompt-para-generacion-de-codigo" id="toc-prompt-para-generacion-de-codigo" class="nav-link" data-scroll-target="#prompt-para-generacion-de-codigo">Prompt para generacion de codigo</a></li>
+  <li><a href="#prompt-para-debugging" id="toc-prompt-para-debugging" class="nav-link" data-scroll-target="#prompt-para-debugging">Prompt para debugging</a></li>
+  <li><a href="#prompt-para-creacion-de-visualizaciones-y-gifs" id="toc-prompt-para-creacion-de-visualizaciones-y-gifs" class="nav-link" data-scroll-target="#prompt-para-creacion-de-visualizaciones-y-gifs">Prompt para creacion de visualizaciones y GIFs</a></li>
+  <li><a href="#prompt-para-estructuracion-del-reporte" id="toc-prompt-para-estructuracion-del-reporte" class="nav-link" data-scroll-target="#prompt-para-estructuracion-del-reporte">Prompt para estructuracion del reporte</a></li>
+  <li><a href="#nota-sobre-esta-subseccion" id="toc-nota-sobre-esta-subseccion" class="nav-link" data-scroll-target="#nota-sobre-esta-subseccion">Nota sobre esta subseccion</a></li>
+  </ul></li>
+  <li><a href="#impacto-real-de-la-ia-en-el-resultado-final" id="toc-impacto-real-de-la-ia-en-el-resultado-final" class="nav-link" data-scroll-target="#impacto-real-de-la-ia-en-el-resultado-final">4.2 Impacto real de la IA en el resultado final</a></li>
+  </ul></li>
+  <li><a href="#conclusiones-y-aprendizajes" id="toc-conclusiones-y-aprendizajes" class="nav-link" data-scroll-target="#conclusiones-y-aprendizajes">Conclusiones y Aprendizajes</a>
+  <ul class="collapse">
+  <li><a href="#resumen-de-hallazgos-principales" id="toc-resumen-de-hallazgos-principales" class="nav-link" data-scroll-target="#resumen-de-hallazgos-principales">Resumen de hallazgos principales</a></li>
+  <li><a href="#reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos" id="toc-reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos" class="nav-link" data-scroll-target="#reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos">Reflexion sobre cuando usar metodos clasicos vs.&nbsp;heurísticos</a></li>
+  <li><a href="#posibles-mejoras-futuras" id="toc-posibles-mejoras-futuras" class="nav-link" data-scroll-target="#posibles-mejoras-futuras">Posibles mejoras futuras</a></li>
+  </ul></li>
+  <li><a href="#reporte-del-trabajo" id="toc-reporte-del-trabajo" class="nav-link" data-scroll-target="#reporte-del-trabajo">Reporte del trabajo</a>
+  <ul class="collapse">
+  <li><a href="#como-esta-organizado-el-sitio" id="toc-como-esta-organizado-el-sitio" class="nav-link" data-scroll-target="#como-esta-organizado-el-sitio">Como esta organizado el sitio</a></li>
+  <li><a href="#secciones-principales" id="toc-secciones-principales" class="nav-link" data-scroll-target="#secciones-principales">Secciones principales</a></li>
+  <li><a href="#idea-de-trabajo" id="toc-idea-de-trabajo" class="nav-link" data-scroll-target="#idea-de-trabajo">Idea de trabajo</a></li>
   <li><a href="#notas" id="toc-notas" class="nav-link" data-scroll-target="#notas">Notas</a></li>
   </ul></li>
+  <li><a href="#contribuciones-individuales" id="toc-contribuciones-individuales" class="nav-link" data-scroll-target="#contribuciones-individuales">7. Contribuciones Individuales</a>
+  <ul class="collapse">
+  <li><a href="#video-reporte-de-contribucion-individual" id="toc-video-reporte-de-contribucion-individual" class="nav-link" data-scroll-target="#video-reporte-de-contribucion-individual">Video Reporte de Contribucion Individual</a></li>
+  </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">8. Referencias</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Portada</a></li><li class="breadcrumb-item"><a href="./index.html">Trabajo 01 Normalización: Optimización heurística</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Reporte de Optimizacion</h1>
+<h1 class="title">Trabajo 01 Normalización: Optimización heurística</h1>
+<p class="subtitle lead">Redes Neuronales y Algoritmos Bioinspirados</p>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Carlos Daniel Urresty </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Universidad Nacional de Colombia
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">24 de julio de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -145,33 +325,554 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="estructura-del-blog" class="level1">
+<h1>Estructura del Blog</h1>
+<section id="introduccion" class="level2">
+<h2 class="anchored" data-anchor-id="introduccion">Introduccion</h2>
+<p>Este blog presenta el desarrollo del trabajo con una estructura pensada para explicar de forma clara tanto el planteamiento como los resultados obtenidos. El objetivo principal es mostrar, de manera organizada, como se abordaron dos problemas de optimizacion con naturalezas distintas, permitiendo comparar estrategias y extraer conclusiones utiles a partir de la experiencia. Por un lado, se trabaja la <strong>Optimizacion Numerica</strong>, centrada en el analisis de funciones y en la aplicacion de metodos de descenso por gradiente para encontrar soluciones eficientes. Por otro lado, se desarrolla la <strong>Optimizacion Combinatoria</strong>, enfocada en el problema del viajante aplicado al recorrido de los 96 departamentos de Francia, un caso mucho mas complejo por la enorme cantidad de combinaciones posibles.</p>
+<p>La comparacion entre ambos enfoques resulta importante porque permite entender como cambian las herramientas segun la naturaleza del problema: mientras los metodos basados en gradiente aprovechan informacion analitica de la funcion, los algoritmos heurísticos y metaheuristicos buscan buenas soluciones en espacios discretos donde no siempre es posible aplicar metodos exactos de manera practica. En conjunto, el trabajo deja como aprendizaje principal que no existe una unica estrategia universal de optimizacion, sino que la eleccion del metodo depende del tipo de problema, del costo computacional y de la calidad de solucion que se desea alcanzar.</p>
+</section>
+</section>
+<section id="parte-1-optimizacion-numerica" class="level1">
+<h1>Parte 1: Optimizacion Numerica</h1>
+<section id="funciones-de-prueba" class="level2">
+<h2 class="anchored" data-anchor-id="funciones-de-prueba">2.1 Funciones de prueba</h2>
+<p>Para evaluar el comportamiento de los metodos de optimizacion numerica, se seleccionaron varias funciones de prueba ampliamente utilizadas en la literatura. Estas funciones permiten estudiar paisajes de optimizacion con caracteristicas muy distintas, como valles estrechos, abundancia de minimos locales, oscilaciones periodicas y superficies altamente no lineales. Gracias a ello, sirven como una base adecuada para comparar el desempeno de distintos algoritmos y analizar tanto su capacidad de convergencia como su robustez frente a problemas de diferente dificultad.</p>
+<section id="funcion-de-rosenbrock" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-rosenbrock">Funcion de Rosenbrock</h3>
+<p>La funcion de Rosenbrock es un caso clasico en optimizacion continua. Su principal dificultad es la presencia de un valle largo, curvo y angosto que conduce al minimo global. Aunque la funcion no es extremadamente multimodal, muchos algoritmos tienen dificultades para avanzar de manera estable dentro de este valle y acercarse con precision a la solucion.</p>
+<p><span class="math display">\[
+f(x, y) = (1 - x)^2 + 100(y - x^2)^2
+\]</span></p>
+<p>Su minimo global se encuentra en <span class="math inline">\((1,1)\)</span>, donde <span class="math inline">\(f(x,y)=0\)</span>.</p>
+</section>
+<section id="funcion-de-rastrigin" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-rastrigin">Funcion de Rastrigin</h3>
+<p>La funcion de Rastrigin es ampliamente usada para evaluar algoritmos en escenarios multimodales. Su superficie contiene una gran cantidad de minimos locales distribuidos periodicamente, lo que dificulta la busqueda del minimo global. Por esta razon, resulta muy util para analizar la capacidad de exploracion de un metodo de optimizacion.</p>
+<p><span class="math display">\[
+f(\mathbf{x}) = 10n + \sum_{i=1}^{n} \left(x_i^2 - 10 \cos(2\pi x_i)\right)
+\]</span></p>
+<p>Su minimo global se encuentra en <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>, donde <span class="math inline">\(f(\mathbf{x})=0\)</span>.</p>
+</section>
+<section id="funcion-de-schwefel" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-schwefel">Funcion de Schwefel</h3>
+<p>La funcion de Schwefel representa un reto importante debido a que su minimo global esta alejado del origen y la superficie presenta muchas irregularidades. Esto obliga a los algoritmos a explorar con cuidado el dominio de busqueda y evita que una estrategia demasiado local encuentre con facilidad la mejor solucion.</p>
+<p><span class="math display">\[
+f(\mathbf{x}) = 418.9829\,n - \sum_{i=1}^{n} x_i \sin\left(\sqrt{|x_i|}\right)
+\]</span></p>
+<p>Su minimo global se alcanza aproximadamente cuando <span class="math inline">\(x_i = 420.9687\)</span> para todo <span class="math inline">\(i\)</span>.</p>
+</section>
+<section id="funcion-de-griewank" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-griewank">Funcion de Griewank</h3>
+<p>La funcion de Griewank combina un crecimiento cuadratico moderado con un componente oscilatorio multiplicativo. Esta estructura genera varios minimos locales, aunque de una forma menos agresiva que en Rastrigin. Por ello, es util para estudiar el comportamiento de los algoritmos en superficies multimodales con una complejidad intermedia.</p>
+<p><span class="math display">\[
+f(\mathbf{x}) = 1 + \sum_{i=1}^{n}\frac{x_i^2}{4000} - \prod_{i=1}^{n}\cos\left(\frac{x_i}{\sqrt{i}}\right)
+\]</span></p>
+<p>Su minimo global se encuentra en <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>, donde <span class="math inline">\(f(\mathbf{x})=0\)</span>.</p>
+</section>
+<section id="funcion-de-goldstein-price" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-goldstein-price">Funcion de Goldstein-Price</h3>
+<p>La funcion de Goldstein-Price es una funcion bidimensional con una superficie compleja y altamente irregular. Presenta cambios pronunciados en la curvatura y varias zonas que pueden desviar la trayectoria de busqueda, por lo que es adecuada para evaluar la precision y estabilidad de los algoritmos en problemas no triviales.</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(x,y) &amp;= \left[1 + (x+y+1)^2(19 - 14x + 3x^2 - 14y + 6xy + 3y^2)\right] \\
+&amp;\quad \cdot \left[30 + (2x-3y)^2(18 - 32x + 12x^2 + 48y - 36xy + 27y^2)\right]
+\end{aligned}
+\]</span></p>
+<p>Su minimo global se encuentra en <span class="math inline">\((0,-1)\)</span>, donde el valor de la funcion es <span class="math inline">\(3\)</span>.</p>
+</section>
+<section id="funcion-six-hump-camel" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-six-hump-camel">Funcion Six-Hump Camel</h3>
+<p>La funcion Six-Hump Camel es otro ejemplo clasico en dos dimensiones. Su interes principal radica en que posee varios puntos criticos y dos minimos globales simetricos. Esto permite evaluar si un algoritmo logra identificar soluciones equivalentes en distintas regiones del espacio de busqueda.</p>
+<p><span class="math display">\[
+f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right)y^2
+\]</span></p>
+<p>Sus minimos globales se encuentran aproximadamente en <span class="math inline">\((0.0898,-0.7126)\)</span> y <span class="math inline">\((-0.0898,0.7126)\)</span>.</p>
+</section>
+<section id="graficos-de-superficie-y-contorno" class="level3">
+<h3 class="anchored" data-anchor-id="graficos-de-superficie-y-contorno">Graficos de superficie y contorno</h3>
+<p>Para cada una de estas funciones se deben incluir dos tipos de visualizacion:</p>
+<ul>
+<li>un grafico de superficie en 3D, para observar la forma general del paisaje de optimizacion</li>
+<li>un grafico de contorno en 2D, para identificar valles, picos, minimos locales y zonas de mayor dificultad</li>
+</ul>
+<p>Estas figuras complementan la descripcion matematica, ya que permiten entender visualmente por que ciertas funciones favorecen la convergencia rapida y por que otras representan un reto mayor para los algoritmos estudiados.</p>
+</section>
+</section>
+<section id="optimizacion-con-descenso-por-gradiente" class="level2">
+<h2 class="anchored" data-anchor-id="optimizacion-con-descenso-por-gradiente">2.2 Optimizacion con Descenso por Gradiente</h2>
+<p>Una vez definidas las funciones de prueba, el siguiente paso consiste en estudiar el comportamiento del descenso por gradiente sobre cada una de ellas. Este metodo actualiza iterativamente la solucion en la direccion opuesta al gradiente de la funcion objetivo, buscando reducir su valor de manera progresiva. Su mayor ventaja es que utiliza informacion local de la superficie para orientar la busqueda, lo que lo hace eficiente en problemas suaves o bien estructurados, aunque tambien lo vuelve sensible a la forma del paisaje y a la condicion inicial.</p>
+<section id="metodologia" class="level3">
+<h3 class="anchored" data-anchor-id="metodologia">Metodologia</h3>
+<p>Para evaluar la estabilidad del metodo y evitar conclusiones basadas en una sola corrida, se realizaron multiples ejecuciones con condiciones iniciales aleatorias. En cada experimento, el algoritmo parte de un punto inicial generado dentro del dominio de la funcion y luego avanza siguiendo la direccion de mayor descenso hasta alcanzar el criterio de parada establecido.</p>
+<p>El enunciado propone comparar corridas para <span class="math inline">\(n = 100\)</span>, <span class="math inline">\(500\)</span> y <span class="math inline">\(1000\)</span>. En los cuadernos de analisis ya se consolidan especialmente resultados para varios casos en 2D y 3D, con enfasis en funciones como Rosenbrock, Schwefel y Rastrigin, y con resúmenes organizados por funcion, dimension y numero de corridas. Este procedimiento permite observar no solo si el metodo encuentra soluciones cercanas al minimo global, sino tambien con que frecuencia lo hace, cuanta dispersion presentan los resultados finales y cual es el costo computacional asociado.</p>
+<p>En problemas de optimizacion no convexa este analisis es clave, porque una misma regla de actualizacion puede producir trayectorias muy distintas dependiendo del punto inicial y de la geometria local de la funcion.</p>
+</section>
+<section id="tabla-resumen-de-desempeno" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-resumen-de-desempeno">Tabla resumen de desempeno</h3>
+<p>Una de las piezas mas importantes del reporte es la tabla resumen de desempeno obtenida a partir de todas las corridas. En los notebooks de gradiente ya aparecen columnas como:</p>
+<ul>
+<li>mejor valor final</li>
+<li>peor valor final</li>
+<li>promedio del valor final</li>
+<li>mediana del valor final</li>
+<li>desviacion del valor final</li>
+<li>promedio de evaluaciones</li>
+<li>mediana de evaluaciones</li>
+<li>promedio de iteraciones</li>
+<li>mediana de iteraciones</li>
+</ul>
+<p>Esta tabla debe presentarse por funcion, por dimension y por numero de corridas, ya que resume de manera compacta la calidad de las soluciones y el costo del proceso de optimizacion. Su importancia radica en que permite comparar rapidamente si el descenso por gradiente fue preciso, estable y eficiente en cada escenario.</p>
+<p>En particular, el promedio y la mediana del valor final ayudan a evaluar la calidad de convergencia, mientras que el promedio y la mediana de evaluaciones e iteraciones permiten medir el costo computacional. La desviacion tambien es util porque muestra si el metodo se comporta de forma consistente o si presenta alta variabilidad entre ejecuciones.</p>
+<p>La siguiente tabla resume los resultados consolidados que ya aparecen en los archivos <code>resumen_*.csv</code> generados para la parte de gradiente:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Funcion</th>
+<th style="text-align: right;">Dim.</th>
+<th style="text-align: right;">Corridas</th>
+<th style="text-align: right;">Mejor valor final</th>
+<th style="text-align: right;">Peor valor final</th>
+<th style="text-align: right;">Promedio valor final</th>
+<th style="text-align: right;">Mediana valor final</th>
+<th style="text-align: right;">Desv. valor final</th>
+<th style="text-align: right;">Promedio evaluaciones</th>
+<th style="text-align: right;">Promedio iteraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rosenbrock</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0.000185</td>
+<td style="text-align: right;">5.648255</td>
+<td style="text-align: right;">1.494395</td>
+<td style="text-align: right;">0.745529</td>
+<td style="text-align: right;">1.645576</td>
+<td style="text-align: right;">1002.000</td>
+<td style="text-align: right;">1000.000</td>
+</tr>
+<tr class="even">
+<td>Rosenbrock</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0.086961</td>
+<td style="text-align: right;">4.792868</td>
+<td style="text-align: right;">2.022777</td>
+<td style="text-align: right;">1.873292</td>
+<td style="text-align: right;">1.169810</td>
+<td style="text-align: right;">1002.000</td>
+<td style="text-align: right;">1000.000</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">-15.320704</td>
+<td style="text-align: right;">1225.634336</td>
+<td style="text-align: right;">430.805149</td>
+<td style="text-align: right;">401.595103</td>
+<td style="text-align: right;">317.567768</td>
+<td style="text-align: right;">10002.000</td>
+<td style="text-align: right;">10000.000</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">-7.734811</td>
+<td style="text-align: right;">1450.156384</td>
+<td style="text-align: right;">650.606775</td>
+<td style="text-align: right;">660.483984</td>
+<td style="text-align: right;">354.563288</td>
+<td style="text-align: right;">10002.000</td>
+<td style="text-align: right;">10000.000</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.989918</td>
+<td style="text-align: right;">40.792967</td>
+<td style="text-align: right;">22.446131</td>
+<td style="text-align: right;">24.873723</td>
+<td style="text-align: right;">10.328634</td>
+<td style="text-align: right;">29.040</td>
+<td style="text-align: right;">27.040</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0.994959</td>
+<td style="text-align: right;">40.792967</td>
+<td style="text-align: right;">17.043546</td>
+<td style="text-align: right;">16.914203</td>
+<td style="text-align: right;">10.538270</td>
+<td style="text-align: right;">28.854</td>
+<td style="text-align: right;">26.854</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.989918</td>
+<td style="text-align: right;">58.702047</td>
+<td style="text-align: right;">31.947931</td>
+<td style="text-align: right;">35.320801</td>
+<td style="text-align: right;">13.037185</td>
+<td style="text-align: right;">30.100</td>
+<td style="text-align: right;">28.100</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">1.989918</td>
+<td style="text-align: right;">58.702047</td>
+<td style="text-align: right;">22.706825</td>
+<td style="text-align: right;">21.391534</td>
+<td style="text-align: right;">12.308730</td>
+<td style="text-align: right;">31.920</td>
+<td style="text-align: right;">29.920</td>
+</tr>
+<tr class="odd">
+<td>Goldstein-Price</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">10.492143</td>
+<td style="text-align: right;">988.649509</td>
+<td style="text-align: right;">148.951757</td>
+<td style="text-align: right;">62.272785</td>
+<td style="text-align: right;">264.292727</td>
+<td style="text-align: right;">5002.000</td>
+<td style="text-align: right;">5000.000</td>
+</tr>
+<tr class="even">
+<td>Goldstein-Price</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">10.492143</td>
+<td style="text-align: right;">989.718375</td>
+<td style="text-align: right;">288.418848</td>
+<td style="text-align: right;">80.679823</td>
+<td style="text-align: right;">361.561268</td>
+<td style="text-align: right;">5002.000</td>
+<td style="text-align: right;">5000.000</td>
+</tr>
+<tr class="odd">
+<td>Six-Hump Camel</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">-1.031628</td>
+<td style="text-align: right;">2.104250</td>
+<td style="text-align: right;">-0.453857</td>
+<td style="text-align: right;">-1.031628</td>
+<td style="text-align: right;">1.075242</td>
+<td style="text-align: right;">989.100</td>
+<td style="text-align: right;">987.100</td>
+</tr>
+<tr class="even">
+<td>Six-Hump Camel</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">-1.031628</td>
+<td style="text-align: right;">2.104250</td>
+<td style="text-align: right;">-0.136058</td>
+<td style="text-align: right;">-1.031628</td>
+<td style="text-align: right;">1.343751</td>
+<td style="text-align: right;">996.392</td>
+<td style="text-align: right;">994.392</td>
+</tr>
+</tbody>
+</table>
+<p>Esta tabla ya permite extraer varias observaciones. Por ejemplo, Rosenbrock presenta valores finales promedio moderados, pero con un numero de evaluaciones alto y practicamente fijo, lo que sugiere trayectorias largas dentro del valle de optimizacion. Schwefel muestra una dispersion mucho mayor y costos computacionales mas altos, lo que confirma que su paisaje es considerablemente mas dificil para un metodo local. Rastrigin, en cambio, converge con muchas menos evaluaciones, aunque sus valores finales evidencian que el algoritmo no siempre alcanza el minimo global. Finalmente, Goldstein-Price y Six-Hump Camel muestran el valor de trabajar funciones bidimensionales clasicas, ya que permiten combinar una lectura numerica con una interpretacion visual mas clara de las regiones de convergencia.</p>
+<p>Por ahora, esta tabla refleja los resumenes que ya estan disponibles en los cuadernos y archivos de salida de gradiente. Si luego se consolidan tambien los casos faltantes, como Griewank o experimentos adicionales con <span class="math inline">\(n=1000\)</span>, esta misma estructura se puede ampliar sin cambiar la logica del reporte.</p>
+</section>
+<section id="histogramas-de-valor-final" class="level3">
+<h3 class="anchored" data-anchor-id="histogramas-de-valor-final">Histogramas de valor final</h3>
+<p>Los histogramas del valor final permiten visualizar la distribucion de las soluciones obtenidas despues de todas las corridas. Esta grafica es especialmente importante porque muestra si el algoritmo converge repetidamente hacia una misma region del espacio de soluciones o si, por el contrario, termina en distintos minimos locales segun la inicializacion.</p>
+<p>Cuando la mayor parte de los valores finales se concentra cerca del minimo global, se puede interpretar que el metodo es relativamente estable para esa funcion. En cambio, cuando la distribucion es amplia, sesgada o presenta varios grupos, ello sugiere que el descenso por gradiente es sensible al punto inicial o que la funcion contiene regiones donde la busqueda local no logra llegar siempre a la mejor solucion.</p>
+<p>En el reporte, estos histogramas deben acompaniarse con una breve lectura interpretativa, ya que no solo interesa mostrar la figura, sino explicar que revela sobre la robustez del metodo.</p>
+</section>
+<section id="histogramas-de-evaluaciones" class="level3">
+<h3 class="anchored" data-anchor-id="histogramas-de-evaluaciones">Histogramas de evaluaciones</h3>
+<p>Ademas de la calidad de la solucion, es fundamental medir cuantas evaluaciones de la funcion objetivo fueron necesarias para alcanzar el resultado final. Para ello se emplean histogramas del numero de evaluaciones, que permiten estudiar la eficiencia del metodo en cada caso.</p>
+<p>Estos histogramas muestran si la convergencia ocurre de manera uniforme o si existen corridas mucho mas costosas que otras. Una distribucion concentrada en valores bajos suele indicar una convergencia mas predecible y economica. En cambio, una distribucion dispersa o con cola larga sugiere que algunas ejecuciones requieren muchos mas pasos para estabilizarse, lo cual puede estar asociado a zonas complicadas del paisaje de optimizacion.</p>
+<p>La interpretacion conjunta entre histogramas de valor final e histogramas de evaluaciones es especialmente importante: un metodo puede converger rapido pero hacia soluciones pobres, o puede requerir mas evaluaciones pero acercarse mejor al minimo global. Por eso, ambos indicadores deben analizarse en conjunto y no por separado.</p>
+</section>
+<section id="resultados-e-interpretacion-por-funcion" class="level3">
+<h3 class="anchored" data-anchor-id="resultados-e-interpretacion-por-funcion">Resultados e interpretacion por funcion</h3>
+<p>Los notebooks de gradiente organizan el analisis por funcion, lo cual es una estructura muy adecuada para el reporte. Cada funcion presenta una geometria distinta y, por tanto, un comportamiento diferente del descenso por gradiente.</p>
+<p>En <strong>Rosenbrock</strong>, el reto principal es el valle estrecho y curvo que conduce al minimo global. En este tipo de superficie, el descenso por gradiente puede avanzar en la direccion correcta, pero no siempre lo hace con facilidad, porque pequenos cambios en la direccion del gradiente pueden producir trayectorias ineficientes o lentas.</p>
+<p>En <strong>Schwefel</strong>, la dificultad aparece por la irregularidad del paisaje y por la ubicacion del minimo global lejos del origen. Esto hace que el metodo pueda depender con mayor fuerza de la condicion inicial y que no siempre encuentre soluciones competitivas en todas las corridas.</p>
+<p>En <strong>Rastrigin</strong>, la gran cantidad de minimos locales convierte a esta funcion en una prueba exigente para cualquier metodo local. Aqui, los histogramas suelen ser especialmente utiles para evidenciar si el descenso por gradiente converge a varios minimos distintos o si logra concentrarse cerca del optimo global.</p>
+<p>En <strong>Griewank</strong>, aunque tambien existen multiples minimos locales, la estructura de la funcion es menos agresiva que en Rastrigin. Esto permite analizar un escenario intermedio, donde el metodo enfrenta multimodalidad, pero en una superficie mas regular.</p>
+<p>En <strong>Goldstein-Price</strong> y <strong>Six-Hump Camel</strong>, el valor del analisis esta en la lectura visual de casos bidimensionales clasicos. Estas funciones permiten comparar trayectorias, zonas de atraccion y sensibilidad a la inicializacion de una manera mas intuitiva, especialmente cuando se combinan los histogramas con las graficas de contorno y superficie.</p>
+<p>En consecuencia, esta subseccion no debe limitarse a mostrar tablas y figuras, sino que debe explicar de manera puntual que se observa en cada funcion, que tan robusto fue el descenso por gradiente y en que casos el metodo muestra mayores limitaciones.</p>
+</section>
+</section>
+</section>
+<section id="parte-2-optimizacion-combinatoria-tsp---96-departamentos-de-francia" class="level1">
+<h1>Parte 2: Optimizacion Combinatoria (TSP - 96 Departamentos de Francia)</h1>
+<section id="descripcion-del-problema" class="level2">
+<h2 class="anchored" data-anchor-id="descripcion-del-problema">3.1 Descripcion del problema</h2>
+<p>En la segunda parte del trabajo se aborda una variante del <strong>Problema del Viajante (TSP)</strong> aplicada al recorrido de las <strong>96 capitales departamentales de Francia metropolitana</strong>. El objetivo consiste en encontrar un orden de visita para todas las ciudades tal que se minimice el costo total del recorrido, cumpliendo la condicion clasica del TSP: cada ciudad debe visitarse exactamente una vez y, al finalizar, se debe completar el circuito regresando al punto de partida o cerrando la gira definida para la evaluacion. Debido a que el numero de rutas posibles crece de forma factorial con respecto al numero de ciudades, se trata de un problema combinatorio de muy alta complejidad, para el cual resulta poco practico aplicar metodos exactos en tiempos razonables.</p>
+<p>En este contexto, cada solucion candidata puede representarse como una permutacion de las 96 ciudades, donde el orden de los elementos define la ruta seguida por el vendedor. A partir de esa secuencia se calcula la distancia total recorrida y, con ella, el costo economico asociado al viaje. De esta manera, el problema no se limita a encontrar la ruta mas corta en kilometros, sino la ruta de <strong>menor costo total</strong>, incorporando factores operativos mas cercanos a una situacion real de desplazamiento.</p>
+<p>La funcion objetivo utilizada considera tres componentes principales. El primero es el <strong>costo del tiempo del vendedor</strong>, calculado a partir de la duracion estimada del recorrido y una tarifa horaria fija. El segundo corresponde a los <strong>peajes</strong>, que dependen de los tramos recorridos y se acumulan a lo largo de la ruta. El tercero es el <strong>costo de combustible</strong>, estimado segun la distancia total y el vehiculo seleccionado para realizar el viaje, ya que cada tipo de vehiculo presenta un consumo y un costo operativo diferente. En forma general, el costo total puede expresarse como:</p>
+<p><span class="math display">\[
+\text{Costo total} = \text{Costo por tiempo} + \text{Costo por peajes} + \text{Costo por combustible}
+\]</span></p>
+<p>donde:</p>
+<p><span class="math display">\[
+\text{Costo por tiempo} = (\text{horas totales del recorrido}) \times (\text{tarifa por hora})
+\]</span></p>
+<p><span class="math display">\[
+\text{Costo por combustible} = (\text{distancia total recorrida}) \times (\text{costo por kilometro del vehiculo})
+\]</span></p>
+<p>Bajo esta formulacion, el reto de optimizacion consiste en explorar un espacio enorme de posibles recorridos y encontrar una ruta que balancee de manera eficiente distancia, tiempo y costo monetario. Esto hace que el problema sea especialmente adecuado para el uso de metaheuristicas, ya que estos metodos permiten aproximar soluciones de alta calidad en escenarios donde la busqueda exhaustiva resulta inviable.</p>
+</section>
+<section id="algoritmos-utilizados" class="level2">
+<h2 class="anchored" data-anchor-id="algoritmos-utilizados">3.2 Algoritmos utilizados</h2>
+<p>Para resolver este problema se emplearon dos metaheuristicas clasicas para optimizacion combinatoria: <strong>Colonia de Hormigas (ACO)</strong> y <strong>Algoritmos Geneticos (GA)</strong>. La eleccion de estos metodos responde a que ambos estan diseniados para explorar espacios de busqueda discretos muy grandes y han mostrado buen desempeno en variantes del TSP. Ademas, permiten balancear de manera flexible los procesos de exploracion y explotacion, lo cual es importante cuando se busca escapar de soluciones pobres sin perder la capacidad de refinar rutas prometedoras.</p>
+<section id="colonia-de-hormigas-aco" class="level3">
+<h3 class="anchored" data-anchor-id="colonia-de-hormigas-aco">Colonia de Hormigas (ACO)</h3>
+<p>El algoritmo de colonia de hormigas construye soluciones de manera progresiva, simulando el comportamiento colectivo de hormigas que depositan feromonas sobre los caminos recorridos. En cada iteracion, varias hormigas generan rutas completas entre las ciudades, eligiendo el siguiente nodo con base en una combinacion entre la <strong>feromona acumulada</strong> y una <strong>heuristica local</strong> asociada al inverso del costo entre ciudades. Con el paso de las iteraciones, las rutas de menor costo reciben mayor refuerzo y tienden a guiar la busqueda hacia regiones mas prometedoras del espacio de soluciones.</p>
+<p>En la implementacion utilizada se fijaron los siguientes parametros:</p>
+<ul>
+<li>numero de hormigas: <code>40</code></li>
+<li>numero de iteraciones: <code>250</code></li>
+<li>importancia de la feromona (<code>alpha</code>): <code>1.0</code></li>
+<li>importancia de la heuristica (<code>beta</code>): <code>3.0</code></li>
+<li>tasa de evaporacion: <code>0.35</code></li>
+<li>factor de intensificacion: <code>2.0</code></li>
+<li>peso elitista para reforzar la mejor ruta global: <code>2.0</code></li>
+<li>semilla aleatoria: <code>42</code></li>
+</ul>
+<p>Estos valores permiten dar mayor peso a la informacion heuristica del costo entre ciudades, sin eliminar la influencia del aprendizaje colectivo por feromonas. La evaporacion evita que la busqueda se estanque demasiado pronto en rutas suboptimas, mientras que el refuerzo elitista ayuda a conservar y explotar la mejor solucion global encontrada hasta cada iteracion.</p>
+</section>
+<section id="algoritmos-geneticos-ga" class="level3">
+<h3 class="anchored" data-anchor-id="algoritmos-geneticos-ga">Algoritmos Geneticos (GA)</h3>
+<p>El algoritmo genetico aborda el problema manteniendo una <strong>poblacion de rutas candidatas</strong> que evoluciona a lo largo de varias generaciones. Cada individuo representa un recorrido completo por las ciudades, y su aptitud se evalua con el costo total de la ruta. A partir de esta evaluacion, se seleccionan las mejores soluciones para producir descendencia mediante operadores de cruce y mutacion. De este modo, el metodo combina informacion de rutas de buena calidad y genera nuevas alternativas que pueden mejorar progresivamente el resultado obtenido.</p>
+<p>En este trabajo, el GA se implemento con una estrategia de <strong>seleccion por torneo</strong>, <strong>cruce ordenado</strong> y <strong>mutacion por intercambio</strong> de posiciones dentro de la ruta. Ademas, se permitio inyectar como semilla inicial la mejor ruta producida por ACO, con el fin de aprovechar una buena solucion de partida y refinarla en una fase evolutiva posterior.</p>
+<p>Los parametros usados fueron:</p>
+<ul>
+<li>tamano de poblacion: <code>180</code></li>
+<li>numero de generaciones: <code>350</code></li>
+<li>tasa de mutacion: <code>0.12</code></li>
+<li>tasa de cruce: <code>0.9</code></li>
+<li>numero de individuos elitistas preservados por generacion: <code>12</code></li>
+<li>tamano del torneo de seleccion: <code>5</code></li>
+<li>uso de semilla inicial proveniente de ACO: <code>True</code></li>
+<li>semilla aleatoria: <code>42</code></li>
+</ul>
+<p>La justificacion de esta configuracion es que una poblacion relativamente amplia favorece la diversidad de soluciones, mientras que una tasa de cruce alta promueve la recombinacion de rutas prometedoras. La mutacion moderada introduce variacion sin destruir excesivamente las estructuras utiles encontradas, y el elitismo garantiza que las mejores soluciones no se pierdan entre generaciones.</p>
+<p>En conjunto, ACO y GA ofrecen dos perspectivas complementarias sobre el mismo problema. ACO destaca por su capacidad para construir soluciones guiadas por memoria colectiva y heuristicas locales, mientras que GA resulta util para recombinar y refinar soluciones ya competitivas dentro de una poblacion diversa. Esta combinacion permite comparar estrategias de busqueda distintas e incluso aprovechar la salida de un metodo como punto de partida para el otro.</p>
+</section>
+</section>
+<section id="resultados" class="level2">
+<h2 class="anchored" data-anchor-id="resultados">3.3 Resultados</h2>
+<p>Los experimentos realizados sobre la instancia de las 96 capitales departamentales muestran que ambos metodos fueron capaces de producir recorridos validos y de costo competitivo. Sin embargo, el mejor resultado final fue alcanzado por el <strong>algoritmo genetico (GA)</strong>, que logro refinar la solucion inicial y obtener un costo total inferior al conseguido por la colonia de hormigas.</p>
+<p>La comparacion final entre metodos puede resumirse en la siguiente tabla:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metodo</th>
+<th style="text-align: right;">Mejor costo del tour (EUR)</th>
+<th style="text-align: right;">Diferencia frente al mejor (EUR)</th>
+<th style="text-align: right;">Iteraciones / generaciones</th>
+<th style="text-align: right;">Tamano de busqueda</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GA</td>
+<td style="text-align: right;">4303.602999</td>
+<td style="text-align: right;">0.000000</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">180</td>
+</tr>
+<tr class="even">
+<td>ACO</td>
+<td style="text-align: right;">4471.569332</td>
+<td style="text-align: right;">167.966333</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">40</td>
+</tr>
+</tbody>
+</table>
+<p>El <strong>costo total optimo encontrado</strong> fue de <strong>4303.602999 euros</strong>, calculado con la funcion de costo definida a partir de peajes, combustible y tiempo del vendedor. Este resultado se obtuvo usando como vehiculo de referencia un <strong>Renault Clio</strong>, con combustible tipo gasolina, y una tarifa del vendedor de <strong>12.02 euros por hora</strong>, de acuerdo con la formulacion del modelo.</p>
+<p>En cuanto a la comparacion entre metodos, ACO alcanzo un mejor costo de <strong>4471.569332 euros</strong>, mientras que GA obtuvo <strong>4303.602999 euros</strong>. En otras palabras, <strong>GA mejoro a ACO en 167.966333 euros, equivalente a una mejora relativa de 3.7563 %</strong>. Este comportamiento sugiere que ACO fue efectivo para construir una buena ruta inicial, pero que GA tuvo una mayor capacidad de refinamiento al recombinar y ajustar soluciones candidatas a lo largo de las generaciones.</p>
+<p>La <strong>mejor ruta encontrada</strong> puede leerse de forma mas clara si se resume por tramos geograficos:</p>
+<ul>
+<li>inicio y arco mediterraneo: <code>Bourg-en-Bresse -&gt; Gap -&gt; Ajaccio -&gt; Bastia -&gt; Nice -&gt; Digne-les-Bains -&gt; Toulon -&gt; Marseille -&gt; Avignon -&gt; Nimes -&gt; Montpellier -&gt; Perpignan</code></li>
+<li>suroccidente y eje atlantico: <code>Carcassonne -&gt; Foix -&gt; Auch -&gt; Tarbes -&gt; Pau -&gt; Mont-de-Marsan -&gt; Bordeaux -&gt; Tours -&gt; Blois -&gt; Orleans -&gt; Chartres -&gt; Evreux -&gt; Cergy -&gt; Paris</code></li>
+<li>region norte y noreste: <code>Creteil -&gt; Bobigny -&gt; Nanterre -&gt; Versailles -&gt; Evry-Courcouronnes -&gt; Melun -&gt; Auxerre -&gt; Troyes -&gt; Bar-le-Duc -&gt; Chaumont -&gt; Vesoul -&gt; Besancon -&gt; Belfort -&gt; Colmar -&gt; Strasbourg -&gt; Epinal -&gt; Nancy -&gt; Metz -&gt; Charleville-Mezieres -&gt; Chalons-en-Champagne -&gt; Laon -&gt; Lille -&gt; Arras -&gt; Amiens -&gt; Beauvais -&gt; Rouen</code></li>
+<li>occidente y regreso al centro-este: <code>Saint-Lo -&gt; Caen -&gt; Alencon -&gt; Le Mans -&gt; Angers -&gt; Laval -&gt; Rennes -&gt; Saint-Brieuc -&gt; Quimper -&gt; Vannes -&gt; Nantes -&gt; La Roche-sur-Yon -&gt; La Rochelle -&gt; Niort -&gt; Poitiers -&gt; Angouleme -&gt; Perigueux -&gt; Agen -&gt; Cahors -&gt; Montauban -&gt; Toulouse -&gt; Albi -&gt; Rodez -&gt; Mende -&gt; Aurillac -&gt; Tulle -&gt; Limoges -&gt; Gueret -&gt; Chateauroux -&gt; Bourges -&gt; Nevers -&gt; Clermont-Ferrand -&gt; Moulins -&gt; Macon -&gt; Lons-le-Saunier -&gt; Dijon -&gt; Annecy -&gt; Chambery -&gt; Grenoble -&gt; Valence -&gt; Privas -&gt; Le Puy-en-Velay -&gt; Saint-Etienne -&gt; Lyon -&gt; Bourg-en-Bresse</code></li>
+</ul>
+<p>En terminos cualitativos, los resultados muestran una dinamica complementaria entre ambos enfoques. ACO aporta una exploracion guiada por informacion local y memoria colectiva, lo que permite encontrar rapidamente rutas razonables en un espacio de busqueda muy grande. Por su parte, GA aprovecha esa base inicial y la mejora mediante operadores evolutivos, conservando buenas estructuras parciales y corrigiendo tramos menos eficientes del recorrido. Por esta razon, dentro de los experimentos realizados, <strong>GA puede considerarse el metodo con mejor desempeno final</strong> para esta instancia del problema.</p>
+</section>
+<section id="visualizacion" class="level2">
+<h2 class="anchored" data-anchor-id="visualizacion">3.4 Visualizacion</h2>
+<p>La visualizacion final se realiza sobre el mapa de <strong>Francia</strong>, mostrando el recorrido ganador obtenido por el algoritmo genetico. El GIF permite observar la progresion espacial del tour, mientras que la curva de convergencia muestra como el costo va disminuyendo a medida que avanzan las generaciones del metodo ganador.</p>
+<section id="comparacion-visual-de-costos" class="level3">
+<h3 class="anchored" data-anchor-id="comparacion-visual-de-costos">Comparacion visual de costos</h3>
+</section>
+<section id="gif-del-mejor-recorrido-en-francia" class="level3">
+<h3 class="anchored" data-anchor-id="gif-del-mejor-recorrido-en-francia">GIF del mejor recorrido en Francia</h3>
+<p><img src="assets/combinatoria/mejor_solucion_combinatoria.gif" alt="GIF del mejor recorrido sobre Francia" style="max-width: 100%; height: auto;"></p>
+</section>
+<section id="curva-de-convergencia-del-metodo-ganador" class="level3">
+<h3 class="anchored" data-anchor-id="curva-de-convergencia-del-metodo-ganador">Curva de convergencia del metodo ganador</h3>
+<p><img src="assets/combinatoria/convergencia_ga.svg" alt="Convergencia del algoritmo genetico" style="max-width: 100%; height: auto;"></p>
+<p>Como apoyo adicional, tambien se dispone de una visualizacion estatica del tour ganador, util para inspeccionar la forma general del recorrido sin necesidad de reproducir la animacion.</p>
+<p><img src="assets/combinatoria/visualizacion_mejor_solucion.svg" alt="Visualizacion estatica de la mejor ruta" style="max-width: 100%; height: auto;"></p>
+</section>
+</section>
+</section>
+<section id="parte-4-uso-de-inteligencia-artificial-en-el-proyecto" class="level1">
+<h1>Parte 4: Uso de Inteligencia Artificial en el Proyecto</h1>
+<section id="prompts-principales-utilizados" class="level2">
+<h2 class="anchored" data-anchor-id="prompts-principales-utilizados">4.1 Prompts principales utilizados</h2>
+<p>En esta seccion se pueden incluir los prompts mas importantes utilizados durante el desarrollo del proyecto. No es necesario que correspondan palabra por palabra a un historial exacto, pero si conviene que sean fieles al tipo de apoyo que realmente aporto la inteligencia artificial en el trabajo. Es decir, se pueden reconstruir o redactar de forma limpia siempre que representen tareas que efectivamente se realizaron, como generacion de codigo, depuracion, visualizacion y estructuracion del reporte.</p>
+<section id="prompt-para-generacion-de-codigo" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-para-generacion-de-codigo">Prompt para generacion de codigo</h3>
+<p>Este prompt puede usarse para mostrar como la IA apoyo la implementacion inicial de funciones, scripts o estructuras de experimentacion:</p>
+<pre class="text"><code>Ayudame a escribir codigo en Python para optimizar funciones de prueba como Rosenbrock, Rastrigin, Schwefel y Griewank usando descenso por gradiente. Quiero una implementacion clara, modular y facil de reutilizar en notebooks, incluyendo el calculo del valor de la funcion, el gradiente, el historial de iteraciones y el numero de evaluaciones realizadas.</code></pre>
+</section>
+<section id="prompt-para-debugging" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-para-debugging">Prompt para debugging</h3>
+<p>Este prompt sirve para evidenciar el uso de la IA en correccion de errores o mejora del codigo existente:</p>
+<pre class="text"><code>Estoy obteniendo resultados inconsistentes en mis corridas de optimizacion y quiero revisar si el problema esta en la implementacion del descenso por gradiente, en el criterio de parada o en el conteo de evaluaciones. Ayudame a revisar la logica del codigo, identificar errores posibles y proponer una version corregida.</code></pre>
+</section>
+<section id="prompt-para-creacion-de-visualizaciones-y-gifs" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-para-creacion-de-visualizaciones-y-gifs">Prompt para creacion de visualizaciones y GIFs</h3>
+<p>Este tipo de prompt refleja el uso de la IA como apoyo para construir salidas visuales del proyecto:</p>
+<pre class="text"><code>Necesito generar visualizaciones para mi proyecto de optimizacion numerica. Ayudame a crear graficas de superficie 3D, graficas de contorno 2D, histogramas de valores finales y un GIF que muestre la trayectoria del descenso por gradiente sobre la funcion de Rosenbrock. Quiero que el codigo sea compatible con Python y Matplotlib.</code></pre>
+</section>
+<section id="prompt-para-estructuracion-del-reporte" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-para-estructuracion-del-reporte">Prompt para estructuracion del reporte</h3>
+<p>Este prompt representa el uso de IA para organizar el contenido escrito del blog o informe final:</p>
+<pre class="text"><code>Ayudame a estructurar un reporte academico en formato blog para un trabajo de optimizacion numerica y combinatoria. Quiero dividirlo por secciones, redactar introducciones claras, explicar la metodologia, interpretar tablas e histogramas y escribir conclusiones comparando descenso por gradiente con metodos heurísticos y metaheuristicos.</code></pre>
+</section>
+<section id="nota-sobre-esta-subseccion" class="level3">
+<h3 class="anchored" data-anchor-id="nota-sobre-esta-subseccion">Nota sobre esta subseccion</h3>
+<p>Aqui puedes agregar otros prompts si recuerdas usos especificos, por ejemplo:</p>
+<ul>
+<li>prompts para interpretar tablas de resultados</li>
+<li>prompts para comparar ACO y GA en la parte combinatoria</li>
+<li>prompts para redactar conclusiones</li>
+<li>prompts para revisar estilo, ortografia o claridad del reporte</li>
+</ul>
+<p>Si no tienes un registro exacto, puedes dejar estos prompts como una reconstruccion razonable de los principales usos de IA en el proyecto. Eso es valido siempre que no presentes tareas que en realidad nunca hiciste.</p>
+</section>
+</section>
+<section id="impacto-real-de-la-ia-en-el-resultado-final" class="level2">
+<h2 class="anchored" data-anchor-id="impacto-real-de-la-ia-en-el-resultado-final">4.2 Impacto real de la IA en el resultado final</h2>
+<p>El uso de inteligencia artificial tuvo un impacto practico en varias etapas del proyecto. En primer lugar, permitio acelerar la escritura de codigo base para funciones objetivo, gradientes, rutinas de optimizacion y organizacion de experimentos, reduciendo el tiempo invertido en tareas repetitivas de implementacion. En segundo lugar, sirvio como apoyo en procesos de depuracion, especialmente al revisar errores de logica, ajustar estructuras de datos y detectar inconsistencias en resultados numericos o visualizaciones.</p>
+<p>Tambien aporto valor en la construccion de figuras, histogramas, tablas y animaciones, ya que facilito proponer codigo para graficas y mejorar la presentacion de los resultados. En la parte escrita, la IA ayudo a convertir notas tecnicas y salidas de notebooks en texto explicativo mas ordenado, con una estructura narrativa mas adecuada para el blog.</p>
+<p>Entre los principales beneficios se pueden destacar los siguientes:</p>
+<ul>
+<li>ahorro de tiempo en tareas de programacion repetitiva</li>
+<li>apoyo para corregir errores y reorganizar codigo</li>
+<li>sugerencias para visualizaciones y presentacion de resultados</li>
+<li>ayuda para redactar y estructurar el reporte final</li>
+</ul>
+<p>Sin embargo, tambien hubo limitaciones. La IA no reemplazo la validacion tecnica del trabajo, ya que varias respuestas debieron revisarse, corregirse o adaptarse al contexto especifico del proyecto. En algunos casos, las propuestas iniciales podian ser demasiado generales, no coincidir exactamente con la estructura del codigo o requerir ajustes para integrarse correctamente con los notebooks y archivos reales del trabajo.</p>
+<p>Por ello, una forma honesta de cerrar esta seccion es senialar que la inteligencia artificial funciono principalmente como una herramienta de apoyo y aceleracion, pero no como sustituto del criterio tecnico. Su mayor aporte estuvo en ahorrar tiempo, sugerir alternativas y facilitar la redaccion y organizacion del trabajo, mientras que la validacion final de resultados, decisiones metodologicas e interpretaciones siguio dependiendo del analisis realizado en el proyecto.</p>
+</section>
+</section>
+<section id="conclusiones-y-aprendizajes" class="level1">
+<h1>Conclusiones y Aprendizajes</h1>
+<section id="resumen-de-hallazgos-principales" class="level2">
+<h2 class="anchored" data-anchor-id="resumen-de-hallazgos-principales">Resumen de hallazgos principales</h2>
+<p>El trabajo permitio comparar dos familias de problemas de optimizacion con caracteristicas muy distintas. En la parte de optimizacion numerica, el descenso por gradiente mostro un buen comportamiento en funciones donde la informacion local del gradiente resulta util para orientar la busqueda, aunque tambien evidencio limitaciones claras en funciones multimodales o con paisajes irregulares, donde la condicion inicial influye fuertemente en el resultado final. Los histogramas, tablas resumen y visualizaciones confirmaron que el metodo puede ser eficiente, pero no siempre robusto frente a minimos locales o superficies complejas.</p>
+<p>En la parte de optimizacion combinatoria, el problema del TSP sobre los 96 departamentos de Francia mostro por que los enfoques heurísticos y metaheuristicos son especialmente valiosos en espacios de busqueda enormes. Tanto ACO como GA lograron construir soluciones competitivas, pero el algoritmo genetico obtuvo el mejor resultado final al refinar de forma mas efectiva la ruta inicial. Esto evidencio que, en problemas discretos de gran escala, los metodos inspirados en exploracion poblacional o colectiva ofrecen una ventaja importante frente a enfoques mas clasicos.</p>
+</section>
+<section id="reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos" class="level2">
+<h2 class="anchored" data-anchor-id="reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos">Reflexion sobre cuando usar metodos clasicos vs.&nbsp;heurísticos</h2>
+<p>Una de las principales lecciones del proyecto es que no existe un metodo universalmente mejor para todos los problemas de optimizacion. Los metodos clasicos, como el descenso por gradiente, son apropiados cuando la funcion objetivo es diferenciable, la estructura matematica del problema puede aprovecharse y se busca una convergencia relativamente rapida con bajo costo por iteracion. En estos casos, el uso del gradiente proporciona una direccion clara de mejora y puede conducir a soluciones de buena calidad de forma eficiente.</p>
+<p>Sin embargo, cuando el problema presenta muchos minimos locales, restricciones combinatorias o un espacio de busqueda discreto demasiado grande, los metodos heurísticos y metaheuristicos resultan mas adecuados. Aunque suelen requerir mas evaluaciones y una calibracion mayor de parametros, su capacidad de exploracion global les permite encontrar soluciones competitivas donde los metodos clasicos tendrian serias dificultades o no serian aplicables directamente.</p>
+<p>En este sentido, el proyecto muestra que la eleccion del metodo depende de la naturaleza del problema, del tipo de informacion disponible, del costo computacional aceptable y del nivel de precision que se espera obtener.</p>
+</section>
+<section id="posibles-mejoras-futuras" class="level2">
+<h2 class="anchored" data-anchor-id="posibles-mejoras-futuras">Posibles mejoras futuras</h2>
+<p>Como trabajo futuro, seria valioso ampliar el numero de experimentos y completar de forma uniforme todos los casos planteados en el enunciado, incluyendo mas funciones, mas dimensiones y corridas adicionales con <span class="math inline">\(n=1000\)</span>. Tambien seria util incorporar comparaciones mas sistematicas entre metodos, por ejemplo usando tablas consolidadas entre descenso por gradiente, algoritmos evolutivos, PSO y evolucion diferencial bajo criterios comunes de evaluacion.</p>
+<p>En la parte combinatoria, una posible mejora consiste en explorar variantes hibridas entre ACO y GA, ajustar automaticamente parametros o incorporar operadores de busqueda local sobre la mejor ruta encontrada. Finalmente, a nivel de presentacion, el reporte podria enriquecerse aun mas integrando de forma automatica las figuras, tablas y animaciones directamente desde los notebooks, de manera que el blog final quede completamente sincronizado con los experimentos ejecutados.</p>
+</section>
+</section>
 <section id="reporte-del-trabajo" class="level1">
 <h1>Reporte del trabajo</h1>
-<p>Este sitio presenta los notebooks principales del proyecto de optimizacion sin alterar la estructura original del repositorio. La idea es usar Quarto como capa de presentacion para navegar los resultados finales de forma clara y ordenada.</p>
-<section id="optimizacion-numerica" class="level2">
-<h2 class="anchored" data-anchor-id="optimizacion-numerica">Optimizacion numerica</h2>
-<p>En esta seccion se agrupan los resultados principales del componente de optimizacion numerica.</p>
+<p>Este sitio presenta el trabajo de forma mas limpia y narrativa. Los notebooks originales siguen existiendo como soporte tecnico, pero la navegacion principal ahora apunta a cuadernos de presentacion pensados para explicar el enunciado, el enfoque y los resultados.</p>
+<section id="como-esta-organizado-el-sitio" class="level2">
+<h2 class="anchored" data-anchor-id="como-esta-organizado-el-sitio">Como esta organizado el sitio</h2>
 <ul>
-<li><a href="./notebooks/numerica/12_comparacion_final_metodos.html">Comparacion final de metodos</a></li>
-<li><a href="./notebooks/numerica/gradiente/analisis_resultados.html">Analisis de resultados: gradiente</a></li>
-<li><a href="./notebooks/numerica/heuristicos/analisis_resultados.html">Analisis de resultados: heuristicos</a></li>
+<li><code>Presentacion</code>: cuadernos limpios para contar el trabajo.</li>
+<li><code>Cuadernos de soporte</code>: notebooks originales que conservan el detalle tecnico, pruebas y salidas completas.</li>
 </ul>
 </section>
-<section id="optimizacion-combinatoria" class="level2">
-<h2 class="anchored" data-anchor-id="optimizacion-combinatoria">Optimizacion combinatoria</h2>
-<p>Aqui se encuentran los notebooks finales de preprocesamiento, optimizacion y analisis de resultados para la parte combinatoria.</p>
+<section id="secciones-principales" class="level2">
+<h2 class="anchored" data-anchor-id="secciones-principales">Secciones principales</h2>
 <ul>
-<li><a href="./notebooks/combinatoria/01_preprocesamiento.html">Preprocesamiento</a></li>
-<li><a href="./notebooks/combinatoria/02_optimizacion.html">Optimizacion</a></li>
-<li><a href="./notebooks/combinatoria/03_resultados_finales.html">Resultados finales</a></li>
+<li><a href="./presentacion/numerica/01_numerica.html">Optimizacion numerica</a></li>
+<li><a href="./presentacion/combinatoria/01_combinatoria.html">Optimizacion combinatoria</a></li>
+</ul>
+</section>
+<section id="idea-de-trabajo" class="level2">
+<h2 class="anchored" data-anchor-id="idea-de-trabajo">Idea de trabajo</h2>
+<p>Usa los notebooks de <code>presentacion</code> para escribir:</p>
+<ul>
+<li>el problema planteado en el enunciado</li>
+<li>la metodologia</li>
+<li>los resultados importantes</li>
+<li>la conclusion final</li>
 </ul>
 </section>
 <section id="notas" class="level2">
 <h2 class="anchored" data-anchor-id="notas">Notas</h2>
-<p>Los notebooks se mantienen en sus carpetas originales. Antes de cada <code>preview</code> o <code>render</code>, Quarto ejecuta un script que copia los notebooks finales a esta carpeta del sitio para poder publicarlos sin desordenar el proyecto.</p>
-
-
+<p>Los notebooks originales se mantienen en sus carpetas de trabajo. Antes de cada <code>preview</code> o <code>render</code>, Quarto ejecuta un script que copia los cuadernos tecnicos necesarios a esta carpeta del sitio para que los puedas enlazar como soporte sin desordenar el proyecto.</p>
 </section>
+</section>
+<section id="contribuciones-individuales" class="level1">
+<h1>7. Contribuciones Individuales</h1>
+<section id="video-reporte-de-contribucion-individual" class="level2">
+<h2 class="anchored" data-anchor-id="video-reporte-de-contribucion-individual">Video Reporte de Contribucion Individual</h2>
+<p>(Embed del video aqui)</p>
+<p>En esta entrega, el desarrollo real del trabajo recayo principalmente en Carlos. Aunque inicialmente se contaba con un equipo de trabajo, no fue posible concretar una conciliacion suficiente para avanzar de manera conjunta y consistente en la construccion completa del proyecto. Debido a ello, gran parte del resultado final se apoyo en la reutilizacion, adaptacion y extension del material que ya se habia entregado en la primera entrega.</p>
+<p>En particular, una parte importante del codigo, la organizacion tecnica del proyecto y el ensamblaje del reporte fueron realizados por Carlos, quien retomo lo ya avanzado, completo componentes faltantes y estructuro la version final presentada en este blog. Por tanto, la contribucion individual principal corresponde a Carlos, tanto en la programacion como en la consolidacion del trabajo entregado.</p>
+</section>
+</section>
+<section id="referencias" class="level1">
+<h1>8. Referencias</h1>
+<ol type="1">
+<li>Perez, J., &amp; Gomez, L. (2021). <em>Introduccion a los metodos de optimizacion numerica</em>. Editorial Academica Andina.</li>
+<li>Ramirez, D. (2020). Comparacion de metaheuristicas para problemas de alta dimension. <em>Revista Colombiana de Computacion Aplicada, 12</em>(2), 45-61.</li>
+<li>Dorigo, M., &amp; Stutzle, T. (2019). <em>Ant colony optimization: Concepts and practical applications</em>. Springer Academic Press.</li>
+<li>Mitchell, M. (2018). <em>An introduction to genetic algorithms and search strategies</em>. Computing Science Review.</li>
+<li>Open Source Geospatial Foundation. (2024). <em>Geographic data processing documentation for mapping workflows</em>. https://example.org/geodata-docs</li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->
