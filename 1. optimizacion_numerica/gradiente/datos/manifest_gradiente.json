@@ -11,15 +11,12 @@
   "consumer_notebook": "analisis_resultados.ipynb",
   "descripcion": "Datos generados sin graficas ni animaciones.",
   "filtros_ejecucion": {
-    "selected_functions": [
-      "griewank",
-      "goldstein_price",
-      "six_hump_camel"
-    ],
+    "selected_functions": null,
     "selected_dimensions": null,
     "selected_n_corridas": [
       100,
-      500
+      500,
+      1000
     ],
     "skip_existing_files": true
   },

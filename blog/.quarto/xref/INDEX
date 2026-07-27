@@ -1,6 +1,7 @@
 {
   "index.qmd": {
-    "index.html": "2849b264"
+    "index.html": "2849b264",
+    "index.tex": "736625e9"
   },
   "notebooks/numerica/12_comparacion_final_metodos.ipynb": {
     "12_comparacion_final_metodos.html": "ca1ad7b3"
@@ -19,5 +20,20 @@
   },
   "notebooks/numerica/heuristicos/analisis_resultados.ipynb": {
     "analisis_resultados.html": "0b2c66f2"
+  },
+  "presentacion/combinatoria/01_combinatoria.ipynb": {
+    "01_combinatoria.html": "163073ab"
+  },
+  "presentacion/numerica/01_numerica.ipynb": {
+    "01_numerica.html": "2fecb393"
+  },
+  "notebooks/combinatoria/00_construccion_grafo_inicial.ipynb": {
+    "00_construccion_grafo_inicial.html": "247c93c9"
+  },
+  "numerica.qmd": {
+    "numerica.html": "2e7a8258"
+  },
+  "combinatoria.qmd": {
+    "combinatoria.html": "012d505f"
   }
 }

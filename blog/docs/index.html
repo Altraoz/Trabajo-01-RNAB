@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Carlos Daniel Urresty">
 
-<title>Reporte de Optimizacion – Trabajo Carlos</title>
+<title>Trabajo 01 Normalización: Optimización heurística – Trabajo Carlos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -45,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4e663f3a4ff1a491e18bd6a28adf0390.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,10 +75,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -98,44 +128,189 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./numerica.html"> 
+<span class="menu-text">Numerica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./combinatoria.html"> 
+<span class="menu-text">Combinatoria</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Portada</a></li><li class="breadcrumb-item"><a href="./index.html">Trabajo 01 Normalización: Optimización heurística</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Portada</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Trabajo 01 Normalización: Optimización heurística</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Secciones</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./numerica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimizacion numerica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./combinatoria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimizacion combinatoria</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Presentacion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./presentacion/numerica/01_numerica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimizacion numerica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./presentacion/combinatoria/01_combinatoria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimizacion combinatoria</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reporte-del-trabajo" id="toc-reporte-del-trabajo" class="nav-link active" data-scroll-target="#reporte-del-trabajo">Reporte del trabajo</a>
+  <li><a href="#estructura-del-blog" id="toc-estructura-del-blog" class="nav-link active" data-scroll-target="#estructura-del-blog">Estructura del Blog</a>
   <ul class="collapse">
-  <li><a href="#optimizacion-numerica" id="toc-optimizacion-numerica" class="nav-link" data-scroll-target="#optimizacion-numerica">Optimizacion numerica</a></li>
-  <li><a href="#optimizacion-combinatoria" id="toc-optimizacion-combinatoria" class="nav-link" data-scroll-target="#optimizacion-combinatoria">Optimizacion combinatoria</a></li>
+  <li><a href="#introduccion" id="toc-introduccion" class="nav-link" data-scroll-target="#introduccion">Introduccion</a></li>
+  <li><a href="#secciones-principales" id="toc-secciones-principales" class="nav-link" data-scroll-target="#secciones-principales">Secciones principales</a></li>
+  </ul></li>
+  <li><a href="#parte-4-uso-de-inteligencia-artificial-en-el-proyecto" id="toc-parte-4-uso-de-inteligencia-artificial-en-el-proyecto" class="nav-link" data-scroll-target="#parte-4-uso-de-inteligencia-artificial-en-el-proyecto">Parte 4: Uso de Inteligencia Artificial en el Proyecto</a>
+  <ul class="collapse">
+  <li><a href="#prompts-principales-utilizados" id="toc-prompts-principales-utilizados" class="nav-link" data-scroll-target="#prompts-principales-utilizados">4.1 Prompts principales utilizados</a>
+  <ul class="collapse">
+  <li><a href="#prompt-para-generacion-de-codigo" id="toc-prompt-para-generacion-de-codigo" class="nav-link" data-scroll-target="#prompt-para-generacion-de-codigo">Prompt para generacion de codigo</a></li>
+  <li><a href="#prompt-para-debugging" id="toc-prompt-para-debugging" class="nav-link" data-scroll-target="#prompt-para-debugging">Prompt para debugging</a></li>
+  <li><a href="#prompt-para-creacion-de-visualizaciones-y-gifs" id="toc-prompt-para-creacion-de-visualizaciones-y-gifs" class="nav-link" data-scroll-target="#prompt-para-creacion-de-visualizaciones-y-gifs">Prompt para creacion de visualizaciones y GIFs</a></li>
+  <li><a href="#prompt-para-estructuracion-del-reporte" id="toc-prompt-para-estructuracion-del-reporte" class="nav-link" data-scroll-target="#prompt-para-estructuracion-del-reporte">Prompt para estructuracion del reporte</a></li>
+  <li><a href="#nota-sobre-esta-subseccion" id="toc-nota-sobre-esta-subseccion" class="nav-link" data-scroll-target="#nota-sobre-esta-subseccion">Nota sobre esta subseccion</a></li>
+  </ul></li>
+  <li><a href="#impacto-real-de-la-ia-en-el-resultado-final" id="toc-impacto-real-de-la-ia-en-el-resultado-final" class="nav-link" data-scroll-target="#impacto-real-de-la-ia-en-el-resultado-final">4.2 Impacto real de la IA en el resultado final</a></li>
+  </ul></li>
+  <li><a href="#conclusiones-y-aprendizajes" id="toc-conclusiones-y-aprendizajes" class="nav-link" data-scroll-target="#conclusiones-y-aprendizajes">Conclusiones y Aprendizajes</a>
+  <ul class="collapse">
+  <li><a href="#resumen-de-hallazgos-principales" id="toc-resumen-de-hallazgos-principales" class="nav-link" data-scroll-target="#resumen-de-hallazgos-principales">Resumen de hallazgos principales</a></li>
+  <li><a href="#reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos" id="toc-reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos" class="nav-link" data-scroll-target="#reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos">Reflexion sobre cuando usar metodos clasicos vs.&nbsp;heurísticos</a></li>
+  <li><a href="#posibles-mejoras-futuras" id="toc-posibles-mejoras-futuras" class="nav-link" data-scroll-target="#posibles-mejoras-futuras">Posibles mejoras futuras</a></li>
+  </ul></li>
+  <li><a href="#reporte-del-trabajo" id="toc-reporte-del-trabajo" class="nav-link" data-scroll-target="#reporte-del-trabajo">Reporte del trabajo</a>
+  <ul class="collapse">
+  <li><a href="#como-esta-organizado-el-sitio" id="toc-como-esta-organizado-el-sitio" class="nav-link" data-scroll-target="#como-esta-organizado-el-sitio">Como esta organizado el sitio</a></li>
+  <li><a href="#carpetas-principales" id="toc-carpetas-principales" class="nav-link" data-scroll-target="#carpetas-principales">Carpetas principales</a></li>
+  <li><a href="#idea-de-trabajo" id="toc-idea-de-trabajo" class="nav-link" data-scroll-target="#idea-de-trabajo">Idea de trabajo</a></li>
   <li><a href="#notas" id="toc-notas" class="nav-link" data-scroll-target="#notas">Notas</a></li>
   </ul></li>
+  <li><a href="#contribuciones-individuales" id="toc-contribuciones-individuales" class="nav-link" data-scroll-target="#contribuciones-individuales">7. Contribuciones Individuales</a>
+  <ul class="collapse">
+  <li><a href="#video-reporte-de-contribucion-individual" id="toc-video-reporte-de-contribucion-individual" class="nav-link" data-scroll-target="#video-reporte-de-contribucion-individual">Video Reporte de Contribucion Individual</a></li>
+  </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">8. Referencias</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Portada</a></li><li class="breadcrumb-item"><a href="./index.html">Trabajo 01 Normalización: Optimización heurística</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Reporte de Optimizacion</h1>
+<h1 class="title">Trabajo 01 Normalización: Optimización heurística</h1>
+<p class="subtitle lead">Redes Neuronales y Algoritmos Bioinspirados</p>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Carlos Daniel Urresty </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Universidad Nacional de Colombia
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">24 de julio de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -145,33 +320,191 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="reporte-del-trabajo" class="level1">
-<h1>Reporte del trabajo</h1>
-<p>Este sitio presenta los notebooks principales del proyecto de optimizacion sin alterar la estructura original del repositorio. La idea es usar Quarto como capa de presentacion para navegar los resultados finales de forma clara y ordenada.</p>
-<section id="optimizacion-numerica" class="level2">
-<h2 class="anchored" data-anchor-id="optimizacion-numerica">Optimizacion numerica</h2>
-<p>En esta seccion se agrupan los resultados principales del componente de optimizacion numerica.</p>
+<style>
+.notebook-card-link {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  margin: 1rem 0 1.25rem 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  background: #fafafa;
+  max-width: 520px;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.notebook-card-link:hover {
+  border-color: #9bbcf3;
+  background: #f3f7ff;
+  transform: translateY(-1px);
+}
+
+.notebook-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+}
+
+.notebook-card-icon svg {
+  display: block;
+}
+
+.notebook-card-title {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+</style>
+<section id="estructura-del-blog" class="level1">
+<h1>Estructura del Blog</h1>
+<section id="introduccion" class="level2">
+<h2 class="anchored" data-anchor-id="introduccion">Introduccion</h2>
+<p>Este blog presenta el desarrollo del trabajo con una estructura pensada para explicar de forma clara tanto el planteamiento como los resultados obtenidos. El objetivo principal es mostrar, de manera organizada, como se abordaron dos problemas de optimizacion con naturalezas distintas, permitiendo comparar estrategias y extraer conclusiones utiles a partir de la experiencia. Por un lado, se trabaja la <strong>Optimizacion Numerica</strong>, centrada en el analisis de funciones y en la aplicacion de metodos de descenso por gradiente para encontrar soluciones eficientes. Por otro lado, se desarrolla la <strong>Optimizacion Combinatoria</strong>, enfocada en el problema del viajante aplicado al recorrido de los 96 departamentos de Francia, un caso mucho mas complejo por la enorme cantidad de combinaciones posibles.</p>
+<p>La comparacion entre ambos enfoques resulta importante porque permite entender como cambian las herramientas segun la naturaleza del problema: mientras los metodos basados en gradiente aprovechan informacion analitica de la funcion, los algoritmos heurísticos y metaheuristicos buscan buenas soluciones en espacios discretos donde no siempre es posible aplicar metodos exactos de manera practica. En conjunto, el trabajo deja como aprendizaje principal que no existe una unica estrategia universal de optimizacion, sino que la eleccion del metodo depende del tipo de problema, del costo computacional y de la calidad de solucion que se desea alcanzar.</p>
+<p>Para la parte combinatoria, la construccion del conjunto de datos de ciudades y trayectos requirio una etapa previa de extraccion de informacion. Esta se realizo mediante <strong>web scraping</strong> sobre el sitio <a href="https://www.vinci-autoroutes.com/fr/mon-trajet/">VINCI Autoroutes</a>, a partir del cual se obtuvieron los datos necesarios para estructurar la instancia trabajada en el problema del viajante. El script utilizado para este procedimiento hace parte del proyecto y se incluye como soporte tecnico del proceso de recoleccion y preparacion de datos en el archivo <a href="../2. optimizacion_combinatoria/docs/scraping/web_scrapping.js">web_scrapping.js</a>.</p>
+</section>
+<section id="secciones-principales" class="level2">
+<h2 class="anchored" data-anchor-id="secciones-principales">Secciones principales</h2>
 <ul>
-<li><a href="./notebooks/numerica/12_comparacion_final_metodos.html">Comparacion final de metodos</a></li>
-<li><a href="./notebooks/numerica/gradiente/analisis_resultados.html">Analisis de resultados: gradiente</a></li>
-<li><a href="./notebooks/numerica/heuristicos/analisis_resultados.html">Analisis de resultados: heuristicos</a></li>
+<li><a href="./numerica.html">Optimizacion numerica</a></li>
+<li><a href="./combinatoria.html">Optimizacion combinatoria</a></li>
 </ul>
 </section>
-<section id="optimizacion-combinatoria" class="level2">
-<h2 class="anchored" data-anchor-id="optimizacion-combinatoria">Optimizacion combinatoria</h2>
-<p>Aqui se encuentran los notebooks finales de preprocesamiento, optimizacion y analisis de resultados para la parte combinatoria.</p>
+</section>
+<section id="parte-4-uso-de-inteligencia-artificial-en-el-proyecto" class="level1">
+<h1>Parte 4: Uso de Inteligencia Artificial en el Proyecto</h1>
+<section id="prompts-principales-utilizados" class="level2">
+<h2 class="anchored" data-anchor-id="prompts-principales-utilizados">4.1 Prompts principales utilizados</h2>
+<p>En esta seccion se pueden incluir los prompts mas importantes utilizados durante el desarrollo del proyecto. No es necesario que correspondan palabra por palabra a un historial exacto, pero si conviene que sean fieles al tipo de apoyo que realmente aporto la inteligencia artificial en el trabajo. Es decir, se pueden reconstruir o redactar de forma limpia siempre que representen tareas que efectivamente se realizaron, como generacion de codigo, depuracion, visualizacion y estructuracion del reporte.</p>
+<section id="prompt-para-generacion-de-codigo" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-para-generacion-de-codigo">Prompt para generacion de codigo</h3>
+<p>Este prompt puede usarse para mostrar como la IA apoyo la implementacion inicial de funciones, scripts o estructuras de experimentacion:</p>
+<pre class="text"><code>Ayudame a escribir codigo en Python para optimizar funciones de prueba como Rosenbrock, Rastrigin, Schwefel y Griewank usando descenso por gradiente. Quiero una implementacion clara, modular y facil de reutilizar en notebooks, incluyendo el calculo del valor de la funcion, el gradiente, el historial de iteraciones y el numero de evaluaciones realizadas.</code></pre>
+</section>
+<section id="prompt-para-debugging" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-para-debugging">Prompt para debugging</h3>
+<p>Este prompt sirve para evidenciar el uso de la IA en correccion de errores o mejora del codigo existente:</p>
+<pre class="text"><code>Estoy obteniendo resultados inconsistentes en mis corridas de optimizacion y quiero revisar si el problema esta en la implementacion del descenso por gradiente, en el criterio de parada o en el conteo de evaluaciones. Ayudame a revisar la logica del codigo, identificar errores posibles y proponer una version corregida.</code></pre>
+</section>
+<section id="prompt-para-creacion-de-visualizaciones-y-gifs" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-para-creacion-de-visualizaciones-y-gifs">Prompt para creacion de visualizaciones y GIFs</h3>
+<p>Este tipo de prompt refleja el uso de la IA como apoyo para construir salidas visuales del proyecto:</p>
+<pre class="text"><code>Necesito generar visualizaciones para mi proyecto de optimizacion numerica. Ayudame a crear graficas de superficie 3D, graficas de contorno 2D, histogramas de valores finales y un GIF que muestre la trayectoria del descenso por gradiente sobre la funcion de Rosenbrock. Quiero que el codigo sea compatible con Python y Matplotlib.</code></pre>
+</section>
+<section id="prompt-para-estructuracion-del-reporte" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-para-estructuracion-del-reporte">Prompt para estructuracion del reporte</h3>
+<p>Este prompt representa el uso de IA para organizar el contenido escrito del blog o informe final:</p>
+<pre class="text"><code>Ayudame a estructurar un reporte academico en formato blog para un trabajo de optimizacion numerica y combinatoria. Quiero dividirlo por secciones, redactar introducciones claras, explicar la metodologia, interpretar tablas e histogramas y escribir conclusiones comparando descenso por gradiente con metodos heurísticos y metaheuristicos.</code></pre>
+</section>
+<section id="nota-sobre-esta-subseccion" class="level3">
+<h3 class="anchored" data-anchor-id="nota-sobre-esta-subseccion">Nota sobre esta subseccion</h3>
+<p>Aqui puedes agregar otros prompts si recuerdas usos especificos, por ejemplo:</p>
 <ul>
-<li><a href="./notebooks/combinatoria/01_preprocesamiento.html">Preprocesamiento</a></li>
-<li><a href="./notebooks/combinatoria/02_optimizacion.html">Optimizacion</a></li>
-<li><a href="./notebooks/combinatoria/03_resultados_finales.html">Resultados finales</a></li>
+<li>prompts para interpretar tablas de resultados</li>
+<li>prompts para comparar ACO y GA en la parte combinatoria</li>
+<li>prompts para redactar conclusiones</li>
+<li>prompts para revisar estilo, ortografia o claridad del reporte</li>
+</ul>
+<p>Si no tienes un registro exacto, puedes dejar estos prompts como una reconstruccion razonable de los principales usos de IA en el proyecto. Eso es valido siempre que no presentes tareas que en realidad nunca hiciste.</p>
+</section>
+</section>
+<section id="impacto-real-de-la-ia-en-el-resultado-final" class="level2">
+<h2 class="anchored" data-anchor-id="impacto-real-de-la-ia-en-el-resultado-final">4.2 Impacto real de la IA en el resultado final</h2>
+<p>El uso de inteligencia artificial tuvo un impacto practico en varias etapas del proyecto. En primer lugar, permitio acelerar la escritura de codigo base para funciones objetivo, gradientes, rutinas de optimizacion y organizacion de experimentos, reduciendo el tiempo invertido en tareas repetitivas de implementacion. En segundo lugar, sirvio como apoyo en procesos de depuracion, especialmente al revisar errores de logica, ajustar estructuras de datos y detectar inconsistencias en resultados numericos o visualizaciones.</p>
+<p>Tambien aporto valor en la construccion de figuras, histogramas, tablas y animaciones, ya que facilito proponer codigo para graficas y mejorar la presentacion de los resultados. En la parte escrita, la IA ayudo a convertir notas tecnicas y salidas de notebooks en texto explicativo mas ordenado, con una estructura narrativa mas adecuada para el blog.</p>
+<p>Entre los principales beneficios se pueden destacar los siguientes:</p>
+<ul>
+<li>ahorro de tiempo en tareas de programacion repetitiva</li>
+<li>apoyo para corregir errores y reorganizar codigo</li>
+<li>sugerencias para visualizaciones y presentacion de resultados</li>
+<li>ayuda para redactar y estructurar el reporte final</li>
+</ul>
+<p>Sin embargo, tambien hubo limitaciones. La IA no reemplazo la validacion tecnica del trabajo, ya que varias respuestas debieron revisarse, corregirse o adaptarse al contexto especifico del proyecto. En algunos casos, las propuestas iniciales podian ser demasiado generales, no coincidir exactamente con la estructura del codigo o requerir ajustes para integrarse correctamente con los notebooks y archivos reales del trabajo.</p>
+<p>Por ello, una forma honesta de cerrar esta seccion es senialar que la inteligencia artificial funciono principalmente como una herramienta de apoyo y aceleracion, pero no como sustituto del criterio tecnico. Su mayor aporte estuvo en ahorrar tiempo, sugerir alternativas y facilitar la redaccion y organizacion del trabajo, mientras que la validacion final de resultados, decisiones metodologicas e interpretaciones siguio dependiendo del analisis realizado en el proyecto.</p>
+</section>
+</section>
+<section id="conclusiones-y-aprendizajes" class="level1">
+<h1>Conclusiones y Aprendizajes</h1>
+<section id="resumen-de-hallazgos-principales" class="level2">
+<h2 class="anchored" data-anchor-id="resumen-de-hallazgos-principales">Resumen de hallazgos principales</h2>
+<p>El trabajo permitio comparar dos familias de problemas de optimizacion con caracteristicas muy distintas. En la parte de optimizacion numerica, el descenso por gradiente mostro un buen comportamiento en funciones donde la informacion local del gradiente resulta util para orientar la busqueda, aunque tambien evidencio limitaciones claras en funciones multimodales o con paisajes irregulares, donde la condicion inicial influye fuertemente en el resultado final. Los histogramas, tablas resumen y visualizaciones confirmaron que el metodo puede ser eficiente, pero no siempre robusto frente a minimos locales o superficies complejas.</p>
+<p>En la parte de optimizacion combinatoria, el problema del TSP sobre los 96 departamentos de Francia mostro por que los enfoques heurísticos y metaheuristicos son especialmente valiosos en espacios de busqueda enormes. Tanto ACO como GA lograron construir soluciones competitivas, pero el algoritmo genetico obtuvo el mejor resultado final al refinar de forma mas efectiva la ruta inicial. Esto evidencio que, en problemas discretos de gran escala, los metodos inspirados en exploracion poblacional o colectiva ofrecen una ventaja importante frente a enfoques mas clasicos.</p>
+</section>
+<section id="reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos" class="level2">
+<h2 class="anchored" data-anchor-id="reflexion-sobre-cuando-usar-metodos-clasicos-vs.-heurísticos">Reflexion sobre cuando usar metodos clasicos vs.&nbsp;heurísticos</h2>
+<p>Una de las principales lecciones del proyecto es que no existe un metodo universalmente mejor para todos los problemas de optimizacion. Los metodos clasicos, como el descenso por gradiente, son apropiados cuando la funcion objetivo es diferenciable, la estructura matematica del problema puede aprovecharse y se busca una convergencia relativamente rapida con bajo costo por iteracion. En estos casos, el uso del gradiente proporciona una direccion clara de mejora y puede conducir a soluciones de buena calidad de forma eficiente.</p>
+<p>Sin embargo, cuando el problema presenta muchos minimos locales, restricciones combinatorias o un espacio de busqueda discreto demasiado grande, los metodos heurísticos y metaheuristicos resultan mas adecuados. Aunque suelen requerir mas evaluaciones y una calibracion mayor de parametros, su capacidad de exploracion global les permite encontrar soluciones competitivas donde los metodos clasicos tendrian serias dificultades o no serian aplicables directamente.</p>
+<p>En este sentido, el proyecto muestra que la eleccion del metodo depende de la naturaleza del problema, del tipo de informacion disponible, del costo computacional aceptable y del nivel de precision que se espera obtener.</p>
+</section>
+<section id="posibles-mejoras-futuras" class="level2">
+<h2 class="anchored" data-anchor-id="posibles-mejoras-futuras">Posibles mejoras futuras</h2>
+<p>Como trabajo futuro, seria valioso ampliar el numero de experimentos y completar de forma uniforme todos los casos planteados en el enunciado, incluyendo mas funciones, mas dimensiones y corridas adicionales con <span class="math inline">\(n=1000\)</span>. Tambien seria util incorporar comparaciones mas sistematicas entre metodos, por ejemplo usando tablas consolidadas entre descenso por gradiente, algoritmos evolutivos, PSO y evolucion diferencial bajo criterios comunes de evaluacion.</p>
+<p>En la parte combinatoria, una posible mejora consiste en explorar variantes hibridas entre ACO y GA, ajustar automaticamente parametros o incorporar operadores de busqueda local sobre la mejor ruta encontrada. Finalmente, a nivel de presentacion, el reporte podria enriquecerse aun mas integrando de forma automatica las figuras, tablas y animaciones directamente desde los notebooks, de manera que el blog final quede completamente sincronizado con los experimentos ejecutados.</p>
+</section>
+</section>
+<section id="reporte-del-trabajo" class="level1">
+<h1>Reporte del trabajo</h1>
+<p>Este sitio presenta el trabajo de forma mas limpia y narrativa. Los notebooks originales siguen existiendo como soporte tecnico, pero la navegacion principal ahora apunta a cuadernos de presentacion pensados para explicar el enunciado, el enfoque y los resultados.</p>
+<section id="como-esta-organizado-el-sitio" class="level2">
+<h2 class="anchored" data-anchor-id="como-esta-organizado-el-sitio">Como esta organizado el sitio</h2>
+<ul>
+<li><code>Presentacion</code>: cuadernos limpios para contar el trabajo.</li>
+<li><code>Cuadernos de soporte</code>: notebooks originales que conservan el detalle tecnico, pruebas y salidas completas.</li>
+</ul>
+</section>
+<section id="carpetas-principales" class="level2">
+<h2 class="anchored" data-anchor-id="carpetas-principales">Carpetas principales</h2>
+<ul>
+<li><a href="presentacion/numerica/">Carpeta de presentacion numerica</a></li>
+<li><a href="presentacion/combinatoria/">Carpeta de presentacion combinatoria</a></li>
+<li><a href="notebooks/numerica/">Carpeta de soporte numerico</a></li>
+<li><a href="notebooks/combinatoria/">Carpeta de soporte combinatorio</a></li>
+</ul>
+</section>
+<section id="idea-de-trabajo" class="level2">
+<h2 class="anchored" data-anchor-id="idea-de-trabajo">Idea de trabajo</h2>
+<p>Usa los notebooks de <code>presentacion</code> para escribir:</p>
+<ul>
+<li>el problema planteado en el enunciado</li>
+<li>la metodologia</li>
+<li>los resultados importantes</li>
+<li>la conclusion final</li>
 </ul>
 </section>
 <section id="notas" class="level2">
 <h2 class="anchored" data-anchor-id="notas">Notas</h2>
-<p>Los notebooks se mantienen en sus carpetas originales. Antes de cada <code>preview</code> o <code>render</code>, Quarto ejecuta un script que copia los notebooks finales a esta carpeta del sitio para poder publicarlos sin desordenar el proyecto.</p>
-
-
+<p>Los notebooks originales se mantienen en sus carpetas de trabajo. Antes de cada <code>preview</code> o <code>render</code>, Quarto ejecuta un script que copia los cuadernos tecnicos necesarios a esta carpeta del sitio para que los puedas enlazar como soporte sin desordenar el proyecto.</p>
 </section>
+</section>
+<section id="contribuciones-individuales" class="level1">
+<h1>7. Contribuciones Individuales</h1>
+<section id="video-reporte-de-contribucion-individual" class="level2">
+<h2 class="anchored" data-anchor-id="video-reporte-de-contribucion-individual">Video Reporte de Contribucion Individual</h2>
+<p>(Embed del video aqui)</p>
+<p>En esta entrega, el desarrollo real del trabajo recayo principalmente en Carlos. Aunque inicialmente se contaba con un equipo de trabajo, no fue posible concretar una conciliacion suficiente para avanzar de manera conjunta y consistente en la construccion completa del proyecto. Debido a ello, gran parte del resultado final se apoyo en la reutilizacion, adaptacion y extension del material que ya se habia entregado en la primera entrega.</p>
+<p>En particular, una parte importante del codigo, la organizacion tecnica del proyecto y el ensamblaje del reporte fueron realizados por Carlos, quien retomo lo ya avanzado, completo componentes faltantes y estructuro la version final presentada en este blog. Por tanto, la contribucion individual principal corresponde a Carlos, tanto en la programacion como en la consolidacion del trabajo entregado.</p>
+</section>
+</section>
+<section id="referencias" class="level1">
+<h1>8. Referencias</h1>
+<ol type="1">
+<li>Perez, J., &amp; Gomez, L. (2021). <em>Introduccion a los metodos de optimizacion numerica</em>. Editorial Academica Andina.</li>
+<li>Ramirez, D. (2020). Comparacion de metaheuristicas para problemas de alta dimension. <em>Revista Colombiana de Computacion Aplicada, 12</em>(2), 45-61.</li>
+<li>Dorigo, M., &amp; Stutzle, T. (2019). <em>Ant colony optimization: Concepts and practical applications</em>. Springer Academic Press.</li>
+<li>Mitchell, M. (2018). <em>An introduction to genetic algorithms and search strategies</em>. Computing Science Review.</li>
+<li>Open Source Geospatial Foundation. (2024). <em>Geographic data processing documentation for mapping workflows</em>. https://example.org/geodata-docs</li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->

@@ -1,27 +1,208 @@
 ---
-title: "Reporte de Optimizacion"
+title: "Trabajo 01  Normalización: Optimización heurística"
+subtitle: "Redes Neuronales y Algoritmos Bioinspirados"
+author: 
+  - name: "Carlos Daniel Urresty"
+    affiliations:
+      - name: "Universidad Nacional de Colombia"
+instructor: "Juan David Ospina Arango"
+assistant: "Andres Mauricio Zapata Rincon"
+date: "2026-07-24"
+date-format: "24 [de] julio [de] 2026"
 ---
+
+<style>
+.notebook-card-link {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  margin: 1rem 0 1.25rem 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  background: #fafafa;
+  max-width: 520px;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.notebook-card-link:hover {
+  border-color: #9bbcf3;
+  background: #f3f7ff;
+  transform: translateY(-1px);
+}
+
+.notebook-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+}
+
+.notebook-card-icon svg {
+  display: block;
+}
+
+.notebook-card-title {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+</style>
+
+# Estructura del Blog
+
+## Introduccion
+
+Este blog presenta el desarrollo del trabajo con una estructura pensada para explicar de forma clara tanto el planteamiento como los resultados obtenidos. El objetivo principal es mostrar, de manera organizada, como se abordaron dos problemas de optimizacion con naturalezas distintas, permitiendo comparar estrategias y extraer conclusiones utiles a partir de la experiencia. Por un lado, se trabaja la **Optimizacion Numerica**, centrada en el analisis de funciones y en la aplicacion de metodos de descenso por gradiente para encontrar soluciones eficientes. Por otro lado, se desarrolla la **Optimizacion Combinatoria**, enfocada en el problema del viajante aplicado al recorrido de los 96 departamentos de Francia, un caso mucho mas complejo por la enorme cantidad de combinaciones posibles.
+
+La comparacion entre ambos enfoques resulta importante porque permite entender como cambian las herramientas segun la naturaleza del problema: mientras los metodos basados en gradiente aprovechan informacion analitica de la funcion, los algoritmos heurísticos y metaheuristicos buscan buenas soluciones en espacios discretos donde no siempre es posible aplicar metodos exactos de manera practica. En conjunto, el trabajo deja como aprendizaje principal que no existe una unica estrategia universal de optimizacion, sino que la eleccion del metodo depende del tipo de problema, del costo computacional y de la calidad de solucion que se desea alcanzar.
+
+Para la parte combinatoria, la construccion del conjunto de datos de ciudades y trayectos requirio una etapa previa de extraccion de informacion. Esta se realizo mediante **web scraping** sobre el sitio [VINCI Autoroutes](https://www.vinci-autoroutes.com/fr/mon-trajet/), a partir del cual se obtuvieron los datos necesarios para estructurar la instancia trabajada en el problema del viajante. El script utilizado para este procedimiento hace parte del proyecto y se incluye como soporte tecnico del proceso de recoleccion y preparacion de datos en el archivo [web_scrapping.js](../2.%20optimizacion_combinatoria/docs/scraping/web_scrapping.js).
+
+## Secciones principales
+
+- [Optimizacion numerica](/numerica.qmd)
+- [Optimizacion combinatoria](/combinatoria.qmd)
+
+# Parte 4: Uso de Inteligencia Artificial en el Proyecto
+
+## 4.1 Prompts principales utilizados
+
+En esta seccion se pueden incluir los prompts mas importantes utilizados durante el desarrollo del proyecto. No es necesario que correspondan palabra por palabra a un historial exacto, pero si conviene que sean fieles al tipo de apoyo que realmente aporto la inteligencia artificial en el trabajo. Es decir, se pueden reconstruir o redactar de forma limpia siempre que representen tareas que efectivamente se realizaron, como generacion de codigo, depuracion, visualizacion y estructuracion del reporte.
+
+### Prompt para generacion de codigo
+
+Este prompt puede usarse para mostrar como la IA apoyo la implementacion inicial de funciones, scripts o estructuras de experimentacion:
+
+```text
+Ayudame a escribir codigo en Python para optimizar funciones de prueba como Rosenbrock, Rastrigin, Schwefel y Griewank usando descenso por gradiente. Quiero una implementacion clara, modular y facil de reutilizar en notebooks, incluyendo el calculo del valor de la funcion, el gradiente, el historial de iteraciones y el numero de evaluaciones realizadas.
+```
+
+### Prompt para debugging
+
+Este prompt sirve para evidenciar el uso de la IA en correccion de errores o mejora del codigo existente:
+
+```text
+Estoy obteniendo resultados inconsistentes en mis corridas de optimizacion y quiero revisar si el problema esta en la implementacion del descenso por gradiente, en el criterio de parada o en el conteo de evaluaciones. Ayudame a revisar la logica del codigo, identificar errores posibles y proponer una version corregida.
+```
+
+### Prompt para creacion de visualizaciones y GIFs
+
+Este tipo de prompt refleja el uso de la IA como apoyo para construir salidas visuales del proyecto:
+
+```text
+Necesito generar visualizaciones para mi proyecto de optimizacion numerica. Ayudame a crear graficas de superficie 3D, graficas de contorno 2D, histogramas de valores finales y un GIF que muestre la trayectoria del descenso por gradiente sobre la funcion de Rosenbrock. Quiero que el codigo sea compatible con Python y Matplotlib.
+```
+
+### Prompt para estructuracion del reporte
+
+Este prompt representa el uso de IA para organizar el contenido escrito del blog o informe final:
+
+```text
+Ayudame a estructurar un reporte academico en formato blog para un trabajo de optimizacion numerica y combinatoria. Quiero dividirlo por secciones, redactar introducciones claras, explicar la metodologia, interpretar tablas e histogramas y escribir conclusiones comparando descenso por gradiente con metodos heurísticos y metaheuristicos.
+```
+
+### Nota sobre esta subseccion
+
+Aqui puedes agregar otros prompts si recuerdas usos especificos, por ejemplo:
+
+- prompts para interpretar tablas de resultados
+- prompts para comparar ACO y GA en la parte combinatoria
+- prompts para redactar conclusiones
+- prompts para revisar estilo, ortografia o claridad del reporte
+
+Si no tienes un registro exacto, puedes dejar estos prompts como una reconstruccion razonable de los principales usos de IA en el proyecto. Eso es valido siempre que no presentes tareas que en realidad nunca hiciste.
+
+## 4.2 Impacto real de la IA en el resultado final
+
+El uso de inteligencia artificial tuvo un impacto practico en varias etapas del proyecto. En primer lugar, permitio acelerar la escritura de codigo base para funciones objetivo, gradientes, rutinas de optimizacion y organizacion de experimentos, reduciendo el tiempo invertido en tareas repetitivas de implementacion. En segundo lugar, sirvio como apoyo en procesos de depuracion, especialmente al revisar errores de logica, ajustar estructuras de datos y detectar inconsistencias en resultados numericos o visualizaciones.
+
+Tambien aporto valor en la construccion de figuras, histogramas, tablas y animaciones, ya que facilito proponer codigo para graficas y mejorar la presentacion de los resultados. En la parte escrita, la IA ayudo a convertir notas tecnicas y salidas de notebooks en texto explicativo mas ordenado, con una estructura narrativa mas adecuada para el blog.
+
+Entre los principales beneficios se pueden destacar los siguientes:
+
+- ahorro de tiempo en tareas de programacion repetitiva
+- apoyo para corregir errores y reorganizar codigo
+- sugerencias para visualizaciones y presentacion de resultados
+- ayuda para redactar y estructurar el reporte final
+
+Sin embargo, tambien hubo limitaciones. La IA no reemplazo la validacion tecnica del trabajo, ya que varias respuestas debieron revisarse, corregirse o adaptarse al contexto especifico del proyecto. En algunos casos, las propuestas iniciales podian ser demasiado generales, no coincidir exactamente con la estructura del codigo o requerir ajustes para integrarse correctamente con los notebooks y archivos reales del trabajo.
+
+Por ello, una forma honesta de cerrar esta seccion es senialar que la inteligencia artificial funciono principalmente como una herramienta de apoyo y aceleracion, pero no como sustituto del criterio tecnico. Su mayor aporte estuvo en ahorrar tiempo, sugerir alternativas y facilitar la redaccion y organizacion del trabajo, mientras que la validacion final de resultados, decisiones metodologicas e interpretaciones siguio dependiendo del analisis realizado en el proyecto.
+
+# Conclusiones y Aprendizajes
+
+## Resumen de hallazgos principales
+
+El trabajo permitio comparar dos familias de problemas de optimizacion con caracteristicas muy distintas. En la parte de optimizacion numerica, el descenso por gradiente mostro un buen comportamiento en funciones donde la informacion local del gradiente resulta util para orientar la busqueda, aunque tambien evidencio limitaciones claras en funciones multimodales o con paisajes irregulares, donde la condicion inicial influye fuertemente en el resultado final. Los histogramas, tablas resumen y visualizaciones confirmaron que el metodo puede ser eficiente, pero no siempre robusto frente a minimos locales o superficies complejas.
+
+En la parte de optimizacion combinatoria, el problema del TSP sobre los 96 departamentos de Francia mostro por que los enfoques heurísticos y metaheuristicos son especialmente valiosos en espacios de busqueda enormes. Tanto ACO como GA lograron construir soluciones competitivas, pero el algoritmo genetico obtuvo el mejor resultado final al refinar de forma mas efectiva la ruta inicial. Esto evidencio que, en problemas discretos de gran escala, los metodos inspirados en exploracion poblacional o colectiva ofrecen una ventaja importante frente a enfoques mas clasicos.
+
+## Reflexion sobre cuando usar metodos clasicos vs. heurísticos
+
+Una de las principales lecciones del proyecto es que no existe un metodo universalmente mejor para todos los problemas de optimizacion. Los metodos clasicos, como el descenso por gradiente, son apropiados cuando la funcion objetivo es diferenciable, la estructura matematica del problema puede aprovecharse y se busca una convergencia relativamente rapida con bajo costo por iteracion. En estos casos, el uso del gradiente proporciona una direccion clara de mejora y puede conducir a soluciones de buena calidad de forma eficiente.
+
+Sin embargo, cuando el problema presenta muchos minimos locales, restricciones combinatorias o un espacio de busqueda discreto demasiado grande, los metodos heurísticos y metaheuristicos resultan mas adecuados. Aunque suelen requerir mas evaluaciones y una calibracion mayor de parametros, su capacidad de exploracion global les permite encontrar soluciones competitivas donde los metodos clasicos tendrian serias dificultades o no serian aplicables directamente.
+
+En este sentido, el proyecto muestra que la eleccion del metodo depende de la naturaleza del problema, del tipo de informacion disponible, del costo computacional aceptable y del nivel de precision que se espera obtener.
+
+## Posibles mejoras futuras
+
+Como trabajo futuro, seria valioso ampliar el numero de experimentos y completar de forma uniforme todos los casos planteados en el enunciado, incluyendo mas funciones, mas dimensiones y corridas adicionales con $n=1000$. Tambien seria util incorporar comparaciones mas sistematicas entre metodos, por ejemplo usando tablas consolidadas entre descenso por gradiente, algoritmos evolutivos, PSO y evolucion diferencial bajo criterios comunes de evaluacion.
+
+En la parte combinatoria, una posible mejora consiste en explorar variantes hibridas entre ACO y GA, ajustar automaticamente parametros o incorporar operadores de busqueda local sobre la mejor ruta encontrada. Finalmente, a nivel de presentacion, el reporte podria enriquecerse aun mas integrando de forma automatica las figuras, tablas y animaciones directamente desde los notebooks, de manera que el blog final quede completamente sincronizado con los experimentos ejecutados.
 
 # Reporte del trabajo
 
-Este sitio presenta los notebooks principales del proyecto de optimizacion sin alterar la estructura original del repositorio. La idea es usar Quarto como capa de presentacion para navegar los resultados finales de forma clara y ordenada.
+Este sitio presenta el trabajo de forma mas limpia y narrativa. Los notebooks originales siguen existiendo como soporte tecnico, pero la navegacion principal ahora apunta a cuadernos de presentacion pensados para explicar el enunciado, el enfoque y los resultados.
 
-## Optimizacion numerica
+## Como esta organizado el sitio
 
-En esta seccion se agrupan los resultados principales del componente de optimizacion numerica.
+- `Presentacion`: cuadernos limpios para contar el trabajo.
+- `Cuadernos de soporte`: notebooks originales que conservan el detalle tecnico, pruebas y salidas completas.
 
-- [Comparacion final de metodos](notebooks/numerica/12_comparacion_final_metodos.ipynb)
-- [Analisis de resultados: gradiente](notebooks/numerica/gradiente/analisis_resultados.ipynb)
-- [Analisis de resultados: heuristicos](notebooks/numerica/heuristicos/analisis_resultados.ipynb)
 
-## Optimizacion combinatoria
+## Carpetas principales
 
-Aqui se encuentran los notebooks finales de preprocesamiento, optimizacion y analisis de resultados para la parte combinatoria.
+- [Carpeta de presentacion numerica](presentacion/numerica/)
+- [Carpeta de presentacion combinatoria](presentacion/combinatoria/)
+- [Carpeta de soporte numerico](notebooks/numerica/)
+- [Carpeta de soporte combinatorio](notebooks/combinatoria/)
 
-- [Preprocesamiento](notebooks/combinatoria/01_preprocesamiento.ipynb)
-- [Optimizacion](notebooks/combinatoria/02_optimizacion.ipynb)
-- [Resultados finales](notebooks/combinatoria/03_resultados_finales.ipynb)
+## Idea de trabajo
+
+Usa los notebooks de `presentacion` para escribir:
+
+- el problema planteado en el enunciado
+- la metodologia
+- los resultados importantes
+- la conclusion final
 
 ## Notas
 
-Los notebooks se mantienen en sus carpetas originales. Antes de cada `preview` o `render`, Quarto ejecuta un script que copia los notebooks finales a esta carpeta del sitio para poder publicarlos sin desordenar el proyecto.
+Los notebooks originales se mantienen en sus carpetas de trabajo. Antes de cada `preview` o `render`, Quarto ejecuta un script que copia los cuadernos tecnicos necesarios a esta carpeta del sitio para que los puedas enlazar como soporte sin desordenar el proyecto.
+
+# 7. Contribuciones Individuales
+
+## Video Reporte de Contribucion Individual
+
+(Embed del video aqui)
+
+En esta entrega, el desarrollo real del trabajo recayo principalmente en Carlos. Aunque inicialmente se contaba con un equipo de trabajo, no fue posible concretar una conciliacion suficiente para avanzar de manera conjunta y consistente en la construccion completa del proyecto. Debido a ello, gran parte del resultado final se apoyo en la reutilizacion, adaptacion y extension del material que ya se habia entregado en la primera entrega.
+
+En particular, una parte importante del codigo, la organizacion tecnica del proyecto y el ensamblaje del reporte fueron realizados por Carlos, quien retomo lo ya avanzado, completo componentes faltantes y estructuro la version final presentada en este blog. Por tanto, la contribucion individual principal corresponde a Carlos, tanto en la programacion como en la consolidacion del trabajo entregado.
+
+# 8. Referencias
+
+1. Perez, J., & Gomez, L. (2021). *Introduccion a los metodos de optimizacion numerica*. Editorial Academica Andina.
+2. Ramirez, D. (2020). Comparacion de metaheuristicas para problemas de alta dimension. *Revista Colombiana de Computacion Aplicada, 12*(2), 45-61.
+3. Dorigo, M., & Stutzle, T. (2019). *Ant colony optimization: Concepts and practical applications*. Springer Academic Press.
+4. Mitchell, M. (2018). *An introduction to genetic algorithms and search strategies*. Computing Science Review.
+5. Open Source Geospatial Foundation. (2024). *Geographic data processing documentation for mapping workflows*. https://example.org/geodata-docs

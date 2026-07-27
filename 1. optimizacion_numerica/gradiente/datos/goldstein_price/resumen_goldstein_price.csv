@@ -1,3 +1,4 @@
 funcion,nombre_funcion,metodo,dimension,n_corridas,mejor_valor_final,peor_valor_final,promedio_valor_final,mediana_valor_final,desviacion_valor_final,promedio_evaluaciones,mediana_evaluaciones,promedio_iteraciones,mediana_iteraciones
 goldstein_price,Goldstein-Price,gradient,2,100,10.492143026389963,988.6495094412548,148.9517572805867,62.27278537698101,264.2927270925542,5002.0,5002.0,5000.0,5000.0
 goldstein_price,Goldstein-Price,gradient,2,500,10.492143026389963,989.7183747779673,288.4188480053516,80.67982273035967,361.56126780400456,5002.0,5002.0,5000.0,5000.0
+goldstein_price,Goldstein-Price,gradient,2,1000,10.492143026389963,989.7183747779673,328.0776327375795,81.16439520638166,382.51968502052824,5002.0,5002.0,5000.0,5000.0

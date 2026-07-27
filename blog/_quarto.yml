@@ -5,7 +5,10 @@ project:
     - powershell -ExecutionPolicy Bypass -File scripts/sync-notebooks.ps1
   render:
     - index.qmd
+    - numerica.qmd
+    - combinatoria.qmd
     - notebooks/**/*.ipynb
+    - presentacion/**/*.ipynb
 
 website:
   title: "Trabajo Carlos"
@@ -13,9 +16,28 @@ website:
     left:
       - href: index.qmd
         text: Inicio
+      - href: numerica.qmd
+        text: Numerica
+      - href: combinatoria.qmd
+        text: Combinatoria
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - section: "Portada"
+        contents:
+          - index.qmd
+      - section: "Secciones"
+        contents:
+          - numerica.qmd
+          - combinatoria.qmd
 
 format:
   html:
     theme: cosmo
     toc: true
-    code-fold: show
+    code-fold: true
+    code-summary: "Ver codigo"
+
+execute:
+  enabled: false

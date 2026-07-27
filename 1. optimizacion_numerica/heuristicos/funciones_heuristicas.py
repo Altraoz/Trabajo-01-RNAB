@@ -185,6 +185,11 @@ def run_evolutionary_algorithm(
         )
         populations.append(population.copy())
 
+    ranked_population, ranked_fitness = evolutionary_population_eval(population, objective_function)
+    best_values.append(float(ranked_fitness[0]))
+    best_solutions.append(ranked_population[0].copy())
+    populations[-1] = ranked_population.copy()
+
     best_solution = np.array(best_solutions[-1], dtype=float)
     best_value = float(best_values[-1])
 
@@ -197,7 +202,7 @@ def run_evolutionary_algorithm(
         "best_solutions_history": np.array(best_solutions, dtype=float),
         "populations_history": populations,
         "iterations": max_iterations,
-        "evaluations": population_size * max_iterations,
+        "evaluations": population_size * (max_iterations + 1),
     }
 
 

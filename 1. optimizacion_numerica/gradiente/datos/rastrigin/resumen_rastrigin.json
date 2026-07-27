@@ -35,6 +35,22 @@
     "funcion": "rastrigin",
     "nombre_funcion": "Rastrigin",
     "metodo": "gradient",
+    "dimension": 2,
+    "n_corridas": 1000,
+    "mejor_valor_final": 0.9949590572911564,
+    "peor_valor_final": 40.792966727220495,
+    "promedio_valor_final": 16.481399189166886,
+    "mediana_valor_final": 16.914202849848696,
+    "desviacion_valor_final": 10.576092152812603,
+    "promedio_evaluaciones": 29.045,
+    "mediana_evaluaciones": 28.0,
+    "promedio_iteraciones": 27.045,
+    "mediana_iteraciones": 26.0
+  },
+  {
+    "funcion": "rastrigin",
+    "nombre_funcion": "Rastrigin",
+    "metodo": "gradient",
     "dimension": 3,
     "n_corridas": 100,
     "mejor_valor_final": 1.989918114464098,
@@ -61,6 +77,22 @@
     "promedio_evaluaciones": 31.92,
     "mediana_evaluaciones": 31.0,
     "promedio_iteraciones": 29.92,
+    "mediana_iteraciones": 29.0
+  },
+  {
+    "funcion": "rastrigin",
+    "nombre_funcion": "Rastrigin",
+    "metodo": "gradient",
+    "dimension": 3,
+    "n_corridas": 1000,
+    "mejor_valor_final": 0.9949590572919806,
+    "peor_valor_final": 58.702047110987294,
+    "promedio_valor_final": 21.551686929364756,
+    "mediana_valor_final": 20.894034040283344,
+    "desviacion_valor_final": 11.735033758562231,
+    "promedio_evaluaciones": 32.041,
+    "mediana_evaluaciones": 31.0,
+    "promedio_iteraciones": 30.041,
     "mediana_iteraciones": 29.0
   }
 ]

@@ -194,6 +194,27 @@ def run_gradient_descent(initial_position, function, gradient_function, rate, ma
 
 No pongas todo el archivo completo en el reporte.
 
+### 4.4 Metodologia experimental del descenso por gradiente
+
+Para evaluar el comportamiento del descenso por gradiente no se realizo una sola corrida por funcion, sino un conjunto de experimentos repetidos con condiciones iniciales aleatorias. En cada caso se genero una posicion inicial dentro del dominio de la funcion y se ejecuto el algoritmo hasta alcanzar el numero maximo de iteraciones definido para esa familia de funciones o hasta cumplir el criterio de tolerancia cuando aplicaba.
+
+La metodologia seguida fue la siguiente:
+
+- Para cada funcion activa del proyecto se ejecutaron corridas independientes en las dimensiones que correspondian a su implementacion.
+- En `Rosenbrock`, `Rastrigin`, `Schwefel` y `Griewank` se consideraron casos en `2D` y `3D`.
+- En `Goldstein-Price` y `Six-Hump Camel` se consideraron solo corridas en `2D`, porque esas funciones fueron implementadas en su forma clasica bidimensional.
+- Para cada caso se realizaron experimentos con `n = 100`, `500` y `1000` ejecuciones independientes.
+- En cada corrida se registraron la posicion inicial, la solucion final, el valor final de la funcion objetivo, el numero de iteraciones y el numero de evaluaciones de la funcion objetivo.
+
+Las condiciones iniciales aleatorias fueron importantes porque permitieron medir no solo la capacidad del metodo para encontrar soluciones bajas, sino tambien su sensibilidad al punto de partida. Esta decision es especialmente relevante en funciones multimodales como `Rastrigin`, `Schwefel` y `Griewank`, donde la ubicacion inicial puede cambiar de manera importante el minimo local al que converge el metodo.
+
+Desde el punto de vista computacional, el flujo experimental de gradiente se organizo en dos etapas:
+
+- `generador_de_datos.ipynb`: produce los archivos `json` y `csv` de las corridas.
+- `analisis_resultados.ipynb`: consume esos archivos y construye tablas, histogramas y figuras para el reporte.
+
+Esta separacion evita mezclar logica experimental con visualizacion y permite que los resultados sean reproducibles.
+
 ## 5. Metodos heuristicos
 
 En esta seccion explicas los metodos heuristicos implementados.
@@ -265,10 +286,14 @@ Lo mejor es organizarla **por funcion** para que no se mezcle todo.
 
 #### 7.1.1 Resultados en 2D
 
-Aqui puedes poner:
-- una tabla resumen
-- histogramas
-- observaciones cortas
+En `Rosenbrock 2D` el descenso por gradiente mostro un comportamiento relativamente estable cuando la tasa de aprendizaje se mantuvo en un rango conservador. Debido a la geometria del valle de la funcion, la convergencia no fue instantanea, pero si consistente cuando la condicion inicial se encontraba dentro del dominio de trabajo.
+
+Para este caso conviene mostrar:
+
+- una tabla resumen con mejor valor final, promedio, mediana y desviacion estandar
+- un histograma de valores finales
+- un histograma del numero de evaluaciones
+- una observacion corta sobre la sensibilidad al punto inicial
 
 Imagenes que deberian ir:
 - histograma de soluciones finales
@@ -286,66 +311,102 @@ Ejemplo de marcador:
 
 #### 7.1.2 Resultados en 3D
 
+En `Rosenbrock 3D` la dificultad aumenta por la mayor curvatura del paisaje y por la necesidad de alinear simultaneamente tres coordenadas alrededor del valle de minimizacion. En el reporte conviene contrastar este caso con `Rosenbrock 2D`, destacando si hubo aumento en el numero medio de evaluaciones o una mayor dispersion de los resultados finales.
+
 ```text
-[Insertar tablas e imagenes correspondientes]
+[Insertar tabla resumen de Rosenbrock 3D]
+[Insertar histograma de valores finales]
+[Insertar histograma de evaluaciones]
 ```
 
 ### 7.2 Rastrigin
 
 #### 7.2.1 Resultados en 2D
 
+`Rastrigin 2D` es un caso importante para el descenso por gradiente porque introduce una superficie multimodal con muchos minimos locales. Aqui el analisis no debe centrarse solo en el mejor valor encontrado, sino tambien en la dispersion de los resultados finales. Si el histograma muestra varios grupos o una cola ancha, eso debe discutirse como evidencia de sensibilidad a la condicion inicial.
+
 ```text
-[Insertar histogramas y analisis]
+[Insertar tabla resumen de Rastrigin 2D]
+[Insertar histograma de valores finales]
+[Insertar histograma de evaluaciones]
 ```
 
 #### 7.2.2 Resultados en 3D
 
+En `Rastrigin 3D` la presencia de minimos locales se vuelve aun mas exigente para un metodo local como descenso por gradiente. Conviene remarcar si el metodo conserva tiempos de convergencia cortos pero a costa de terminar lejos del optimo global en una parte significativa de las corridas.
+
 ```text
-[Insertar histogramas y analisis]
+[Insertar tabla resumen de Rastrigin 3D]
+[Insertar histograma de valores finales]
+[Insertar histograma de evaluaciones]
 ```
 
 ### 7.3 Schwefel
 
 #### 7.3.1 Resultados en 2D
 
+En `Schwefel 2D` el descenso por gradiente enfrenta una topografia mas irregular y gradientes menos amigables que en `Rosenbrock`. Por eso, aqui es especialmente util reportar no solo el promedio del valor final, sino tambien el mejor y el peor caso observados entre las `n` corridas.
+
 ```text
-[Insertar histogramas y analisis]
+[Insertar tabla resumen de Schwefel 2D]
+[Insertar histograma de valores finales]
+[Insertar histograma de evaluaciones]
 ```
 
 #### 7.3.2 Resultados en 3D
 
+En `Schwefel 3D` se espera una mayor dispersion de soluciones finales y, en algunos escenarios, un incremento del numero de evaluaciones necesario para estabilizar la trayectoria. Si el histograma de evaluaciones se concentra pero el de valores finales se dispersa, eso sugiere que el metodo converge de forma consistente, aunque no necesariamente hacia soluciones globalmente buenas.
+
 ```text
-[Insertar histogramas y analisis]
+[Insertar tabla resumen de Schwefel 3D]
+[Insertar histograma de valores finales]
+[Insertar histograma de evaluaciones]
 ```
 
 ### 7.4 Griewank
 
 #### 7.4.1 Resultados en 2D
 
+`Griewank 2D` ofrece un punto intermedio entre funciones suaves y funciones fuertemente multimodales. El analisis debe destacar si el descenso por gradiente logra acercarse al optimo con baja varianza o si aparecen varios minimos de atrapamiento.
+
 ```text
-[Insertar histogramas y analisis]
+[Insertar tabla resumen de Griewank 2D]
+[Insertar histograma de valores finales]
+[Insertar histograma de evaluaciones]
 ```
 
 #### 7.4.2 Resultados en 3D
 
+En `Griewank 3D` conviene enfatizar el efecto de la dimension sobre la estabilidad del algoritmo. Esta subseccion debe comparar directamente la calidad media de solucion y el costo computacional respecto al caso `2D`.
+
 ```text
-[Insertar histogramas y analisis]
+[Insertar tabla resumen de Griewank 3D]
+[Insertar histograma de valores finales]
+[Insertar histograma de evaluaciones]
 ```
 
 ### 7.5 Goldstein-Price
 
 #### 7.5.1 Resultados en 2D
 
+En `Goldstein-Price 2D` el reporte debe resaltar que, aunque la funcion solo se trabajo en dos dimensiones, sigue siendo un caso util para contrastar la respuesta del descenso por gradiente en una superficie no convexa con interacciones fuertes entre variables.
+
 ```text
-[Insertar histogramas y analisis]
+[Insertar tabla resumen de Goldstein-Price 2D]
+[Insertar histograma de valores finales]
+[Insertar histograma de evaluaciones]
 ```
 
 ### 7.6 Funcion de las seis jorobas de camello
 
 #### 7.6.1 Resultados en 2D
 
+La funcion `Six-Hump Camel 2D` es especialmente valiosa para discutir multiplicidad de minimos. Aqui los histogramas ayudan a mostrar si las corridas terminan concentrandose en uno de los minimos globales o si existe una proporcion visible de trayectorias que termina en soluciones peores.
+
 ```text
-[Insertar histogramas y analisis]
+[Insertar tabla resumen de Six-Hump Camel 2D]
+[Insertar histograma de valores finales]
+[Insertar histograma de evaluaciones]
 ```
 
 ## 8. Animaciones del proceso de optimizacion

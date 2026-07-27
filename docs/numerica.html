@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Optimizacion numerica – Trabajo Carlos</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-4e663f3a4ff1a491e18bd6a28adf0390.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Trabajo Carlos</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./numerica.html"> 
+<span class="menu-text">Numerica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./combinatoria.html"> 
+<span class="menu-text">Combinatoria</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./numerica.html">Secciones</a></li><li class="breadcrumb-item"><a href="./numerica.html">Optimizacion numerica</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Portada</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Trabajo 01 Normalización: Optimización heurística</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Secciones</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./numerica.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Optimizacion numerica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./combinatoria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimizacion combinatoria</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#parte-1-optimizacion-numerica" id="toc-parte-1-optimizacion-numerica" class="nav-link active" data-scroll-target="#parte-1-optimizacion-numerica">Parte 1: Optimizacion Numerica</a>
+  <ul class="collapse">
+  <li><a href="#funciones-de-prueba" id="toc-funciones-de-prueba" class="nav-link" data-scroll-target="#funciones-de-prueba">2.1 Funciones de prueba</a>
+  <ul class="collapse">
+  <li><a href="#funcion-de-rosenbrock" id="toc-funcion-de-rosenbrock" class="nav-link" data-scroll-target="#funcion-de-rosenbrock">Funcion de Rosenbrock</a></li>
+  <li><a href="#funcion-de-rastrigin" id="toc-funcion-de-rastrigin" class="nav-link" data-scroll-target="#funcion-de-rastrigin">Funcion de Rastrigin</a></li>
+  <li><a href="#funcion-de-schwefel" id="toc-funcion-de-schwefel" class="nav-link" data-scroll-target="#funcion-de-schwefel">Funcion de Schwefel</a></li>
+  <li><a href="#funcion-de-griewank" id="toc-funcion-de-griewank" class="nav-link" data-scroll-target="#funcion-de-griewank">Funcion de Griewank</a></li>
+  <li><a href="#funcion-de-goldstein-price" id="toc-funcion-de-goldstein-price" class="nav-link" data-scroll-target="#funcion-de-goldstein-price">Funcion de Goldstein-Price</a></li>
+  <li><a href="#funcion-six-hump-camel" id="toc-funcion-six-hump-camel" class="nav-link" data-scroll-target="#funcion-six-hump-camel">Funcion Six-Hump Camel</a></li>
+  <li><a href="#graficos-de-superficie-y-contorno" id="toc-graficos-de-superficie-y-contorno" class="nav-link" data-scroll-target="#graficos-de-superficie-y-contorno">Graficos de superficie y contorno</a></li>
+  </ul></li>
+  <li><a href="#optimizacion-con-descenso-por-gradiente" id="toc-optimizacion-con-descenso-por-gradiente" class="nav-link" data-scroll-target="#optimizacion-con-descenso-por-gradiente">2.2 Optimizacion con Descenso por Gradiente</a>
+  <ul class="collapse">
+  <li><a href="#metodologia" id="toc-metodologia" class="nav-link" data-scroll-target="#metodologia">Metodologia</a></li>
+  <li><a href="#visualización-de-la-función-objetivo" id="toc-visualización-de-la-función-objetivo" class="nav-link" data-scroll-target="#visualización-de-la-función-objetivo">Visualización de la función objetivo</a></li>
+  <li><a href="#tabla-resumen-de-desempeno" id="toc-tabla-resumen-de-desempeno" class="nav-link" data-scroll-target="#tabla-resumen-de-desempeno">Tabla resumen de desempeno</a></li>
+  <li><a href="#histogramas-de-valor-final" id="toc-histogramas-de-valor-final" class="nav-link" data-scroll-target="#histogramas-de-valor-final">Histogramas de valor final</a></li>
+  <li><a href="#histogramas-de-evaluaciones" id="toc-histogramas-de-evaluaciones" class="nav-link" data-scroll-target="#histogramas-de-evaluaciones">Histogramas de evaluaciones</a></li>
+  <li><a href="#resultados-e-interpretación-por-función" id="toc-resultados-e-interpretación-por-función" class="nav-link" data-scroll-target="#resultados-e-interpretación-por-función">Resultados e interpretación por función</a></li>
+  </ul></li>
+  <li><a href="#optimizacion-con-metodos-heuristicos" id="toc-optimizacion-con-metodos-heuristicos" class="nav-link" data-scroll-target="#optimizacion-con-metodos-heuristicos">2.3 Optimizacion con Metodos Heuristicos</a>
+  <ul class="collapse">
+  <li><a href="#metodologia-1" id="toc-metodologia-1" class="nav-link" data-scroll-target="#metodologia-1">Metodologia</a></li>
+  <li><a href="#parametros-de-los-algoritmos" id="toc-parametros-de-los-algoritmos" class="nav-link" data-scroll-target="#parametros-de-los-algoritmos">Parametros de los algoritmos</a></li>
+  <li><a href="#tabla-resumen-comparativa" id="toc-tabla-resumen-comparativa" class="nav-link" data-scroll-target="#tabla-resumen-comparativa">Tabla resumen comparativa</a></li>
+  <li><a href="#comparacion-grafica-de-desempeno" id="toc-comparacion-grafica-de-desempeno" class="nav-link" data-scroll-target="#comparacion-grafica-de-desempeno">Comparacion grafica de desempeno</a></li>
+  <li><a href="#interpretacion-general-de-los-resultados-heuristicos" id="toc-interpretacion-general-de-los-resultados-heuristicos" class="nav-link" data-scroll-target="#interpretacion-general-de-los-resultados-heuristicos">Interpretacion general de los resultados heuristicos</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./numerica.html">Secciones</a></li><li class="breadcrumb-item"><a href="./numerica.html">Optimizacion numerica</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Optimizacion numerica</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="parte-1-optimizacion-numerica" class="level1">
+<h1>Parte 1: Optimizacion Numerica</h1>
+<section id="funciones-de-prueba" class="level2">
+<h2 class="anchored" data-anchor-id="funciones-de-prueba">2.1 Funciones de prueba</h2>
+<p>Para evaluar el comportamiento de los metodos de optimizacion numerica, se seleccionaron varias funciones de prueba ampliamente utilizadas en la literatura. Estas funciones permiten estudiar paisajes de optimizacion con caracteristicas muy distintas, como valles estrechos, abundancia de minimos locales, oscilaciones periodicas y superficies altamente no lineales. Gracias a ello, sirven como una base adecuada para comparar el desempeno de distintos algoritmos y analizar tanto su capacidad de convergencia como su robustez frente a problemas de diferente dificultad.</p>
+<section id="funcion-de-rosenbrock" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-rosenbrock">Funcion de Rosenbrock</h3>
+<p>La funcion de Rosenbrock es un caso clasico en optimizacion continua. Su principal dificultad es la presencia de un valle largo, curvo y angosto que conduce al minimo global. Aunque la funcion no es extremadamente multimodal, muchos algoritmos tienen dificultades para avanzar de manera estable dentro de este valle y acercarse con precision a la solucion.</p>
+<p><span class="math display">\[
+f(x, y) = (1 - x)^2 + 100(y - x^2)^2
+\]</span></p>
+<p>Su minimo global se encuentra en <span class="math inline">\((1,1)\)</span>, donde <span class="math inline">\(f(x,y)=0\)</span>.</p>
+</section>
+<section id="funcion-de-rastrigin" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-rastrigin">Funcion de Rastrigin</h3>
+<p>La funcion de Rastrigin es ampliamente usada para evaluar algoritmos en escenarios multimodales. Su superficie contiene una gran cantidad de minimos locales distribuidos periodicamente, lo que dificulta la busqueda del minimo global. Por esta razon, resulta muy util para analizar la capacidad de exploracion de un metodo de optimizacion.</p>
+<p><span class="math display">\[
+f(\mathbf{x}) = 10n + \sum_{i=1}^{n} \left(x_i^2 - 10 \cos(2\pi x_i)\right)
+\]</span></p>
+<p>Su minimo global se encuentra en <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>, donde <span class="math inline">\(f(\mathbf{x})=0\)</span>.</p>
+</section>
+<section id="funcion-de-schwefel" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-schwefel">Funcion de Schwefel</h3>
+<p>La funcion de Schwefel representa un reto importante debido a que su minimo global esta alejado del origen y la superficie presenta muchas irregularidades. Esto obliga a los algoritmos a explorar con cuidado el dominio de busqueda y evita que una estrategia demasiado local encuentre con facilidad la mejor solucion.</p>
+<p><span class="math display">\[
+f(\mathbf{x}) = 418.9829\,n - \sum_{i=1}^{n} x_i \sin\left(\sqrt{|x_i|}\right)
+\]</span></p>
+<p>Su minimo global se alcanza aproximadamente cuando <span class="math inline">\(x_i = 420.9687\)</span> para todo <span class="math inline">\(i\)</span>.</p>
+</section>
+<section id="funcion-de-griewank" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-griewank">Funcion de Griewank</h3>
+<p>La funcion de Griewank combina un crecimiento cuadratico moderado con un componente oscilatorio multiplicativo. Esta estructura genera varios minimos locales, aunque de una forma menos agresiva que en Rastrigin. Por ello, es util para estudiar el comportamiento de los algoritmos en superficies multimodales con una complejidad intermedia.</p>
+<p><span class="math display">\[
+f(\mathbf{x}) = 1 + \sum_{i=1}^{n}\frac{x_i^2}{4000} - \prod_{i=1}^{n}\cos\left(\frac{x_i}{\sqrt{i}}\right)
+\]</span></p>
+<p>Su minimo global se encuentra en <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>, donde <span class="math inline">\(f(\mathbf{x})=0\)</span>.</p>
+</section>
+<section id="funcion-de-goldstein-price" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-de-goldstein-price">Funcion de Goldstein-Price</h3>
+<p>La funcion de Goldstein-Price es una funcion bidimensional con una superficie compleja y altamente irregular. Presenta cambios pronunciados en la curvatura y varias zonas que pueden desviar la trayectoria de busqueda, por lo que es adecuada para evaluar la precision y estabilidad de los algoritmos en problemas no triviales.</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(x,y) &amp;= \left[1 + (x+y+1)^2(19 - 14x + 3x^2 - 14y + 6xy + 3y^2)\right] \\
+&amp;\quad \cdot \left[30 + (2x-3y)^2(18 - 32x + 12x^2 + 48y - 36xy + 27y^2)\right]
+\end{aligned}
+\]</span></p>
+<p>Su minimo global se encuentra en <span class="math inline">\((0,-1)\)</span>, donde el valor de la funcion es <span class="math inline">\(3\)</span>.</p>
+</section>
+<section id="funcion-six-hump-camel" class="level3">
+<h3 class="anchored" data-anchor-id="funcion-six-hump-camel">Funcion Six-Hump Camel</h3>
+<p>La funcion Six-Hump Camel es otro ejemplo clasico en dos dimensiones. Su interes principal radica en que posee varios puntos criticos y dos minimos globales simetricos. Esto permite evaluar si un algoritmo logra identificar soluciones equivalentes en distintas regiones del espacio de busqueda.</p>
+<p><span class="math display">\[
+f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right)y^2
+\]</span></p>
+<p>Sus minimos globales se encuentran aproximadamente en <span class="math inline">\((0.0898,-0.7126)\)</span> y <span class="math inline">\((-0.0898,0.7126)\)</span>.</p>
+</section>
+<section id="graficos-de-superficie-y-contorno" class="level3">
+<h3 class="anchored" data-anchor-id="graficos-de-superficie-y-contorno">Graficos de superficie y contorno</h3>
+<p>Para cada una de estas funciones se deben incluir dos tipos de visualizacion:</p>
+<ul>
+<li>un grafico de superficie en 3D, para observar la forma general del paisaje de optimizacion</li>
+<li>un grafico de contorno en 2D, para identificar valles, picos, minimos locales y zonas de mayor dificultad</li>
+</ul>
+<p>Estas figuras complementan la descripcion matematica, ya que permiten entender visualmente por que ciertas funciones favorecen la convergencia rapida y por que otras representan un reto mayor para los algoritmos estudiados.</p>
+</section>
+</section>
+<section id="optimizacion-con-descenso-por-gradiente" class="level2">
+<h2 class="anchored" data-anchor-id="optimizacion-con-descenso-por-gradiente">2.2 Optimizacion con Descenso por Gradiente</h2>
+<p>Una vez definidas las funciones de prueba, el siguiente paso consiste en estudiar el comportamiento del descenso por gradiente sobre cada una de ellas. Este metodo actualiza iterativamente la solucion en la direccion opuesta al gradiente de la funcion objetivo, buscando reducir su valor de manera progresiva. Su mayor ventaja es que utiliza informacion local de la superficie para orientar la busqueda, lo que lo hace eficiente en problemas suaves o bien estructurados, aunque tambien lo vuelve sensible a la forma del paisaje y a la condicion inicial.</p>
+<section id="metodologia" class="level3">
+<h3 class="anchored" data-anchor-id="metodologia">Metodologia</h3>
+<p>Para evaluar la estabilidad del metodo y evitar conclusiones basadas en una sola corrida, se realizaron multiples ejecuciones con condiciones iniciales aleatorias. En cada experimento, el algoritmo parte de un punto inicial generado dentro del dominio de la funcion y luego avanza siguiendo la direccion de mayor descenso hasta alcanzar el criterio de parada establecido.</p>
+<p>El enunciado propone comparar corridas para <span class="math inline">\(n = 100\)</span>, <span class="math inline">\(500\)</span> y <span class="math inline">\(1000\)</span>. En los cuadernos de analisis ya se consolidan especialmente resultados para varios casos en 2D y 3D, con enfasis en funciones como Rosenbrock, Schwefel y Rastrigin, y con resúmenes organizados por funcion, dimension y numero de corridas. Este procedimiento permite observar no solo si el metodo encuentra soluciones cercanas al minimo global, sino tambien con que frecuencia lo hace, cuanta dispersion presentan los resultados finales y cual es el costo computacional asociado.</p>
+<p>En problemas de optimizacion no convexa este analisis es clave, porque una misma regla de actualizacion puede producir trayectorias muy distintas dependiendo del punto inicial y de la geometria local de la funcion.</p>
+</section>
+<section id="visualización-de-la-función-objetivo" class="level3">
+<h3 class="anchored" data-anchor-id="visualización-de-la-función-objetivo">Visualización de la función objetivo</h3>
+<section id="rosenbrock" class="level4">
+<h4 class="anchored" data-anchor-id="rosenbrock">Rosenbrock</h4>
+<p><img src="assets/superficies/rosenbrock_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="rastrigin" class="level4">
+<h4 class="anchored" data-anchor-id="rastrigin">Rastrigin</h4>
+<p><img src="assets/superficies/rastrigin_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="schwefel" class="level4">
+<h4 class="anchored" data-anchor-id="schwefel">Schwefel</h4>
+<p><img src="assets/superficies/schwefel_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="griewank" class="level4">
+<h4 class="anchored" data-anchor-id="griewank">Griewank</h4>
+<p><img src="assets/superficies/griewank_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="goldstein-price" class="level4">
+<h4 class="anchored" data-anchor-id="goldstein-price">Goldstein-Price</h4>
+<p><img src="assets/superficies/goldstein_price_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="six-hump-camel" class="level4">
+<h4 class="anchored" data-anchor-id="six-hump-camel">Six-Hump Camel</h4>
+<p><img src="assets/superficies/six_hump_camel_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="tabla-resumen-de-desempeno" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-resumen-de-desempeno">Tabla resumen de desempeno</h3>
+<p>A continuacion se muestra el detalle especifico de las funciones evaluadas en ambas dimensiones o una dependiendo el caso. Esto nos permite leer mejor como cambia el desempeño del metodo cuando aumenta el numero de corridas y como se distribuyen los resultados finales.</p>
+<section id="rosenbrock-1" class="level4">
+<h4 class="anchored" data-anchor-id="rosenbrock-1">Rosenbrock</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Corridas</th>
+<th style="text-align: right;">Mejor valor final</th>
+<th style="text-align: right;">Peor valor final</th>
+<th style="text-align: right;">Promedio valor final</th>
+<th style="text-align: right;">Mediana valor final</th>
+<th style="text-align: right;">Desv. valor final</th>
+<th style="text-align: right;">Promedio evaluaciones</th>
+<th style="text-align: right;">Promedio iteraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">5.20</td>
+<td style="text-align: right;">2.27</td>
+<td style="text-align: right;">1.86</td>
+<td style="text-align: right;">1.71</td>
+<td style="text-align: right;">1002.00</td>
+<td style="text-align: right;">1000.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">5.65</td>
+<td style="text-align: right;">1.49</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">1.65</td>
+<td style="text-align: right;">1002.00</td>
+<td style="text-align: right;">1000.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">5.65</td>
+<td style="text-align: right;">1.49</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">1.59</td>
+<td style="text-align: right;">1002.00</td>
+<td style="text-align: right;">1000.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">4.32</td>
+<td style="text-align: right;">2.26</td>
+<td style="text-align: right;">2.59</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">1002.00</td>
+<td style="text-align: right;">1000.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">4.79</td>
+<td style="text-align: right;">2.02</td>
+<td style="text-align: right;">1.87</td>
+<td style="text-align: right;">1.17</td>
+<td style="text-align: right;">1002.00</td>
+<td style="text-align: right;">1000.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">4.79</td>
+<td style="text-align: right;">2.03</td>
+<td style="text-align: right;">2.18</td>
+<td style="text-align: right;">1.17</td>
+<td style="text-align: right;">1002.00</td>
+<td style="text-align: right;">1000.00</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rastrigin-1" class="level4">
+<h4 class="anchored" data-anchor-id="rastrigin-1">Rastrigin</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Corridas</th>
+<th style="text-align: right;">Mejor valor final</th>
+<th style="text-align: right;">Peor valor final</th>
+<th style="text-align: right;">Promedio valor final</th>
+<th style="text-align: right;">Mediana valor final</th>
+<th style="text-align: right;">Desv. valor final</th>
+<th style="text-align: right;">Promedio evaluaciones</th>
+<th style="text-align: right;">Promedio iteraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">40.79</td>
+<td style="text-align: right;">22.45</td>
+<td style="text-align: right;">24.87</td>
+<td style="text-align: right;">10.33</td>
+<td style="text-align: right;">29.04</td>
+<td style="text-align: right;">27.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">40.79</td>
+<td style="text-align: right;">17.04</td>
+<td style="text-align: right;">16.91</td>
+<td style="text-align: right;">10.54</td>
+<td style="text-align: right;">28.85</td>
+<td style="text-align: right;">26.85</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">40.79</td>
+<td style="text-align: right;">16.48</td>
+<td style="text-align: right;">16.91</td>
+<td style="text-align: right;">10.58</td>
+<td style="text-align: right;">29.05</td>
+<td style="text-align: right;">27.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">58.70</td>
+<td style="text-align: right;">31.95</td>
+<td style="text-align: right;">35.32</td>
+<td style="text-align: right;">13.04</td>
+<td style="text-align: right;">30.10</td>
+<td style="text-align: right;">28.10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">58.70</td>
+<td style="text-align: right;">22.71</td>
+<td style="text-align: right;">21.39</td>
+<td style="text-align: right;">12.31</td>
+<td style="text-align: right;">31.92</td>
+<td style="text-align: right;">29.92</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">58.70</td>
+<td style="text-align: right;">21.55</td>
+<td style="text-align: right;">20.89</td>
+<td style="text-align: right;">11.74</td>
+<td style="text-align: right;">32.04</td>
+<td style="text-align: right;">30.04</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="schwefel-1" class="level4">
+<h4 class="anchored" data-anchor-id="schwefel-1">Schwefel</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Corridas</th>
+<th style="text-align: right;">Mejor valor final</th>
+<th style="text-align: right;">Peor valor final</th>
+<th style="text-align: right;">Promedio valor final</th>
+<th style="text-align: right;">Mediana valor final</th>
+<th style="text-align: right;">Desv. valor final</th>
+<th style="text-align: right;">Promedio evaluaciones</th>
+<th style="text-align: right;">Promedio iteraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">-15.32</td>
+<td style="text-align: right;">985.87</td>
+<td style="text-align: right;">369.84</td>
+<td style="text-align: right;">416.60</td>
+<td style="text-align: right;">254.49</td>
+<td style="text-align: right;">10002.00</td>
+<td style="text-align: right;">10000.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">-15.32</td>
+<td style="text-align: right;">1225.63</td>
+<td style="text-align: right;">430.81</td>
+<td style="text-align: right;">401.60</td>
+<td style="text-align: right;">317.57</td>
+<td style="text-align: right;">10002.00</td>
+<td style="text-align: right;">10000.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">-15.32</td>
+<td style="text-align: right;">1225.63</td>
+<td style="text-align: right;">376.59</td>
+<td style="text-align: right;">341.46</td>
+<td style="text-align: right;">291.55</td>
+<td style="text-align: right;">10002.00</td>
+<td style="text-align: right;">10000.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">-7.73</td>
+<td style="text-align: right;">1203.50</td>
+<td style="text-align: right;">538.47</td>
+<td style="text-align: right;">542.68</td>
+<td style="text-align: right;">325.66</td>
+<td style="text-align: right;">10002.00</td>
+<td style="text-align: right;">10000.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">-7.73</td>
+<td style="text-align: right;">1450.16</td>
+<td style="text-align: right;">650.61</td>
+<td style="text-align: right;">660.48</td>
+<td style="text-align: right;">354.56</td>
+<td style="text-align: right;">10002.00</td>
+<td style="text-align: right;">10000.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">-7.73</td>
+<td style="text-align: right;">1450.16</td>
+<td style="text-align: right;">565.92</td>
+<td style="text-align: right;">517.55</td>
+<td style="text-align: right;">351.71</td>
+<td style="text-align: right;">10002.00</td>
+<td style="text-align: right;">10000.00</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="griewank-1" class="level4">
+<h4 class="anchored" data-anchor-id="griewank-1">Griewank</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Corridas</th>
+<th style="text-align: right;">Mejor valor final</th>
+<th style="text-align: right;">Peor valor final</th>
+<th style="text-align: right;">Promedio valor final</th>
+<th style="text-align: right;">Mediana valor final</th>
+<th style="text-align: right;">Desv. valor final</th>
+<th style="text-align: right;">Promedio evaluaciones</th>
+<th style="text-align: right;">Promedio iteraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">1766.94</td>
+<td style="text-align: right;">1764.94</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">1732.03</td>
+<td style="text-align: right;">1730.03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">1741.05</td>
+<td style="text-align: right;">1739.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">2002.00</td>
+<td style="text-align: right;">2000.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">2002.00</td>
+<td style="text-align: right;">2000.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">2002.00</td>
+<td style="text-align: right;">2000.00</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="goldstein-price-1" class="level4">
+<h4 class="anchored" data-anchor-id="goldstein-price-1">Goldstein-Price</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Corridas</th>
+<th style="text-align: right;">Mejor valor final</th>
+<th style="text-align: right;">Peor valor final</th>
+<th style="text-align: right;">Promedio valor final</th>
+<th style="text-align: right;">Mediana valor final</th>
+<th style="text-align: right;">Desv. valor final</th>
+<th style="text-align: right;">Promedio evaluaciones</th>
+<th style="text-align: right;">Promedio iteraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">10.49</td>
+<td style="text-align: right;">988.65</td>
+<td style="text-align: right;">148.95</td>
+<td style="text-align: right;">62.27</td>
+<td style="text-align: right;">264.29</td>
+<td style="text-align: right;">5002.00</td>
+<td style="text-align: right;">5000.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">10.49</td>
+<td style="text-align: right;">989.72</td>
+<td style="text-align: right;">288.42</td>
+<td style="text-align: right;">80.68</td>
+<td style="text-align: right;">361.56</td>
+<td style="text-align: right;">5002.00</td>
+<td style="text-align: right;">5000.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">10.49</td>
+<td style="text-align: right;">989.72</td>
+<td style="text-align: right;">328.08</td>
+<td style="text-align: right;">81.16</td>
+<td style="text-align: right;">382.52</td>
+<td style="text-align: right;">5002.00</td>
+<td style="text-align: right;">5000.00</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="six-hump-camel-1" class="level4">
+<h4 class="anchored" data-anchor-id="six-hump-camel-1">Six-Hump Camel</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Corridas</th>
+<th style="text-align: right;">Mejor valor final</th>
+<th style="text-align: right;">Peor valor final</th>
+<th style="text-align: right;">Promedio valor final</th>
+<th style="text-align: right;">Mediana valor final</th>
+<th style="text-align: right;">Desv. valor final</th>
+<th style="text-align: right;">Promedio evaluaciones</th>
+<th style="text-align: right;">Promedio iteraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">-1.03</td>
+<td style="text-align: right;">2.10</td>
+<td style="text-align: right;">-0.45</td>
+<td style="text-align: right;">-1.03</td>
+<td style="text-align: right;">1.08</td>
+<td style="text-align: right;">989.10</td>
+<td style="text-align: right;">987.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">-1.03</td>
+<td style="text-align: right;">2.10</td>
+<td style="text-align: right;">-0.14</td>
+<td style="text-align: right;">-1.03</td>
+<td style="text-align: right;">1.34</td>
+<td style="text-align: right;">996.39</td>
+<td style="text-align: right;">994.39</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">-1.03</td>
+<td style="text-align: right;">2.10</td>
+<td style="text-align: right;">-0.11</td>
+<td style="text-align: right;">-1.03</td>
+<td style="text-align: right;">1.37</td>
+<td style="text-align: right;">986.34</td>
+<td style="text-align: right;">984.34</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="histogramas-de-valor-final" class="level3">
+<h3 class="anchored" data-anchor-id="histogramas-de-valor-final">Histogramas de valor final</h3>
+<p>Los histogramas del valor final permiten visualizar la distribucion de las soluciones obtenidas despues de todas las corridas. Esta grafica es especialmente importante porque muestra si el algoritmo converge repetidamente hacia una misma region del espacio de soluciones o si, por el contrario, termina en distintos minimos locales segun la inicializacion.</p>
+<p>Cuando la mayor parte de los valores finales se concentra cerca del minimo global, se puede interpretar que el metodo es relativamente estable para esa funcion. En cambio, cuando la distribucion es amplia, sesgada o presenta varios grupos, ello sugiere que el descenso por gradiente es sensible al punto inicial o que la funcion contiene regiones donde la busqueda local no logra llegar siempre a la mejor solucion.</p>
+<p>En el reporte, estos histogramas deben acompaniarse con una breve lectura interpretativa, ya que no solo interesa mostrar la figura, sino explicar que revela sobre la robustez del metodo.</p>
+<section id="rosenbrock-2" class="level4">
+<h4 class="anchored" data-anchor-id="rosenbrock-2">Rosenbrock</h4>
+<section id="d" class="level5">
+<h5 class="anchored" data-anchor-id="d">2D</h5>
+<p><img src="assets/histogramas/rosenbrock_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+</section>
+<section id="d-1" class="level5">
+<h5 class="anchored" data-anchor-id="d-1">3D</h5>
+<p><img src="assets/histogramas/rosenbrock_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="rastrigin-2" class="level4">
+<h4 class="anchored" data-anchor-id="rastrigin-2">Rastrigin</h4>
+<section id="d-2" class="level5">
+<h5 class="anchored" data-anchor-id="d-2">2D</h5>
+<p><img src="assets/histogramas/rastrigin_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+</section>
+<section id="d-3" class="level5">
+<h5 class="anchored" data-anchor-id="d-3">3D</h5>
+<p><img src="assets/histogramas/rastrigin_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="schwefel-2" class="level4">
+<h4 class="anchored" data-anchor-id="schwefel-2">Schwefel</h4>
+<section id="d-4" class="level5">
+<h5 class="anchored" data-anchor-id="d-4">2D</h5>
+<p><img src="assets/histogramas/schwefel_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+</section>
+<section id="d-5" class="level5">
+<h5 class="anchored" data-anchor-id="d-5">3D</h5>
+<p><img src="assets/histogramas/schwefel_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="griewank-2" class="level4">
+<h4 class="anchored" data-anchor-id="griewank-2">Griewank</h4>
+<section id="d-6" class="level5">
+<h5 class="anchored" data-anchor-id="d-6">2D</h5>
+<p><img src="assets/histogramas/griewank_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+</section>
+<section id="d-7" class="level5">
+<h5 class="anchored" data-anchor-id="d-7">3D</h5>
+<p><img src="assets/histogramas/griewank_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="goldstein-price-2" class="level4">
+<h4 class="anchored" data-anchor-id="goldstein-price-2">Goldstein-Price</h4>
+<section id="d-8" class="level5">
+<h5 class="anchored" data-anchor-id="d-8">2D</h5>
+<p><img src="assets/histogramas/goldstein_price_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="six-hump-camel-2" class="level4">
+<h4 class="anchored" data-anchor-id="six-hump-camel-2">Six-Hump Camel</h4>
+<section id="d-9" class="level5">
+<h5 class="anchored" data-anchor-id="d-9">2D</h5>
+<p><img src="assets/histogramas/six_hump_camel_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+</section>
+</section>
+</section>
+<section id="histogramas-de-evaluaciones" class="level3">
+<h3 class="anchored" data-anchor-id="histogramas-de-evaluaciones">Histogramas de evaluaciones</h3>
+<p>Ademas de la calidad de la solucion, es fundamental medir cuantas evaluaciones de la funcion objetivo fueron necesarias para alcanzar el resultado final. Para ello se emplean histogramas del numero de evaluaciones, que permiten estudiar la eficiencia del metodo en cada caso.</p>
+<p>Estos histogramas muestran si la convergencia ocurre de manera uniforme o si existen corridas mucho mas costosas que otras. Una distribucion concentrada en valores bajos suele indicar una convergencia mas predecible y economica. En cambio, una distribucion dispersa o con cola larga sugiere que algunas ejecuciones requieren muchos mas pasos para estabilizarse, lo cual puede estar asociado a zonas complicadas del paisaje de optimizacion.</p>
+<p>La interpretacion conjunta entre histogramas de valor final e histogramas de evaluaciones es especialmente importante: un metodo puede converger rapido pero hacia soluciones pobres, o puede requerir mas evaluaciones pero acercarse mejor al minimo global. Por eso, ambos indicadores deben analizarse en conjunto y no por separado.</p>
+<section id="rosenbrock-3" class="level4">
+<h4 class="anchored" data-anchor-id="rosenbrock-3">Rosenbrock</h4>
+<section id="d-10" class="level5">
+<h5 class="anchored" data-anchor-id="d-10">2D</h5>
+<p><img src="assets/histogramas/rosenbrock_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+</section>
+<section id="d-11" class="level5">
+<h5 class="anchored" data-anchor-id="d-11">3D</h5>
+<p><img src="assets/histogramas/rosenbrock_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="rastrigin-3" class="level4">
+<h4 class="anchored" data-anchor-id="rastrigin-3">Rastrigin</h4>
+<section id="d-12" class="level5">
+<h5 class="anchored" data-anchor-id="d-12">2D</h5>
+<p><img src="assets/histogramas/rastrigin_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+</section>
+<section id="d-13" class="level5">
+<h5 class="anchored" data-anchor-id="d-13">3D</h5>
+<p><img src="assets/histogramas/rastrigin_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="schwefel-3" class="level4">
+<h4 class="anchored" data-anchor-id="schwefel-3">Schwefel</h4>
+<section id="d-14" class="level5">
+<h5 class="anchored" data-anchor-id="d-14">2D</h5>
+<p><img src="assets/histogramas/schwefel_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+</section>
+<section id="d-15" class="level5">
+<h5 class="anchored" data-anchor-id="d-15">3D</h5>
+<p><img src="assets/histogramas/schwefel_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="griewank-3" class="level4">
+<h4 class="anchored" data-anchor-id="griewank-3">Griewank</h4>
+<section id="d-16" class="level5">
+<h5 class="anchored" data-anchor-id="d-16">2D</h5>
+<p><img src="assets/histogramas/griewank_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+</section>
+<section id="d-17" class="level5">
+<h5 class="anchored" data-anchor-id="d-17">3D</h5>
+<p><img src="assets/histogramas/griewank_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="goldstein-price-3" class="level4">
+<h4 class="anchored" data-anchor-id="goldstein-price-3">Goldstein-Price</h4>
+<section id="d-18" class="level5">
+<h5 class="anchored" data-anchor-id="d-18">2D</h5>
+<p><img src="assets/histogramas/goldstein_price_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="six-hump-camel-3" class="level4">
+<h4 class="anchored" data-anchor-id="six-hump-camel-3">Six-Hump Camel</h4>
+<section id="d-19" class="level5">
+<h5 class="anchored" data-anchor-id="d-19">2D</h5>
+<p><img src="assets/histogramas/six_hump_camel_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+</section>
+</section>
+</section>
+<section id="resultados-e-interpretación-por-función" class="level3">
+<h3 class="anchored" data-anchor-id="resultados-e-interpretación-por-función">Resultados e interpretación por función</h3>
+<p>Los notebooks correspondientes al descenso por gradiente organizan el análisis según cada función de prueba, lo cual constituye una estructura adecuada para presentar los resultados en el informe. Cada función posee una geometría particular y, por lo tanto, plantea dificultades diferentes para el proceso de optimización.</p>
+<p>El análisis de cada caso debe considerar principalmente la calidad de las soluciones encontradas, la variabilidad entre las corridas y el costo computacional, expresado mediante el número de evaluaciones realizadas. Los histogramas permiten observar la distribución de los valores finales y determinar si el algoritmo converge de manera consistente o si presenta una alta dependencia del punto inicial.</p>
+<section id="rosenbrock-4" class="level4">
+<h4 class="anchored" data-anchor-id="rosenbrock-4">Rosenbrock</h4>
+<p>En <code>Rosenbrock</code>, el principal reto para el descenso por gradiente es la presencia de un valle estrecho y curvo que conduce al mínimo global. Aunque la función posee un único mínimo global, su geometría dificulta que el algoritmo avance directamente hacia él, debido a que la dirección del gradiente puede generar movimientos laterales o trayectorias en zigzag dentro del valle.</p>
+<p>Los resultados muestran que el descenso por gradiente puede avanzar hacia regiones favorables y obtener soluciones cercanas al óptimo en algunas corridas. Sin embargo, el proceso puede ser lento y sensible tanto al punto inicial como al tamaño de paso utilizado. Pequeñas variaciones en estos elementos pueden provocar trayectorias ineficientes o hacer que el algoritmo requiera una gran cantidad de evaluaciones antes de detenerse.</p>
+<p>En términos generales, la versión <code>2D</code> presenta un comportamiento más favorable que la versión <code>3D</code>, debido a que el aumento de la dimensionalidad introduce una mayor dificultad para recorrer correctamente el valle de la función. Por esta razón, aunque el método logra orientarse hacia el mínimo, su convergencia no siempre es rápida ni completamente robusta.</p>
+</section>
+<section id="schwefel-4" class="level4">
+<h4 class="anchored" data-anchor-id="schwefel-4">Schwefel</h4>
+<p>En <code>Schwefel</code>, el descenso por gradiente presenta una convergencia útil, pero poco robusta. El algoritmo alcanza soluciones relativamente buenas en el mejor caso, tanto en <code>2D</code> como en <code>3D</code>, lo que indica que puede aproximarse a regiones favorables de la función. Sin embargo, esta convergencia no es consistente entre las diferentes corridas, ya que los peores valores continúan siendo muy altos y los promedios permanecen alejados del mejor resultado observado.</p>
+<p>Esta dificultad se relaciona con la estructura altamente multimodal de la función, la cual contiene numerosos mínimos locales alejados entre sí. Como consecuencia, el resultado final depende considerablemente del punto inicial, pues el algoritmo puede quedar atrapado en regiones que no corresponden al óptimo global.</p>
+<p>Desde el punto de vista computacional, el costo es muy alto y completamente estable, debido a que el promedio de evaluaciones permanece fijo en todos los escenarios. Esto sugiere que, en la práctica, la mayoría de las corridas alcanza el límite máximo de iteraciones configurado, en lugar de detenerse como resultado de una convergencia clara.</p>
+<p>En conjunto, <code>Schwefel 2D</code> presenta mejores promedios y una menor dispersión que <code>Schwefel 3D</code>. Por lo tanto, el paso a tres dimensiones empeora la calidad promedio de las soluciones y refuerza la idea de que esta función representa una prueba especialmente difícil para el descenso por gradiente.</p>
+</section>
+<section id="rastrigin-4" class="level4">
+<h4 class="anchored" data-anchor-id="rastrigin-4">Rastrigin</h4>
+<p>En <code>Rastrigin</code>, la presencia de una gran cantidad de mínimos locales convierte la función en una prueba exigente para cualquier método de optimización local. En este caso, los histogramas resultan especialmente útiles para identificar si el descenso por gradiente converge hacia diferentes mínimos o si los resultados se concentran cerca del óptimo global.</p>
+<p>Los resultados muestran una convergencia parcial y claramente dependiente del punto inicial. El algoritmo logra encontrar soluciones relativamente cercanas al óptimo en el mejor caso, tanto en <code>2D</code> como en <code>3D</code>, lo que demuestra que puede aproximarse a mínimos bajos de la función. Sin embargo, este comportamiento no se presenta de manera sistemática, debido a que la superficie multimodal facilita que el método quede atrapado en diferentes mínimos locales.</p>
+<p>En cuanto al costo computacional, el comportamiento es bajo y bastante estable en comparación con funciones como <code>Schwefel</code> o <code>Rosenbrock</code>. El promedio de evaluaciones se mantiene alrededor de <code>29</code> en <code>2D</code> y entre <code>30</code> y <code>32</code> en <code>3D</code>, lo que indica que el algoritmo se detiene con mayor rapidez.</p>
+<p>En conjunto, <code>Rastrigin 2D</code> presenta mejores soluciones promedio, menor variabilidad y un costo computacional ligeramente inferior al de <code>Rastrigin 3D</code>. Aunque la versión tridimensional conserva un mejor caso competitivo, sus promedios son más altos y sus resultados presentan una mayor dispersión.</p>
+</section>
+<section id="griewank-4" class="level4">
+<h4 class="anchored" data-anchor-id="griewank-4">Griewank</h4>
+<p>En <code>Griewank</code>, aunque también existen múltiples mínimos locales, la estructura de la función es menos agresiva que la de <code>Rastrigin</code>. Esto permite estudiar un escenario intermedio en el que el descenso por gradiente enfrenta multimodalidad, pero sobre una superficie más regular.</p>
+<p>Los resultados muestran una convergencia adecuada en comparación con las demás funciones del experimento. En <code>2D</code>, el mejor valor alcanza prácticamente el óptimo global, mientras que en <code>3D</code> también se obtienen soluciones muy cercanas. Además, los promedios permanecen bajos en ambos casos, especialmente en <code>2D</code>, lo que indica que el método logra encontrar con regularidad regiones favorables del espacio de búsqueda.</p>
+<p>Respecto al costo computacional, el comportamiento es intermedio y estable. En <code>2D</code>, el promedio de evaluaciones se encuentra aproximadamente entre <code>1730</code> y <code>1767</code>, mientras que en <code>3D</code> permanece prácticamente fijo alrededor de <code>2002</code>. Esta estabilidad sugiere una influencia importante del criterio de parada configurado, especialmente en la versión tridimensional.</p>
+<p>En conjunto, <code>Griewank 2D</code> presenta mejores valores promedio, menor dispersión y un menor costo computacional que <code>Griewank 3D</code>. No obstante, en ambas dimensiones el descenso por gradiente logra aproximarse al óptimo con una regularidad considerable.</p>
+</section>
+<section id="goldstein-price-4" class="level4">
+<h4 class="anchored" data-anchor-id="goldstein-price-4">Goldstein-Price</h4>
+<p>En <code>Goldstein-Price 2D</code>, el descenso por gradiente presenta una convergencia limitada e inestable. Aunque el mejor valor encontrado resulta relativamente favorable dentro de las corridas observadas, todavía permanece alejado del óptimo global de la función y convive con valores finales considerablemente altos.</p>
+<p>Este comportamiento indica que el método puede aproximarse a regiones favorables en algunas ejecuciones, pero no conserva esa capacidad de manera consistente. La solución obtenida depende fuertemente de la condición inicial y de la región de atracción en la que comienza cada corrida.</p>
+<p>La dispersión de los resultados es elevada y los promedios del valor final incluso empeoran al aumentar el número de corridas. Esto no significa que incrementar el número de ejecuciones deteriore el algoritmo, sino que una muestra más amplia permite observar con mayor claridad la presencia de corridas que finalizan en soluciones de baja calidad.</p>
+<p>Desde el punto de vista computacional, el costo es alto y completamente fijo, debido a que el promedio de evaluaciones permanece constante en todos los escenarios. Esto sugiere que la mayoría de las corridas alcanza el límite máximo de iteraciones establecido.</p>
+<p>Como <code>Goldstein-Price</code> solamente se estudia en <code>2D</code>, no es posible realizar una comparación con una versión tridimensional. Aun así, los resultados evidencian que esta función representa una dificultad mayor para el descenso por gradiente que otras funciones como <code>Rosenbrock</code> o <code>Griewank</code>.</p>
+</section>
+<section id="six-hump-camel-4" class="level4">
+<h4 class="anchored" data-anchor-id="six-hump-camel-4">Six-Hump Camel</h4>
+<p>En <code>Six-Hump Camel 2D</code>, el descenso por gradiente muestra una convergencia parcialmente adecuada. El mejor valor encontrado es muy cercano al óptimo global conocido de la función, lo que demuestra que el método posee la capacidad de alcanzar soluciones de alta calidad.</p>
+<p>Sin embargo, este buen resultado no representa el comportamiento de todas las corridas. También se observan valores finales claramente superiores, lo que evidencia una sensibilidad considerable frente a la condición inicial. Dependiendo del punto de partida, el algoritmo puede dirigirse hacia alguno de los mínimos globales o quedar atrapado en otros puntos estacionarios de menor calidad.</p>
+<p>En cuanto al costo computacional, el comportamiento es moderado y bastante estable, con un promedio de evaluaciones cercano a <code>990</code> para los diferentes tamaños de muestra. Este resultado es más favorable que el observado en funciones más costosas, como <code>Goldstein-Price</code> o <code>Schwefel</code>, aunque continúa mostrando que muchas corridas requieren una cantidad similar de trabajo antes de finalizar.</p>
+<p>En conjunto, <code>Six-Hump Camel 2D</code> demuestra que el descenso por gradiente puede encontrar soluciones muy cercanas al óptimo global. No obstante, la dispersión de los resultados impide considerar que el método sea completamente confiable en todas las corridas.</p>
+<p>En consecuencia, esta subsección no debe limitarse a presentar tablas, histogramas y figuras. También debe explicar de manera puntual qué se observa en cada función, cuál es la calidad de las soluciones obtenidas, qué tan robusto resulta el descenso por gradiente y en qué casos el método presenta sus principales limitaciones.</p>
+</section>
+</section>
+</section>
+<section id="optimizacion-con-metodos-heuristicos" class="level2">
+<h2 class="anchored" data-anchor-id="optimizacion-con-metodos-heuristicos">2.3 Optimizacion con Metodos Heuristicos</h2>
+<p>Una vez analizado el descenso por gradiente, el siguiente paso consiste en estudiar metodos de optimizacion heuristica que no dependan de informacion derivativa de la funcion objetivo. En esta parte se emplearon tres estrategias de busqueda poblacional: <strong>algoritmo evolutivo</strong>, <strong>optimizacion por enjambre de particulas (PSO)</strong> y <strong>evolucion diferencial</strong>. Estos metodos resultan especialmente utiles en funciones multimodales o con paisajes complejos, donde una estrategia puramente local puede quedar atrapada en minimos no globales.</p>
+<p>El objetivo de esta subseccion es comparar la calidad de las soluciones obtenidas por estos metodos, asi como su costo computacional medido en numero de evaluaciones de la funcion objetivo. De esta manera, la discusion no se centra solo en quien alcanza el mejor valor final, sino tambien en que tan robusto y eficiente resulta cada enfoque frente a funciones de distinta dificultad y dimensionalidad.</p>
+<section id="metodologia-1" class="level3">
+<h3 class="anchored" data-anchor-id="metodologia-1">Metodologia</h3>
+<p>Para el experimento heuristico se evaluaron las funciones <code>Rosenbrock</code>, <code>Rastrigin</code>, <code>Schwefel</code> y <code>Griewank</code> en <code>2D</code> y <code>3D</code>. Adicionalmente, <code>Goldstein-Price</code> y <code>Six-Hump Camel</code> se trabajaron solo en <code>2D</code>, ya que en el proyecto fueron implementadas en su formulacion clasica bidimensional. En todos los casos se realizaron varias corridas con semillas distintas, registrando el mejor valor encontrado, la mejor solucion, el numero de iteraciones y el numero de evaluaciones de la funcion objetivo.</p>
+<p>Los resultados consolidados de esta parte fueron generados desde el bloque <code>heuristicos/</code>, utilizando una implementacion unificada para los tres metodos y un criterio consistente de conteo de evaluaciones. Esto permite realizar comparaciones directas entre algoritmos bajo condiciones experimentales equivalentes.</p>
+</section>
+<section id="parametros-de-los-algoritmos" class="level3">
+<h3 class="anchored" data-anchor-id="parametros-de-los-algoritmos">Parametros de los algoritmos</h3>
+<p>La configuracion general utilizada para los experimentos heuristicos se resume a continuacion, separando los parametros de cada metodo para facilitar su lectura e interpretacion.</p>
+<section id="algoritmo-evolutivo" class="level4">
+<h4 class="anchored" data-anchor-id="algoritmo-evolutivo">Algoritmo evolutivo</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parametro</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tamano de poblacion</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td>Fraccion de elitismo</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr class="odd">
+<td>Fraccion de mutacion</td>
+<td style="text-align: right;">0.1</td>
+</tr>
+<tr class="even">
+<td>Maximo de iteraciones</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pso" class="level4">
+<h4 class="anchored" data-anchor-id="pso">PSO</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parametro</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Numero de particulas</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td>Peso de inercia</td>
+<td style="text-align: right;">0.7</td>
+</tr>
+<tr class="odd">
+<td>Peso cognitivo</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+<tr class="even">
+<td>Peso social</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+<tr class="odd">
+<td>Maximo de iteraciones</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="evolucion-diferencial" class="level4">
+<h4 class="anchored" data-anchor-id="evolucion-diferencial">Evolucion diferencial</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parametro</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tamano de poblacion</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td>Factor de mutacion</td>
+<td style="text-align: right;">0.8</td>
+</tr>
+<tr class="odd">
+<td>Tasa de cruce</td>
+<td style="text-align: right;">0.7</td>
+</tr>
+<tr class="even">
+<td>Maximo de iteraciones</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="tabla-resumen-comparativa" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-resumen-comparativa">Tabla resumen comparativa</h3>
+<p>La tabla principal de esta subseccion debe consolidar, para cada funcion, dimension y metodo, el mejor valor promedio, el mejor valor minimo alcanzado y el promedio de evaluaciones realizadas. Esta tabla permite comparar de manera global tanto la calidad de las soluciones como el costo computacional.</p>
+<pre class="text"><code>[Insertar aqui la tabla resumen construida a partir de `trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/resumen_punto_2_heuristicos.csv`]</code></pre>
+</section>
+<section id="comparacion-grafica-de-desempeno" class="level3">
+<h3 class="anchored" data-anchor-id="comparacion-grafica-de-desempeno">Comparacion grafica de desempeno</h3>
+<p>Para evitar una presentacion excesivamente fragmentada, en la parte heuristica conviene resumir los resultados con unas pocas figuras comparativas de alto valor interpretativo. En lugar de repetir una grafica por cada funcion y por cada metodo, es preferible usar figuras consolidadas que permitan identificar rapidamente tendencias generales.</p>
+<section id="mejor-valor-promedio-por-metodo" class="level4">
+<h4 class="anchored" data-anchor-id="mejor-valor-promedio-por-metodo">Mejor valor promedio por metodo</h4>
+<p>Esta figura debe mostrar, para cada funcion, el mejor valor promedio alcanzado por cada metodo heuristico. La recomendacion es presentar una figura para <code>2D</code> y otra para <code>3D</code>, usando colores distintos para <code>algoritmo evolutivo</code>, <code>PSO</code> y <code>evolucion diferencial</code>.</p>
+<pre class="text"><code>[Insertar imagen: grafica de barras del mejor valor promedio por metodo en 2D]</code></pre>
+<pre class="text"><code>[Insertar imagen: grafica de barras del mejor valor promedio por metodo en 3D]</code></pre>
+</section>
+<section id="evaluaciones-promedio-por-metodo" class="level4">
+<h4 class="anchored" data-anchor-id="evaluaciones-promedio-por-metodo">Evaluaciones promedio por metodo</h4>
+<p>Esta figura debe comparar el costo computacional promedio de los tres metodos, medido en numero de evaluaciones de la funcion objetivo. Su lectura complementa la figura anterior, ya que permite discutir si los mejores resultados se obtienen a costa de un esfuerzo computacional mayor o si existe tambien una ventaja en eficiencia.</p>
+<pre class="text"><code>[Insertar imagen: grafica de barras de evaluaciones promedio por metodo]</code></pre>
+</section>
+<section id="vista-resumida-tipo-mapa-de-calor-o-tabla-coloreada" class="level4">
+<h4 class="anchored" data-anchor-id="vista-resumida-tipo-mapa-de-calor-o-tabla-coloreada">Vista resumida tipo mapa de calor o tabla coloreada</h4>
+<p>Como apoyo adicional, puede incluirse una visualizacion compacta en la que las filas representen cada combinacion <code>funcion-dimension</code> y las columnas correspondan a los tres metodos. El valor mostrado puede ser el mejor valor promedio o un ranking relativo entre metodos. Esta figura resulta util para identificar de un vistazo en que funciones cada algoritmo se comporta mejor.</p>
+<pre class="text"><code>[Insertar imagen: mapa de calor o tabla coloreada comparando metodos por funcion y dimension]</code></pre>
+</section>
+</section>
+<section id="interpretacion-general-de-los-resultados-heuristicos" class="level3">
+<h3 class="anchored" data-anchor-id="interpretacion-general-de-los-resultados-heuristicos">Interpretacion general de los resultados heuristicos</h3>
+<p>En terminos generales, los resultados obtenidos muestran que <code>PSO</code> y <code>evolucion diferencial</code> ofrecen un mejor desempeno global que el algoritmo evolutivo simple en la mayoria de funciones estudiadas. En particular, <code>evolucion diferencial</code> presenta un comportamiento muy fuerte en funciones como <code>Rosenbrock</code> y <code>Rastrigin</code>, mientras que <code>PSO</code> logra soluciones muy competitivas y consistentes en varios escenarios.</p>
+<p>El algoritmo evolutivo tambien encuentra soluciones razonables, pero en promedio queda por debajo de los otros dos metodos en calidad de la solucion final. Aun asi, su presencia en el estudio es importante porque representa una estrategia poblacional clasica y permite comparar tres filosofias diferentes de exploracion del espacio de busqueda.</p>
+<p>Finalmente, la interpretacion de esta subseccion debe conectarse con la discusion general del trabajo. No basta con identificar que metodo produce el menor valor promedio; tambien es necesario contrastar ese resultado con el numero de evaluaciones realizadas y con la dificultad propia de cada funcion. Esta comparacion sera clave mas adelante para responder que aportan los metodos heuristicos frente al descenso por gradiente.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

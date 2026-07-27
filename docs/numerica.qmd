@@ -1,0 +1,28 @@
+---
+title: "Optimizacion numerica"
+---
+
+# Parte 1: Optimizacion Numerica
+
+Esta pagina reune la parte numerica del trabajo en un solo lugar, separada de la portada general del sitio.
+
+## Contenido
+
+En esta seccion se estudia el comportamiento de distintos metodos sobre funciones clasicas de optimizacion continua, con enfasis en:
+
+- funciones de prueba como Rosenbrock, Rastrigin, Schwefel, Griewank, Goldstein-Price y Six-Hump Camel
+- descenso por gradiente
+- analisis de corridas multiples
+- histogramas de desempeno
+- comparacion con metodos heurísticos
+
+## Cuadernos principales
+
+- [Presentacion de optimizacion numerica](presentacion/numerica/01_numerica.ipynb)
+- [Comparacion final de metodos](notebooks/numerica/12_comparacion_final_metodos.ipynb)
+- [Analisis de resultados de gradiente](notebooks/numerica/gradiente/analisis_resultados.ipynb)
+- [Analisis de resultados heurísticos](notebooks/numerica/heuristicos/analisis_resultados.ipynb)
+
+## Resumen
+
+La parte numerica permite comparar como cambia el comportamiento del algoritmo segun la geometria de la funcion objetivo. En funciones suaves o mejor condicionadas, el descenso por gradiente puede converger de manera estable; en funciones multimodales o con valles complejos, la sensibilidad al punto inicial y la presencia de minimos locales se vuelven mucho mas evidentes.
