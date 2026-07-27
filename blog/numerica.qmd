@@ -1,5 +1,5 @@
 ---
-title: "Optimizacion numerica"
+title: "Optimización Numérica"
 ---
 
 # Parte 1: Optimizacion Numerica
@@ -416,9 +416,84 @@ La configuracion general utilizada para los experimentos heuristicos se resume a
 
 La tabla principal de esta subseccion debe consolidar, para cada funcion, dimension y metodo, el mejor valor promedio, el mejor valor minimo alcanzado y el promedio de evaluaciones realizadas. Esta tabla permite comparar de manera global tanto la calidad de las soluciones como el costo computacional.
 
-```text
-[Insertar aqui la tabla resumen construida a partir de `trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/resumen_punto_2_heuristicos.csv`]
-```
+La siguiente tabla fue construida a partir de `trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/tabla_resumen_heuristicos.csv`.
+
+| Funcion | Dimension | Metodo | Corridas | Mejor valor minimo | Mejor valor promedio | Promedio de evaluaciones |
+|---|---|---|---|---|---|---|
+| Goldstein-Price | 2 | Algoritmo evolutivo | 100 | 3.011752 | 3.338019 | 4840.0 |
+| Goldstein-Price | 2 | Algoritmo evolutivo | 500 | 3.007420 | 3.208080 | 4840.0 |
+| Goldstein-Price | 2 | Algoritmo evolutivo | 1000 | 3.007420 | 3.199833 | 4840.0 |
+| Goldstein-Price | 2 | Evolucion diferencial | 100 | 3.000000 | 3.000000 | 4840.0 |
+| Goldstein-Price | 2 | Evolucion diferencial | 500 | 3.000000 | 3.000000 | 4840.0 |
+| Goldstein-Price | 2 | Evolucion diferencial | 1000 | 3.000000 | 3.000000 | 4840.0 |
+| Goldstein-Price | 2 | PSO | 100 | 3.000000 | 3.000000 | 4840.0 |
+| Goldstein-Price | 2 | PSO | 500 | 3.000000 | 3.000000 | 4840.0 |
+| Goldstein-Price | 2 | PSO | 1000 | 3.000000 | 3.000000 | 4840.0 |
+| Griewank | 2 | Algoritmo evolutivo | 100 | 0.023408 | 0.174526 | 7050.0 |
+| Griewank | 2 | Algoritmo evolutivo | 500 | 0.023408 | 0.185783 | 7050.0 |
+| Griewank | 2 | Algoritmo evolutivo | 1000 | 0.023408 | 0.182617 | 7050.0 |
+| Griewank | 2 | Evolucion diferencial | 100 | 0.000000 | 0.002150 | 7050.0 |
+| Griewank | 2 | Evolucion diferencial | 500 | 0.000000 | 0.003609 | 7050.0 |
+| Griewank | 2 | Evolucion diferencial | 1000 | 0.000000 | 0.003672 | 7050.0 |
+| Griewank | 2 | PSO | 100 | 0.000000 | 0.004464 | 7050.0 |
+| Griewank | 2 | PSO | 500 | 0.000000 | 0.003019 | 7050.0 |
+| Griewank | 2 | PSO | 1000 | 0.000000 | 0.002583 | 7050.0 |
+| Griewank | 3 | Algoritmo evolutivo | 100 | 0.043549 | 0.317831 | 7050.0 |
+| Griewank | 3 | Algoritmo evolutivo | 500 | 0.043549 | 0.294296 | 7050.0 |
+| Griewank | 3 | Algoritmo evolutivo | 1000 | 0.043549 | 0.280114 | 7050.0 |
+| Griewank | 3 | Evolucion diferencial | 100 | 0.013144 | 0.045171 | 7050.0 |
+| Griewank | 3 | Evolucion diferencial | 500 | 0.008405 | 0.046863 | 7050.0 |
+| Griewank | 3 | Evolucion diferencial | 1000 | 0.008405 | 0.046312 | 7050.0 |
+| Griewank | 3 | PSO | 100 | 0.000000 | 0.009003 | 7050.0 |
+| Griewank | 3 | PSO | 500 | 0.000000 | 0.015270 | 7050.0 |
+| Griewank | 3 | PSO | 1000 | 0.000000 | 0.015423 | 7050.0 |
+| Rastrigin | 2 | Algoritmo evolutivo | 100 | 0.000016 | 0.369705 | 4840.0 |
+| Rastrigin | 2 | Algoritmo evolutivo | 500 | 0.000016 | 0.476122 | 4840.0 |
+| Rastrigin | 2 | Algoritmo evolutivo | 1000 | 0.000016 | 0.501283 | 4840.0 |
+| Rastrigin | 2 | Evolucion diferencial | 100 | 0.000000 | 0.000000 | 4840.0 |
+| Rastrigin | 2 | Evolucion diferencial | 500 | 0.000000 | 0.000000 | 4840.0 |
+| Rastrigin | 2 | Evolucion diferencial | 1000 | 0.000000 | 0.000000 | 4840.0 |
+| Rastrigin | 2 | PSO | 100 | 0.000000 | 0.000000 | 4840.0 |
+| Rastrigin | 2 | PSO | 500 | 0.000000 | 0.000000 | 4840.0 |
+| Rastrigin | 2 | PSO | 1000 | 0.000000 | 0.000000 | 4840.0 |
+| Rastrigin | 3 | Algoritmo evolutivo | 100 | 0.066868 | 1.162023 | 4840.0 |
+| Rastrigin | 3 | Algoritmo evolutivo | 500 | 0.066868 | 0.814044 | 4840.0 |
+| Rastrigin | 3 | Algoritmo evolutivo | 1000 | 0.066868 | 0.818432 | 4840.0 |
+| Rastrigin | 3 | Evolucion diferencial | 100 | 0.000002 | 0.015972 | 4840.0 |
+| Rastrigin | 3 | Evolucion diferencial | 500 | 0.000002 | 0.022538 | 4840.0 |
+| Rastrigin | 3 | Evolucion diferencial | 1000 | 0.000002 | 0.038206 | 4840.0 |
+| Rastrigin | 3 | PSO | 100 | 0.000000 | 0.119398 | 4840.0 |
+| Rastrigin | 3 | PSO | 500 | 0.000000 | 0.225021 | 4840.0 |
+| Rastrigin | 3 | PSO | 1000 | 0.000000 | 0.206074 | 4840.0 |
+| Rosenbrock | 2 | Algoritmo evolutivo | 100 | 0.001981 | 0.068190 | 4840.0 |
+| Rosenbrock | 2 | Evolucion diferencial | 100 | 0.000000 | 0.000000 | 4840.0 |
+| Schwefel | 2 | Algoritmo evolutivo | 100 | 0.006247 | 0.483469 | 7050.0 |
+| Schwefel | 2 | Algoritmo evolutivo | 500 | 0.005284 | 0.637866 | 7050.0 |
+| Schwefel | 2 | Algoritmo evolutivo | 1000 | 0.005284 | 0.841185 | 7050.0 |
+| Schwefel | 2 | Evolucion diferencial | 100 | 0.000025 | 0.000025 | 7050.0 |
+| Schwefel | 2 | Evolucion diferencial | 500 | 0.000025 | 0.000025 | 7050.0 |
+| Schwefel | 2 | Evolucion diferencial | 1000 | 0.000025 | 0.000025 | 7050.0 |
+| Schwefel | 2 | PSO | 100 | 0.000025 | 8.296265 | 7050.0 |
+| Schwefel | 2 | PSO | 500 | 0.000025 | 15.871873 | 7050.0 |
+| Schwefel | 2 | PSO | 1000 | 0.000025 | 13.265675 | 7050.0 |
+| Schwefel | 3 | Algoritmo evolutivo | 100 | 0.063615 | 3.713479 | 7050.0 |
+| Schwefel | 3 | Algoritmo evolutivo | 500 | 0.012548 | 4.483891 | 7050.0 |
+| Schwefel | 3 | Algoritmo evolutivo | 1000 | 0.012548 | 4.713732 | 7050.0 |
+| Schwefel | 3 | Evolucion diferencial | 100 | 0.000038 | 0.000038 | 7050.0 |
+| Schwefel | 3 | Evolucion diferencial | 500 | 0.000038 | 0.000038 | 7050.0 |
+| Schwefel | 3 | Evolucion diferencial | 1000 | 0.000038 | 0.000038 | 7050.0 |
+| Schwefel | 3 | PSO | 100 | 0.000038 | 41.498987 | 7050.0 |
+| Schwefel | 3 | PSO | 500 | 0.000038 | 76.520309 | 7050.0 |
+| Schwefel | 3 | PSO | 1000 | 0.000038 | 78.410769 | 7050.0 |
+| Six-Hump Camel | 2 | Algoritmo evolutivo | 100 | -1.031556 | -1.027307 | 4840.0 |
+| Six-Hump Camel | 2 | Algoritmo evolutivo | 500 | -1.031556 | -1.029222 | 4840.0 |
+| Six-Hump Camel | 2 | Algoritmo evolutivo | 1000 | -1.031585 | -1.029417 | 4840.0 |
+| Six-Hump Camel | 2 | Evolucion diferencial | 100 | -1.031628 | -1.031628 | 4840.0 |
+| Six-Hump Camel | 2 | Evolucion diferencial | 500 | -1.031628 | -1.031628 | 4840.0 |
+| Six-Hump Camel | 2 | Evolucion diferencial | 1000 | -1.031628 | -1.031628 | 4840.0 |
+| Six-Hump Camel | 2 | PSO | 100 | -1.031628 | -1.031628 | 4840.0 |
+| Six-Hump Camel | 2 | PSO | 500 | -1.031628 | -1.031628 | 4840.0 |
+| Six-Hump Camel | 2 | PSO | 1000 | -1.031628 | -1.031628 | 4840.0 |
 
 ### Comparacion grafica de desempeno
 
@@ -432,30 +507,152 @@ Esta figura debe mostrar, para cada funcion, el mejor valor promedio alcanzado p
 [Insertar imagen: grafica de barras del mejor valor promedio por metodo en 2D]
 ```
 
-```text
-[Insertar imagen: grafica de barras del mejor valor promedio por metodo en 3D]
-```
+### Resultados por funcion
 
-#### Evaluaciones promedio por metodo
+#### Funcion Rosenbrock
+![](assets/histogramas/rosenbrock_2d_3d_corridas.png)
 
-Esta figura debe comparar el costo computacional promedio de los tres metodos, medido en numero de evaluaciones de la funcion objetivo. Su lectura complementa la figura anterior, ya que permite discutir si los mejores resultados se obtienen a costa de un esfuerzo computacional mayor o si existe tambien una ventaja en eficiencia.
+#### Funcion Schwefel
+![](assets/histogramas/schwefel_2d_3d_corridas.png)
 
-```text
-[Insertar imagen: grafica de barras de evaluaciones promedio por metodo]
-```
+#### Funcion Rastrigin
+![](assets/histogramas/rastrigin_2d_3d_corridas.png)
 
-#### Vista resumida tipo mapa de calor o tabla coloreada
+#### Funcion Griewank
+![](assets/histogramas/griewank_2d_3d_corridas.png)
 
-Como apoyo adicional, puede incluirse una visualizacion compacta en la que las filas representen cada combinacion `funcion-dimension` y las columnas correspondan a los tres metodos. El valor mostrado puede ser el mejor valor promedio o un ranking relativo entre metodos. Esta figura resulta util para identificar de un vistazo en que funciones cada algoritmo se comporta mejor.
+#### Funcion Goldstein-Price
+![](assets\histogramas\goldstein-price_2d_3d_corridas.png)
 
-```text
-[Insertar imagen: mapa de calor o tabla coloreada comparando metodos por funcion y dimension]
-```
+#### Funcion Six-Hump Camel
+![](assets/histogramas/six-hump camel_2d_3d_corridas.png)
 
-### Interpretacion general de los resultados heuristicos
+### Convergencia Por Funcion
 
-En terminos generales, los resultados obtenidos muestran que `PSO` y `evolucion diferencial` ofrecen un mejor desempeno global que el algoritmo evolutivo simple en la mayoria de funciones estudiadas. En particular, `evolucion diferencial` presenta un comportamiento muy fuerte en funciones como `Rosenbrock` y `Rastrigin`, mientras que `PSO` logra soluciones muy competitivas y consistentes en varios escenarios.
+#### Funcion Rosenbrock
+![](assets/histogramas/convergencia_rosenbrock_2d_3d.png)
 
-El algoritmo evolutivo tambien encuentra soluciones razonables, pero en promedio queda por debajo de los otros dos metodos en calidad de la solucion final. Aun asi, su presencia en el estudio es importante porque representa una estrategia poblacional clasica y permite comparar tres filosofias diferentes de exploracion del espacio de busqueda.
+#### Funcion Schwefel
+![](assets/histogramas/convergencia_schwefel_2d_3d.png)
 
-Finalmente, la interpretacion de esta subseccion debe conectarse con la discusion general del trabajo. No basta con identificar que metodo produce el menor valor promedio; tambien es necesario contrastar ese resultado con el numero de evaluaciones realizadas y con la dificultad propia de cada funcion. Esta comparacion sera clave mas adelante para responder que aportan los metodos heuristicos frente al descenso por gradiente.
+#### Funcion Rastrigin
+![](assets/histogramas/convergencia_rastrigin_2d_3d.png)
+
+#### Funcion Griewank
+![](assets/histogramas/convergencia_griewank_2d_3d.png)
+
+#### Funcion Goldstein-Price
+![](assets/histogramas/convergencia_goldstein-price_2d_3d.png)
+
+#### Funcion Six-Hump Camel
+![](assets/histogramas/convergencia_six-hump camel_2d_3d.png)
+
+
+**Interpretacion general de los resultados heuristicos**
+
+En terminos generales, los resultados actualizados muestran que la evolucion diferencial mantiene el mejor desempeno global en la mayoria de los casos analizados, especialmente cuando el criterio principal es la cercania al optimo en el valor final promedio. Este comportamiento es particularmente claro en funciones como Rosenbrock, Rastrigin, Goldstein-Price y Schwefel, donde dicho metodo alcanza valores muy cercanos al optimo tanto en 2D como en 3D, con una estabilidad alta entre corridas.
+
+PSO tambien presenta un desempeno competitivo y, en algunos escenarios, incluso supera a la evolucion diferencial. Esto ocurre de forma visible en Griewank 3D y en Six-Hump Camel 2D, donde obtiene los mejores valores promedio observados. Ademas, en varios problemas PSO muestra trayectorias de convergencia consistentes, lo que sugiere una buena capacidad de exploracion y ajuste fino en funciones con superficies complejas.
+
+Por su parte, el algoritmo evolutivo simple suele quedar en tercer lugar en calidad de solucion final. Aunque en algunos casos encuentra soluciones razonables, sus valores promedio tienden a estar mas alejados del optimo y su variabilidad entre corridas es mayor. Esto se nota con mas fuerza en funciones como Griewank y Rastrigin, sobre todo al pasar de 2D a 3D, donde la dificultad del espacio de busqueda aumenta y los otros metodos muestran una adaptacion mas robusta.
+
+Otro aspecto importante es que el aumento de dimension generalmente hace mas exigente el problema. En varias funciones los valores promedio empeoran al pasar de 2D a 3D, y esta diferencia se observa con mayor intensidad en PSO y en el algoritmo evolutivo para ciertos casos particulares. Sin embargo, la evolucion diferencial conserva un comportamiento mas estable en la transicion de dimension, lo cual refuerza su posicion como el metodo mas solido del conjunto evaluado.
+
+Finalmente, esta interpretacion no debe limitarse a identificar que metodo alcanza el menor valor promedio. Tambien es necesario contrastar la calidad de la solucion con el numero de evaluaciones empleadas y con la dificultad intrinseca de cada funcion. Bajo esa lectura conjunta, los resultados sugieren que la evolucion diferencial ofrece el mejor balance global de precision y robustez, mientras que PSO aparece como una alternativa muy competitiva en funciones especificas. Esta comparacion sera clave en la discusion posterior para valorar que aportan los metodos heurististicos frente al descenso por gradiente.
+
+
+# Comparacion final entre metodos
+
+Esta pagina esta pensada para comparar los metodos **dentro del mismo caso**, no entre funciones distintas. La comparacion correcta es:
+
+- `Rosenbrock 2D y 3D`: gradiente vs EA vs PSO vs DE
+![](notebooks/numerica/salidas_tablas_comparacion_final/rosenbrock_lineas_por_n.png)
+- `Rastrigin 2D y 3D`: gradiente vs EA vs PSO vs DE
+![](notebooks/numerica/salidas_tablas_comparacion_final/rastrigin_lineas_por_n.png)
+- `Schwefel 2D y 3D`: gradiente vs EA vs PSO vs DE
+![](notebooks/numerica/salidas_tablas_comparacion_final/schwefel_lineas_por_n.png)
+- `Griewank 2D y 3D`: gradiente vs EA vs PSO vs DE
+![](notebooks/numerica/salidas_tablas_comparacion_final/griewank_lineas_por_n.png)
+- `Goldstein-Price 2D`: gradiente vs EA vs PSO vs DE
+![](notebooks/numerica/salidas_tablas_comparacion_final/goldstein_price_lineas_por_n.png)
+- `Six-Hump Camel 2D`: gradiente vs EA vs PSO vs DE
+![](notebooks/numerica/salidas_tablas_comparacion_final/six_hump_camel_lineas_por_n.png)
+
+## Criterios de comparacion
+
+Para cada caso, la comparacion debe hacerse con estas metricas:
+
+- calidad de solucion:
+  - `valor final`, solo dentro del mismo caso
+  - o mejor aun, `distancia al optimo`
+- costo computacional:
+  - `numero de evaluaciones`
+
+## Regla de lectura
+
+La idea no es mezclar todas las funciones en una sola escala bruta, porque cada funcion tiene un paisaje y una escala diferentes. Por eso:
+
+- `valor final` se interpreta **solo dentro de la misma funcion y dimension**
+- `distancia al optimo` sirve mejor para comparar comportamiento relativo
+- `evaluaciones` permite ver que tan costoso fue cada metodo
+
+## Tabla maestra sugerida
+
+Usa una fila por caso:
+
+| Caso | Mejor metodo en valor final o distancia al optimo | Mejor metodo en evaluaciones | Comentario corto |
+|---|---|---|---|
+| Goldstein-Price 2D | Evolucion diferencial | Evolucion diferencial | Evolucion diferencial logra el mejor valor y tambien el menor costo. |
+| Griewank 2D | PSO | Descenso por gradiente | PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Griewank 3D | PSO | Descenso por gradiente | PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Rastrigin 2D | Evolucion diferencial | Descenso por gradiente | Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Rastrigin 3D | Evolucion diferencial | Descenso por gradiente | Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Rosenbrock 2D | Descenso por gradiente | Descenso por gradiente | Comparacion parcial: solo hay 1 metodo(s) cargados; mejor valor Descenso por gradiente y mejor costo Descenso por gradiente. |
+| Rosenbrock 3D | Descenso por gradiente | Descenso por gradiente | Comparacion parcial: solo hay 1 metodo(s) cargados; mejor valor Descenso por gradiente y mejor costo Descenso por gradiente. |
+| Schwefel 2D | Evolucion diferencial | Evolucion diferencial | Evolucion diferencial logra el mejor valor y tambien el menor costo. |
+| Schwefel 3D | Evolucion diferencial | Evolucion diferencial | Evolucion diferencial logra el mejor valor y tambien el menor costo. |
+| Six-Hump Camel 2D | PSO | Descenso por gradiente | PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+
+
+## Conteo global de victorias
+
+Aqui puedes hacer un cierre simple contando cuantas veces gano cada metodo.
+
+| Metodo | Veces que gano en calidad | Veces que gano en evaluaciones |
+|---|---:|---:|
+| Gradiente | 2 | 5 |
+| EA | 0 | 0 |
+| PSO | 3 | 0 |
+| DE | 5 | 5 |
+
+## Conclusiones sugeridas
+
+### Conclusion 1
+
+En terminos de calidad de solucion, la `evolucion diferencial` fue el metodo mas solido del conjunto. Gano en `Goldstein-Price 2D`, `Rastrigin 2D`, `Rastrigin 3D`, `Schwefel 2D` y `Schwefel 3D`, lo que muestra un comportamiento especialmente robusto en funciones multimodales o con paisajes complejos. `PSO` tambien tuvo un desempeno fuerte, sobre todo en `Griewank 2D`, `Griewank 3D` y `Six-Hump Camel 2D`, mientras que el `algoritmo evolutivo` no logro imponerse en ninguno de los casos comparados.
+
+### Conclusion 2
+
+Desde el punto de vista del costo computacional, el `descenso por gradiente` fue el metodo mas eficiente en numero de evaluaciones en varios casos, especialmente en `Rastrigin`, `Griewank` y `Six-Hump Camel`. Sin embargo, esa ventaja en costo no siempre vino acompanada de la mejor calidad de solucion. Por su parte, la `evolucion diferencial` tambien destaco en eficiencia en `Goldstein-Price` y `Schwefel`, donde ademas de encontrar mejores soluciones mantuvo un costo competitivo.
+
+### Conclusion 3
+
+En conjunto, los resultados sugieren que el `descenso por gradiente` conviene cuando se prioriza rapidez y bajo costo, siempre que la geometria del problema permita una convergencia local razonable. En cambio, los metodos heuristicos, y en particular la `evolucion diferencial`, resultan mas convenientes cuando la funcion presenta multiples minimos locales, alta irregularidad o una fuerte dependencia del punto inicial. La comparacion de `Rosenbrock` debe leerse con cautela, porque en la tabla consolidada actual solo aparece cargado `descenso por gradiente`, de modo que ese caso todavia no representa una comparacion completa frente a `EA`, `PSO` y `DE`.
+
+
+## Animacion representativa del metodo ganador
+
+Como cierre visual de la comparacion numerica, se incluye una animacion de `evolucion diferencial` sobre la funcion `Rastrigin 2D`. Este caso se eligio porque `DE` fue el metodo con mejor desempeno global en la comparacion final y porque `Rastrigin` presenta una superficie altamente multimodal, con muchos minimos locales, lo que permite visualizar con claridad la capacidad de exploracion del algoritmo.
+
+En la animacion se observa la evolucion de la poblacion a lo largo de las iteraciones, junto con la trayectoria de la mejor solucion encontrada hasta converger hacia el minimo global. Esta figura resume de manera intuitiva por que los metodos heuristicos, y en particular la `evolucion diferencial`, pueden superar a un metodo local cuando el paisaje de optimizacion es complejo.
+
+![](assets/histogramas/animacion_de_rastrigin_2d_semilla_1612.gif)
+
+
+## Fuente de datos
+
+Esta comparacion debe salir de:
+
+- [analisis_resultados.ipynb](notebooks/numerica/gradiente/analisis_resultados.ipynb)
+- [analisis_resultados.ipynb](notebooks/numerica/heuristicos/analisis_resultados.ipynb)
+- [12_comparacion_final_metodos.ipynb](notebooks/numerica/12_comparacion_final_metodos.ipynb)

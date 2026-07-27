@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Optimizacion numerica – Trabajo Carlos</title>
+<title>Optimización Numérica – Trabajo Carlos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -132,6 +132,10 @@ window.Quarto = {
 <span class="menu-text">Numerica</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./comparacion_final_numerica.html"> 
+<span class="menu-text">Comparacion final</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./combinatoria.html"> 
 <span class="menu-text">Combinatoria</span></a>
   </li>  
@@ -146,7 +150,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./numerica.html">Secciones</a></li><li class="breadcrumb-item"><a href="./numerica.html">Optimizacion numerica</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./numerica.html">Optimización Numérica</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -166,46 +170,24 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Portada</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Trabajo 01 Normalización: Optimización heurística</span></a>
+ <span class="menu-text">Introduccion</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Secciones</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./numerica.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Optimizacion numerica</span></a>
+ <span class="menu-text">Optimización Numérica</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./combinatoria.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optimizacion combinatoria</span></a>
   </div>
 </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -243,8 +225,24 @@ window.Quarto = {
   <li><a href="#parametros-de-los-algoritmos" id="toc-parametros-de-los-algoritmos" class="nav-link" data-scroll-target="#parametros-de-los-algoritmos">Parametros de los algoritmos</a></li>
   <li><a href="#tabla-resumen-comparativa" id="toc-tabla-resumen-comparativa" class="nav-link" data-scroll-target="#tabla-resumen-comparativa">Tabla resumen comparativa</a></li>
   <li><a href="#comparacion-grafica-de-desempeno" id="toc-comparacion-grafica-de-desempeno" class="nav-link" data-scroll-target="#comparacion-grafica-de-desempeno">Comparacion grafica de desempeno</a></li>
-  <li><a href="#interpretacion-general-de-los-resultados-heuristicos" id="toc-interpretacion-general-de-los-resultados-heuristicos" class="nav-link" data-scroll-target="#interpretacion-general-de-los-resultados-heuristicos">Interpretacion general de los resultados heuristicos</a></li>
+  <li><a href="#resultados-por-funcion" id="toc-resultados-por-funcion" class="nav-link" data-scroll-target="#resultados-por-funcion">Resultados por funcion</a></li>
+  <li><a href="#convergencia-por-funcion" id="toc-convergencia-por-funcion" class="nav-link" data-scroll-target="#convergencia-por-funcion">Convergencia Por Funcion</a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#comparacion-final-entre-metodos" id="toc-comparacion-final-entre-metodos" class="nav-link" data-scroll-target="#comparacion-final-entre-metodos">Comparacion final entre metodos</a>
+  <ul class="collapse">
+  <li><a href="#criterios-de-comparacion" id="toc-criterios-de-comparacion" class="nav-link" data-scroll-target="#criterios-de-comparacion">Criterios de comparacion</a></li>
+  <li><a href="#regla-de-lectura" id="toc-regla-de-lectura" class="nav-link" data-scroll-target="#regla-de-lectura">Regla de lectura</a></li>
+  <li><a href="#tabla-maestra-sugerida" id="toc-tabla-maestra-sugerida" class="nav-link" data-scroll-target="#tabla-maestra-sugerida">Tabla maestra sugerida</a></li>
+  <li><a href="#conteo-global-de-victorias" id="toc-conteo-global-de-victorias" class="nav-link" data-scroll-target="#conteo-global-de-victorias">Conteo global de victorias</a></li>
+  <li><a href="#conclusiones-sugeridas" id="toc-conclusiones-sugeridas" class="nav-link" data-scroll-target="#conclusiones-sugeridas">Conclusiones sugeridas</a>
+  <ul class="collapse">
+  <li><a href="#conclusion-1" id="toc-conclusion-1" class="nav-link" data-scroll-target="#conclusion-1">Conclusion 1</a></li>
+  <li><a href="#conclusion-2" id="toc-conclusion-2" class="nav-link" data-scroll-target="#conclusion-2">Conclusion 2</a></li>
+  <li><a href="#conclusion-3" id="toc-conclusion-3" class="nav-link" data-scroll-target="#conclusion-3">Conclusion 3</a></li>
+  </ul></li>
+  <li><a href="#animacion-representativa-del-metodo-ganador" id="toc-animacion-representativa-del-metodo-ganador" class="nav-link" data-scroll-target="#animacion-representativa-del-metodo-ganador">Animacion representativa del metodo ganador</a></li>
+  <li><a href="#fuente-de-datos" id="toc-fuente-de-datos" class="nav-link" data-scroll-target="#fuente-de-datos">Fuente de datos</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -252,9 +250,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./numerica.html">Secciones</a></li><li class="breadcrumb-item"><a href="./numerica.html">Optimizacion numerica</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Optimizacion numerica</h1>
+<h1 class="title">Optimización Numérica</h1>
 </div>
 
 
@@ -1135,7 +1133,697 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <section id="tabla-resumen-comparativa" class="level3">
 <h3 class="anchored" data-anchor-id="tabla-resumen-comparativa">Tabla resumen comparativa</h3>
 <p>La tabla principal de esta subseccion debe consolidar, para cada funcion, dimension y metodo, el mejor valor promedio, el mejor valor minimo alcanzado y el promedio de evaluaciones realizadas. Esta tabla permite comparar de manera global tanto la calidad de las soluciones como el costo computacional.</p>
-<pre class="text"><code>[Insertar aqui la tabla resumen construida a partir de `trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/resumen_punto_2_heuristicos.csv`]</code></pre>
+<p>La siguiente tabla fue construida a partir de <code>trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/tabla_resumen_heuristicos.csv</code>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Funcion</th>
+<th>Dimension</th>
+<th>Metodo</th>
+<th>Corridas</th>
+<th>Mejor valor minimo</th>
+<th>Mejor valor promedio</th>
+<th>Promedio de evaluaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>3.011752</td>
+<td>3.338019</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>500</td>
+<td>3.007420</td>
+<td>3.208080</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>1000</td>
+<td>3.007420</td>
+<td>3.199833</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>1000</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>PSO</td>
+<td>100</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>PSO</td>
+<td>500</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>PSO</td>
+<td>1000</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Griewank</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>0.023408</td>
+<td>0.174526</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>500</td>
+<td>0.023408</td>
+<td>0.185783</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Griewank</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>1000</td>
+<td>0.023408</td>
+<td>0.182617</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>0.000000</td>
+<td>0.002150</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Griewank</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>0.000000</td>
+<td>0.003609</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>1000</td>
+<td>0.000000</td>
+<td>0.003672</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Griewank</td>
+<td>2</td>
+<td>PSO</td>
+<td>100</td>
+<td>0.000000</td>
+<td>0.004464</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>2</td>
+<td>PSO</td>
+<td>500</td>
+<td>0.000000</td>
+<td>0.003019</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Griewank</td>
+<td>2</td>
+<td>PSO</td>
+<td>1000</td>
+<td>0.000000</td>
+<td>0.002583</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>3</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>0.043549</td>
+<td>0.317831</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Griewank</td>
+<td>3</td>
+<td>Algoritmo evolutivo</td>
+<td>500</td>
+<td>0.043549</td>
+<td>0.294296</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>3</td>
+<td>Algoritmo evolutivo</td>
+<td>1000</td>
+<td>0.043549</td>
+<td>0.280114</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Griewank</td>
+<td>3</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>0.013144</td>
+<td>0.045171</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>3</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>0.008405</td>
+<td>0.046863</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Griewank</td>
+<td>3</td>
+<td>Evolucion diferencial</td>
+<td>1000</td>
+<td>0.008405</td>
+<td>0.046312</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>3</td>
+<td>PSO</td>
+<td>100</td>
+<td>0.000000</td>
+<td>0.009003</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Griewank</td>
+<td>3</td>
+<td>PSO</td>
+<td>500</td>
+<td>0.000000</td>
+<td>0.015270</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>3</td>
+<td>PSO</td>
+<td>1000</td>
+<td>0.000000</td>
+<td>0.015423</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>0.000016</td>
+<td>0.369705</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>500</td>
+<td>0.000016</td>
+<td>0.476122</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>1000</td>
+<td>0.000016</td>
+<td>0.501283</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>1000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td>2</td>
+<td>PSO</td>
+<td>100</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td>2</td>
+<td>PSO</td>
+<td>500</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td>2</td>
+<td>PSO</td>
+<td>1000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td>3</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>0.066868</td>
+<td>1.162023</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td>3</td>
+<td>Algoritmo evolutivo</td>
+<td>500</td>
+<td>0.066868</td>
+<td>0.814044</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td>3</td>
+<td>Algoritmo evolutivo</td>
+<td>1000</td>
+<td>0.066868</td>
+<td>0.818432</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td>3</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>0.000002</td>
+<td>0.015972</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td>3</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>0.000002</td>
+<td>0.022538</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td>3</td>
+<td>Evolucion diferencial</td>
+<td>1000</td>
+<td>0.000002</td>
+<td>0.038206</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td>3</td>
+<td>PSO</td>
+<td>100</td>
+<td>0.000000</td>
+<td>0.119398</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Rastrigin</td>
+<td>3</td>
+<td>PSO</td>
+<td>500</td>
+<td>0.000000</td>
+<td>0.225021</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin</td>
+<td>3</td>
+<td>PSO</td>
+<td>1000</td>
+<td>0.000000</td>
+<td>0.206074</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Rosenbrock</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>0.001981</td>
+<td>0.068190</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Rosenbrock</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>0.006247</td>
+<td>0.483469</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>500</td>
+<td>0.005284</td>
+<td>0.637866</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>1000</td>
+<td>0.005284</td>
+<td>0.841185</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>0.000025</td>
+<td>0.000025</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>0.000025</td>
+<td>0.000025</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>1000</td>
+<td>0.000025</td>
+<td>0.000025</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td>2</td>
+<td>PSO</td>
+<td>100</td>
+<td>0.000025</td>
+<td>8.296265</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td>2</td>
+<td>PSO</td>
+<td>500</td>
+<td>0.000025</td>
+<td>15.871873</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td>2</td>
+<td>PSO</td>
+<td>1000</td>
+<td>0.000025</td>
+<td>13.265675</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td>3</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>0.063615</td>
+<td>3.713479</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td>3</td>
+<td>Algoritmo evolutivo</td>
+<td>500</td>
+<td>0.012548</td>
+<td>4.483891</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td>3</td>
+<td>Algoritmo evolutivo</td>
+<td>1000</td>
+<td>0.012548</td>
+<td>4.713732</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td>3</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>0.000038</td>
+<td>0.000038</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td>3</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>0.000038</td>
+<td>0.000038</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td>3</td>
+<td>Evolucion diferencial</td>
+<td>1000</td>
+<td>0.000038</td>
+<td>0.000038</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td>3</td>
+<td>PSO</td>
+<td>100</td>
+<td>0.000038</td>
+<td>41.498987</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
+<td>3</td>
+<td>PSO</td>
+<td>500</td>
+<td>0.000038</td>
+<td>76.520309</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Schwefel</td>
+<td>3</td>
+<td>PSO</td>
+<td>1000</td>
+<td>0.000038</td>
+<td>78.410769</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>-1.031556</td>
+<td>-1.027307</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>500</td>
+<td>-1.031556</td>
+<td>-1.029222</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>1000</td>
+<td>-1.031585</td>
+<td>-1.029417</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>1000</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>PSO</td>
+<td>100</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>PSO</td>
+<td>500</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>PSO</td>
+<td>1000</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>4840.0</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="comparacion-grafica-de-desempeno" class="level3">
 <h3 class="anchored" data-anchor-id="comparacion-grafica-de-desempeno">Comparacion grafica de desempeno</h3>
@@ -1144,27 +1832,253 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <h4 class="anchored" data-anchor-id="mejor-valor-promedio-por-metodo">Mejor valor promedio por metodo</h4>
 <p>Esta figura debe mostrar, para cada funcion, el mejor valor promedio alcanzado por cada metodo heuristico. La recomendacion es presentar una figura para <code>2D</code> y otra para <code>3D</code>, usando colores distintos para <code>algoritmo evolutivo</code>, <code>PSO</code> y <code>evolucion diferencial</code>.</p>
 <pre class="text"><code>[Insertar imagen: grafica de barras del mejor valor promedio por metodo en 2D]</code></pre>
-<pre class="text"><code>[Insertar imagen: grafica de barras del mejor valor promedio por metodo en 3D]</code></pre>
-</section>
-<section id="evaluaciones-promedio-por-metodo" class="level4">
-<h4 class="anchored" data-anchor-id="evaluaciones-promedio-por-metodo">Evaluaciones promedio por metodo</h4>
-<p>Esta figura debe comparar el costo computacional promedio de los tres metodos, medido en numero de evaluaciones de la funcion objetivo. Su lectura complementa la figura anterior, ya que permite discutir si los mejores resultados se obtienen a costa de un esfuerzo computacional mayor o si existe tambien una ventaja en eficiencia.</p>
-<pre class="text"><code>[Insertar imagen: grafica de barras de evaluaciones promedio por metodo]</code></pre>
-</section>
-<section id="vista-resumida-tipo-mapa-de-calor-o-tabla-coloreada" class="level4">
-<h4 class="anchored" data-anchor-id="vista-resumida-tipo-mapa-de-calor-o-tabla-coloreada">Vista resumida tipo mapa de calor o tabla coloreada</h4>
-<p>Como apoyo adicional, puede incluirse una visualizacion compacta en la que las filas representen cada combinacion <code>funcion-dimension</code> y las columnas correspondan a los tres metodos. El valor mostrado puede ser el mejor valor promedio o un ranking relativo entre metodos. Esta figura resulta util para identificar de un vistazo en que funciones cada algoritmo se comporta mejor.</p>
-<pre class="text"><code>[Insertar imagen: mapa de calor o tabla coloreada comparando metodos por funcion y dimension]</code></pre>
 </section>
 </section>
-<section id="interpretacion-general-de-los-resultados-heuristicos" class="level3">
-<h3 class="anchored" data-anchor-id="interpretacion-general-de-los-resultados-heuristicos">Interpretacion general de los resultados heuristicos</h3>
-<p>En terminos generales, los resultados obtenidos muestran que <code>PSO</code> y <code>evolucion diferencial</code> ofrecen un mejor desempeno global que el algoritmo evolutivo simple en la mayoria de funciones estudiadas. En particular, <code>evolucion diferencial</code> presenta un comportamiento muy fuerte en funciones como <code>Rosenbrock</code> y <code>Rastrigin</code>, mientras que <code>PSO</code> logra soluciones muy competitivas y consistentes en varios escenarios.</p>
-<p>El algoritmo evolutivo tambien encuentra soluciones razonables, pero en promedio queda por debajo de los otros dos metodos en calidad de la solucion final. Aun asi, su presencia en el estudio es importante porque representa una estrategia poblacional clasica y permite comparar tres filosofias diferentes de exploracion del espacio de busqueda.</p>
-<p>Finalmente, la interpretacion de esta subseccion debe conectarse con la discusion general del trabajo. No basta con identificar que metodo produce el menor valor promedio; tambien es necesario contrastar ese resultado con el numero de evaluaciones realizadas y con la dificultad propia de cada funcion. Esta comparacion sera clave mas adelante para responder que aportan los metodos heuristicos frente al descenso por gradiente.</p>
+<section id="resultados-por-funcion" class="level3">
+<h3 class="anchored" data-anchor-id="resultados-por-funcion">Resultados por funcion</h3>
+<section id="funcion-rosenbrock" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-rosenbrock">Funcion Rosenbrock</h4>
+<p><img src="assets/histogramas/rosenbrock_2d_3d_corridas.png" class="img-fluid"></p>
+</section>
+<section id="funcion-schwefel" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-schwefel">Funcion Schwefel</h4>
+<p><img src="assets/histogramas/schwefel_2d_3d_corridas.png" class="img-fluid"></p>
+</section>
+<section id="funcion-rastrigin" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-rastrigin">Funcion Rastrigin</h4>
+<p><img src="assets/histogramas/rastrigin_2d_3d_corridas.png" class="img-fluid"></p>
+</section>
+<section id="funcion-griewank" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-griewank">Funcion Griewank</h4>
+<p><img src="assets/histogramas/griewank_2d_3d_corridas.png" class="img-fluid"></p>
+</section>
+<section id="funcion-goldstein-price" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-goldstein-price">Funcion Goldstein-Price</h4>
+<p><img src="assets\histogramas\goldstein-price_2d_3d_corridas.png" class="img-fluid"></p>
+</section>
+<section id="funcion-six-hump-camel-1" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-six-hump-camel-1">Funcion Six-Hump Camel</h4>
+<p><img src="assets/histogramas/six-hump camel_2d_3d_corridas.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="convergencia-por-funcion" class="level3">
+<h3 class="anchored" data-anchor-id="convergencia-por-funcion">Convergencia Por Funcion</h3>
+<section id="funcion-rosenbrock-1" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-rosenbrock-1">Funcion Rosenbrock</h4>
+<p><img src="assets/histogramas/convergencia_rosenbrock_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="funcion-schwefel-1" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-schwefel-1">Funcion Schwefel</h4>
+<p><img src="assets/histogramas/convergencia_schwefel_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="funcion-rastrigin-1" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-rastrigin-1">Funcion Rastrigin</h4>
+<p><img src="assets/histogramas/convergencia_rastrigin_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="funcion-griewank-1" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-griewank-1">Funcion Griewank</h4>
+<p><img src="assets/histogramas/convergencia_griewank_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="funcion-goldstein-price-1" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-goldstein-price-1">Funcion Goldstein-Price</h4>
+<p><img src="assets/histogramas/convergencia_goldstein-price_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="funcion-six-hump-camel-2" class="level4">
+<h4 class="anchored" data-anchor-id="funcion-six-hump-camel-2">Funcion Six-Hump Camel</h4>
+<p><img src="assets/histogramas/convergencia_six-hump camel_2d_3d.png" class="img-fluid"></p>
+<p><strong>Interpretacion general de los resultados heuristicos</strong></p>
+<p>En terminos generales, los resultados actualizados muestran que la evolucion diferencial mantiene el mejor desempeno global en la mayoria de los casos analizados, especialmente cuando el criterio principal es la cercania al optimo en el valor final promedio. Este comportamiento es particularmente claro en funciones como Rosenbrock, Rastrigin, Goldstein-Price y Schwefel, donde dicho metodo alcanza valores muy cercanos al optimo tanto en 2D como en 3D, con una estabilidad alta entre corridas.</p>
+<p>PSO tambien presenta un desempeno competitivo y, en algunos escenarios, incluso supera a la evolucion diferencial. Esto ocurre de forma visible en Griewank 3D y en Six-Hump Camel 2D, donde obtiene los mejores valores promedio observados. Ademas, en varios problemas PSO muestra trayectorias de convergencia consistentes, lo que sugiere una buena capacidad de exploracion y ajuste fino en funciones con superficies complejas.</p>
+<p>Por su parte, el algoritmo evolutivo simple suele quedar en tercer lugar en calidad de solucion final. Aunque en algunos casos encuentra soluciones razonables, sus valores promedio tienden a estar mas alejados del optimo y su variabilidad entre corridas es mayor. Esto se nota con mas fuerza en funciones como Griewank y Rastrigin, sobre todo al pasar de 2D a 3D, donde la dificultad del espacio de busqueda aumenta y los otros metodos muestran una adaptacion mas robusta.</p>
+<p>Otro aspecto importante es que el aumento de dimension generalmente hace mas exigente el problema. En varias funciones los valores promedio empeoran al pasar de 2D a 3D, y esta diferencia se observa con mayor intensidad en PSO y en el algoritmo evolutivo para ciertos casos particulares. Sin embargo, la evolucion diferencial conserva un comportamiento mas estable en la transicion de dimension, lo cual refuerza su posicion como el metodo mas solido del conjunto evaluado.</p>
+<p>Finalmente, esta interpretacion no debe limitarse a identificar que metodo alcanza el menor valor promedio. Tambien es necesario contrastar la calidad de la solucion con el numero de evaluaciones empleadas y con la dificultad intrinseca de cada funcion. Bajo esa lectura conjunta, los resultados sugieren que la evolucion diferencial ofrece el mejor balance global de precision y robustez, mientras que PSO aparece como una alternativa muy competitiva en funciones especificas. Esta comparacion sera clave en la discusion posterior para valorar que aportan los metodos heurististicos frente al descenso por gradiente.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="comparacion-final-entre-metodos" class="level1">
+<h1>Comparacion final entre metodos</h1>
+<p>Esta pagina esta pensada para comparar los metodos <strong>dentro del mismo caso</strong>, no entre funciones distintas. La comparacion correcta es:</p>
+<ul>
+<li><code>Rosenbrock 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/rosenbrock_lineas_por_n.png" class="img-fluid"></li>
+<li><code>Rastrigin 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/rastrigin_lineas_por_n.png" class="img-fluid"></li>
+<li><code>Schwefel 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/schwefel_lineas_por_n.png" class="img-fluid"></li>
+<li><code>Griewank 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/griewank_lineas_por_n.png" class="img-fluid"></li>
+<li><code>Goldstein-Price 2D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/goldstein_price_lineas_por_n.png" class="img-fluid"></li>
+<li><code>Six-Hump Camel 2D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/six_hump_camel_lineas_por_n.png" class="img-fluid"></li>
+</ul>
+<section id="criterios-de-comparacion" class="level2">
+<h2 class="anchored" data-anchor-id="criterios-de-comparacion">Criterios de comparacion</h2>
+<p>Para cada caso, la comparacion debe hacerse con estas metricas:</p>
+<ul>
+<li>calidad de solucion:
+<ul>
+<li><code>valor final</code>, solo dentro del mismo caso</li>
+<li>o mejor aun, <code>distancia al optimo</code></li>
+</ul></li>
+<li>costo computacional:
+<ul>
+<li><code>numero de evaluaciones</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="regla-de-lectura" class="level2">
+<h2 class="anchored" data-anchor-id="regla-de-lectura">Regla de lectura</h2>
+<p>La idea no es mezclar todas las funciones en una sola escala bruta, porque cada funcion tiene un paisaje y una escala diferentes. Por eso:</p>
+<ul>
+<li><code>valor final</code> se interpreta <strong>solo dentro de la misma funcion y dimension</strong></li>
+<li><code>distancia al optimo</code> sirve mejor para comparar comportamiento relativo</li>
+<li><code>evaluaciones</code> permite ver que tan costoso fue cada metodo</li>
+</ul>
+</section>
+<section id="tabla-maestra-sugerida" class="level2">
+<h2 class="anchored" data-anchor-id="tabla-maestra-sugerida">Tabla maestra sugerida</h2>
+<p>Usa una fila por caso:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>Mejor metodo en valor final o distancia al optimo</th>
+<th>Mejor metodo en evaluaciones</th>
+<th>Comentario corto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Goldstein-Price 2D</td>
+<td>Evolucion diferencial</td>
+<td>Evolucion diferencial</td>
+<td>Evolucion diferencial logra el mejor valor y tambien el menor costo.</td>
+</tr>
+<tr class="even">
+<td>Griewank 2D</td>
+<td>PSO</td>
+<td>Descenso por gradiente</td>
+<td>PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
+</tr>
+<tr class="odd">
+<td>Griewank 3D</td>
+<td>PSO</td>
+<td>Descenso por gradiente</td>
+<td>PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
+</tr>
+<tr class="even">
+<td>Rastrigin 2D</td>
+<td>Evolucion diferencial</td>
+<td>Descenso por gradiente</td>
+<td>Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
+</tr>
+<tr class="odd">
+<td>Rastrigin 3D</td>
+<td>Evolucion diferencial</td>
+<td>Descenso por gradiente</td>
+<td>Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
+</tr>
+<tr class="even">
+<td>Rosenbrock 2D</td>
+<td>Descenso por gradiente</td>
+<td>Descenso por gradiente</td>
+<td>Comparacion parcial: solo hay 1 metodo(s) cargados; mejor valor Descenso por gradiente y mejor costo Descenso por gradiente.</td>
+</tr>
+<tr class="odd">
+<td>Rosenbrock 3D</td>
+<td>Descenso por gradiente</td>
+<td>Descenso por gradiente</td>
+<td>Comparacion parcial: solo hay 1 metodo(s) cargados; mejor valor Descenso por gradiente y mejor costo Descenso por gradiente.</td>
+</tr>
+<tr class="even">
+<td>Schwefel 2D</td>
+<td>Evolucion diferencial</td>
+<td>Evolucion diferencial</td>
+<td>Evolucion diferencial logra el mejor valor y tambien el menor costo.</td>
+</tr>
+<tr class="odd">
+<td>Schwefel 3D</td>
+<td>Evolucion diferencial</td>
+<td>Evolucion diferencial</td>
+<td>Evolucion diferencial logra el mejor valor y tambien el menor costo.</td>
+</tr>
+<tr class="even">
+<td>Six-Hump Camel 2D</td>
+<td>PSO</td>
+<td>Descenso por gradiente</td>
+<td>PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="conteo-global-de-victorias" class="level2">
+<h2 class="anchored" data-anchor-id="conteo-global-de-victorias">Conteo global de victorias</h2>
+<p>Aqui puedes hacer un cierre simple contando cuantas veces gano cada metodo.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metodo</th>
+<th style="text-align: right;">Veces que gano en calidad</th>
+<th style="text-align: right;">Veces que gano en evaluaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gradiente</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td>EA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>PSO</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>DE</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="conclusiones-sugeridas" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-sugeridas">Conclusiones sugeridas</h2>
+<section id="conclusion-1" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-1">Conclusion 1</h3>
+<p>En terminos de calidad de solucion, la <code>evolucion diferencial</code> fue el metodo mas solido del conjunto. Gano en <code>Goldstein-Price 2D</code>, <code>Rastrigin 2D</code>, <code>Rastrigin 3D</code>, <code>Schwefel 2D</code> y <code>Schwefel 3D</code>, lo que muestra un comportamiento especialmente robusto en funciones multimodales o con paisajes complejos. <code>PSO</code> tambien tuvo un desempeno fuerte, sobre todo en <code>Griewank 2D</code>, <code>Griewank 3D</code> y <code>Six-Hump Camel 2D</code>, mientras que el <code>algoritmo evolutivo</code> no logro imponerse en ninguno de los casos comparados.</p>
+</section>
+<section id="conclusion-2" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-2">Conclusion 2</h3>
+<p>Desde el punto de vista del costo computacional, el <code>descenso por gradiente</code> fue el metodo mas eficiente en numero de evaluaciones en varios casos, especialmente en <code>Rastrigin</code>, <code>Griewank</code> y <code>Six-Hump Camel</code>. Sin embargo, esa ventaja en costo no siempre vino acompanada de la mejor calidad de solucion. Por su parte, la <code>evolucion diferencial</code> tambien destaco en eficiencia en <code>Goldstein-Price</code> y <code>Schwefel</code>, donde ademas de encontrar mejores soluciones mantuvo un costo competitivo.</p>
+</section>
+<section id="conclusion-3" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-3">Conclusion 3</h3>
+<p>En conjunto, los resultados sugieren que el <code>descenso por gradiente</code> conviene cuando se prioriza rapidez y bajo costo, siempre que la geometria del problema permita una convergencia local razonable. En cambio, los metodos heuristicos, y en particular la <code>evolucion diferencial</code>, resultan mas convenientes cuando la funcion presenta multiples minimos locales, alta irregularidad o una fuerte dependencia del punto inicial. La comparacion de <code>Rosenbrock</code> debe leerse con cautela, porque en la tabla consolidada actual solo aparece cargado <code>descenso por gradiente</code>, de modo que ese caso todavia no representa una comparacion completa frente a <code>EA</code>, <code>PSO</code> y <code>DE</code>.</p>
+</section>
+</section>
+<section id="animacion-representativa-del-metodo-ganador" class="level2">
+<h2 class="anchored" data-anchor-id="animacion-representativa-del-metodo-ganador">Animacion representativa del metodo ganador</h2>
+<p>Como cierre visual de la comparacion numerica, se incluye una animacion de <code>evolucion diferencial</code> sobre la funcion <code>Rastrigin 2D</code>. Este caso se eligio porque <code>DE</code> fue el metodo con mejor desempeno global en la comparacion final y porque <code>Rastrigin</code> presenta una superficie altamente multimodal, con muchos minimos locales, lo que permite visualizar con claridad la capacidad de exploracion del algoritmo.</p>
+<p>En la animacion se observa la evolucion de la poblacion a lo largo de las iteraciones, junto con la trayectoria de la mejor solucion encontrada hasta converger hacia el minimo global. Esta figura resume de manera intuitiva por que los metodos heuristicos, y en particular la <code>evolucion diferencial</code>, pueden superar a un metodo local cuando el paisaje de optimizacion es complejo.</p>
+<p><img src="assets/histogramas/animacion_de_rastrigin_2d_semilla_1612.gif" class="img-fluid"></p>
+</section>
+<section id="fuente-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="fuente-de-datos">Fuente de datos</h2>
+<p>Esta comparacion debe salir de:</p>
+<ul>
+<li><a href="./notebooks/numerica/gradiente/analisis_resultados.html">analisis_resultados.ipynb</a></li>
+<li><a href="./notebooks/numerica/heuristicos/analisis_resultados.html">analisis_resultados.ipynb</a></li>
+<li><a href="./notebooks/numerica/12_comparacion_final_metodos.html">12_comparacion_final_metodos.ipynb</a></li>
+</ul>
 
 
-</section>
 </section>
 </section>
 

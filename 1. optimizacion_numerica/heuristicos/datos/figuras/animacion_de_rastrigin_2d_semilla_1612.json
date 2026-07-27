@@ -1,0 +1,17 @@
+{
+  "archivo_base": "C:\\Carlos\\Uni\\Algortimos\\trabajos\\trabajo_1\\trabajo_carlos\\1. optimizacion_numerica\\heuristicos\\datos\\rastrigin\\rastrigin_de_2d_n1000.json",
+  "corrida_elegida": 499,
+  "semilla": 1612,
+  "population_size": 40,
+  "mutation_factor": 0.8,
+  "crossover_rate": 0.7,
+  "max_iterations": 120,
+  "best_value_reconstruido": 0.0,
+  "best_solution_reconstruida": [
+    -7.392096649069699e-10,
+    -1.5992945236412615e-10
+  ],
+  "evaluations": 4840,
+  "frames": 41,
+  "gif_path": "C:\\Carlos\\Uni\\Algortimos\\trabajos\\trabajo_1\\trabajo_carlos\\1. optimizacion_numerica\\heuristicos\\datos\\figuras\\animacion_de_rastrigin_2d_semilla_1612.gif"
+}

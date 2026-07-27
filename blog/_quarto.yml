@@ -7,6 +7,7 @@ project:
     - index.qmd
     - numerica.qmd
     - combinatoria.qmd
+    - comparacion_final_numerica.qmd
     - notebooks/**/*.ipynb
     - presentacion/**/*.ipynb
 
@@ -18,19 +19,17 @@ website:
         text: Inicio
       - href: numerica.qmd
         text: Numerica
+      - href: comparacion_final_numerica.qmd
+        text: Comparacion final
       - href: combinatoria.qmd
         text: Combinatoria
   sidebar:
     style: docked
     search: true
     contents:
-      - section: "Portada"
-        contents:
-          - index.qmd
-      - section: "Secciones"
-        contents:
-          - numerica.qmd
-          - combinatoria.qmd
+      - index.qmd
+      - numerica.qmd
+      - combinatoria.qmd
 
 format:
   html:

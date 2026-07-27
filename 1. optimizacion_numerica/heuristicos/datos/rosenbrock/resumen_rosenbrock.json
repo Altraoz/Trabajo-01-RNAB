@@ -1,0 +1,40 @@
+[
+  {
+    "funcion": "rosenbrock",
+    "nombre_funcion": "Rosenbrock",
+    "metodo": "ea",
+    "nombre_metodo": "Algoritmo evolutivo",
+    "dimension": 2,
+    "n_corridas": 100,
+    "mejor_valor": 0.001980920383499212,
+    "peor_valor": 0.7112598311686328,
+    "promedio_valor": 0.06818983037486287,
+    "mediana_valor": 0.02374561352162622,
+    "desviacion_valor": 0.12503475617676646,
+    "mejor_distancia_al_optimo": 0.00613262729588896,
+    "promedio_distancia_al_optimo": 0.37191651762943745,
+    "promedio_evaluaciones": 4840.0,
+    "mediana_evaluaciones": 4840.0,
+    "promedio_iteraciones": 120.0,
+    "mediana_iteraciones": 120.0
+  },
+  {
+    "funcion": "rosenbrock",
+    "nombre_funcion": "Rosenbrock",
+    "metodo": "de",
+    "nombre_metodo": "Evolucion diferencial",
+    "dimension": 2,
+    "n_corridas": 100,
+    "mejor_valor": 4.2466851001492666e-16,
+    "peor_valor": 6.218325447707884e-12,
+    "promedio_valor": 7.908427131231841e-13,
+    "mediana_valor": 1.117478130001389e-13,
+    "desviacion_valor": 1.7708015712832757e-12,
+    "mejor_distancia_al_optimo": 1.4998286969158037e-08,
+    "promedio_distancia_al_optimo": 6.003520533066983e-07,
+    "promedio_evaluaciones": 4840.0,
+    "mediana_evaluaciones": 4840.0,
+    "promedio_iteraciones": 120.0,
+    "mediana_iteraciones": 120.0
+  }
+]

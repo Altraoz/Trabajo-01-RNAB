@@ -1,0 +1,356 @@
+---
+title: "Reporte tecnico - Trabajo 01"
+subtitle: "Optimizacion numerica y combinatoria"
+author:
+  - name: "Carlos Daniel Urresty"
+    affiliations:
+      - name: "Universidad Nacional de Colombia"
+date: "2026-07-27"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    toc: true
+    number-sections: true
+  docx:
+    toc: true
+    number-sections: true
+execute:
+  enabled: false
+---
+
+# Como usar este archivo
+
+::: {.callout-note}
+## Uso rapido
+
+- Este archivo esta pensado como base para tu reporte tecnico final.
+- Todo lo que aparezca como `[PENDIENTE: ...]` lo debes reemplazar con tus resultados reales.
+- La parte de optimizacion numerica quedo marcada para que pegues tablas, histogramas y comparaciones cuando terminen las corridas heuristicas.
+- La parte combinatoria ya queda mas adelantada porque en tu proyecto si hay resultados finales claros.
+- Si `quarto render reporte_tecnico_borrador.qmd --to pdf` falla por LaTeX, puedes usar `--to html` o `--to docx` y luego exportar a PDF.
+:::
+
+# 1. Introduccion
+
+Este trabajo aborda dos problemas de optimizacion con naturalezas distintas. La primera parte corresponde a optimizacion numerica sobre funciones de prueba clasicas, usando tanto descenso por gradiente como metodos heuristicos. La segunda parte corresponde a optimizacion combinatoria, especificamente una variante del problema del viajante aplicada al recorrido por las 96 capitales departamentales de la Francia continental.
+
+El objetivo general del reporte es presentar la metodologia seguida, justificar las decisiones de modelado y comparar los resultados obtenidos en ambos contextos. En particular, interesa contrastar el comportamiento de metodos locales basados en gradiente frente a metodos de exploracion global, y discutir como cambia su desempeno segun la estructura del problema.
+
+# 2. Objetivos
+
+## 2.1 Objetivo general
+
+Analizar y comparar metodos de optimizacion numerica y combinatoria sobre problemas representativos, considerando tanto la calidad final de la solucion como el costo computacional asociado.
+
+## 2.2 Objetivos especificos
+
+- Implementar y evaluar descenso por gradiente sobre funciones de prueba en 2D y 3D.
+- Implementar y evaluar algoritmos evolutivos, PSO y evolucion diferencial para la misma familia de funciones.
+- Comparar los enfoques anteriores usando valor final de la funcion objetivo y numero de evaluaciones.
+- Modelar el problema de recorrido por las 96 capitales departamentales de Francia como un problema TSP con costo compuesto.
+- Resolver la parte combinatoria usando colonia de hormigas y algoritmo genetico.
+- Construir visualizaciones y artefactos que faciliten interpretar los resultados.
+
+# 3. Parte 1: Optimizacion numerica
+
+## 3.1 Funciones de prueba
+
+En la parte numerica se trabajaron las siguientes funciones:
+
+- Rosenbrock
+- Rastrigin
+- Schwefel
+- Griewank
+- Goldstein-Price
+- Six-Hump Camel
+
+Las funciones `Rosenbrock`, `Rastrigin`, `Schwefel` y `Griewank` se estudiaron en `2D` y `3D`. En cambio, `Goldstein-Price` y `Six-Hump Camel` se mantuvieron en `2D`, ya que en el proyecto fueron implementadas en su forma clasica bidimensional.
+
+::: {.callout-important}
+## PENDIENTE
+
+- Pegar aqui las formulas matematicas de las funciones objetivo si el profesor quiere un reporte mas formal.
+- Si prefieres ahorrar espacio, puedes dejar las formulas completas en anexo y aqui solo dar una descripcion corta de cada funcion.
+:::
+
+## 3.2 Metodos evaluados
+
+Los metodos numericos implementados fueron:
+
+- descenso por gradiente
+- algoritmo evolutivo
+- optimizacion por particulas (PSO)
+- evolucion diferencial
+
+En todos los casos se realizaron multiples corridas con inicializacion aleatoria para evaluar estabilidad, robustez y sensibilidad al punto de partida.
+
+## 3.3 Metodologia experimental
+
+La metodologia de la parte numerica siguio el enunciado del curso:
+
+- se consideraron las funciones de prueba definidas arriba
+- se ejecutaron experimentos en `2D` y `3D` cuando la formulacion usada lo permitia
+- para cada caso se realizaron corridas con `n = 100`, `500` y `1000`
+- se registraron el valor final de la funcion objetivo y el numero de evaluaciones
+- a partir de esos datos se construyeron histogramas, tablas resumen y comparaciones entre metodos
+
+Desde el punto de vista del flujo de trabajo, la organizacion del proyecto fue esta:
+
+- [analisis_resultados.ipynb](notebooks/numerica/gradiente/analisis_resultados.ipynb): analiza gradiente
+- [analisis_resultados.ipynb](notebooks/numerica/heuristicos/analisis_resultados.ipynb): analiza heuristicas
+- [12_comparacion_final_metodos.ipynb](notebooks/numerica/12_comparacion_final_metodos.ipynb): integra y compara ambos enfoques
+
+## 3.4 Resultados del descenso por gradiente
+
+::: {.callout-important}
+## PENDIENTE: pegar desde `gradiente/analisis_resultados.ipynb`
+
+- Tabla resumen por funcion y dimension.
+- Histogramas de valor final.
+- Histogramas de evaluaciones.
+- Uno o dos parrafos cortos con la interpretacion principal por funcion.
+:::
+
+### Tabla resumen sugerida
+
+[PENDIENTE: pegar aqui una tabla consolidada de gradiente]
+
+### Comentario de interpretacion sugerido
+
+[PENDIENTE: redactar 1 parrafo corto sobre que funciones fueron mas faciles para gradiente y en cuales hubo mas sensibilidad al punto inicial]
+
+## 3.5 Resultados de los metodos heuristicos
+
+::: {.callout-important}
+## PENDIENTE: pegar desde `heuristicos/analisis_resultados.ipynb`
+
+- Tabla resumen por funcion, dimension y metodo.
+- Figuras comparativas entre algoritmo evolutivo, PSO y evolucion diferencial.
+- Un parrafo corto sobre cual metodo heuristico fue mas estable o mas eficiente.
+:::
+
+### Tabla resumen sugerida
+
+[PENDIENTE: pegar aqui una tabla consolidada de heuristicas]
+
+### Comentario de interpretacion sugerido
+
+[PENDIENTE: redactar 1 parrafo corto sobre el comportamiento general de los metodos heuristicos]
+
+## 3.6 Comparacion final: gradiente vs heuristicas
+
+Esta es la subseccion mas importante de la parte numerica, porque responde directamente a la discusion pedida en el enunciado.
+
+::: {.callout-important}
+## PENDIENTE: completar desde `12_comparacion_final_metodos.ipynb`
+
+- Unir en una sola tabla los resultados de gradiente y heuristicas.
+- Marcar el mejor metodo en valor final por cada funcion y dimension.
+- Marcar el mejor metodo en numero de evaluaciones por cada funcion y dimension.
+- Escribir la conclusion general con base en esas dos metricas.
+:::
+
+### Tabla comparativa final sugerida
+
+| Caso | Metodo con mejor valor final | Metodo con menos evaluaciones | Comentario |
+|---|---|---|---|
+| Rosenbrock 2D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Rosenbrock 3D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Rastrigin 2D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Rastrigin 3D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Schwefel 2D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Schwefel 3D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Griewank 2D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Griewank 3D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Goldstein-Price 2D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Six-Hump Camel 2D | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+
+### Parrafos de conclusion sugeridos para esta parte
+
+[PENDIENTE: pegar aqui los 3 parrafos de comparacion entre gradiente y heuristicas]
+
+## 3.7 Animaciones de la parte numerica
+
+El enunciado solicita una animacion o video del proceso de optimizacion para un caso representativo.
+
+::: {.callout-note}
+## Que pegar aqui
+
+- un GIF, captura o enlace de la animacion de descenso por gradiente
+- un GIF, captura o enlace de la animacion de un metodo heuristico
+- una frase explicando por que elegiste ese caso
+:::
+
+[PENDIENTE: insertar aqui la evidencia visual de la animacion numerica]
+
+# 4. Parte 2: Optimizacion combinatoria
+
+## 4.1 Planteamiento del problema
+
+En la parte combinatoria se considero un problema tipo TSP sobre las 96 capitales departamentales de la Francia continental. El objetivo fue encontrar un orden de visita que minimizara el costo total del recorrido, incorporando una funcion de costo compuesta por tiempo del vendedor, peajes y combustible.
+
+Una dificultad importante del problema fue que los datos originales describian conexiones directas parciales entre ciudades. Por ello, antes de aplicar las metaheuristicas fue necesario transformar el grafo original en una matriz completa de costos minimos entre todos los pares de ciudades.
+
+## 4.2 Modelo de costo
+
+El modelo final usado en el proyecto fue:
+
+`costo_total = peajes(euros) + gasolina(euros) + (tiempo(min)/60) * 12.02`
+
+Supuestos de modelado:
+
+- vehiculo de referencia: `Renault Clio`
+- tipo de combustible: `gasolina`
+- tarifa del vendedor: `12.02 EUR/h`
+- salario de referencia: `SMIC Francia 2026`
+
+## 4.3 Metodologia implementada
+
+El flujo general de la parte combinatoria fue:
+
+1. valorar cada conexion directa del grafo con el modelo de costo
+2. construir una matriz completa `96x96` de costos minimos
+3. ejecutar `ACO` sobre esa matriz
+4. ejecutar `GA` sobre la misma matriz
+5. comparar ambas soluciones
+6. expandir la mejor ruta y generar la visualizacion final
+
+Como soporte del proceso quedaron estos documentos:
+
+- [reporte_abordaje_problema_tsp.md](../2.%20optimizacion_combinatoria/docs/reporte_abordaje_problema_tsp.md)
+- [comparativo_aco_vs_ga.md](../2.%20optimizacion_combinatoria/docs/comparativo_aco_vs_ga.md)
+
+## 4.4 Algoritmos usados
+
+### 4.4.1 Colonia de hormigas (ACO)
+
+Configuracion usada:
+
+- hormigas: `40`
+- iteraciones: `250`
+- `alpha = 1.0`
+- `beta = 3.0`
+- evaporacion: `0.35`
+- intensificacion: `2.0`
+- peso elitista: `2.0`
+- semilla: `42`
+
+### 4.4.2 Algoritmo genetico (GA)
+
+Configuracion usada:
+
+- tamano de poblacion: `180`
+- generaciones: `350`
+- tasa de mutacion: `0.12`
+- tasa de cruce: `0.9`
+- elitismo: `12`
+- torneo: `5`
+- uso de semilla inicial proveniente de ACO: `si`
+- semilla: `42`
+
+## 4.5 Resultados finales
+
+La comparacion final entre ACO y GA fue la siguiente:
+
+| Metodo | Mejor costo del tour (EUR) | Diferencia frente al mejor (EUR) | Iteraciones / generaciones | Tamano de busqueda |
+|---|---:|---:|---:|---:|
+| GA | 4303.602999 | 0.000000 | 350 | 180 |
+| ACO | 4471.569332 | 167.966333 | 250 | 40 |
+
+El mejor resultado final correspondio al algoritmo genetico, con una mejora relativa aproximada de `3.76%` frente a ACO.
+
+## 4.6 Visualizacion final
+
+::: {.callout-note}
+## Nota para PDF
+
+El GIF no se anima en PDF. Para el PDF conviene dejar la visualizacion estatica y la curva de convergencia. Si quieres, tambien puedes poner una captura del GIF como figura adicional.
+:::
+
+### Mejor ruta encontrada
+
+![](assets/combinatoria/visualizacion_mejor_solucion.svg)
+
+### Convergencia del metodo ganador
+
+![](assets/combinatoria/convergencia_ga.svg)
+
+## 4.7 Discusion de la parte combinatoria
+
+Los dos algoritmos produjeron recorridos validos sobre la misma matriz de costos. ACO fue util para construir rapidamente una solucion factible y relativamente buena, mientras que GA logro refinar esa base inicial y encontrar un recorrido de menor costo final. Esto sugiere una dinamica complementaria: ACO funciona bien como mecanismo de exploracion y GA resulta especialmente fuerte para refinar la solucion.
+
+Desde una perspectiva metodologica, el aporte principal de esta parte no fue solamente ejecutar una metaheuristica, sino modelar correctamente una red parcial de conexiones reales como una instancia completa de TSP. Sin esa transformacion previa, varios algoritmos hubieran fallado o trabajado sobre una representacion inconsistente del problema.
+
+# 5. Uso de inteligencia artificial
+
+## 5.1 Prompts principales utilizados
+
+Puedes reutilizar aqui los prompts ya redactados en tu `index.qmd`.
+
+::: {.callout-important}
+## PENDIENTE
+
+- Copiar aqui los prompts principales que ya dejaste en `index.qmd`.
+- Si quieres, reduce la lista a 3 o 4 prompts realmente importantes.
+:::
+
+[PENDIENTE: pegar aqui la subseccion de prompts]
+
+## 5.2 Impacto real de la IA en el resultado final
+
+[PENDIENTE: pegar aqui la reflexion sobre uso de IA desde `index.qmd`]
+
+# 6. Contribucion individual
+
+El enunciado pide reportar en primera persona los aportes individuales del trabajo.
+
+::: {.callout-important}
+## PENDIENTE
+
+- Reemplazar este texto por tu declaracion personal.
+- Pegar el enlace o evidencia del video de contribucion individual.
+:::
+
+[PENDIENTE: redactar aqui tu contribucion individual en primera persona]
+
+# 7. Repositorio de codigo
+
+::: {.callout-important}
+## PENDIENTE
+
+- Pegar aqui el enlace real al repositorio Git que vas a referenciar en el reporte.
+:::
+
+Repositorio:
+
+`[PENDIENTE: pegar enlace al repositorio]`
+
+# 8. Conclusiones generales
+
+La parte numerica y la parte combinatoria permitieron comparar enfoques de optimizacion con supuestos y dificultades muy diferentes. En problemas donde la geometria local de la funcion puede aprovecharse, el descenso por gradiente ofrece una estrategia eficiente y dirigida. En cambio, en problemas multimodales o discretos, los metodos heuristicos y metaheuristicos aportan mayor capacidad de exploracion.
+
+En la parte numerica, la conclusion final debe salir de la comparacion entre valor final y numero de evaluaciones para gradiente y heuristicas. En la parte combinatoria, el resultado mas fuerte del proyecto fue la superioridad del algoritmo genetico sobre ACO en la corrida final disponible.
+
+::: {.callout-important}
+## PENDIENTE FINAL
+
+- Reemplazar este bloque por 3 conclusiones finales tuyas cuando tengas lista la comparacion numerica.
+:::
+
+- [PENDIENTE: conclusion final 1]
+- [PENDIENTE: conclusion final 2]
+- [PENDIENTE: conclusion final 3]
+
+# 9. Referencias
+
+::: {.callout-warning}
+## Importante
+
+No dejes referencias inventadas o de ejemplo. En esta seccion debes pegar solamente las fuentes reales que si usaste y ponerlas en formato APA.
+:::
+
+- [PENDIENTE: referencia real 1 en APA]
+- [PENDIENTE: referencia real 2 en APA]
+- [PENDIENTE: referencia real 3 en APA]

@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -108,6 +108,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -132,6 +135,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link active" href="../../../index.html" aria-current="page"> 
 <span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../numerica.html"> 
+<span class="menu-text">Numerica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../comparacion_final_numerica.html"> 
+<span class="menu-text">Comparacion final</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../combinatoria.html"> 
+<span class="menu-text">Combinatoria</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -184,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Presentacion</span></a>
+ <span class="menu-text">Secciones</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -192,13 +207,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../presentacion/numerica/01_numerica.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../numerica.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optimizacion numerica</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../presentacion/combinatoria/01_combinatoria.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../comparacion_final_numerica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comparacion final numerica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../combinatoria.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optimizacion combinatoria</span></a>
   </div>
 </li>
@@ -220,8 +241,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ranking-por-caso" id="toc-ranking-por-caso" class="nav-link" data-scroll-target="#ranking-por-caso">Ranking por caso</a></li>
   <li><a href="#figuras-para-reporte" id="toc-figuras-para-reporte" class="nav-link" data-scroll-target="#figuras-para-reporte">Figuras para reporte</a>
   <ul class="collapse">
-  <li><a href="#barras-comparativas-por-metodo" id="toc-barras-comparativas-por-metodo" class="nav-link" data-scroll-target="#barras-comparativas-por-metodo">1. Barras comparativas por metodo</a></li>
-  <li><a href="#heatmap-comparativo-por-caso-y-metodo" id="toc-heatmap-comparativo-por-caso-y-metodo" class="nav-link" data-scroll-target="#heatmap-comparativo-por-caso-y-metodo">2. Heatmap comparativo por caso y metodo</a></li>
   <li><a href="#distribuciones-por-metodo" id="toc-distribuciones-por-metodo" class="nav-link" data-scroll-target="#distribuciones-por-metodo">3. Distribuciones por metodo</a></li>
   <li><a href="#comparacion-por-caso" id="toc-comparacion-por-caso" class="nav-link" data-scroll-target="#comparacion-por-caso">4. Comparacion por caso</a></li>
   <li><a href="#graficas-de-convergencia" id="toc-graficas-de-convergencia" class="nav-link" data-scroll-target="#graficas-de-convergencia">5. Graficas de convergencia</a></li>
@@ -254,7 +273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Este notebook consume los datos generados por <code>generador_de_datos.ipynb</code> y organiza la parte analitica de la entrega.</p>
 <p>Objetivos de este notebook: - calcular medias, desviaciones y mejores/peores casos - comparar metodos por funcion y dimension - analizar costo en evaluaciones, no solo valor final - producir tablas y figuras listas para el reporte</p>
-<div id="cell-2" class="cell">
+<div id="a4146826" class="cell" data-execution_count="74">
 <details class="code-fold">
 <summary>Ver codigo</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
@@ -282,396 +301,1924 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>manifest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-display" data-execution_count="74">
+<pre><code>{'modulo': 'heuristicos',
+ 'funciones': ['rosenbrock',
+  'rastrigin',
+  'schwefel',
+  'griewank',
+  'goldstein_price',
+  'six_hump_camel'],
+ 'metodos': ['ea', 'pso', 'de'],
+ 'consumer_notebook': 'analisis_resultados.ipynb',
+ 'descripcion': 'Datos generados sin graficas ni animaciones.',
+ 'fecha_referencia': '2026-07-24',
+ 'filtros_ejecucion': {'selected_functions': None,
+  'selected_dimensions': None,
+  'selected_methods': None,
+  'selected_n_corridas': None,
+  'skip_existing_files': True},
+ 'directorios': {'datos_base': 'heuristicos/datos'},
+ 'organizacion_corridas': 'heuristicos/datos/&lt;funcion&gt;/&lt;archivo&gt;.json|csv',
+ 'organizacion_resumenes': 'heuristicos/datos/&lt;funcion&gt;/resumen_&lt;funcion&gt;.json|csv',
+ 'campos_corridas': ['funcion',
+  'nombre_funcion',
+  'corrida',
+  'semilla',
+  'metodo',
+  'nombre_metodo',
+  'dimension',
+  'limites',
+  'optimo_conocido',
+  'mejor_solucion',
+  'mejor_valor',
+  'distancia_al_optimo',
+  'iteraciones',
+  'evaluaciones',
+  'best_values_history',
+  'parametros'],
+ 'campos_resumen': ['funcion',
+  'nombre_funcion',
+  'metodo',
+  'nombre_metodo',
+  'dimension',
+  'n_corridas',
+  'mejor_valor',
+  'peor_valor',
+  'promedio_valor',
+  'mediana_valor',
+  'desviacion_valor',
+  'mejor_distancia_al_optimo',
+  'promedio_distancia_al_optimo',
+  'promedio_evaluaciones',
+  'mediana_evaluaciones',
+  'promedio_iteraciones',
+  'mediana_iteraciones']}</code></pre>
+</div>
 </div>
 <section id="carga-de-datos" class="level2">
 <h2 class="anchored" data-anchor-id="carga-de-datos">Carga de datos</h2>
-<div id="cell-4" class="cell">
+<div id="07d7b30f" class="cell" data-execution_count="75">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>run_csv_files <span class="op">=</span> <span class="bu">sorted</span>(path <span class="cf">for</span> path <span class="kw">in</span> DATA_DIR.glob(<span class="st">"*/*.csv"</span>) <span class="cf">if</span> <span class="kw">not</span> path.name.startswith(<span class="st">"resumen_"</span>))</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>summary_csv_files <span class="op">=</span> <span class="bu">sorted</span>(DATA_DIR.glob(<span class="st">"*/resumen_*.csv"</span>))</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>run_json_files <span class="op">=</span> <span class="bu">sorted</span>(path <span class="cf">for</span> path <span class="kw">in</span> DATA_DIR.glob(<span class="st">"*/*.json"</span>) <span class="cf">if</span> <span class="kw">not</span> path.name.startswith(<span class="st">"resumen_"</span>))</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> run_csv_files:</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="st">"No se encontraron archivos de corridas dentro de datos/&lt;funcion&gt;/. Ejecuta primero el generador."</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>runs_df <span class="op">=</span> pd.concat((pd.read_csv(path) <span class="cf">for</span> path <span class="kw">in</span> run_csv_files), ignore_index<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> summary_csv_files:</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    summary_df <span class="op">=</span> pd.concat((pd.read_csv(path) <span class="cf">for</span> path <span class="kw">in</span> summary_csv_files), ignore_index<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    summary_df <span class="op">=</span> pd.DataFrame()</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Archivos de corridas encontrados:"</span>, <span class="bu">len</span>(run_csv_files))</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Archivos de resumen encontrados:"</span>, <span class="bu">len</span>(summary_csv_files))</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>runs_df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>run_csv_files <span class="op">=</span> <span class="bu">sorted</span>(path <span class="cf">for</span> path <span class="kw">in</span> DATA_DIR.glob(<span class="st">"*/*.csv"</span>) <span class="cf">if</span> <span class="kw">not</span> path.name.startswith(<span class="st">"resumen_"</span>))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>summary_csv_files <span class="op">=</span> <span class="bu">sorted</span>(DATA_DIR.glob(<span class="st">"*/resumen_*.csv"</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>run_json_files <span class="op">=</span> <span class="bu">sorted</span>(path <span class="cf">for</span> path <span class="kw">in</span> DATA_DIR.glob(<span class="st">"*/*.json"</span>) <span class="cf">if</span> <span class="kw">not</span> path.name.startswith(<span class="st">"resumen_"</span>))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> run_csv_files:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="st">"No se encontraron archivos de corridas dentro de datos/&lt;funcion&gt;/. Ejecuta primero el generador."</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>runs_df <span class="op">=</span> pd.concat((pd.read_csv(path) <span class="cf">for</span> path <span class="kw">in</span> run_csv_files), ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> summary_csv_files:</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    summary_df <span class="op">=</span> pd.concat((pd.read_csv(path) <span class="cf">for</span> path <span class="kw">in</span> summary_csv_files), ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    summary_df <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Archivos de corridas encontrados:"</span>, <span class="bu">len</span>(run_csv_files))</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Archivos de resumen encontrados:"</span>, <span class="bu">len</span>(summary_csv_files))</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>runs_df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Archivos de corridas encontrados: 94
+Archivos de resumen encontrados: 6</code></pre>
 </div>
-<div id="cell-5" class="cell">
+<div class="cell-output cell-output-display" data-execution_count="75">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">caso</th>
+<th data-quarto-table-cell-role="th">nombre_metodo</th>
+<th data-quarto-table-cell-role="th">corrida</th>
+<th data-quarto-table-cell-role="th">mejor_valor</th>
+<th data-quarto-table-cell-role="th">distancia_al_optimo</th>
+<th data-quarto-table-cell-role="th">evaluaciones</th>
+<th data-quarto-table-cell-role="th">promedio_valor</th>
+<th data-quarto-table-cell-role="th">promedio_distancia_al_optimo</th>
+<th data-quarto-table-cell-role="th">promedio_evaluaciones</th>
+<th data-quarto-table-cell-role="th">nombre_funcion</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">desviacion_valor</th>
+<th data-quarto-table-cell-role="th">funcion</th>
+<th data-quarto-table-cell-role="th">semilla</th>
+<th data-quarto-table-cell-role="th">metodo</th>
+<th data-quarto-table-cell-role="th">limites</th>
+<th data-quarto-table-cell-role="th">optimo_conocido</th>
+<th data-quarto-table-cell-role="th">mejor_solucion</th>
+<th data-quarto-table-cell-role="th">iteraciones</th>
+<th data-quarto-table-cell-role="th">best_values_history</th>
+<th data-quarto-table-cell-role="th">parametros</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>NaN</td>
+<td>-1.031628</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>NaN</td>
+<td>-1.031628</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>NaN</td>
+<td>-1.031628</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>1.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>7.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 22 columns</p>
+</div>
+</div>
+</div>
+<div id="60aed2ab" class="cell" data-execution_count="76">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> [</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"corrida"</span>,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"semilla"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dimension"</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mejor_valor"</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"distancia_al_optimo"</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"iteraciones"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"evaluaciones"</span>,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> numeric_columns:</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    runs_df[column] <span class="op">=</span> pd.to_numeric(runs_df[column], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>runs_df[<span class="st">"caso"</span>] <span class="op">=</span> runs_df[<span class="st">"nombre_funcion"</span>] <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> runs_df[<span class="st">"dimension"</span>].astype(<span class="bu">int</span>).astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"D"</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>runs_df[<span class="st">"eficiencia_valor_por_eval"</span>] <span class="op">=</span> runs_df[<span class="st">"mejor_valor"</span>] <span class="op">/</span> runs_df[<span class="st">"evaluaciones"</span>].replace(<span class="dv">0</span>, np.nan)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> summary_df.empty:</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    summary_df <span class="op">=</span> (</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        runs_df.groupby([<span class="st">"funcion"</span>, <span class="st">"nombre_funcion"</span>, <span class="st">"metodo"</span>, <span class="st">"nombre_metodo"</span>, <span class="st">"dimension"</span>], dropna<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        .agg(</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>            n_corridas<span class="op">=</span>(<span class="st">"corrida"</span>, <span class="st">"count"</span>),</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>            mejor_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"min"</span>),</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>            peor_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"max"</span>),</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>            promedio_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"mean"</span>),</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>            mediana_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"median"</span>),</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>            desviacion_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"std"</span>),</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            mejor_distancia_al_optimo<span class="op">=</span>(<span class="st">"distancia_al_optimo"</span>, <span class="st">"min"</span>),</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>            promedio_distancia_al_optimo<span class="op">=</span>(<span class="st">"distancia_al_optimo"</span>, <span class="st">"mean"</span>),</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            promedio_evaluaciones<span class="op">=</span>(<span class="st">"evaluaciones"</span>, <span class="st">"mean"</span>),</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>            mediana_evaluaciones<span class="op">=</span>(<span class="st">"evaluaciones"</span>, <span class="st">"median"</span>),</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>            promedio_iteraciones<span class="op">=</span>(<span class="st">"iteraciones"</span>, <span class="st">"mean"</span>),</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>            mediana_iteraciones<span class="op">=</span>(<span class="st">"iteraciones"</span>, <span class="st">"median"</span>),</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        .reset_index()</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    summary_df[<span class="st">"desviacion_valor"</span>] <span class="op">=</span> summary_df[<span class="st">"desviacion_valor"</span>].fillna(<span class="fl">0.0</span>)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>summary_df[<span class="st">"caso"</span>] <span class="op">=</span> summary_df[<span class="st">"nombre_funcion"</span>] <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> summary_df[<span class="st">"dimension"</span>].astype(<span class="bu">int</span>).astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"D"</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>summary_df.sort_values([<span class="st">"nombre_funcion"</span>, <span class="st">"dimension"</span>, <span class="st">"metodo"</span>]).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> [</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"corrida"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"semilla"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dimension"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mejor_valor"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"distancia_al_optimo"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"iteraciones"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"evaluaciones"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> numeric_columns:</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    runs_df[column] <span class="op">=</span> pd.to_numeric(runs_df[column], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>runs_df <span class="op">=</span> runs_df.dropna(subset<span class="op">=</span>[<span class="st">"dimension"</span>]).copy()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>runs_df[<span class="st">"dimension"</span>] <span class="op">=</span> runs_df[<span class="st">"dimension"</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>runs_df[<span class="st">"caso"</span>] <span class="op">=</span> runs_df[<span class="st">"nombre_funcion"</span>] <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> runs_df[<span class="st">"dimension"</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"D"</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>runs_df[<span class="st">"eficiencia_valor_por_eval"</span>] <span class="op">=</span> runs_df[<span class="st">"mejor_valor"</span>] <span class="op">/</span> runs_df[<span class="st">"evaluaciones"</span>].replace(<span class="dv">0</span>, np.nan)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> summary_df.empty:</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    summary_df <span class="op">=</span> (</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        runs_df.groupby([<span class="st">"funcion"</span>, <span class="st">"nombre_funcion"</span>, <span class="st">"metodo"</span>, <span class="st">"nombre_metodo"</span>, <span class="st">"dimension"</span>], dropna<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        .agg(</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            n_corridas<span class="op">=</span>(<span class="st">"corrida"</span>, <span class="st">"count"</span>),</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            mejor_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"min"</span>),</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            peor_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"max"</span>),</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>            promedio_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"mean"</span>),</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>            mediana_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"median"</span>),</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            desviacion_valor<span class="op">=</span>(<span class="st">"mejor_valor"</span>, <span class="st">"std"</span>),</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>            mejor_distancia_al_optimo<span class="op">=</span>(<span class="st">"distancia_al_optimo"</span>, <span class="st">"min"</span>),</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>            promedio_distancia_al_optimo<span class="op">=</span>(<span class="st">"distancia_al_optimo"</span>, <span class="st">"mean"</span>),</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>            promedio_evaluaciones<span class="op">=</span>(<span class="st">"evaluaciones"</span>, <span class="st">"mean"</span>),</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>            mediana_evaluaciones<span class="op">=</span>(<span class="st">"evaluaciones"</span>, <span class="st">"median"</span>),</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>            promedio_iteraciones<span class="op">=</span>(<span class="st">"iteraciones"</span>, <span class="st">"mean"</span>),</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>            mediana_iteraciones<span class="op">=</span>(<span class="st">"iteraciones"</span>, <span class="st">"median"</span>),</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>        .reset_index()</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    summary_df[<span class="st">"desviacion_valor"</span>] <span class="op">=</span> summary_df[<span class="st">"desviacion_valor"</span>].fillna(<span class="fl">0.0</span>)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>summary_df[<span class="st">"caso"</span>] <span class="op">=</span> summary_df[<span class="st">"nombre_funcion"</span>] <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> summary_df[<span class="st">"dimension"</span>].astype(<span class="bu">int</span>).astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">"D"</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>summary_df[<span class="st">"caso_n"</span>] <span class="op">=</span> summary_df[<span class="st">"caso"</span>] <span class="op">+</span> <span class="st">" | n="</span> <span class="op">+</span> summary_df[<span class="st">"n_corridas"</span>].astype(<span class="bu">int</span>).astype(<span class="bu">str</span>)</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>summary_df <span class="op">=</span> summary_df.sort_values([<span class="st">"nombre_funcion"</span>, <span class="st">"dimension"</span>, <span class="st">"n_corridas"</span>, <span class="st">"metodo"</span>]).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>ordered_case_n <span class="op">=</span> summary_df[<span class="st">"caso_n"</span>].drop_duplicates().tolist()</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>summary_df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-display" data-execution_count="76">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">funcion</th>
+<th data-quarto-table-cell-role="th">nombre_funcion</th>
+<th data-quarto-table-cell-role="th">metodo</th>
+<th data-quarto-table-cell-role="th">nombre_metodo</th>
+<th data-quarto-table-cell-role="th">dimension</th>
+<th data-quarto-table-cell-role="th">n_corridas</th>
+<th data-quarto-table-cell-role="th">mejor_valor</th>
+<th data-quarto-table-cell-role="th">peor_valor</th>
+<th data-quarto-table-cell-role="th">promedio_valor</th>
+<th data-quarto-table-cell-role="th">mediana_valor</th>
+<th data-quarto-table-cell-role="th">desviacion_valor</th>
+<th data-quarto-table-cell-role="th">mejor_distancia_al_optimo</th>
+<th data-quarto-table-cell-role="th">promedio_distancia_al_optimo</th>
+<th data-quarto-table-cell-role="th">promedio_evaluaciones</th>
+<th data-quarto-table-cell-role="th">mediana_evaluaciones</th>
+<th data-quarto-table-cell-role="th">promedio_iteraciones</th>
+<th data-quarto-table-cell-role="th">mediana_iteraciones</th>
+<th data-quarto-table-cell-role="th">caso</th>
+<th data-quarto-table-cell-role="th">caso_n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>goldstein_price</td>
+<td>Goldstein-Price</td>
+<td>de</td>
+<td>Evolucion diferencial</td>
+<td>2</td>
+<td>100</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>9.409453e-15</td>
+<td>1.840240e-09</td>
+<td>6.059547e-09</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Goldstein-Price 2D</td>
+<td>Goldstein-Price 2D | n=100</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>goldstein_price</td>
+<td>Goldstein-Price</td>
+<td>ea</td>
+<td>Algoritmo evolutivo</td>
+<td>2</td>
+<td>100</td>
+<td>3.011752</td>
+<td>4.336153</td>
+<td>3.338019</td>
+<td>3.220787</td>
+<td>3.697649e-01</td>
+<td>6.059783e-03</td>
+<td>2.987153e-02</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Goldstein-Price 2D</td>
+<td>Goldstein-Price 2D | n=100</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>goldstein_price</td>
+<td>Goldstein-Price</td>
+<td>pso</td>
+<td>PSO</td>
+<td>2</td>
+<td>100</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>1.675337e-12</td>
+<td>3.832762e-09</td>
+<td>2.783651e-08</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Goldstein-Price 2D</td>
+<td>Goldstein-Price 2D | n=100</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>goldstein_price</td>
+<td>Goldstein-Price</td>
+<td>de</td>
+<td>Evolucion diferencial</td>
+<td>2</td>
+<td>500</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>9.812181e-15</td>
+<td>1.005919e-09</td>
+<td>4.393659e-09</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Goldstein-Price 2D</td>
+<td>Goldstein-Price 2D | n=500</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>goldstein_price</td>
+<td>Goldstein-Price</td>
+<td>ea</td>
+<td>Algoritmo evolutivo</td>
+<td>2</td>
+<td>500</td>
+<td>3.007420</td>
+<td>4.336153</td>
+<td>3.208080</td>
+<td>3.098265</td>
+<td>2.806074e-01</td>
+<td>4.104958e-03</td>
+<td>2.191061e-02</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Goldstein-Price 2D</td>
+<td>Goldstein-Price 2D | n=500</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">69</th>
+<td>six_hump_camel</td>
+<td>Six-Hump Camel</td>
+<td>ea</td>
+<td>Algoritmo evolutivo</td>
+<td>2</td>
+<td>500</td>
+<td>-1.031556</td>
+<td>-1.013471</td>
+<td>-1.029222</td>
+<td>-1.030392</td>
+<td>2.923234e-03</td>
+<td>7.269088e-03</td>
+<td>1.005735e+00</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Six-Hump Camel 2D</td>
+<td>Six-Hump Camel 2D | n=500</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">70</th>
+<td>six_hump_camel</td>
+<td>Six-Hump Camel</td>
+<td>pso</td>
+<td>PSO</td>
+<td>2</td>
+<td>500</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>6.143328e-14</td>
+<td>3.521953e-07</td>
+<td>1.065953e+00</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Six-Hump Camel 2D</td>
+<td>Six-Hump Camel 2D | n=500</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">71</th>
+<td>six_hump_camel</td>
+<td>Six-Hump Camel</td>
+<td>de</td>
+<td>Evolucion diferencial</td>
+<td>2</td>
+<td>1000</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>1.634599e-10</td>
+<td>1.034882e-07</td>
+<td>7.987462e-01</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Six-Hump Camel 2D</td>
+<td>Six-Hump Camel 2D | n=1000</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">72</th>
+<td>six_hump_camel</td>
+<td>Six-Hump Camel</td>
+<td>ea</td>
+<td>Algoritmo evolutivo</td>
+<td>2</td>
+<td>1000</td>
+<td>-1.031585</td>
+<td>-1.013471</td>
+<td>-1.029417</td>
+<td>-1.030093</td>
+<td>2.347016e-03</td>
+<td>7.269088e-03</td>
+<td>9.606496e-01</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Six-Hump Camel 2D</td>
+<td>Six-Hump Camel 2D | n=1000</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">73</th>
+<td>six_hump_camel</td>
+<td>Six-Hump Camel</td>
+<td>pso</td>
+<td>PSO</td>
+<td>2</td>
+<td>1000</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>4.436990e-14</td>
+<td>3.521953e-07</td>
+<td>1.110487e+00</td>
+<td>4840.0</td>
+<td>4840.0</td>
+<td>120.0</td>
+<td>120.0</td>
+<td>Six-Hump Camel 2D</td>
+<td>Six-Hump Camel 2D | n=1000</td>
+</tr>
+</tbody>
+</table>
+
+<p>74 rows × 19 columns</p>
+</div>
+</div>
 </div>
 </section>
 <section id="tabla-base-para-reporte" class="level2">
 <h2 class="anchored" data-anchor-id="tabla-base-para-reporte">Tabla base para reporte</h2>
-<div id="cell-7" class="cell">
+<div id="0ccf1997" class="cell" data-execution_count="77">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tabla_reporte <span class="op">=</span> (</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    summary_df[</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        [</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">"nombre_funcion"</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">"dimension"</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">"nombre_metodo"</span>,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">"n_corridas"</span>,</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">"mejor_valor"</span>,</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_valor"</span>,</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">"desviacion_valor"</span>,</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_distancia_al_optimo"</span>,</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_evaluaciones"</span>,</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        ]</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    .sort_values([<span class="st">"nombre_funcion"</span>, <span class="st">"dimension"</span>, <span class="st">"nombre_metodo"</span>])</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    .reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>tabla_reporte</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>tabla_reporte <span class="op">=</span> (</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    summary_df[</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">"nombre_funcion"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">"dimension"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">"nombre_metodo"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">"n_corridas"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">"mejor_valor"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_valor"</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">"desviacion_valor"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_distancia_al_optimo"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_evaluaciones"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    .sort_values([<span class="st">"nombre_funcion"</span>, <span class="st">"dimension"</span>, <span class="st">"nombre_metodo"</span>])</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    .reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>tabla_reporte</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-display" data-execution_count="77">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">nombre_funcion</th>
+<th data-quarto-table-cell-role="th">dimension</th>
+<th data-quarto-table-cell-role="th">nombre_metodo</th>
+<th data-quarto-table-cell-role="th">n_corridas</th>
+<th data-quarto-table-cell-role="th">mejor_valor</th>
+<th data-quarto-table-cell-role="th">promedio_valor</th>
+<th data-quarto-table-cell-role="th">desviacion_valor</th>
+<th data-quarto-table-cell-role="th">promedio_distancia_al_optimo</th>
+<th data-quarto-table-cell-role="th">promedio_evaluaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>100</td>
+<td>3.011752</td>
+<td>3.338019</td>
+<td>3.697649e-01</td>
+<td>2.987153e-02</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>500</td>
+<td>3.007420</td>
+<td>3.208080</td>
+<td>2.806074e-01</td>
+<td>2.191061e-02</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Algoritmo evolutivo</td>
+<td>1000</td>
+<td>3.007420</td>
+<td>3.199833</td>
+<td>2.531059e-01</td>
+<td>2.152912e-02</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>100</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>9.409453e-15</td>
+<td>6.059547e-09</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Goldstein-Price</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>9.812181e-15</td>
+<td>4.393659e-09</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">69</th>
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>500</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>2.036880e-10</td>
+<td>9.395323e-01</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">70</th>
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>Evolucion diferencial</td>
+<td>1000</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>1.634599e-10</td>
+<td>7.987462e-01</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">71</th>
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>PSO</td>
+<td>100</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>1.343516e-13</td>
+<td>6.608334e-01</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">72</th>
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>PSO</td>
+<td>500</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>6.143328e-14</td>
+<td>1.065953e+00</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">73</th>
+<td>Six-Hump Camel</td>
+<td>2</td>
+<td>PSO</td>
+<td>1000</td>
+<td>-1.031628</td>
+<td>-1.031628</td>
+<td>4.436990e-14</td>
+<td>1.110487e+00</td>
+<td>4840.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>74 rows × 9 columns</p>
+</div>
+</div>
 </div>
 </section>
 <section id="mejores-y-peores-casos" class="level2">
 <h2 class="anchored" data-anchor-id="mejores-y-peores-casos">Mejores y peores casos</h2>
-<div id="cell-9" class="cell">
+<div id="28638f92" class="cell" data-execution_count="78">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mejores_casos <span class="op">=</span> runs_df.nsmallest(<span class="dv">15</span>, <span class="st">"mejor_valor"</span>)[</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"caso"</span>, <span class="st">"nombre_metodo"</span>, <span class="st">"corrida"</span>, <span class="st">"mejor_valor"</span>, <span class="st">"distancia_al_optimo"</span>, <span class="st">"evaluaciones"</span>]</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>peores_casos <span class="op">=</span> runs_df.nlargest(<span class="dv">15</span>, <span class="st">"mejor_valor"</span>)[</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"caso"</span>, <span class="st">"nombre_metodo"</span>, <span class="st">"corrida"</span>, <span class="st">"mejor_valor"</span>, <span class="st">"distancia_al_optimo"</span>, <span class="st">"evaluaciones"</span>]</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mejores casos globales"</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>display(mejores_casos)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Peores casos globales"</span>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>display(peores_casos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mejores_casos <span class="op">=</span> runs_df.nsmallest(<span class="dv">15</span>, <span class="st">"mejor_valor"</span>)[</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"caso"</span>, <span class="st">"nombre_metodo"</span>, <span class="st">"corrida"</span>, <span class="st">"mejor_valor"</span>, <span class="st">"distancia_al_optimo"</span>, <span class="st">"evaluaciones"</span>]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>peores_casos <span class="op">=</span> runs_df.nlargest(<span class="dv">15</span>, <span class="st">"mejor_valor"</span>)[</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"caso"</span>, <span class="st">"nombre_metodo"</span>, <span class="st">"corrida"</span>, <span class="st">"mejor_valor"</span>, <span class="st">"distancia_al_optimo"</span>, <span class="st">"evaluaciones"</span>]</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mejores casos globales"</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>display(mejores_casos)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Peores casos globales"</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>display(peores_casos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mejores casos globales</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">caso</th>
+<th data-quarto-table-cell-role="th">nombre_metodo</th>
+<th data-quarto-table-cell-role="th">corrida</th>
+<th data-quarto-table-cell-role="th">mejor_valor</th>
+<th data-quarto-table-cell-role="th">distancia_al_optimo</th>
+<th data-quarto-table-cell-role="th">evaluaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">107</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>NaN</td>
+<td>-1.031628</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">108</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>NaN</td>
+<td>-1.031628</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">109</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>NaN</td>
+<td>-1.031628</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">43313</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>1.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">43319</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>7.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">43331</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>19.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">43340</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>28.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">43341</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>29.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">43349</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>37.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">43350</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>38.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">43358</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>46.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">43359</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>47.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">43367</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>55.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">43368</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>56.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">43371</th>
+<td>Six-Hump Camel 2D</td>
+<td>Evolucion diferencial</td>
+<td>59.0</td>
+<td>-1.031628</td>
+<td>1.436594</td>
+<td>4840.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Peores casos globales</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">caso</th>
+<th data-quarto-table-cell-role="th">nombre_metodo</th>
+<th data-quarto-table-cell-role="th">corrida</th>
+<th data-quarto-table-cell-role="th">mejor_valor</th>
+<th data-quarto-table-cell-role="th">distancia_al_optimo</th>
+<th data-quarto-table-cell-role="th">evaluaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">41791</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>79.0</td>
+<td>356.832102</td>
+<td>1171.164607</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">41800</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>88.0</td>
+<td>356.832102</td>
+<td>1171.164607</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">41809</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>97.0</td>
+<td>356.832102</td>
+<td>1171.164607</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">41891</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>79.0</td>
+<td>356.832102</td>
+<td>1171.164607</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">41900</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>88.0</td>
+<td>356.832102</td>
+<td>1171.164607</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">41909</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>97.0</td>
+<td>356.832102</td>
+<td>1171.164607</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">42891</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>79.0</td>
+<td>356.832102</td>
+<td>1171.164607</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">42900</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>88.0</td>
+<td>356.832102</td>
+<td>1171.164607</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">42909</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>97.0</td>
+<td>356.832102</td>
+<td>1171.164607</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">41781</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>69.0</td>
+<td>236.876707</td>
+<td>1023.174598</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">41790</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>78.0</td>
+<td>236.876707</td>
+<td>1023.174598</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">41799</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>87.0</td>
+<td>236.876707</td>
+<td>1023.174598</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">41808</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>96.0</td>
+<td>236.876707</td>
+<td>1023.174598</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">41881</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>69.0</td>
+<td>236.876707</td>
+<td>1023.174598</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">41890</th>
+<td>Schwefel 3D</td>
+<td>PSO</td>
+<td>78.0</td>
+<td>236.876707</td>
+<td>1023.174598</td>
+<td>7050.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div>
 </section>
 <section id="ranking-por-caso" class="level2">
 <h2 class="anchored" data-anchor-id="ranking-por-caso">Ranking por caso</h2>
 <p>Se prioriza valor promedio, luego cercania promedio al optimo y luego costo promedio en evaluaciones.</p>
-<div id="cell-11" class="cell">
+<div id="657ccd5c" class="cell" data-execution_count="79">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ranking_por_caso <span class="op">=</span> (</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    summary_df.sort_values(</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        [<span class="st">"caso"</span>, <span class="st">"promedio_valor"</span>, <span class="st">"promedio_distancia_al_optimo"</span>, <span class="st">"promedio_evaluaciones"</span>]</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"caso"</span>, as_index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    .first()[</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        [</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">"caso"</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">"nombre_metodo"</span>,</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_valor"</span>,</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_distancia_al_optimo"</span>,</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_evaluaciones"</span>,</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        ]</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>ranking_por_caso</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ranking_por_caso <span class="op">=</span> (</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    summary_df.sort_values(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        [<span class="st">"caso"</span>, <span class="st">"promedio_valor"</span>, <span class="st">"promedio_distancia_al_optimo"</span>, <span class="st">"promedio_evaluaciones"</span>]</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"caso"</span>, as_index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    .first()[</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">"caso"</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">"nombre_metodo"</span>,</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_valor"</span>,</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_distancia_al_optimo"</span>,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">"promedio_evaluaciones"</span>,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>ranking_por_caso</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-display" data-execution_count="79">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">caso</th>
+<th data-quarto-table-cell-role="th">nombre_metodo</th>
+<th data-quarto-table-cell-role="th">promedio_valor</th>
+<th data-quarto-table-cell-role="th">promedio_distancia_al_optimo</th>
+<th data-quarto-table-cell-role="th">promedio_evaluaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Goldstein-Price 2D</td>
+<td>Evolucion diferencial</td>
+<td>3.000000e+00</td>
+<td>4.393659e-09</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Griewank 2D</td>
+<td>Evolucion diferencial</td>
+<td>2.150460e-03</td>
+<td>7.927933e-01</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Griewank 3D</td>
+<td>PSO</td>
+<td>9.002913e-03</td>
+<td>4.826982e+00</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Rastrigin 2D</td>
+<td>Evolucion diferencial</td>
+<td>7.571831e-12</td>
+<td>8.089109e-08</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Rastrigin 3D</td>
+<td>Evolucion diferencial</td>
+<td>1.597214e-02</td>
+<td>4.741411e-03</td>
+<td>4840.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>Rosenbrock 2D</td>
+<td>Evolucion diferencial</td>
+<td>7.908427e-13</td>
+<td>6.003521e-07</td>
+<td>4840.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>Schwefel 2D</td>
+<td>Evolucion diferencial</td>
+<td>2.545513e-05</td>
+<td>6.148978e-07</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>Schwefel 3D</td>
+<td>Evolucion diferencial</td>
+<td>3.819315e-05</td>
+<td>2.265668e-04</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>Six-Hump Camel 2D</td>
+<td>PSO</td>
+<td>-1.031628e+00</td>
+<td>1.110487e+00</td>
+<td>4840.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div>
 </section>
 <section id="figuras-para-reporte" class="level2">
 <h2 class="anchored" data-anchor-id="figuras-para-reporte">Figuras para reporte</h2>
-<div id="cell-13" class="cell">
+<div id="5edf7a10" class="cell" data-execution_count="80">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>method_colors <span class="op">=</span> {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Algoritmo evolutivo"</span>: <span class="st">"#4C78A8"</span>,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PSO"</span>: <span class="st">"#F58518"</span>,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Evolucion diferencial"</span>: <span class="st">"#54A24B"</span>,</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> save_current_figure(filename: <span class="bu">str</span>) <span class="op">-&gt;</span> Path:</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> filename</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    plt.savefig(path, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>method_colors <span class="op">=</span> {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Algoritmo evolutivo"</span>: <span class="st">"#4C78A8"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PSO"</span>: <span class="st">"#F58518"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Evolucion diferencial"</span>: <span class="st">"#54A24B"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> save_current_figure(filename: <span class="bu">str</span>) <span class="op">-&gt;</span> Path:</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> filename</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    plt.savefig(path, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="barras-comparativas-por-metodo" class="level3">
-<h3 class="anchored" data-anchor-id="barras-comparativas-por-metodo">1. Barras comparativas por metodo</h3>
-<div id="cell-15" class="cell">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>promedio_por_metodo <span class="op">=</span> (</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    summary_df.groupby(<span class="st">"nombre_metodo"</span>, as_index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    .agg(</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        promedio_valor<span class="op">=</span>(<span class="st">"promedio_valor"</span>, <span class="st">"mean"</span>),</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        promedio_evaluaciones<span class="op">=</span>(<span class="st">"promedio_evaluaciones"</span>, <span class="st">"mean"</span>),</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        promedio_distancia<span class="op">=</span>(<span class="st">"promedio_distancia_al_optimo"</span>, <span class="st">"mean"</span>),</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">5</span>))</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, metric, title <span class="kw">in</span> [</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    (axes[<span class="dv">0</span>], <span class="st">"promedio_valor"</span>, <span class="st">"Valor final promedio"</span>),</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    (axes[<span class="dv">1</span>], <span class="st">"promedio_evaluaciones"</span>, <span class="st">"Evaluaciones promedio"</span>),</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    (axes[<span class="dv">2</span>], <span class="st">"promedio_distancia"</span>, <span class="st">"Distancia promedio al optimo"</span>),</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>]:</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    colors <span class="op">=</span> [method_colors.get(name, <span class="st">"#777777"</span>) <span class="cf">for</span> name <span class="kw">in</span> promedio_por_metodo[<span class="st">"nombre_metodo"</span>]]</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    ax.bar(promedio_por_metodo[<span class="st">"nombre_metodo"</span>], promedio_por_metodo[metric], color<span class="op">=</span>colors)</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    ax.set_title(title)</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">"x"</span>, rotation<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    ax.grid(axis<span class="op">=</span><span class="st">"y"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>fig_path <span class="op">=</span> save_current_figure(<span class="st">"01_barras_resumen_por_metodo.png"</span>)</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>fig_path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section>
-<section id="heatmap-comparativo-por-caso-y-metodo" class="level3">
-<h3 class="anchored" data-anchor-id="heatmap-comparativo-por-caso-y-metodo">2. Heatmap comparativo por caso y metodo</h3>
-<div id="cell-17" class="cell">
-<details class="code-fold">
-<summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pivot_valor <span class="op">=</span> summary_df.pivot(index<span class="op">=</span><span class="st">"caso"</span>, columns<span class="op">=</span><span class="st">"nombre_metodo"</span>, values<span class="op">=</span><span class="st">"promedio_valor"</span>).sort_index()</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pivot_eval <span class="op">=</span> summary_df.pivot(index<span class="op">=</span><span class="st">"caso"</span>, columns<span class="op">=</span><span class="st">"nombre_metodo"</span>, values<span class="op">=</span><span class="st">"promedio_evaluaciones"</span>).sort_index()</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">7</span>))</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>im1 <span class="op">=</span> axes[<span class="dv">0</span>].imshow(pivot_valor.values, aspect<span class="op">=</span><span class="st">"auto"</span>, cmap<span class="op">=</span><span class="st">"viridis"</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"Promedio del valor final"</span>)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xticks(<span class="bu">range</span>(<span class="bu">len</span>(pivot_valor.columns)))</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xticklabels(pivot_valor.columns, rotation<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_yticks(<span class="bu">range</span>(<span class="bu">len</span>(pivot_valor.index)))</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_yticklabels(pivot_valor.index)</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>fig.colorbar(im1, ax<span class="op">=</span>axes[<span class="dv">0</span>], fraction<span class="op">=</span><span class="fl">0.046</span>, pad<span class="op">=</span><span class="fl">0.04</span>)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>im2 <span class="op">=</span> axes[<span class="dv">1</span>].imshow(pivot_eval.values, aspect<span class="op">=</span><span class="st">"auto"</span>, cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"Promedio de evaluaciones"</span>)</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xticks(<span class="bu">range</span>(<span class="bu">len</span>(pivot_eval.columns)))</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xticklabels(pivot_eval.columns, rotation<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_yticks(<span class="bu">range</span>(<span class="bu">len</span>(pivot_eval.index)))</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_yticklabels(pivot_eval.index)</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>fig.colorbar(im2, ax<span class="op">=</span>axes[<span class="dv">1</span>], fraction<span class="op">=</span><span class="fl">0.046</span>, pad<span class="op">=</span><span class="fl">0.04</span>)</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>fig_path <span class="op">=</span> save_current_figure(<span class="st">"02_heatmap_casos_vs_metodos.png"</span>)</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>fig_path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section>
 <section id="distribuciones-por-metodo" class="level3">
 <h3 class="anchored" data-anchor-id="distribuciones-por-metodo">3. Distribuciones por metodo</h3>
-<div id="cell-19" class="cell">
+<div id="3f6ee71d" class="cell" data-execution_count="83">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">5</span>))</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>method_names <span class="op">=</span> <span class="bu">list</span>(<span class="bu">dict</span>.fromkeys(runs_df[<span class="st">"nombre_metodo"</span>]))</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> method_name <span class="kw">in</span> method_names:</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    subset <span class="op">=</span> runs_df[runs_df[<span class="st">"nombre_metodo"</span>] <span class="op">==</span> method_name]</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> method_colors.get(method_name, <span class="st">"#777777"</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">0</span>].hist(subset[<span class="st">"mejor_valor"</span>], bins<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, label<span class="op">=</span>method_name, color<span class="op">=</span>color)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">1</span>].hist(subset[<span class="st">"evaluaciones"</span>], bins<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, label<span class="op">=</span>method_name, color<span class="op">=</span>color)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"Distribucion del mejor valor"</span>)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xlabel(<span class="st">"Mejor valor"</span>)</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">"Frecuencia"</span>)</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"Distribucion de evaluaciones"</span>)</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">"Evaluaciones"</span>)</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">"Frecuencia"</span>)</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend()</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>fig_path <span class="op">=</span> save_current_figure(<span class="st">"03_histogramas_por_metodo.png"</span>)</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>fig_path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">5</span>))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>method_names <span class="op">=</span> <span class="bu">list</span>(<span class="bu">dict</span>.fromkeys(runs_df[<span class="st">"nombre_metodo"</span>]))</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> method_name <span class="kw">in</span> method_names:</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    subset <span class="op">=</span> runs_df[runs_df[<span class="st">"nombre_metodo"</span>] <span class="op">==</span> method_name]</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> method_colors.get(method_name, <span class="st">"#777777"</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">0</span>].hist(subset[<span class="st">"mejor_valor"</span>], bins<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, label<span class="op">=</span>method_name, color<span class="op">=</span>color)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">1</span>].hist(subset[<span class="st">"evaluaciones"</span>], bins<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, label<span class="op">=</span>method_name, color<span class="op">=</span>color)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"Distribucion del mejor valor"</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xlabel(<span class="st">"Mejor valor"</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">"Frecuencia"</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"Distribucion de evaluaciones"</span>)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">"Evaluaciones"</span>)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">"Frecuencia"</span>)</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend()</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>fig_path <span class="op">=</span> save_current_figure(<span class="st">"03_histogramas_por_metodo.png"</span>)</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>fig_path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="83">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/03_histogramas_por_metodo.png')</code></pre>
+</div>
 </div>
 </section>
 <section id="comparacion-por-caso" class="level3">
 <h3 class="anchored" data-anchor-id="comparacion-por-caso">4. Comparacion por caso</h3>
-<div id="cell-21" class="cell">
+<div id="54cd556c" class="cell" data-execution_count="84">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ordered_cases <span class="op">=</span> <span class="bu">sorted</span>(summary_df[<span class="st">"caso"</span>].unique())</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>n_cases <span class="op">=</span> <span class="bu">len</span>(ordered_cases)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(n_cases, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="bu">max</span>(<span class="dv">4</span> <span class="op">*</span> n_cases, <span class="dv">10</span>)))</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> n_cases <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    axes <span class="op">=</span> np.array([axes])</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row_index, case_name <span class="kw">in</span> <span class="bu">enumerate</span>(ordered_cases):</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    case_data <span class="op">=</span> summary_df[summary_df[<span class="st">"caso"</span>] <span class="op">==</span> case_name].sort_values(<span class="st">"nombre_metodo"</span>)</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    colors <span class="op">=</span> [method_colors.get(name, <span class="st">"#777777"</span>) <span class="cf">for</span> name <span class="kw">in</span> case_data[<span class="st">"nombre_metodo"</span>]]</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">0</span>].bar(case_data[<span class="st">"nombre_metodo"</span>], case_data[<span class="st">"promedio_valor"</span>], color<span class="op">=</span>colors)</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">0</span>].set_title(<span class="ss">f"</span><span class="sc">{</span>case_name<span class="sc">}</span><span class="ss"> - Valor promedio"</span>)</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">0</span>].tick_params(axis<span class="op">=</span><span class="st">"x"</span>, rotation<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">0</span>].grid(axis<span class="op">=</span><span class="st">"y"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">1</span>].bar(case_data[<span class="st">"nombre_metodo"</span>], case_data[<span class="st">"promedio_evaluaciones"</span>], color<span class="op">=</span>colors)</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">1</span>].set_title(<span class="ss">f"</span><span class="sc">{</span>case_name<span class="sc">}</span><span class="ss"> - Evaluaciones promedio"</span>)</span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">1</span>].tick_params(axis<span class="op">=</span><span class="st">"x"</span>, rotation<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">1</span>].grid(axis<span class="op">=</span><span class="st">"y"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>fig_path <span class="op">=</span> save_current_figure(<span class="st">"04_comparacion_por_caso.png"</span>)</span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>fig_path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ordered_cases <span class="op">=</span> ordered_case_n</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>n_cases <span class="op">=</span> <span class="bu">len</span>(ordered_cases)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(n_cases, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="bu">max</span>(<span class="dv">4</span> <span class="op">*</span> n_cases, <span class="dv">10</span>)))</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> n_cases <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    axes <span class="op">=</span> np.array([axes])</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row_index, case_name <span class="kw">in</span> <span class="bu">enumerate</span>(ordered_cases):</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    case_data <span class="op">=</span> summary_df[summary_df[<span class="st">"caso_n"</span>] <span class="op">==</span> case_name].sort_values(<span class="st">"nombre_metodo"</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    colors <span class="op">=</span> [method_colors.get(name, <span class="st">"#777777"</span>) <span class="cf">for</span> name <span class="kw">in</span> case_data[<span class="st">"nombre_metodo"</span>]]</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">0</span>].bar(case_data[<span class="st">"nombre_metodo"</span>], case_data[<span class="st">"promedio_valor"</span>], color<span class="op">=</span>colors)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">0</span>].set_title(<span class="ss">f"</span><span class="sc">{</span>case_name<span class="sc">}</span><span class="ss"> - Valor promedio"</span>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">0</span>].tick_params(axis<span class="op">=</span><span class="st">"x"</span>, rotation<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">0</span>].grid(axis<span class="op">=</span><span class="st">"y"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">1</span>].bar(case_data[<span class="st">"nombre_metodo"</span>], case_data[<span class="st">"promedio_evaluaciones"</span>], color<span class="op">=</span>colors)</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">1</span>].set_title(<span class="ss">f"</span><span class="sc">{</span>case_name<span class="sc">}</span><span class="ss"> - Evaluaciones promedio"</span>)</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">1</span>].tick_params(axis<span class="op">=</span><span class="st">"x"</span>, rotation<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    axes[row_index, <span class="dv">1</span>].grid(axis<span class="op">=</span><span class="st">"y"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>fig_path <span class="op">=</span> save_current_figure(<span class="st">"04_comparacion_por_caso.png"</span>)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>fig_path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="84">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/04_comparacion_por_caso.png')</code></pre>
+</div>
 </div>
 </section>
 <section id="graficas-de-convergencia" class="level3">
 <h3 class="anchored" data-anchor-id="graficas-de-convergencia">5. Graficas de convergencia</h3>
 <p>Estas curvas requieren que cada archivo JSON de corridas incluya <code>best_values_history</code>. Si todavia no aparece ese campo, hay que volver a ejecutar el generador.</p>
-<div id="cell-23" class="cell">
+<div id="719f90a1" class="cell">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_json_runs() <span class="op">-&gt;</span> <span class="bu">list</span>[<span class="bu">dict</span>]:</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    all_rows <span class="op">=</span> []</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> json_path <span class="kw">in</span> run_json_files:</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> json_path.<span class="bu">open</span>(<span class="st">"r"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>            rows <span class="op">=</span> json.load(<span class="bu">file</span>)</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> row <span class="kw">in</span> rows:</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>            row[<span class="st">"source_file"</span>] <span class="op">=</span> json_path.name</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>            all_rows.append(row)</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> all_rows</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>json_runs <span class="op">=</span> load_json_runs()</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>has_histories <span class="op">=</span> <span class="bu">any</span>(<span class="st">"best_values_history"</span> <span class="kw">in</span> row <span class="cf">for</span> row <span class="kw">in</span> json_runs)</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hay historiales de convergencia disponibles:"</span>, has_histories)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_json_runs() <span class="op">-&gt;</span> <span class="bu">list</span>[<span class="bu">dict</span>]:</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    all_rows <span class="op">=</span> []</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> json_path <span class="kw">in</span> run_json_files:</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> json_path.<span class="bu">open</span>(<span class="st">"r"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>            rows <span class="op">=</span> json.load(<span class="bu">file</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> row <span class="kw">in</span> rows:</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>            row[<span class="st">"source_file"</span>] <span class="op">=</span> json_path.name</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>            all_rows.append(row)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> all_rows</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>json_runs <span class="op">=</span> load_json_runs()</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>has_histories <span class="op">=</span> <span class="bu">any</span>(<span class="st">"best_values_history"</span> <span class="kw">in</span> row <span class="cf">for</span> row <span class="kw">in</span> json_runs)</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hay historiales de convergencia disponibles:"</span>, has_histories)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hay historiales de convergencia disponibles: True</code></pre>
 </div>
-<div id="cell-24" class="cell">
+</div>
+<div id="d9fab86e" class="cell">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> has_histories:</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    convergence_rows <span class="op">=</span> [row <span class="cf">for</span> row <span class="kw">in</span> json_runs <span class="cf">if</span> <span class="st">"best_values_history"</span> <span class="kw">in</span> row <span class="kw">and</span> row[<span class="st">"best_values_history"</span>]]</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    convergence_cases <span class="op">=</span> <span class="bu">sorted</span>({<span class="ss">f"</span><span class="sc">{</span>row[<span class="st">'nombre_funcion'</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">'dimension'</span>]<span class="sc">}</span><span class="ss">D"</span> <span class="cf">for</span> row <span class="kw">in</span> convergence_rows})</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> convergence_cases:</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        selected_cases <span class="op">=</span> convergence_cases[: <span class="bu">min</span>(<span class="dv">6</span>, <span class="bu">len</span>(convergence_cases))]</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        n_cols <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        n_rows <span class="op">=</span> <span class="bu">int</span>(np.ceil(<span class="bu">len</span>(selected_cases) <span class="op">/</span> n_cols))</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        fig, axes <span class="op">=</span> plt.subplots(n_rows, n_cols, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">5</span> <span class="op">*</span> n_rows))</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        axes <span class="op">=</span> np.array(axes).reshape(<span class="op">-</span><span class="dv">1</span>)</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ax, case_name <span class="kw">in</span> <span class="bu">zip</span>(axes, selected_cases):</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>            case_rows <span class="op">=</span> [</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>                row <span class="cf">for</span> row <span class="kw">in</span> convergence_rows</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="ss">f"</span><span class="sc">{</span>row[<span class="st">'nombre_funcion'</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">'dimension'</span>]<span class="sc">}</span><span class="ss">D"</span> <span class="op">==</span> case_name</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>            ]</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> method_name <span class="kw">in</span> <span class="bu">sorted</span>({row[<span class="st">'nombre_metodo'</span>] <span class="cf">for</span> row <span class="kw">in</span> case_rows}):</span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>                method_histories <span class="op">=</span> [</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>                    np.asarray(row[<span class="st">"best_values_history"</span>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">for</span> row <span class="kw">in</span> case_rows</span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> row[<span class="st">"nombre_metodo"</span>] <span class="op">==</span> method_name</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>                ]</span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>                min_length <span class="op">=</span> <span class="bu">min</span>(<span class="bu">len</span>(history) <span class="cf">for</span> history <span class="kw">in</span> method_histories)</span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>                aligned <span class="op">=</span> np.vstack([history[:min_length] <span class="cf">for</span> history <span class="kw">in</span> method_histories])</span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>                mean_history <span class="op">=</span> aligned.mean(axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>                color <span class="op">=</span> method_colors.get(method_name, <span class="st">"#777777"</span>)</span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>                ax.plot(mean_history, label<span class="op">=</span>method_name, linewidth<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>color)</span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>            ax.set_title(<span class="ss">f"Convergencia - </span><span class="sc">{</span>case_name<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>            ax.set_xlabel(<span class="st">"Iteracion"</span>)</span>
-<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>            ax.set_ylabel(<span class="st">"Mejor valor medio"</span>)</span>
-<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>            ax.set_yscale(<span class="st">"symlog"</span>)</span>
-<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>            ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>            ax.legend()</span>
-<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ax <span class="kw">in</span> axes[<span class="bu">len</span>(selected_cases):]:</span>
-<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>            ax.axis(<span class="st">"off"</span>)</span>
-<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>        plt.tight_layout()</span>
-<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>        fig_path <span class="op">=</span> save_current_figure(<span class="st">"05_convergencia_por_caso.png"</span>)</span>
-<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
-<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>        display(fig_path)</span>
-<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"No hay casos con historiales de convergencia para graficar."</span>)</span>
-<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No se encontraron historiales. Vuelve a ejecutar generador_de_datos.ipynb despues de guardar best_values_history."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> has_histories:</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    convergence_rows <span class="op">=</span> [row <span class="cf">for</span> row <span class="kw">in</span> json_runs <span class="cf">if</span> <span class="st">"best_values_history"</span> <span class="kw">in</span> row <span class="kw">and</span> row[<span class="st">"best_values_history"</span>]]</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    convergence_cases <span class="op">=</span> <span class="bu">sorted</span>({<span class="ss">f"</span><span class="sc">{</span>row[<span class="st">'nombre_funcion'</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">'dimension'</span>]<span class="sc">}</span><span class="ss">D"</span> <span class="cf">for</span> row <span class="kw">in</span> convergence_rows})</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> convergence_cases:</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>        selected_cases <span class="op">=</span> convergence_cases[: <span class="bu">min</span>(<span class="dv">6</span>, <span class="bu">len</span>(convergence_cases))]</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>        n_cols <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        n_rows <span class="op">=</span> <span class="bu">int</span>(np.ceil(<span class="bu">len</span>(selected_cases) <span class="op">/</span> n_cols))</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>        fig, axes <span class="op">=</span> plt.subplots(n_rows, n_cols, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">5</span> <span class="op">*</span> n_rows))</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>        axes <span class="op">=</span> np.array(axes).reshape(<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ax, case_name <span class="kw">in</span> <span class="bu">zip</span>(axes, selected_cases):</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>            case_rows <span class="op">=</span> [</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>                row <span class="cf">for</span> row <span class="kw">in</span> convergence_rows</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="ss">f"</span><span class="sc">{</span>row[<span class="st">'nombre_funcion'</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>row[<span class="st">'dimension'</span>]<span class="sc">}</span><span class="ss">D"</span> <span class="op">==</span> case_name</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>            ]</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> method_name <span class="kw">in</span> <span class="bu">sorted</span>({row[<span class="st">'nombre_metodo'</span>] <span class="cf">for</span> row <span class="kw">in</span> case_rows}):</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>                method_histories <span class="op">=</span> [</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>                    np.asarray(row[<span class="st">"best_values_history"</span>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">for</span> row <span class="kw">in</span> case_rows</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> row[<span class="st">"nombre_metodo"</span>] <span class="op">==</span> method_name</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>                min_length <span class="op">=</span> <span class="bu">min</span>(<span class="bu">len</span>(history) <span class="cf">for</span> history <span class="kw">in</span> method_histories)</span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>                aligned <span class="op">=</span> np.vstack([history[:min_length] <span class="cf">for</span> history <span class="kw">in</span> method_histories])</span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>                mean_history <span class="op">=</span> aligned.mean(axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>                color <span class="op">=</span> method_colors.get(method_name, <span class="st">"#777777"</span>)</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>                ax.plot(mean_history, label<span class="op">=</span>method_name, linewidth<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>color)</span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>            ax.set_title(<span class="ss">f"Convergencia - </span><span class="sc">{</span>case_name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>            ax.set_xlabel(<span class="st">"Iteracion"</span>)</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>            ax.set_ylabel(<span class="st">"Mejor valor medio"</span>)</span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>            ax.set_yscale(<span class="st">"symlog"</span>)</span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>            ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>            ax.legend()</span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ax <span class="kw">in</span> axes[<span class="bu">len</span>(selected_cases):]:</span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>            ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>        plt.tight_layout()</span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>        fig_path <span class="op">=</span> save_current_figure(<span class="st">"05_convergencia_por_caso.png"</span>)</span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>        display(fig_path)</span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"No hay casos con historiales de convergencia para graficar."</span>)</span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No se encontraron historiales. Vuelve a ejecutar generador_de_datos.ipynb despues de guardar best_values_history."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/05_convergencia_por_caso.png')</code></pre>
+</div>
+</div>
+<div id="49bca1ca" class="cell">
+<details class="code-fold">
+<summary>Ver codigo</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> has_histories:</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    convergence_rows <span class="op">=</span> [</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        row <span class="cf">for</span> row <span class="kw">in</span> json_runs</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">"best_values_history"</span> <span class="kw">in</span> row <span class="kw">and</span> row[<span class="st">"best_values_history"</span>]</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">5</span>))</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    dimensiones <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax, dim <span class="kw">in</span> <span class="bu">zip</span>(axes, dimensiones):</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>        case_rows <span class="op">=</span> [</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>            row <span class="cf">for</span> row <span class="kw">in</span> convergence_rows</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">str</span>(row[<span class="st">"nombre_funcion"</span>]).lower() <span class="op">==</span> <span class="st">"rosenbrock"</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>            <span class="kw">and</span> <span class="bu">int</span>(row[<span class="st">"dimension"</span>]) <span class="op">==</span> dim</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> case_rows:</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>            ax.set_title(<span class="ss">f"Rosenbrock </span><span class="sc">{</span>dim<span class="sc">}</span><span class="ss">D - sin datos"</span>)</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>            ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> method_name <span class="kw">in</span> <span class="bu">sorted</span>({row[<span class="st">"nombre_metodo"</span>] <span class="cf">for</span> row <span class="kw">in</span> case_rows}):</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>            method_histories <span class="op">=</span> [</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>                np.asarray(row[<span class="st">"best_values_history"</span>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> row <span class="kw">in</span> case_rows</span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> row[<span class="st">"nombre_metodo"</span>] <span class="op">==</span> method_name</span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>            ]</span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a>            min_length <span class="op">=</span> <span class="bu">min</span>(<span class="bu">len</span>(history) <span class="cf">for</span> history <span class="kw">in</span> method_histories)</span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a>            aligned <span class="op">=</span> np.vstack([history[:min_length] <span class="cf">for</span> history <span class="kw">in</span> method_histories])</span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>            mean_history <span class="op">=</span> aligned.mean(axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>            color <span class="op">=</span> method_colors.get(method_name, <span class="st">"#777777"</span>)</span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a>            ax.plot(mean_history, label<span class="op">=</span>method_name, linewidth<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>color)</span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>        ax.set_title(<span class="ss">f"Convergencia - Rosenbrock </span><span class="sc">{</span>dim<span class="sc">}</span><span class="ss">D"</span>)</span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">"Iteracion"</span>)</span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">"Mejor valor medio"</span>)</span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a>        ax.set_yscale(<span class="st">"symlog"</span>)</span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>        ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a>        ax.legend()</span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a>    fig_path <span class="op">=</span> save_current_figure(<span class="st">"convergencia_rosenbrock_2d_3d.png"</span>)</span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a>    display(fig_path)</span>
+<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No se encontraron historiales."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/convergencia_rosenbrock_2d_3d.png')</code></pre>
+</div>
+</div>
+<div id="77badbe6" class="cell">
+<details class="code-fold">
+<summary>Ver codigo</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> has_histories:</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    convergence_rows <span class="op">=</span> [</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>        row <span class="cf">for</span> row <span class="kw">in</span> json_runs</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">"best_values_history"</span> <span class="kw">in</span> row <span class="kw">and</span> row[<span class="st">"best_values_history"</span>]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    funciones <span class="op">=</span> <span class="bu">sorted</span>({<span class="bu">str</span>(row[<span class="st">"nombre_funcion"</span>]).lower() <span class="cf">for</span> row <span class="kw">in</span> convergence_rows})</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> funcion <span class="kw">in</span> funciones:</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>        fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">5</span>))</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>        dimensiones <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ax, dim <span class="kw">in</span> <span class="bu">zip</span>(axes, dimensiones):</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>            case_rows <span class="op">=</span> [</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>                row <span class="cf">for</span> row <span class="kw">in</span> convergence_rows</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="bu">str</span>(row[<span class="st">"nombre_funcion"</span>]).lower() <span class="op">==</span> funcion</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>                <span class="kw">and</span> <span class="bu">int</span>(row[<span class="st">"dimension"</span>]) <span class="op">==</span> dim</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>            ]</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> case_rows:</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>                ax.set_title(<span class="ss">f"</span><span class="sc">{</span>funcion<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>dim<span class="sc">}</span><span class="ss">D - sin datos"</span>)</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>                ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>                <span class="cf">continue</span></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> method_name <span class="kw">in</span> <span class="bu">sorted</span>({row[<span class="st">"nombre_metodo"</span>] <span class="cf">for</span> row <span class="kw">in</span> case_rows}):</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>                method_histories <span class="op">=</span> [</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>                    np.asarray(row[<span class="st">"best_values_history"</span>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">for</span> row <span class="kw">in</span> case_rows</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> row[<span class="st">"nombre_metodo"</span>] <span class="op">==</span> method_name</span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>                ]</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>                min_length <span class="op">=</span> <span class="bu">min</span>(<span class="bu">len</span>(history) <span class="cf">for</span> history <span class="kw">in</span> method_histories)</span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>                aligned <span class="op">=</span> np.vstack([history[:min_length] <span class="cf">for</span> history <span class="kw">in</span> method_histories])</span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>                mean_history <span class="op">=</span> aligned.mean(axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>                color <span class="op">=</span> method_colors.get(method_name, <span class="st">"#777777"</span>)</span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>                ax.plot(mean_history, label<span class="op">=</span>method_name, linewidth<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>color)</span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a>            ax.set_title(<span class="ss">f"Convergencia - </span><span class="sc">{</span>funcion<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>dim<span class="sc">}</span><span class="ss">D"</span>)</span>
+<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a>            ax.set_xlabel(<span class="st">"Iteracion"</span>)</span>
+<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a>            ax.set_ylabel(<span class="st">"Mejor valor medio"</span>)</span>
+<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a>            ax.set_yscale(<span class="st">"symlog"</span>)</span>
+<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a>            ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a>            ax.legend()</span>
+<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a>        plt.tight_layout()</span>
+<span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a>        fig_path <span class="op">=</span> save_current_figure(<span class="ss">f"convergencia_</span><span class="sc">{</span>funcion<span class="sc">}</span><span class="ss">_2d_3d.png"</span>)</span>
+<span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
+<span id="cb22-49"><a href="#cb22-49" aria-hidden="true" tabindex="-1"></a>        display(fig_path)</span>
+<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No se encontraron historiales."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/convergencia_goldstein-price_2d_3d.png')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-14-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/convergencia_griewank_2d_3d.png')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-14-output-5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/convergencia_rastrigin_2d_3d.png')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-14-output-7.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/convergencia_rosenbrock_2d_3d.png')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-14-output-9.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/convergencia_schwefel_2d_3d.png')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-14-output-11.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/convergencia_six-hump camel_2d_3d.png')</code></pre>
+</div>
 </div>
 </section>
 </section>
 <section id="exportables-utiles-para-el-reporte" class="level2">
 <h2 class="anchored" data-anchor-id="exportables-utiles-para-el-reporte">Exportables utiles para el reporte</h2>
-<div id="cell-26" class="cell">
+<div id="2da565f8" class="cell">
 <details class="code-fold">
 <summary>Ver codigo</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tabla_reporte_path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> <span class="st">"tabla_resumen_heuristicos.csv"</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>ranking_path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> <span class="st">"ranking_por_caso.csv"</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>mejores_path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> <span class="st">"mejores_casos.csv"</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>peores_path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> <span class="st">"peores_casos.csv"</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>tabla_reporte.to_csv(tabla_reporte_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>ranking_por_caso.to_csv(ranking_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>mejores_casos.to_csv(mejores_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>peores_casos.to_csv(peores_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Archivos exportados:"</span>)</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span>, tabla_reporte_path)</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span>, ranking_path)</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span>, mejores_path)</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span>, peores_path)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>tabla_reporte_path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> <span class="st">"tabla_resumen_heuristicos.csv"</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>ranking_path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> <span class="st">"ranking_por_caso.csv"</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>mejores_path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> <span class="st">"mejores_casos.csv"</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>peores_path <span class="op">=</span> FIGURES_DIR <span class="op">/</span> <span class="st">"peores_casos.csv"</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>tabla_reporte.to_csv(tabla_reporte_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>ranking_por_caso.to_csv(ranking_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>mejores_casos.to_csv(mejores_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>peores_casos.to_csv(peores_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Archivos exportados:"</span>)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span>, tabla_reporte_path)</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span>, ranking_path)</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span>, mejores_path)</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span>, peores_path)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Archivos exportados:
+- c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\tabla_resumen_heuristicos.csv
+- c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\ranking_por_caso.csv
+- c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\mejores_casos.csv
+- c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\peores_casos.csv</code></pre>
+</div>
+</div>
+<div id="bad454d6" class="cell">
+<details class="code-fold">
+<summary>Ver codigo</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Graficas de barras del mejor valor promedio por metodo:</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co"># izquierda = 2D, derecha = 3D</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>data_2d <span class="op">=</span> summary_df[</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    summary_df[<span class="st">"caso_n"</span>].astype(<span class="bu">str</span>).<span class="bu">str</span>.contains(<span class="st">"2d"</span>, case<span class="op">=</span><span class="va">False</span>, na<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>].copy()</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>data_3d <span class="op">=</span> summary_df[</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    summary_df[<span class="st">"caso_n"</span>].astype(<span class="bu">str</span>).<span class="bu">str</span>.contains(<span class="st">"3d"</span>, case<span class="op">=</span><span class="va">False</span>, na<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>].copy()</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>resumen_2d <span class="op">=</span> (</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    data_2d.groupby(<span class="st">"nombre_metodo"</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">"promedio_valor"</span>]</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    .mean()</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>    .sort_values(<span class="st">"promedio_valor"</span>)</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>resumen_3d <span class="op">=</span> (</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>    data_3d.groupby(<span class="st">"nombre_metodo"</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">"promedio_valor"</span>]</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>    .mean()</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>    .sort_values(<span class="st">"promedio_valor"</span>)</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>valor_optimo_2d <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>valor_optimo_3d <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">4</span>), sharey<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>colors_2d <span class="op">=</span> [method_colors.get(name, <span class="st">"#777777"</span>) <span class="cf">for</span> name <span class="kw">in</span> resumen_2d[<span class="st">"nombre_metodo"</span>]]</span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>colors_3d <span class="op">=</span> [method_colors.get(name, <span class="st">"#777777"</span>) <span class="cf">for</span> name <span class="kw">in</span> resumen_3d[<span class="st">"nombre_metodo"</span>]]</span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].bar(resumen_2d[<span class="st">"nombre_metodo"</span>], resumen_2d[<span class="st">"promedio_valor"</span>], color<span class="op">=</span>colors_2d)</span>
+<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].axhline(valor_optimo_2d, color<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, linewidth<span class="op">=</span><span class="fl">1.8</span>, label<span class="op">=</span><span class="st">"Valor optimo"</span>)</span>
+<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"Mejor valor promedio por metodo en 2D"</span>)</span>
+<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xlabel(<span class="st">"Metodo"</span>)</span>
+<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">"Mejor valor promedio"</span>)</span>
+<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].tick_params(axis<span class="op">=</span><span class="st">"x"</span>, rotation<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].grid(axis<span class="op">=</span><span class="st">"y"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend()</span>
+<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].bar(resumen_3d[<span class="st">"nombre_metodo"</span>], resumen_3d[<span class="st">"promedio_valor"</span>], color<span class="op">=</span>colors_3d)</span>
+<span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axhline(valor_optimo_3d, color<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, linewidth<span class="op">=</span><span class="fl">1.8</span>, label<span class="op">=</span><span class="st">"Valor optimo"</span>)</span>
+<span id="cb31-43"><a href="#cb31-43" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"Mejor valor promedio por metodo en 3D"</span>)</span>
+<span id="cb31-44"><a href="#cb31-44" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">"Metodo"</span>)</span>
+<span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">"Mejor valor promedio"</span>)</span>
+<span id="cb31-46"><a href="#cb31-46" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].tick_params(axis<span class="op">=</span><span class="st">"x"</span>, rotation<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].grid(axis<span class="op">=</span><span class="st">"y"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb31-48"><a href="#cb31-48" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
+<span id="cb31-49"><a href="#cb31-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-50"><a href="#cb31-50" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb31-51"><a href="#cb31-51" aria-hidden="true" tabindex="-1"></a>fig_path <span class="op">=</span> save_current_figure(<span class="st">"mejor_valor_promedio_por_metodo_2d_3d.png"</span>)</span>
+<span id="cb31-52"><a href="#cb31-52" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb31-53"><a href="#cb31-53" aria-hidden="true" tabindex="-1"></a>fig_path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-16-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="62">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/mejor_valor_promedio_por_metodo_2d_3d.png')</code></pre>
+</div>
+</div>
+<div id="a94e202a" class="cell">
+<details class="code-fold">
+<summary>Ver codigo</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafica completa:</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co"># izquierda = 2D, derecha = 3D</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># eje x = numero de corridas (100, 500, 1000)</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># barras = metodo</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="co"># y = promedio_valor</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>plot_df <span class="op">=</span> summary_df.copy()</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>plot_df[<span class="st">"dimension"</span>] <span class="op">=</span> plot_df[<span class="st">"caso_n"</span>].astype(<span class="bu">str</span>).<span class="bu">str</span>.extract(<span class="vs">r"</span><span class="kw">(</span><span class="vs">2d</span><span class="cf">|</span><span class="vs">3d</span><span class="kw">)</span><span class="vs">"</span>, expand<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>plot_df[<span class="st">"n_corridas"</span>] <span class="op">=</span> pd.to_numeric(</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    plot_df[<span class="st">"caso_n"</span>].astype(<span class="bu">str</span>).<span class="bu">str</span>.extract(<span class="vs">r"n</span><span class="kw">(</span><span class="dv">\d</span><span class="op">+</span><span class="kw">)</span><span class="vs">"</span>, expand<span class="op">=</span><span class="va">False</span>),</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    errors<span class="op">=</span><span class="st">"coerce"</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>plot_df[<span class="st">"metodo_plot"</span>] <span class="op">=</span> (</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>    plot_df[<span class="st">"nombre_metodo"</span>]</span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>    .astype(<span class="bu">str</span>)</span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">str</span>.lower()</span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>    .replace({</span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"evolucion diferencial"</span>: <span class="st">"DE"</span>,</span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"algoritmo evolutivo"</span>: <span class="st">"AG"</span>,</span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"pso"</span>: <span class="st">"PSO"</span>,</span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>        <span class="st">"de"</span>: <span class="st">"DE"</span>,</span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ea"</span>: <span class="st">"AG"</span>,</span>
+<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ag"</span>: <span class="st">"AG"</span></span>
+<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a>plot_df <span class="op">=</span> plot_df.dropna(subset<span class="op">=</span>[<span class="st">"dimension"</span>, <span class="st">"n_corridas"</span>, <span class="st">"promedio_valor"</span>])</span>
+<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a>plot_df[<span class="st">"n_corridas"</span>] <span class="op">=</span> plot_df[<span class="st">"n_corridas"</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">4</span>), sharey<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-34"><a href="#cb33-34" aria-hidden="true" tabindex="-1"></a>orden_n <span class="op">=</span> [<span class="dv">100</span>, <span class="dv">500</span>, <span class="dv">1000</span>]</span>
+<span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a>orden_metodos <span class="op">=</span> [<span class="st">"DE"</span>, <span class="st">"AG"</span>, <span class="st">"PSO"</span>]</span>
+<span id="cb33-36"><a href="#cb33-36" aria-hidden="true" tabindex="-1"></a>colores <span class="op">=</span> {</span>
+<span id="cb33-37"><a href="#cb33-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DE"</span>: <span class="st">"#54A24B"</span>,</span>
+<span id="cb33-38"><a href="#cb33-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AG"</span>: <span class="st">"#4C78A8"</span>,</span>
+<span id="cb33-39"><a href="#cb33-39" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PSO"</span>: <span class="st">"#F58518"</span></span>
+<span id="cb33-40"><a href="#cb33-40" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb33-41"><a href="#cb33-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-42"><a href="#cb33-42" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, dim <span class="kw">in</span> <span class="bu">zip</span>(axes, [<span class="st">"2d"</span>, <span class="st">"3d"</span>]):</span>
+<span id="cb33-43"><a href="#cb33-43" aria-hidden="true" tabindex="-1"></a>    data_dim <span class="op">=</span> plot_df[plot_df[<span class="st">"dimension"</span>] <span class="op">==</span> dim].copy()</span>
+<span id="cb33-44"><a href="#cb33-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-45"><a href="#cb33-45" aria-hidden="true" tabindex="-1"></a>    pivot_vals <span class="op">=</span> (</span>
+<span id="cb33-46"><a href="#cb33-46" aria-hidden="true" tabindex="-1"></a>        data_dim.pivot_table(</span>
+<span id="cb33-47"><a href="#cb33-47" aria-hidden="true" tabindex="-1"></a>            index<span class="op">=</span><span class="st">"n_corridas"</span>,</span>
+<span id="cb33-48"><a href="#cb33-48" aria-hidden="true" tabindex="-1"></a>            columns<span class="op">=</span><span class="st">"metodo_plot"</span>,</span>
+<span id="cb33-49"><a href="#cb33-49" aria-hidden="true" tabindex="-1"></a>            values<span class="op">=</span><span class="st">"promedio_valor"</span>,</span>
+<span id="cb33-50"><a href="#cb33-50" aria-hidden="true" tabindex="-1"></a>            aggfunc<span class="op">=</span><span class="st">"mean"</span></span>
+<span id="cb33-51"><a href="#cb33-51" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb33-52"><a href="#cb33-52" aria-hidden="true" tabindex="-1"></a>        .reindex(index<span class="op">=</span>orden_n, columns<span class="op">=</span>orden_metodos)</span>
+<span id="cb33-53"><a href="#cb33-53" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb33-54"><a href="#cb33-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-55"><a href="#cb33-55" aria-hidden="true" tabindex="-1"></a>    pivot_vals.plot(</span>
+<span id="cb33-56"><a href="#cb33-56" aria-hidden="true" tabindex="-1"></a>        kind<span class="op">=</span><span class="st">"bar"</span>,</span>
+<span id="cb33-57"><a href="#cb33-57" aria-hidden="true" tabindex="-1"></a>        ax<span class="op">=</span>ax,</span>
+<span id="cb33-58"><a href="#cb33-58" aria-hidden="true" tabindex="-1"></a>        width<span class="op">=</span><span class="fl">0.8</span>,</span>
+<span id="cb33-59"><a href="#cb33-59" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span>[colores.get(col, <span class="st">"#777777"</span>) <span class="cf">for</span> col <span class="kw">in</span> pivot_vals.columns]</span>
+<span id="cb33-60"><a href="#cb33-60" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb33-61"><a href="#cb33-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-62"><a href="#cb33-62" aria-hidden="true" tabindex="-1"></a>    ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="st">"Valor optimo"</span>)</span>
+<span id="cb33-63"><a href="#cb33-63" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="ss">f"Mejor valor promedio por metodo en </span><span class="sc">{</span>dim<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb33-64"><a href="#cb33-64" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">"Numero de corridas"</span>)</span>
+<span id="cb33-65"><a href="#cb33-65" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">"Mejor valor promedio"</span>)</span>
+<span id="cb33-66"><a href="#cb33-66" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">"x"</span>, rotation<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb33-67"><a href="#cb33-67" aria-hidden="true" tabindex="-1"></a>    ax.grid(axis<span class="op">=</span><span class="st">"y"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb33-68"><a href="#cb33-68" aria-hidden="true" tabindex="-1"></a>    ax.legend(title<span class="op">=</span><span class="st">"Metodo"</span>)</span>
+<span id="cb33-69"><a href="#cb33-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-70"><a href="#cb33-70" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb33-71"><a href="#cb33-71" aria-hidden="true" tabindex="-1"></a>fig_path <span class="op">=</span> save_current_figure(<span class="st">"mejor_valor_promedio_por_metodo_2d_3d_y_corridas.png"</span>)</span>
+<span id="cb33-72"><a href="#cb33-72" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb33-73"><a href="#cb33-73" aria-hidden="true" tabindex="-1"></a>fig_path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-17-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="63">
+<pre><code>WindowsPath('c:/Carlos/Uni/Algortimos/trabajos/trabajo_1/trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/mejor_valor_promedio_por_metodo_2d_3d_y_corridas.png')</code></pre>
+</div>
+</div>
+<div id="a547d929" class="cell">
+<details class="code-fold">
+<summary>Ver codigo</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary_df[<span class="st">"dimension"</span>].drop_duplicates().tolist())</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary_df[<span class="st">"n_corridas"</span>].drop_duplicates().tolist())</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary_df[<span class="st">"nombre_metodo"</span>].drop_duplicates().tolist())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[2, 3]
+[100, 500, 1000]
+['Evolucion diferencial', 'Algoritmo evolutivo', 'PSO']</code></pre>
+</div>
+</div>
+<div id="521d883c" class="cell">
+<details class="code-fold">
+<summary>Ver codigo</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>funciones <span class="op">=</span> <span class="bu">sorted</span>(summary_df[<span class="st">"nombre_funcion"</span>].dropna().astype(<span class="bu">str</span>).unique())</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>orden_n <span class="op">=</span> [<span class="dv">100</span>, <span class="dv">500</span>, <span class="dv">1000</span>]</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>orden_metodos <span class="op">=</span> [<span class="st">"DE"</span>, <span class="st">"AG"</span>, <span class="st">"PSO"</span>]</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>colores <span class="op">=</span> {</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DE"</span>: <span class="st">"#54A24B"</span>,</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AG"</span>: <span class="st">"#4C78A8"</span>,</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PSO"</span>: <span class="st">"#F58518"</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> funcion <span class="kw">in</span> funciones:</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>    plot_df <span class="op">=</span> summary_df[</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>        summary_df[<span class="st">"nombre_funcion"</span>].astype(<span class="bu">str</span>).<span class="bu">str</span>.lower() <span class="op">==</span> funcion.lower()</span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>    ].copy()</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>    plot_df[<span class="st">"metodo_plot"</span>] <span class="op">=</span> (</span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>        plot_df[<span class="st">"nombre_metodo"</span>]</span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>        .astype(<span class="bu">str</span>)</span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>        .<span class="bu">str</span>.lower()</span>
+<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a>        .replace({</span>
+<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>            <span class="st">"evolucion diferencial"</span>: <span class="st">"DE"</span>,</span>
+<span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a>            <span class="st">"algoritmo evolutivo"</span>: <span class="st">"AG"</span>,</span>
+<span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a>            <span class="st">"pso"</span>: <span class="st">"PSO"</span>,</span>
+<span id="cb37-24"><a href="#cb37-24" aria-hidden="true" tabindex="-1"></a>            <span class="st">"de"</span>: <span class="st">"DE"</span>,</span>
+<span id="cb37-25"><a href="#cb37-25" aria-hidden="true" tabindex="-1"></a>            <span class="st">"ea"</span>: <span class="st">"AG"</span>,</span>
+<span id="cb37-26"><a href="#cb37-26" aria-hidden="true" tabindex="-1"></a>            <span class="st">"ag"</span>: <span class="st">"AG"</span></span>
+<span id="cb37-27"><a href="#cb37-27" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb37-28"><a href="#cb37-28" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb37-29"><a href="#cb37-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-30"><a href="#cb37-30" aria-hidden="true" tabindex="-1"></a>    plot_df <span class="op">=</span> plot_df.dropna(subset<span class="op">=</span>[<span class="st">"dimension"</span>, <span class="st">"n_corridas"</span>, <span class="st">"promedio_valor"</span>]).copy()</span>
+<span id="cb37-31"><a href="#cb37-31" aria-hidden="true" tabindex="-1"></a>    plot_df[<span class="st">"n_corridas"</span>] <span class="op">=</span> pd.to_numeric(plot_df[<span class="st">"n_corridas"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
+<span id="cb37-32"><a href="#cb37-32" aria-hidden="true" tabindex="-1"></a>    plot_df <span class="op">=</span> plot_df.dropna(subset<span class="op">=</span>[<span class="st">"n_corridas"</span>])</span>
+<span id="cb37-33"><a href="#cb37-33" aria-hidden="true" tabindex="-1"></a>    plot_df[<span class="st">"n_corridas"</span>] <span class="op">=</span> plot_df[<span class="st">"n_corridas"</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb37-34"><a href="#cb37-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-35"><a href="#cb37-35" aria-hidden="true" tabindex="-1"></a>    fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="fl">4.5</span>), sharey<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb37-36"><a href="#cb37-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-37"><a href="#cb37-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax, dim, titulo <span class="kw">in</span> <span class="bu">zip</span>(axes, [<span class="dv">2</span>, <span class="dv">3</span>], [<span class="st">"2D"</span>, <span class="st">"3D"</span>]):</span>
+<span id="cb37-38"><a href="#cb37-38" aria-hidden="true" tabindex="-1"></a>        data_dim <span class="op">=</span> plot_df[plot_df[<span class="st">"dimension"</span>] <span class="op">==</span> dim].copy()</span>
+<span id="cb37-39"><a href="#cb37-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-40"><a href="#cb37-40" aria-hidden="true" tabindex="-1"></a>        pivot_vals <span class="op">=</span> (</span>
+<span id="cb37-41"><a href="#cb37-41" aria-hidden="true" tabindex="-1"></a>            data_dim.pivot_table(</span>
+<span id="cb37-42"><a href="#cb37-42" aria-hidden="true" tabindex="-1"></a>                index<span class="op">=</span><span class="st">"n_corridas"</span>,</span>
+<span id="cb37-43"><a href="#cb37-43" aria-hidden="true" tabindex="-1"></a>                columns<span class="op">=</span><span class="st">"metodo_plot"</span>,</span>
+<span id="cb37-44"><a href="#cb37-44" aria-hidden="true" tabindex="-1"></a>                values<span class="op">=</span><span class="st">"promedio_valor"</span>,</span>
+<span id="cb37-45"><a href="#cb37-45" aria-hidden="true" tabindex="-1"></a>                aggfunc<span class="op">=</span><span class="st">"mean"</span></span>
+<span id="cb37-46"><a href="#cb37-46" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb37-47"><a href="#cb37-47" aria-hidden="true" tabindex="-1"></a>            .reindex(index<span class="op">=</span>orden_n, columns<span class="op">=</span>orden_metodos)</span>
+<span id="cb37-48"><a href="#cb37-48" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb37-49"><a href="#cb37-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-50"><a href="#cb37-50" aria-hidden="true" tabindex="-1"></a>        pivot_vals.plot(</span>
+<span id="cb37-51"><a href="#cb37-51" aria-hidden="true" tabindex="-1"></a>            kind<span class="op">=</span><span class="st">"bar"</span>,</span>
+<span id="cb37-52"><a href="#cb37-52" aria-hidden="true" tabindex="-1"></a>            ax<span class="op">=</span>ax,</span>
+<span id="cb37-53"><a href="#cb37-53" aria-hidden="true" tabindex="-1"></a>            width<span class="op">=</span><span class="fl">0.75</span>,</span>
+<span id="cb37-54"><a href="#cb37-54" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span>[colores.get(col, <span class="st">"#777777"</span>) <span class="cf">for</span> col <span class="kw">in</span> pivot_vals.columns]</span>
+<span id="cb37-55"><a href="#cb37-55" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb37-56"><a href="#cb37-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-57"><a href="#cb37-57" aria-hidden="true" tabindex="-1"></a>        ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="st">"Valor optimo"</span>)</span>
+<span id="cb37-58"><a href="#cb37-58" aria-hidden="true" tabindex="-1"></a>        ax.set_title(<span class="ss">f"</span><span class="sc">{</span>funcion<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>titulo<span class="sc">}</span><span class="ss">"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb37-59"><a href="#cb37-59" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">"Numero de corridas"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb37-60"><a href="#cb37-60" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">"Promedio valor"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb37-61"><a href="#cb37-61" aria-hidden="true" tabindex="-1"></a>        ax.tick_params(axis<span class="op">=</span><span class="st">"x"</span>, rotation<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb37-62"><a href="#cb37-62" aria-hidden="true" tabindex="-1"></a>        ax.grid(axis<span class="op">=</span><span class="st">"y"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb37-63"><a href="#cb37-63" aria-hidden="true" tabindex="-1"></a>        ax.legend(title<span class="op">=</span><span class="st">"Metodo"</span>, frameon<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb37-64"><a href="#cb37-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-65"><a href="#cb37-65" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> container <span class="kw">in</span> ax.containers:</span>
+<span id="cb37-66"><a href="#cb37-66" aria-hidden="true" tabindex="-1"></a>            ax.bar_label(container, fmt<span class="op">=</span><span class="st">"</span><span class="sc">%.2f</span><span class="st">"</span>, padding<span class="op">=</span><span class="dv">3</span>, fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb37-67"><a href="#cb37-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-68"><a href="#cb37-68" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb37-69"><a href="#cb37-69" aria-hidden="true" tabindex="-1"></a>    fig_path <span class="op">=</span> save_current_figure(<span class="ss">f"</span><span class="sc">{</span>funcion<span class="sc">.</span>lower()<span class="sc">}</span><span class="ss">_2d_3d_corridas.png"</span>)</span>
+<span id="cb37-70"><a href="#cb37-70" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb37-71"><a href="#cb37-71" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(fig_path)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-19-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\goldstein-price_2d_3d_corridas.png</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-19-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\griewank_2d_3d_corridas.png</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-19-output-5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\rastrigin_2d_3d_corridas.png</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-19-output-7.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\rosenbrock_2d_3d_corridas.png</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-19-output-9.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\schwefel_2d_3d_corridas.png</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analisis_resultados_files/figure-html/cell-19-output-11.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>c:\Carlos\Uni\Algortimos\trabajos\trabajo_1\trabajo_carlos\1. optimizacion_numerica\heuristicos\datos\figuras\six-hump camel_2d_3d_corridas.png</code></pre>
+</div>
 </div>
 
 

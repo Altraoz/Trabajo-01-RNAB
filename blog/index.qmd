@@ -1,5 +1,5 @@
 ---
-title: "Trabajo 01  Normalización: Optimización heurística"
+title: "Introduccion"
 subtitle: "Redes Neuronales y Algoritmos Bioinspirados"
 author: 
   - name: "Carlos Daniel Urresty"
