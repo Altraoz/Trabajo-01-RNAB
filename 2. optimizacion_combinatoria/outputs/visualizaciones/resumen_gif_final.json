@@ -1,6 +1,6 @@
 {
   "metodo_ganador": "GA",
-  "mejor_costo_tour": 4303.602999,
+  "mejor_costo_tour": 3975.266333,
   "frames": 104,
   "archivo_gif": "C:\\Carlos\\Uni\\Algortimos\\trabajos\\trabajo_1\\trabajo_carlos\\2. optimizacion_combinatoria\\outputs\\visualizaciones\\mejor_solucion_combinatoria.gif",
   "formula_peso": "peajes(euros) + gasolina(euros) + (tiempo(min)/60) * 12.02"

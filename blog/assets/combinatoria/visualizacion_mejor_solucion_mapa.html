@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mejor ruta final GA sobre Francia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f8fb;
+      color: #1f2933;
+    }
+    .frame {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 18px 18px 24px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+    }
+    p {
+      margin: 0 0 14px;
+      color: #52606d;
+      font-size: 14px;
+    }
+    #map {
+      height: 760px;
+      border-radius: 18px;
+      box-shadow: 0 10px 32px rgba(15, 23, 42, 0.12);
+      overflow: hidden;
+    }
+    .info-card {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
+      padding: 10px 12px;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <h1>Mejor ruta final GA sobre Francia</h1>
+    <p>Vista interactiva de la ruta expandida sobre un mapa base. Esta version sirve para inspeccion visual y captura para el reporte.</p>
+    <div id="map"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const routePoints = [{"order": 1, "index": 0, "name": "Bourg-en-Bresse", "lat": 46.2052, "lon": 5.2255}, {"order": 2, "index": 39, "name": "Lons-le-Saunier", "lat": 46.6753, "lon": 5.5557}, {"order": 3, "index": 25, "name": "Besançon", "lat": 47.2378, "lon": 6.0241}, {"order": 4, "index": 70, "name": "Vesoul", "lat": 47.6236, "lon": 6.1552}, {"order": 5, "index": 90, "name": "Belfort", "lat": 47.6397, "lon": 6.8638}, {"order": 6, "index": 68, "name": "Colmar", "lat": 48.0794, "lon": 7.3585}, {"order": 7, "index": 67, "name": "Strasbourg", "lat": 48.5734, "lon": 7.7521}, {"order": 8, "index": 57, "name": "Metz", "lat": 49.1193, "lon": 6.1757}, {"order": 9, "index": 54, "name": "Nancy", "lat": 48.6921, "lon": 6.1844}, {"order": 10, "index": 88, "name": "Épinal", "lat": 48.1744, "lon": 6.45}, {"order": 11, "index": 52, "name": "Chaumont", "lat": 48.1117, "lon": 5.1396}, {"order": 12, "index": 21, "name": "Dijon", "lat": 47.322, "lon": 5.0415}, {"order": 13, "index": 89, "name": "Auxerre", "lat": 47.7982, "lon": 3.5738}, {"order": 14, "index": 9, "name": "Troyes", "lat": 48.2973, "lon": 4.0744}, {"order": 15, "index": 55, "name": "Bar-le-Duc", "lat": 48.7728, "lon": 5.1611}, {"order": 16, "index": 51, "name": "Châlons-en-Champagne", "lat": 48.9567, "lon": 4.3631}, {"order": 17, "index": 7, "name": "Charleville-Mézières", "lat": 49.7621, "lon": 4.7261}, {"order": 18, "index": 1, "name": "Laon", "lat": 49.5639, "lon": 3.6244}, {"order": 19, "index": 59, "name": "Lille", "lat": 50.6292, "lon": 3.0573}, {"order": 20, "index": 62, "name": "Arras", "lat": 50.291, "lon": 2.7775}, {"order": 21, "index": 80, "name": "Amiens", "lat": 49.8941, "lon": 2.2958}, {"order": 22, "index": 60, "name": "Beauvais", "lat": 49.43, "lon": 2.08}, {"order": 23, "index": 95, "name": "Cergy", "lat": 49.0365, "lon": 2.0761}, {"order": 24, "index": 92, "name": "Nanterre", "lat": 48.8924, "lon": 2.2153}, {"order": 25, "index": 93, "name": "Bobigny", "lat": 48.9086, "lon": 2.4397}, {"order": 26, "index": 94, "name": "Créteil", "lat": 48.7904, "lon": 2.4556}, {"order": 27, "index": 75, "name": "Paris", "lat": 48.8566, "lon": 2.3522}, {"order": 28, "index": 78, "name": "Versailles", "lat": 48.8049, "lon": 2.1204}, {"order": 29, "index": 91, "name": "Évry-Courcouronnes", "lat": 48.6238, "lon": 2.429}, {"order": 30, "index": 77, "name": "Melun", "lat": 48.539, "lon": 2.6608}, {"order": 31, "index": 91, "name": "Évry-Courcouronnes", "lat": 48.6238, "lon": 2.429}, {"order": 32, "index": 45, "name": "Orléans", "lat": 47.9029, "lon": 1.9093}, {"order": 33, "index": 41, "name": "Blois", "lat": 47.5861, "lon": 1.3359}, {"order": 34, "index": 37, "name": "Tours", "lat": 47.3941, "lon": 0.6848}, {"order": 35, "index": 86, "name": "Poitiers", "lat": 46.5802, "lon": 0.3404}, {"order": 36, "index": 79, "name": "Niort", "lat": 46.3237, "lon": -0.4648}, {"order": 37, "index": 16, "name": "La Rochelle", "lat": 46.1603, "lon": -1.1511}, {"order": 38, "index": 85, "name": "La Roche-sur-Yon", "lat": 46.6705, "lon": -1.426}, {"order": 39, "index": 44, "name": "Nantes", "lat": 47.2184, "lon": -1.5536}, {"order": 40, "index": 56, "name": "Vannes", "lat": 47.6582, "lon": -2.7608}, {"order": 41, "index": 29, "name": "Quimper", "lat": 47.996, "lon": -4.1025}, {"order": 42, "index": 22, "name": "Saint-Brieuc", "lat": 48.5142, "lon": -2.7658}, {"order": 43, "index": 35, "name": "Rennes", "lat": 48.1173, "lon": -1.6778}, {"order": 44, "index": 53, "name": "Laval", "lat": 48.0707, "lon": -0.7734}, {"order": 45, "index": 49, "name": "Angers", "lat": 47.4784, "lon": -0.5632}, {"order": 46, "index": 72, "name": "Le Mans", "lat": 48.0061, "lon": 0.1996}, {"order": 47, "index": 61, "name": "Alençon", "lat": 48.4329, "lon": 0.0913}, {"order": 48, "index": 13, "name": "Caen", "lat": 49.1829, "lon": -0.3707}, {"order": 49, "index": 50, "name": "Saint-Lô", "lat": 49.1157, "lon": -1.0907}, {"order": 50, "index": 13, "name": "Caen", "lat": 49.1829, "lon": -0.3707}, {"order": 51, "index": 76, "name": "Rouen", "lat": 49.4431, "lon": 1.0993}, {"order": 52, "index": 27, "name": "Évreux", "lat": 49.027, "lon": 1.1514}, {"order": 53, "index": 28, "name": "Chartres", "lat": 48.4439, "lon": 1.489}, {"order": 54, "index": 45, "name": "Orléans", "lat": 47.9029, "lon": 1.9093}, {"order": 55, "index": 17, "name": "Bourges", "lat": 47.081, "lon": 2.3988}, {"order": 56, "index": 36, "name": "Châteauroux", "lat": 46.8114, "lon": 1.6868}, {"order": 57, "index": 23, "name": "Guéret", "lat": 46.1694, "lon": 1.8714}, {"order": 58, "index": 87, "name": "Limoges", "lat": 45.8336, "lon": 1.2611}, {"order": 59, "index": 18, "name": "Tulle", "lat": 45.2678, "lon": 1.7707}, {"order": 60, "index": 14, "name": "Aurillac", "lat": 44.926, "lon": 2.4397}, {"order": 61, "index": 11, "name": "Rodez", "lat": 44.35, "lon": 2.575}, {"order": 62, "index": 81, "name": "Albi", "lat": 43.9298, "lon": 2.148}, {"order": 63, "index": 82, "name": "Montauban", "lat": 44.0221, "lon": 1.352}, {"order": 64, "index": 46, "name": "Cahors", "lat": 44.4479, "lon": 1.4412}, {"order": 65, "index": 47, "name": "Agen", "lat": 44.2049, "lon": 0.6212}, {"order": 66, "index": 24, "name": "Périgueux", "lat": 45.184, "lon": 0.7211}, {"order": 67, "index": 15, "name": "Angoulême", "lat": 45.6484, "lon": 0.1562}, {"order": 68, "index": 33, "name": "Bordeaux", "lat": 44.8378, "lon": -0.5792}, {"order": 69, "index": 40, "name": "Mont-de-Marsan", "lat": 43.8911, "lon": -0.5007}, {"order": 70, "index": 64, "name": "Pau", "lat": 43.2951, "lon": -0.3708}, {"order": 71, "index": 65, "name": "Tarbes", "lat": 43.2329, "lon": 0.0781}, {"order": 72, "index": 32, "name": "Auch", "lat": 43.6467, "lon": 0.5851}, {"order": 73, "index": 31, "name": "Toulouse", "lat": 43.6047, "lon": 1.4442}, {"order": 74, "index": 8, "name": "Foix", "lat": 42.9653, "lon": 1.6073}, {"order": 75, "index": 10, "name": "Carcassonne", "lat": 43.213, "lon": 2.3491}, {"order": 76, "index": 66, "name": "Perpignan", "lat": 42.6887, "lon": 2.8948}, {"order": 77, "index": 34, "name": "Montpellier", "lat": 43.6119, "lon": 3.8772}, {"order": 78, "index": 30, "name": "Nîmes", "lat": 43.8367, "lon": 4.3601}, {"order": 79, "index": 84, "name": "Avignon", "lat": 43.9493, "lon": 4.8055}, {"order": 80, "index": 12, "name": "Marseille", "lat": 43.2965, "lon": 5.3698}, {"order": 81, "index": 83, "name": "Toulon", "lat": 43.1242, "lon": 5.928}, {"order": 82, "index": 20, "name": "Bastia", "lat": 42.6973, "lon": 9.4509}, {"order": 83, "index": 19, "name": "Ajaccio", "lat": 41.9192, "lon": 8.7386}, {"order": 84, "index": 5, "name": "Nice", "lat": 43.7102, "lon": 7.262}, {"order": 85, "index": 3, "name": "Digne-les-Bains", "lat": 44.092, "lon": 6.2356}, {"order": 86, "index": 4, "name": "Gap", "lat": 44.5596, "lon": 6.079}, {"order": 87, "index": 38, "name": "Grenoble", "lat": 45.1885, "lon": 5.7245}, {"order": 88, "index": 26, "name": "Valence", "lat": 44.9334, "lon": 4.8924}, {"order": 89, "index": 6, "name": "Privas", "lat": 44.7353, "lon": 4.5997}, {"order": 90, "index": 48, "name": "Mende", "lat": 44.518, "lon": 3.501}, {"order": 91, "index": 43, "name": "Le Puy-en-Velay", "lat": 45.0439, "lon": 3.8857}, {"order": 92, "index": 42, "name": "Saint-Étienne", "lat": 45.4397, "lon": 4.3872}, {"order": 93, "index": 63, "name": "Clermont-Ferrand", "lat": 45.7772, "lon": 3.087}, {"order": 94, "index": 2, "name": "Moulins", "lat": 46.5667, "lon": 3.3333}, {"order": 95, "index": 58, "name": "Nevers", "lat": 46.9896, "lon": 3.159}, {"order": 96, "index": 2, "name": "Moulins", "lat": 46.5667, "lon": 3.3333}, {"order": 97, "index": 71, "name": "Mâcon", "lat": 46.3069, "lon": 4.8317}, {"order": 98, "index": 69, "name": "Lyon", "lat": 45.764, "lon": 4.8357}, {"order": 99, "index": 73, "name": "Chambéry", "lat": 45.5646, "lon": 5.9178}, {"order": 100, "index": 74, "name": "Annecy", "lat": 45.8992, "lon": 6.1294}, {"order": 101, "index": 0, "name": "Bourg-en-Bresse", "lat": 46.2052, "lon": 5.2255}];
+    const allCities = [{"index": 0, "name": "Bourg-en-Bresse", "lat": 46.2052, "lon": 5.2255}, {"index": 1, "name": "Laon", "lat": 49.5639, "lon": 3.6244}, {"index": 2, "name": "Moulins", "lat": 46.5667, "lon": 3.3333}, {"index": 3, "name": "Digne-les-Bains", "lat": 44.092, "lon": 6.2356}, {"index": 4, "name": "Gap", "lat": 44.5596, "lon": 6.079}, {"index": 5, "name": "Nice", "lat": 43.7102, "lon": 7.262}, {"index": 6, "name": "Privas", "lat": 44.7353, "lon": 4.5997}, {"index": 7, "name": "Charleville-Mézières", "lat": 49.7621, "lon": 4.7261}, {"index": 8, "name": "Foix", "lat": 42.9653, "lon": 1.6073}, {"index": 9, "name": "Troyes", "lat": 48.2973, "lon": 4.0744}, {"index": 10, "name": "Carcassonne", "lat": 43.213, "lon": 2.3491}, {"index": 11, "name": "Rodez", "lat": 44.35, "lon": 2.575}, {"index": 12, "name": "Marseille", "lat": 43.2965, "lon": 5.3698}, {"index": 13, "name": "Caen", "lat": 49.1829, "lon": -0.3707}, {"index": 14, "name": "Aurillac", "lat": 44.926, "lon": 2.4397}, {"index": 15, "name": "Angoulême", "lat": 45.6484, "lon": 0.1562}, {"index": 16, "name": "La Rochelle", "lat": 46.1603, "lon": -1.1511}, {"index": 17, "name": "Bourges", "lat": 47.081, "lon": 2.3988}, {"index": 18, "name": "Tulle", "lat": 45.2678, "lon": 1.7707}, {"index": 19, "name": "Ajaccio", "lat": 41.9192, "lon": 8.7386}, {"index": 20, "name": "Bastia", "lat": 42.6973, "lon": 9.4509}, {"index": 21, "name": "Dijon", "lat": 47.322, "lon": 5.0415}, {"index": 22, "name": "Saint-Brieuc", "lat": 48.5142, "lon": -2.7658}, {"index": 23, "name": "Guéret", "lat": 46.1694, "lon": 1.8714}, {"index": 24, "name": "Périgueux", "lat": 45.184, "lon": 0.7211}, {"index": 25, "name": "Besançon", "lat": 47.2378, "lon": 6.0241}, {"index": 26, "name": "Valence", "lat": 44.9334, "lon": 4.8924}, {"index": 27, "name": "Évreux", "lat": 49.027, "lon": 1.1514}, {"index": 28, "name": "Chartres", "lat": 48.4439, "lon": 1.489}, {"index": 29, "name": "Quimper", "lat": 47.996, "lon": -4.1025}, {"index": 30, "name": "Nîmes", "lat": 43.8367, "lon": 4.3601}, {"index": 31, "name": "Toulouse", "lat": 43.6047, "lon": 1.4442}, {"index": 32, "name": "Auch", "lat": 43.6467, "lon": 0.5851}, {"index": 33, "name": "Bordeaux", "lat": 44.8378, "lon": -0.5792}, {"index": 34, "name": "Montpellier", "lat": 43.6119, "lon": 3.8772}, {"index": 35, "name": "Rennes", "lat": 48.1173, "lon": -1.6778}, {"index": 36, "name": "Châteauroux", "lat": 46.8114, "lon": 1.6868}, {"index": 37, "name": "Tours", "lat": 47.3941, "lon": 0.6848}, {"index": 38, "name": "Grenoble", "lat": 45.1885, "lon": 5.7245}, {"index": 39, "name": "Lons-le-Saunier", "lat": 46.6753, "lon": 5.5557}, {"index": 40, "name": "Mont-de-Marsan", "lat": 43.8911, "lon": -0.5007}, {"index": 41, "name": "Blois", "lat": 47.5861, "lon": 1.3359}, {"index": 42, "name": "Saint-Étienne", "lat": 45.4397, "lon": 4.3872}, {"index": 43, "name": "Le Puy-en-Velay", "lat": 45.0439, "lon": 3.8857}, {"index": 44, "name": "Nantes", "lat": 47.2184, "lon": -1.5536}, {"index": 45, "name": "Orléans", "lat": 47.9029, "lon": 1.9093}, {"index": 46, "name": "Cahors", "lat": 44.4479, "lon": 1.4412}, {"index": 47, "name": "Agen", "lat": 44.2049, "lon": 0.6212}, {"index": 48, "name": "Mende", "lat": 44.518, "lon": 3.501}, {"index": 49, "name": "Angers", "lat": 47.4784, "lon": -0.5632}, {"index": 50, "name": "Saint-Lô", "lat": 49.1157, "lon": -1.0907}, {"index": 51, "name": "Châlons-en-Champagne", "lat": 48.9567, "lon": 4.3631}, {"index": 52, "name": "Chaumont", "lat": 48.1117, "lon": 5.1396}, {"index": 53, "name": "Laval", "lat": 48.0707, "lon": -0.7734}, {"index": 54, "name": "Nancy", "lat": 48.6921, "lon": 6.1844}, {"index": 55, "name": "Bar-le-Duc", "lat": 48.7728, "lon": 5.1611}, {"index": 56, "name": "Vannes", "lat": 47.6582, "lon": -2.7608}, {"index": 57, "name": "Metz", "lat": 49.1193, "lon": 6.1757}, {"index": 58, "name": "Nevers", "lat": 46.9896, "lon": 3.159}, {"index": 59, "name": "Lille", "lat": 50.6292, "lon": 3.0573}, {"index": 60, "name": "Beauvais", "lat": 49.43, "lon": 2.08}, {"index": 61, "name": "Alençon", "lat": 48.4329, "lon": 0.0913}, {"index": 62, "name": "Arras", "lat": 50.291, "lon": 2.7775}, {"index": 63, "name": "Clermont-Ferrand", "lat": 45.7772, "lon": 3.087}, {"index": 64, "name": "Pau", "lat": 43.2951, "lon": -0.3708}, {"index": 65, "name": "Tarbes", "lat": 43.2329, "lon": 0.0781}, {"index": 66, "name": "Perpignan", "lat": 42.6887, "lon": 2.8948}, {"index": 67, "name": "Strasbourg", "lat": 48.5734, "lon": 7.7521}, {"index": 68, "name": "Colmar", "lat": 48.0794, "lon": 7.3585}, {"index": 69, "name": "Lyon", "lat": 45.764, "lon": 4.8357}, {"index": 70, "name": "Vesoul", "lat": 47.6236, "lon": 6.1552}, {"index": 71, "name": "Mâcon", "lat": 46.3069, "lon": 4.8317}, {"index": 72, "name": "Le Mans", "lat": 48.0061, "lon": 0.1996}, {"index": 73, "name": "Chambéry", "lat": 45.5646, "lon": 5.9178}, {"index": 74, "name": "Annecy", "lat": 45.8992, "lon": 6.1294}, {"index": 75, "name": "Paris", "lat": 48.8566, "lon": 2.3522}, {"index": 76, "name": "Rouen", "lat": 49.4431, "lon": 1.0993}, {"index": 77, "name": "Melun", "lat": 48.539, "lon": 2.6608}, {"index": 78, "name": "Versailles", "lat": 48.8049, "lon": 2.1204}, {"index": 79, "name": "Niort", "lat": 46.3237, "lon": -0.4648}, {"index": 80, "name": "Amiens", "lat": 49.8941, "lon": 2.2958}, {"index": 81, "name": "Albi", "lat": 43.9298, "lon": 2.148}, {"index": 82, "name": "Montauban", "lat": 44.0221, "lon": 1.352}, {"index": 83, "name": "Toulon", "lat": 43.1242, "lon": 5.928}, {"index": 84, "name": "Avignon", "lat": 43.9493, "lon": 4.8055}, {"index": 85, "name": "La Roche-sur-Yon", "lat": 46.6705, "lon": -1.426}, {"index": 86, "name": "Poitiers", "lat": 46.5802, "lon": 0.3404}, {"index": 87, "name": "Limoges", "lat": 45.8336, "lon": 1.2611}, {"index": 88, "name": "Épinal", "lat": 48.1744, "lon": 6.45}, {"index": 89, "name": "Auxerre", "lat": 47.7982, "lon": 3.5738}, {"index": 90, "name": "Belfort", "lat": 47.6397, "lon": 6.8638}, {"index": 91, "name": "Évry-Courcouronnes", "lat": 48.6238, "lon": 2.429}, {"index": 92, "name": "Nanterre", "lat": 48.8924, "lon": 2.2153}, {"index": 93, "name": "Bobigny", "lat": 48.9086, "lon": 2.4397}, {"index": 94, "name": "Créteil", "lat": 48.7904, "lon": 2.4556}, {"index": 95, "name": "Cergy", "lat": 49.0365, "lon": 2.0761}];
+    const lastCity = {"order": 100, "index": 74, "name": "Annecy", "lat": 45.8992, "lon": 6.1294};
+    const infoHtml = "Mejor ruta final GA sobre Francia<br/>Metodo ganador: GA<br/>Costo total: 3975.27 EUR<br/>Saltos trazados: 100";
+
+    const map = L.map('map', {
+      zoomControl: true,
+      scrollWheelZoom: true
+    });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+      maxZoom: 18
+    }).addTo(map);
+
+    allCities.forEach((city) => {
+      L.circleMarker([city.lat, city.lon], {
+        radius: 3,
+        color: '#315a8a',
+        weight: 1,
+        fillColor: '#315a8a',
+        fillOpacity: 0.55
+      }).bindTooltip(`${city.index} - ${city.name}`, {sticky: true}).addTo(map);
+    });
+
+    const routeLine = L.polyline(
+      routePoints.map((point) => [point.lat, point.lon]),
+      {
+        color: '#d1495b',
+        weight: 4,
+        opacity: 0.9
+      }
+    ).addTo(map);
+
+    L.circleMarker([routePoints[0].lat, routePoints[0].lon], {
+      radius: 8,
+      color: '#ffffff',
+      weight: 2,
+      fillColor: '#2a9d8f',
+      fillOpacity: 1
+    }).bindPopup(`Inicio y cierre: ${routePoints[0].name}`).addTo(map);
+
+    L.circleMarker([lastCity.lat, lastCity.lon], {
+      radius: 8,
+      color: '#ffffff',
+      weight: 2,
+      fillColor: '#f4a261',
+      fillOpacity: 1
+    }).bindPopup(`Ultima ciudad antes del cierre: ${lastCity.name}`).addTo(map);
+
+    L.control.scale({metric: true, imperial: false}).addTo(map);
+
+    const infoControl = L.control({position: 'topright'});
+    infoControl.onAdd = function() {
+      const div = L.DomUtil.create('div', 'info-card');
+      div.innerHTML = infoHtml;
+      return div;
+    };
+    infoControl.addTo(map);
+
+    map.fitBounds(routeLine.getBounds(), {padding: [28, 28]});
+  </script>
+</body>
+</html>

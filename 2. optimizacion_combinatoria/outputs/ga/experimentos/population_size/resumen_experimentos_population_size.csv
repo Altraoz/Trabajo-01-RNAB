@@ -1,0 +1,6 @@
+experimento,population_size,mutation_rate,generaciones,elite_count,tournament_size,crossover_rate,inject_aco_seed,mejor_costo_tour,seed
+pop_180,180,0.12,350,12,5,0.9,True,3975.266333,42
+pop_220,220,0.12,350,12,5,0.9,True,3975.266333,42
+pop_260,260,0.12,350,12,5,0.9,True,3975.266333,42
+pop_300,300,0.12,350,12,5,0.9,True,3975.266333,42
+pop_340,340,0.12,350,12,5,0.9,True,3975.266333,42

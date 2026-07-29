@@ -1,7 +1,7 @@
 {
-  "mejor_costo_tour": 4303.602999,
+  "mejor_costo_tour": 3975.266333,
   "generaciones": 350,
-  "tam_poblacion": 180,
+  "tam_poblacion": 300,
   "seed": 42,
   "n_ciudades": 96,
   "tour_cerrado": 97,

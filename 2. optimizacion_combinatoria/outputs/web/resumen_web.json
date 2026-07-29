@@ -1,7 +1,7 @@
 {
   "metodo_ganador": "GA",
-  "mejor_costo_tour": 4303.602999,
+  "mejor_costo_tour": 3975.266333,
   "n_ciudades": 96,
-  "n_saltos_reales": 109,
+  "n_saltos_reales": 100,
   "formula_peso": "peajes(euros) + gasolina(euros) + (tiempo(min)/60) * 12.02"
 }

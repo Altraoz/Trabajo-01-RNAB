@@ -15,7 +15,15 @@ from src.core_paths import (
     WEB_OUTPUT_DIR,
     WEIGHTED_EDGES_CSV_PATH,
 )
-from src.core_visualizacion import CITY_COORDS, create_history_svg, create_route_svg, save_svg
+from src.core_visualizacion import (
+    CITY_COORDS,
+    create_history_svg,
+    create_route_map_html,
+    create_route_map_svg,
+    create_route_svg,
+    save_html,
+    save_svg,
+)
 
 
 WIDTH = 900
@@ -93,16 +101,38 @@ def expand_best_tour(
 def export_visual_artifacts(
     result: dict,
     method_name: str,
+    expanded_tour: dict | None = None,
     output_dir: Path = VIS_OUTPUT_DIR,
 ) -> dict:
-    city_names = result["mejor_tour_nombres_sin_cierre"]
     route_indices = result["mejor_tour_indices"]
-    route_svg = create_route_svg(route_indices, result["mejor_tour_nombres"], title=f"Mejor solucion {method_name}")
+    route_for_map = expanded_tour["recorrido_real_indices"] if expanded_tour is not None else route_indices
+    idx_to_name = load_city_index_to_name(WEIGHTED_EDGES_CSV_PATH)
+    route_projection_svg = create_route_svg(
+        route_indices,
+        result["mejor_tour_nombres"],
+        title=f"Mejor solucion {method_name}",
+    )
+    route_map_svg = create_route_map_svg(
+        route_for_map,
+        idx_to_name,
+        title=f"Mejor ruta final {method_name} sobre Francia",
+    )
+    route_map_html = create_route_map_html(
+        route_for_map,
+        idx_to_name,
+        title=f"Mejor ruta final {method_name} sobre Francia",
+        method_name=method_name,
+        total_cost=float(result["mejor_costo_tour"]),
+    )
     history_svg = create_history_svg(result["historial_mejor_costo"], title=f"Convergencia {method_name}")
-    route_svg_path = save_svg(route_svg, output_dir / "visualizacion_mejor_solucion.svg")
+    route_svg_path = save_svg(route_map_svg, output_dir / "visualizacion_mejor_solucion.svg")
+    route_projection_svg_path = save_svg(route_projection_svg, output_dir / "visualizacion_mejor_solucion_proyeccion.svg")
+    route_map_html_path = save_html(route_map_html, output_dir / "visualizacion_mejor_solucion_mapa.html")
     history_svg_path = save_svg(history_svg, output_dir / f"convergencia_{method_name.lower()}.svg")
     return {
         "route_svg_path": route_svg_path,
+        "route_projection_svg_path": route_projection_svg_path,
+        "route_map_html_path": route_map_html_path,
         "history_svg_path": history_svg_path,
     }
 

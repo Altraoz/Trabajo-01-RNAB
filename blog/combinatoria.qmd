@@ -1,33 +1,34 @@
 ---
-title: "Optimizacion combinatoria"
+title: "Optimización combinatoria"
+bibliography: referencias.bib
 ---
 
 
-# Parte 2: Optimizacion Combinatoria (TSP - 96 Departamentos de Francia)
+# Parte 2: Optimización Combinatoria (TSP - 96 Departamentos de Francia)
 
-## 3.1 Descripcion del problema
+## 3.1 Descripción del problema
 
-En la segunda parte del trabajo se aborda una variante del **Problema del Viajante (TSP)** aplicada al recorrido de las **96 capitales departamentales de Francia metropolitana**. El objetivo consiste en encontrar un orden de visita para todas las ciudades tal que se minimice el costo total del recorrido, cumpliendo la condicion clasica del TSP: cada ciudad debe visitarse exactamente una vez y, al finalizar, se debe completar el circuito regresando al punto de partida o cerrando la gira definida para la evaluacion. Debido a que el numero de rutas posibles crece de forma factorial con respecto al numero de ciudades, se trata de un problema combinatorio de muy alta complejidad, para el cual resulta poco practico aplicar metodos exactos en tiempos razonables.
+En la segunda parte del trabajo se aborda una variante del **Problema del Viajante (TSP)** aplicada al recorrido de las **96 capitales departamentales de Francia metropolitana**. El objetivo consiste en encontrar un orden de visita para todas las ciudades tal que se minimice el costo total del recorrido, cumpliendo la condición clásica del TSP: cada ciudad debe visitarse exactamente una vez y, al finalizar, se debe completar el circuito regresando al punto de partida o cerrando la gira definida para la evaluación. Debido a que el número de rutas posibles crece de forma factorial con respecto al número de ciudades, se trata de un problema combinatorio de muy alta complejidad, para el cual resulta poco práctico aplicar métodos exactos en tiempos razonables [@applegate2006].
 
-En este contexto, cada solucion candidata puede representarse como una permutacion de las 96 ciudades, donde el orden de los elementos define la ruta seguida por el vendedor. Sin embargo, la evaluacion de esa ruta no se realiza directamente sobre el grafo parcial original, sino sobre una matriz completa de costos minimos entre todas las parejas de ciudades. De esta manera, el problema no se limita a encontrar la ruta mas corta en kilometros, sino la ruta de **menor costo total**, incorporando factores operativos mas cercanos a una situacion real de desplazamiento y dejando la instancia lista para ser tratada como un TSP clasico.
+En este contexto, cada solución candidata puede representarse como una permutación de las 96 ciudades, donde el orden de los elementos define la ruta seguida por el vendedor. Sin embargo, la evaluación de esa ruta no se realiza directamente sobre el grafo parcial original, sino sobre una matriz completa de costos mínimos entre todas las parejas de ciudades. De esta manera, el problema no se limita a encontrar la ruta más corta en kilómetros, sino la ruta de **menor costo total**, incorporando factores operativos más cercanos a una situación real de desplazamiento y dejando la instancia lista para ser tratada como un TSP clásico.
 
-La funcion objetivo utilizada en la implementacion combina directamente tres componentes por tramo: **peajes**, **gasolina** y **costo del tiempo del vendedor**. En particular, el componente de combustible no se estima como distancia por costo por kilometro, sino que se toma directamente de la columna `gasolina(euros)` recuperada del dataset. A esto se suma el costo temporal del vendedor, calculado a partir del tiempo de viaje y una tarifa fija de **12.02 EUR/h**. En forma compacta, la expresion empleada es:
+La función objetivo utilizada en la implementación combina directamente tres componentes por tramo: **peajes**, **gasolina** y **costo del tiempo del vendedor**. En particular, el componente de combustible no se estima como distancia por costo por kilómetro, sino que se toma directamente de la columna `gasolina(euros)` recuperada del dataset. A esto se suma el costo temporal del vendedor, calculado a partir del tiempo de viaje y una tarifa fija de **12.02 EUR/h**. En forma compacta, la expresión empleada es:
 
 $$
 \text{Costo total} = \text{peajes(euros)} + \text{gasolina(euros)} + \left(\frac{\text{tiempo(min)}}{60}\right)\times 12.02
 $$
 
-Bajo esta formulacion, el costo total de un tour se obtiene acumulando ese valor sobre los tramos recorridos en la ruta. Esto hace que el problema sea especialmente adecuado para el uso de metaheuristicas, ya que el reto consiste en explorar un espacio enorme de posibles recorridos y encontrar una secuencia que balancee de manera eficiente tiempo y costo monetario en una red vial real.
+Bajo esta formulación, el costo total de un tour se obtiene acumulando ese valor sobre los tramos recorridos en la ruta. Esto hace que el problema sea especialmente adecuado para el uso de metaheurísticas, ya que el reto consiste en explorar un espacio enorme de posibles recorridos y encontrar una secuencia que balancee de manera eficiente tiempo y costo monetario en una red vial real.
 
-## 3.2 Construccion y preprocesamiento de datos
+## 3.2 Construcción y preprocesamiento de datos
 
-La construccion del conjunto de datos para esta parte del trabajo se realizo en varias etapas. Primero, se extrajeron las coordenadas geograficas de las ciudades desde el sitio web [GeoKeo](https://geokeo.com/database/town/fr/23/), tomando como referencia las capitales departamentales de Francia. A partir de estas coordenadas se genero una primera estructura de conexiones entre ciudades cercanas, utilizada como base para construir un grafo inicial de rutas, el cual fue exportado a un archivo CSV para facilitar su revision posterior.
+La construcción del conjunto de datos para esta parte del trabajo se realizó en varias etapas. Primero, se extrajeron las coordenadas geográficas de las ciudades desde el sitio web [GeoKeo](https://geokeo.com/database/town/fr/23/), tomando como referencia las capitales departamentales de Francia. A partir de estas coordenadas se generó una primera estructura de conexiones entre ciudades cercanas, utilizada como base para construir un grafo inicial de rutas, el cual fue exportado a un archivo CSV para facilitar su revisión posterior.
 
-Posteriormente, este grafo fue ajustado y validado manualmente con apoyo de visualizaciones sobre mapa, con el fin de identificar conexiones plausibles dentro de la red y corregir aquellas que no representaban trayectos razonables. Esta etapa fue importante porque la cercania geografica por si sola no garantiza que dos ciudades esten conectadas por una ruta real o conveniente dentro de la red vial.
+Posteriormente, este grafo fue ajustado y validado manualmente con apoyo de visualizaciones sobre mapa, con el fin de identificar conexiones plausibles dentro de la red y corregir aquellas que no representaban trayectos razonables. Esta etapa fue importante porque la cercanía geográfica por sí sola no garantiza que dos ciudades estén conectadas por una ruta real o conveniente dentro de la red vial.
 
-Una vez consolidada esta red base, se realizo el proceso de `web scraping` sobre el sitio [VINCI Autoroutes](https://www.vinci-autoroutes.com/fr/mon-trajet/), utilizando las rutas previamente definidas para consultar y completar informacion real de los trayectos. En particular, para cada conexion se obtuvo la distancia recorrida, el tiempo estimado de viaje y el valor de los peajes. Para mantener consistencia en la recoleccion de la informacion, en VINCI Autoroutes se utilizo la categoria **Clase 1 - Vehiculos ligeros**, correspondiente a automoviles particulares y vehiculos de uso ligero. Estos datos sirvieron como base para estructurar el conjunto final utilizado en la optimizacion combinatoria.
+Una vez consolidada esta red base, se realizó el proceso de `web scraping` sobre el sitio [VINCI Autoroutes](https://www.vinci-autoroutes.com/fr/mon-trajet/), utilizando las rutas previamente definidas para consultar y completar información real de los trayectos. En particular, para cada conexión se obtuvo la distancia recorrida, el tiempo estimado de viaje y el valor de los peajes. Para mantener consistencia en la recolección de la información, en VINCI Autoroutes se utilizó la categoría **Clase 1 - Vehículos ligeros**, correspondiente a automóviles particulares y vehículos de uso ligero [@vinci2026]. Estos datos sirvieron como base para estructurar el conjunto final utilizado en la optimización combinatoria.
 
-Como paso previo a la optimizacion, se ejecuto **Dijkstra desde cada ciudad** sobre el grafo ponderado de conexiones directas para construir una matriz completa de costos minimos entre todas las parejas de nodos. Este cierre sobre el grafo fue el puente metodologico que permitio pasar de una red vial parcial a una instancia TSP de `96 x 96`, de modo que ACO y GA no optimizan sobre el grafo original, sino sobre la matriz consolidada resultante. Sobre esa matriz se verifico que la estructura fuera cuadrada, que la diagonal quedara en cero y que no existieran valores infinitos fuera de la diagonal, asegurando asi que ambos metodos pudieran trabajar sobre una representacion consistente del problema.
+Como paso previo a la optimización, se calculó el costo mínimo de viaje entre cada par de ciudades a partir de la red de conexiones disponibles. Para ello se aplicó el algoritmo de Dijkstra, un método clásico para encontrar caminos de costo mínimo en grafos [@dijkstra1959]. De esta forma se construyó una matriz completa de costos `96 x 96`, que fue la utilizada posteriormente por ACO y GA. Sobre esa matriz se verificó que la estructura fuera cuadrada, que la diagonal quedara en cero y que no existieran valores infinitos fuera de la diagonal, asegurando así una representación consistente del problema.
 
 <a href="notebooks/combinatoria/00_construccion_grafo_inicial.ipynb" class="notebook-card-link">
   <span class="notebook-card-icon">
@@ -37,82 +38,167 @@ Como paso previo a la optimizacion, se ejecuto **Dijkstra desde cada ciudad** so
       <circle cx="13.5" cy="43" r="3.2" fill="#9e9e9e"></circle>
     </svg>
   </span>
-  <span class="notebook-card-title">Cuaderno de construccion inicial del grafo</span>
+  <span class="notebook-card-title">Cuaderno de construcción inicial del grafo</span>
 </a>
 
 ## 3.3 Algoritmos utilizados
 
-Para resolver este problema se emplearon dos metaheuristicas clasicas para optimizacion combinatoria: **Colonia de Hormigas (ACO)** y **Algoritmos Geneticos (GA)**. La eleccion de estos metodos responde a que ambos estan diseniados para explorar espacios de busqueda discretos muy grandes y han mostrado buen desempeno en variantes del TSP. Ademas, permiten balancear de manera flexible los procesos de exploracion y explotacion, lo cual es importante cuando se busca escapar de soluciones pobres sin perder la capacidad de refinar rutas prometedoras.
+Para resolver este problema se emplearon dos metaheurísticas clásicas para optimización combinatoria: **Colonia de Hormigas (ACO)** y **Algoritmos Genéticos (GA)**. La elección de estos métodos responde a que ambos están diseñados para explorar espacios de búsqueda discretos muy grandes y han mostrado buen desempeño en variantes del TSP. Además, permiten balancear de manera flexible los procesos de exploración y explotación, lo cual es importante cuando se busca escapar de soluciones pobres sin perder la capacidad de refinar rutas prometedoras [@talbi2009].
 
-### Colonia de Hormigas (ACO)
+#### Colonia de Hormigas (ACO)
 
-El algoritmo de colonia de hormigas construye soluciones de manera progresiva, simulando el comportamiento colectivo de hormigas que depositan feromonas sobre los caminos recorridos. En cada iteracion, varias hormigas generan rutas completas entre las ciudades, eligiendo el siguiente nodo con base en una combinacion entre la **feromona acumulada** y una **heuristica local** asociada al inverso del costo entre ciudades. Con el paso de las iteraciones, las rutas de menor costo reciben mayor refuerzo y tienden a guiar la busqueda hacia regiones mas prometedoras del espacio de soluciones.
+El algoritmo de colonia de hormigas construye soluciones de manera progresiva, simulando el comportamiento colectivo de hormigas que depositan feromonas sobre los caminos recorridos. En cada iteración, varias hormigas generan rutas completas entre las ciudades, eligiendo el siguiente nodo con base en una combinación entre la **feromona acumulada** y una **heurística local** asociada al inverso del costo entre ciudades. Con el paso de las iteraciones, las rutas de menor costo reciben mayor refuerzo y tienden a guiar la búsqueda hacia regiones más prometedoras del espacio de soluciones.
 
-En la implementacion utilizada se fijaron los siguientes parametros:
+En la implementación utilizada se fijaron los siguientes parámetros:
 
-- numero de hormigas: `40`
-- numero de iteraciones: `250`
+- número de hormigas: `40`
+- número de iteraciones: `250`
 - importancia de la feromona (`alpha`): `1.0`
-- importancia de la heuristica (`beta`): `3.0`
-- tasa de evaporacion: `0.35`
-- factor de intensificacion: `2.0`
+- importancia de la heurística (`beta`): `3.0`
+- tasa de evaporación: `0.35`
+- factor de intensificación: `2.0`
 - peso elitista para reforzar la mejor ruta global: `2.0`
 - semilla aleatoria: `42`
 
-Estos valores permiten dar mayor peso a la informacion heuristica del costo entre ciudades, sin eliminar la influencia del aprendizaje colectivo por feromonas. La evaporacion evita que la busqueda se estanque demasiado pronto en rutas suboptimas, mientras que el refuerzo elitista ayuda a conservar y explotar la mejor solucion global encontrada hasta cada iteracion.
+#### Experimentación con distintas configuraciones
 
-### Algoritmos Geneticos (GA)
+- Experimento cambiando `número de hormigas`:
 
-El algoritmo genetico aborda el problema manteniendo una **poblacion de rutas candidatas** que evoluciona a lo largo de varias generaciones. Cada individuo representa un recorrido completo por las ciudades, y su aptitud se evalua con el costo total de la ruta. A partir de esta evaluacion, se seleccionan las mejores soluciones para producir descendencia mediante operadores de cruce y mutacion. De este modo, el metodo combina informacion de rutas de buena calidad y genera nuevas alternativas que pueden mejorar progresivamente el resultado obtenido.
+![](assets\combinatoria\aco\aco_ants.png)
 
-En este trabajo, el GA se implemento con una estrategia de **seleccion por torneo**, **cruce ordenado** y **mutacion por intercambio** de posiciones dentro de la ruta. Ademas, se permitio inyectar como semilla inicial la mejor ruta producida por ACO, con el fin de aprovechar una buena solucion de partida y refinarla en una fase evolutiva posterior.
+La gráfica muestra que todas las configuraciones mejoran con rapidez en las primeras iteraciones y luego se estabilizan, así que 250 iteraciones parecen más de las necesarias para este experimento. La mejor configuración fue la de 80 hormigas, ya que alcanzó el menor costo final (aprox. 4100), mientras que 20 hormigas obtuvo el peor resultado.
+En general, aumentar el número de hormigas parece mejorar la exploración y permitir mejores soluciones, aunque la mejora no es totalmente uniforme entre todas las configuraciones. De todos modos, como aquí se usa una sola semilla, sería recomendable repetir el experimento con varias corridas y también comparar contra tiempo de ejecución, porque más hormigas implican mayor costo computacional.
 
-Los parametros usados fueron:
+- Experimento cambiando `beta`:
 
-- tamano de poblacion: `180`
-- numero de generaciones: `350`
-- tasa de mutacion: `0.12`
+![](assets\combinatoria\aco\aco_beta.png)
+
+Aquí se ve más claro el efecto de `beta`: cuando **beta es bajo (`3.0`)**, el algoritmo converge más lento y además termina con el **peor costo final**. En cambio, con valores más altos, la convergencia mejora bastante y se alcanzan soluciones de mejor calidad.
+
+Las mejores configuraciones parecen ser **`beta = 5.0` y `beta = 7.0`**, que llegan a los **costos más bajos** (cerca de 4100), mientras que **`beta = 6.0` y `beta = 4.0`** quedan en un punto intermedio. En general, esto sugiere que **dar más peso a la heurística ayuda**, aunque el efecto no es totalmente lineal, porque no todos los valores altos de `beta` rinden igual.
+
+Estos valores permiten dar mayor peso a la información heurística del costo entre ciudades, sin eliminar la influencia del aprendizaje colectivo por feromonas. La evaporación evita que la búsqueda se estanque demasiado pronto en rutas subóptimas, mientras que el refuerzo elitista ayuda a conservar y explotar la mejor solución global encontrada hasta cada iteración.
+
+- Experimento cambiando `evaporation rate`:
+
+![](assets\combinatoria\aco\aco_evaporation_rate.png)
+    
+Aquí se ve que la **tasa de evaporación sí cambia bastante el comportamiento** del ACO. Con **`0.25`** se obtiene el **mejor costo final** (aprox. **4060**), aunque no es la curva que baja más rápido al inicio. En cambio, con **`0.55`** la mejora inicial es muy rápida, pero se estanca pronto y termina con el **peor resultado final**.
+
+En general, esto sugiere que una evaporación **intermedia** funciona mejor: si es **muy baja** (`0.15`), el algoritmo tarda más en adaptarse; si es **muy alta** (`0.55`), pierde demasiado rápido la información acumulada. Por eso, en este experimento, **`0.25` parece el mejor equilibrio entre exploración y explotación**.
+
+#### Configuración final de parámetros para el modelo de Colonia de Hormigas
+
+De acuerdo con los experimentos realizados, se estableció la siguiente configuración para el algoritmo de colonia de hormigas (ACO), buscando un equilibrio entre la exploración del espacio de soluciones y la explotación de las mejores rutas encontradas:
+
+- número de hormigas: `150`
+- número de iteraciones: `100`
+- importancia de la feromona (`alpha`): `1.0`
+- importancia de la heurística (`beta`): `5.0`
+- tasa de evaporación: `0.25`
+- factor de intensificación: `2.0`
+- peso elitista para reforzar la mejor ruta global: `2.0`
+- semilla aleatoria: `no especificada`
+
+
+
+### Algoritmos Genéticos (GA)
+
+El algoritmo genético aborda el problema manteniendo una **población de rutas candidatas** que evoluciona a lo largo de varias generaciones. Cada individuo representa un recorrido completo por las ciudades, y su aptitud se evalúa con el costo total de la ruta. A partir de esta evaluación, se seleccionan las mejores soluciones para producir descendencia mediante operadores de cruce y mutación. De este modo, el método combina información de rutas de buena calidad y genera nuevas alternativas que pueden mejorar progresivamente el resultado obtenido.
+
+En este trabajo, el GA se implementó con una estrategia de **selección por torneo**, **cruce ordenado** y **mutación por intercambio** de posiciones dentro de la ruta. Además, se permitió inyectar como semilla inicial la mejor ruta producida por ACO, con el fin de aprovechar una buena solución de partida y refinarla en una fase evolutiva posterior.
+
+Los parámetros iniciales usados fueron:
+
+- tamaño de población: `180`
+- número de generaciones: `350`
+- tasa de mutación: `0.12`
 - tasa de cruce: `0.9`
-- numero de individuos elitistas preservados por generacion: `12`
-- tamano del torneo de seleccion: `5`
+- número de individuos elitistas preservados por generación: `12`
+- tamaño del torneo de selección: `5`
 - uso de semilla inicial proveniente de ACO: `True`
 - semilla aleatoria: `42`
 
-La justificacion de esta configuracion es que una poblacion relativamente amplia favorece la diversidad de soluciones, mientras que una tasa de cruce alta promueve la recombinacion de rutas prometedoras. La mutacion moderada introduce variacion sin destruir excesivamente las estructuras utiles encontradas, y el elitismo garantiza que las mejores soluciones no se pierdan entre generaciones.
+La justificación de esta configuración es que una población relativamente amplia favorece la diversidad de soluciones, mientras que una tasa de cruce alta promueve la recombinación de rutas prometedoras. La mutación moderada introduce variación sin destruir excesivamente las estructuras útiles encontradas, y el elitismo garantiza que las mejores soluciones no se pierdan entre generaciones.
 
-En conjunto, ACO y GA ofrecen dos perspectivas complementarias sobre el mismo problema. ACO destaca por su capacidad para construir soluciones guiadas por memoria colectiva y heuristicas locales, mientras que GA resulta util para recombinar y refinar soluciones ya competitivas dentro de una poblacion diversa. Esta combinacion permite comparar estrategias de busqueda distintas e incluso aprovechar la salida de un metodo como punto de partida para el otro.
+#### Experimentación con distintas configuraciones
+
+- Experimento cambiando `tasa de mutación`:
+
+![](assets\combinatoria\ga\ga_mutation_rate.png)
+
+Aquí se ve que **todas las tasas de mutación terminan llegando prácticamente al mismo costo final** (cerca de **3975**), así que en este experimento la diferencia no está tanto en la calidad final sino en la **velocidad de convergencia**. La más lenta es **`mutation_rate = 0.12`**, mientras que **`0.24` y `0.28`** encuentran mejoras antes.
+
+En general, esto sugiere que una **mutación moderadamente alta ayuda a acelerar la búsqueda** sin perjudicar el resultado final. Si tuvieras que escoger una opción balanceada, **`mutation_rate = 0.24`** se ve como una muy buena candidata, porque converge rápido sin irse al valor más extremo.
+
+- Experimento cambiando `tamaño de población`:
+
+![](assets\combinatoria\ga\ga_population_rate.png)
+
+Aquí se ve que tamaños de población más grandes convergen más rápido: 340 y 300 encuentran mejoras antes, mientras que 180 es claramente la más lenta. Sin embargo, todas terminan llegando prácticamente al mismo costo final (cerca de 3975), así que la diferencia principal está en la rapidez, no en la calidad final.
+
+Eso sugiere que aumentar population_size ayuda a acelerar la búsqueda, pero con rendimientos decrecientes. Como además una población más grande cuesta más por generación, no necesariamente conviene irse al valor máximo. Si buscas una opción balanceada, population_size = 260 o 300 se ven como candidatas razonables.
+
+- Experimento cambiando `uso de semilla inicial proveniente de ACO`:
+
+![](assets\combinatoria\ga\ga_aco_seed.png)
+
+Aquí la diferencia es muy marcada: usar ACO seed hace que el GA arranque desde un costo mucho mejor, cerca de 4000, mientras que sin ACO seed empieza alrededor de 19400 y, aunque mejora de forma sostenida, después de 200 generaciones todavía queda muy por encima.
+
+Esto sugiere que inyectar la solución de ACO es altamente beneficioso, porque acelera muchísimo la convergencia y además lleva al algoritmo a una región de soluciones mucho mejores desde el inicio. De hecho, con ACO seed casi no hay mejoras adicionales, lo que indica que ACO ya entrega una solución inicial muy fuerte y el GA solo la refina ligeramente.
+
+## Configuración final de parámetros para el algoritmo genético
+
+De acuerdo con los experimentos realizados, se estableció la siguiente configuración para el algoritmo genético (GA), buscando un equilibrio entre diversidad poblacional, intensidad de búsqueda y preservación de las mejores soluciones encontradas:
+
+- tamaño de población: `300`
+- número de generaciones: `200`
+- tasa de mutación: `0.24`
+- tasa de cruce: `0.9`
+- número de individuos elitistas preservados por generación: `12`
+- tamaño del torneo de selección: `5`
+- uso de semilla inicial proveniente de ACO: `True`
+- semilla aleatoria: `42`
 
 ## 3.4 Resultados
 
-Los experimentos realizados sobre la instancia de las 96 capitales departamentales muestran que ambos metodos fueron capaces de producir recorridos validos y de costo competitivo. Sin embargo, el mejor resultado final fue alcanzado por el **algoritmo genetico (GA)**, que logro refinar la solucion inicial y obtener un costo total inferior al conseguido por la colonia de hormigas.
+Los experimentos realizados sobre la instancia de las 96 capitales departamentales muestran que ambos métodos fueron capaces de producir recorridos válidos y de costo competitivo. Sin embargo, el mejor resultado final fue alcanzado por el **algoritmo genético (GA)**, que logró refinar la solución inicial y obtener un costo total inferior al conseguido por la colonia de hormigas.
 
-La comparacion final entre metodos puede resumirse en la siguiente tabla:
+La comparación final entre métodos puede resumirse en la siguiente tabla:
 
-| Metodo | Mejor costo del tour (EUR) | Diferencia frente al mejor (EUR) | Iteraciones / generaciones | Tamano de busqueda |
+| Método | Mejor costo del tour (EUR) | Diferencia frente al mejor (EUR) | Iteraciones / generaciones | Tamaño de búsqueda |
 |---|---:|---:|---:|---:|
-| GA | 4303.602999 | 0.000000 | 350 | 180 |
-| ACO | 4471.569332 | 167.966333 | 250 | 40 |
+| GA | 3975.266333 | 0.000000 | 350 | 300 |
+| ACO | 4022.039333 | 46.773000 | 250 | 150 |
 
-El **costo total optimo encontrado** fue de **4303.602999 euros**, calculado con la funcion de costo definida a partir de peajes, combustible y tiempo del vendedor. Este resultado se obtuvo usando como vehiculo de referencia un **Renault Clio**, con combustible tipo gasolina, y una tarifa del vendedor de **12.02 euros por hora**, de acuerdo con la formulacion del modelo.
+El **mejor costo encontrado** fue de **3975.266333 euros**, calculado con la función de costo definida a partir de peajes, combustible y tiempo del vendedor. Este resultado se obtuvo usando como vehículo de referencia un **Renault Clio**, con combustible tipo gasolina, y una tarifa del vendedor de **12.02 euros por hora**, de acuerdo con la formulación del modelo. Además, aunque el tour TSP recorre las **96 capitales**, su expansión sobre el grafo real produce un recorrido de **100 saltos reales**, lo que permite interpretar la solución final de manera más fiel a la red de conexiones utilizada.
 
-En cuanto a la comparacion entre metodos, ACO alcanzo un mejor costo de **4471.569332 euros**, mientras que GA obtuvo **4303.602999 euros**. En otras palabras, **GA mejoro a ACO en 167.966333 euros, equivalente a una mejora relativa de 3.7563 %**. Este comportamiento sugiere que ACO fue efectivo para construir una buena ruta inicial, pero que GA tuvo una mayor capacidad de refinamiento al recombinar y ajustar soluciones candidatas a lo largo de las generaciones.
+En cuanto a la comparación entre métodos, ACO alcanzó un mejor costo de **4022.039333 euros**, mientras que GA obtuvo **3975.266333 euros**. En otras palabras, **GA mejoró a ACO en 46.773000 euros, equivalente a una mejora relativa de 1.1629 %**. Esta diferencia es menor que en versiones preliminares de los experimentos, lo que indica que ambos métodos terminaron convergiendo a soluciones de alta calidad y muy cercanas entre sí.
 
-Desde el punto de vista de la convergencia, esta dinamica resulta especialmente interesante: ACO encuentra rapidamente una solucion base competitiva para una instancia grande del TSP, mientras que GA aprovecha esa referencia inicial y la sigue refinando hasta obtener una mejora final del **3.7563 %**. Esto refuerza la idea de que ambos metodos no solo compiten entre si, sino que tambien pueden complementarse dentro del flujo de optimizacion.
+Desde el punto de vista de la convergencia, esta dinámica resulta especialmente interesante. ACO encuentra con rapidez una solución base competitiva para una instancia grande del TSP, mientras que GA, apoyado en una población más amplia y en la inyección de la mejor solución previa de ACO, consigue seguir refinando la ruta hasta obtener la mejor solución final. En este sentido, los resultados no solo muestran competencia entre ambos enfoques, sino también una **complementariedad efectiva** dentro del flujo de optimización.
 
-La **mejor ruta encontrada** puede leerse de forma mas clara si se resume por tramos geograficos:
+La **mejor ruta encontrada** puede resumirse por tramos geográficos de la siguiente forma:
 
-- inicio y arco mediterraneo: `Bourg-en-Bresse -> Gap -> Ajaccio -> Bastia -> Nice -> Digne-les-Bains -> Toulon -> Marseille -> Avignon -> Nimes -> Montpellier -> Perpignan`
-- suroccidente y eje atlantico: `Carcassonne -> Foix -> Auch -> Tarbes -> Pau -> Mont-de-Marsan -> Bordeaux -> Tours -> Blois -> Orleans -> Chartres -> Evreux -> Cergy -> Paris`
-- region norte y noreste: `Creteil -> Bobigny -> Nanterre -> Versailles -> Evry-Courcouronnes -> Melun -> Auxerre -> Troyes -> Bar-le-Duc -> Chaumont -> Vesoul -> Besancon -> Belfort -> Colmar -> Strasbourg -> Epinal -> Nancy -> Metz -> Charleville-Mezieres -> Chalons-en-Champagne -> Laon -> Lille -> Arras -> Amiens -> Beauvais -> Rouen`
-- occidente y regreso al centro-este: `Saint-Lo -> Caen -> Alencon -> Le Mans -> Angers -> Laval -> Rennes -> Saint-Brieuc -> Quimper -> Vannes -> Nantes -> La Roche-sur-Yon -> La Rochelle -> Niort -> Poitiers -> Angouleme -> Perigueux -> Agen -> Cahors -> Montauban -> Toulouse -> Albi -> Rodez -> Mende -> Aurillac -> Tulle -> Limoges -> Gueret -> Chateauroux -> Bourges -> Nevers -> Clermont-Ferrand -> Moulins -> Macon -> Lons-le-Saunier -> Dijon -> Annecy -> Chambery -> Grenoble -> Valence -> Privas -> Le Puy-en-Velay -> Saint-Etienne -> Lyon -> Bourg-en-Bresse`
+- corredor este y noreste: `Bourg-en-Bresse -> Lons-le-Saunier -> Besançon -> Vesoul -> Belfort -> Colmar -> Strasbourg -> Metz -> Nancy -> Épinal -> Chaumont -> Dijon -> Auxerre -> Troyes -> Bar-le-Duc -> Châlons-en-Champagne -> Charleville-Mézières -> Laon`
+- norte y eje parisino: `Lille -> Arras -> Amiens -> Beauvais -> Cergy -> Nanterre -> Bobigny -> Créteil -> Paris -> Versailles -> Évry-Courcouronnes -> Melun`
+- centro-oeste y fachada atlántica: `Orléans -> Blois -> Tours -> Poitiers -> Niort -> La Rochelle -> La Roche-sur-Yon -> Nantes -> Vannes -> Quimper -> Saint-Brieuc -> Rennes -> Laval -> Angers -> Le Mans -> Alençon -> Caen -> Saint-Lô -> Rouen -> Évreux -> Chartres -> Bourges -> Châteauroux -> Guéret -> Limoges -> Tulle -> Aurillac`
+- suroccidente y arco mediterráneo: `Rodez -> Albi -> Montauban -> Cahors -> Agen -> Périgueux -> Angoulême -> Bordeaux -> Mont-de-Marsan -> Pau -> Tarbes -> Auch -> Toulouse -> Foix -> Carcassonne -> Perpignan -> Montpellier -> Nîmes -> Avignon -> Marseille -> Toulon -> Bastia -> Ajaccio -> Nice -> Digne-les-Bains -> Gap`
+- retorno alpino y centro-este: `Grenoble -> Valence -> Privas -> Mende -> Le Puy-en-Velay -> Saint-Étienne -> Clermont-Ferrand -> Moulins -> Nevers -> Mâcon -> Lyon -> Chambéry -> Annecy -> Bourg-en-Bresse`
 
-En terminos cualitativos, los resultados muestran una dinamica complementaria entre ambos enfoques. ACO aporta una exploracion guiada por informacion local y memoria colectiva, lo que permite encontrar rapidamente rutas razonables en un espacio de busqueda muy grande. Por su parte, GA aprovecha esa base inicial y la mejora mediante operadores evolutivos, conservando buenas estructuras parciales y corrigiendo tramos menos eficientes del recorrido. Por esta razon, dentro de los experimentos realizados, **GA puede considerarse el metodo con mejor desempeno final** para esta instancia del problema.
+En términos cualitativos, los resultados muestran una dinámica complementaria entre ambos enfoques. ACO aporta una exploración guiada por información local y memoria colectiva, lo que permite encontrar rápidamente rutas razonables en un espacio de búsqueda muy grande. Por su parte, GA aprovecha esa base inicial y la mejora mediante operadores evolutivos, conservando buenas estructuras parciales y corrigiendo tramos menos eficientes del recorrido. Por esta razón, dentro de los experimentos realizados, **GA puede considerarse el método con mejor desempeño final** para esta instancia del problema, aunque la brecha observada frente a ACO sugiere que ambos métodos fueron altamente competitivos.
 
-## 3.5 Visualizacion
+## 3.5 Visualización
 
-La visualizacion final se realiza sobre el mapa de **Francia**, mostrando el recorrido ganador obtenido por el algoritmo genetico. El GIF permite observar la progresion espacial del tour, mientras que la curva de convergencia muestra como el costo va disminuyendo a medida que avanzan las generaciones del metodo ganador.
+La visualización final se realiza sobre el mapa de **Francia**, mostrando el recorrido ganador obtenido por el algoritmo genético. El GIF permite observar la progresión espacial del tour, mientras que la curva de convergencia muestra cómo el costo va disminuyendo a medida que avanzan las generaciones del método ganador.
 
-### Comparacion visual de costos
+### Comparación visual de costos
+
+<iframe
+  src="assets\combinatoria\visualizacion_mejor_solucion_mapa.html"
+  width="100%"
+  height="760"
+  style="border:0; border-radius:18px;">
+</iframe>
 
 ```{python}
 #| echo: false
@@ -127,7 +213,7 @@ colors = ["#c96f2d", "#2d7fc9"]
 
 fig, ax = plt.subplots(figsize=(7, 4))
 bars = ax.bar(methods, costs, color=colors)
-ax.set_title("Costo final por metodo")
+ax.set_title("Costo final por método")
 ax.set_ylabel("Costo total (EUR)")
 ax.grid(axis="y", alpha=0.25)
 
@@ -149,10 +235,8 @@ plt.show()
 
 <img src="assets/combinatoria/mejor_solucion_combinatoria.gif" alt="GIF del mejor recorrido sobre Francia" style="max-width: 100%; height: auto;">
 
-### Curva de convergencia del metodo ganador
+### Curva de convergencia del método ganador
 
-<img src="assets/combinatoria/convergencia_ga.svg" alt="Convergencia del algoritmo genetico" style="max-width: 100%; height: auto;">
+<img src="assets/combinatoria/convergencia_ga.svg" alt="Convergencia del algoritmo genético" style="max-width: 100%; height: auto;">
 
-Como apoyo adicional, tambien se dispone de una visualizacion estatica del tour ganador, util para inspeccionar la forma general del recorrido sin necesidad de reproducir la animacion.
-
-<img src="assets/combinatoria/visualizacion_mejor_solucion.svg" alt="Visualizacion estatica de la mejor ruta" style="max-width: 100%; height: auto;">
+Como apoyo adicional, también se dispone de una visualización estática del tour ganador, útil para inspeccionar la forma general del recorrido sin necesidad de reproducir la animación.

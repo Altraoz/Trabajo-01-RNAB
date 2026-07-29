@@ -1,0 +1,2146 @@
+{
+  "historial": [
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 1,
+      "mejor_costo": 6855.457334
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 2,
+      "mejor_costo": 6670.609333
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 3,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 4,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 5,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 6,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 7,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 8,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 9,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 10,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 11,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 12,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 13,
+      "mejor_costo": 6376.811329
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 14,
+      "mejor_costo": 6376.811329
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 15,
+      "mejor_costo": 6376.811329
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 16,
+      "mejor_costo": 5984.55
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 17,
+      "mejor_costo": 5981.778329
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 18,
+      "mejor_costo": 5560.657665
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 19,
+      "mejor_costo": 5560.657665
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 20,
+      "mejor_costo": 5466.565329
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 21,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 22,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 23,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 24,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 25,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 26,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 27,
+      "mejor_costo": 4689.647331
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 28,
+      "mejor_costo": 4566.908664
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 29,
+      "mejor_costo": 4565.905331
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 30,
+      "mejor_costo": 4534.004332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 31,
+      "mejor_costo": 4534.004332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 32,
+      "mejor_costo": 4534.004332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 33,
+      "mejor_costo": 4505.030666
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 34,
+      "mejor_costo": 4505.030666
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 35,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 36,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 37,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 38,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 39,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 40,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 41,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 42,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 43,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 44,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 45,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 46,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 47,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 48,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 49,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 50,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 51,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 52,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 53,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 54,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 55,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 56,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 57,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 58,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 59,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "iteracion": 60,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 1,
+      "mejor_costo": 5741.936332
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 2,
+      "mejor_costo": 5699.491329
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 3,
+      "mejor_costo": 5463.551331
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 4,
+      "mejor_costo": 5463.551331
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 5,
+      "mejor_costo": 5463.551331
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 6,
+      "mejor_costo": 5226.821002
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 7,
+      "mejor_costo": 5226.821002
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 8,
+      "mejor_costo": 5226.821002
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 9,
+      "mejor_costo": 5223.392997
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 10,
+      "mejor_costo": 5223.392997
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 11,
+      "mejor_costo": 5223.392997
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 12,
+      "mejor_costo": 5223.392997
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 13,
+      "mejor_costo": 5223.392997
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 14,
+      "mejor_costo": 5223.392997
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 15,
+      "mejor_costo": 5223.392997
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 16,
+      "mejor_costo": 5128.748665
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 17,
+      "mejor_costo": 5128.748665
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 18,
+      "mejor_costo": 5128.748665
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 19,
+      "mejor_costo": 5128.748665
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 20,
+      "mejor_costo": 5060.063669
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 21,
+      "mejor_costo": 4909.746667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 22,
+      "mejor_costo": 4561.339667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 23,
+      "mejor_costo": 4561.339667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 24,
+      "mejor_costo": 4561.339667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 25,
+      "mejor_costo": 4561.339667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 26,
+      "mejor_costo": 4526.396666
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 27,
+      "mejor_costo": 4526.396666
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 28,
+      "mejor_costo": 4387.341335
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 29,
+      "mejor_costo": 4387.341335
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 30,
+      "mejor_costo": 4387.341335
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 31,
+      "mejor_costo": 4365.126336
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 32,
+      "mejor_costo": 4308.481334
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 33,
+      "mejor_costo": 4308.481334
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 34,
+      "mejor_costo": 4308.481334
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 35,
+      "mejor_costo": 4308.481334
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 36,
+      "mejor_costo": 4286.266335
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 37,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 38,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 39,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 40,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 41,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 42,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 43,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 44,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 45,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 46,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 47,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 48,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 49,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 50,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 51,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 52,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 53,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 54,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 55,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 56,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 57,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 58,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 59,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "iteracion": 60,
+      "mejor_costo": 4213.071667
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 1,
+      "mejor_costo": 5342.023332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 2,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 3,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 4,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 5,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 6,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 7,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 8,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 9,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 10,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 11,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 12,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 13,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 14,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 15,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 16,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 17,
+      "mejor_costo": 4926.211668
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 18,
+      "mejor_costo": 4800.039332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 19,
+      "mejor_costo": 4800.039332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 20,
+      "mejor_costo": 4800.039332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 21,
+      "mejor_costo": 4702.967
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 22,
+      "mejor_costo": 4278.481664
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 23,
+      "mejor_costo": 4278.481664
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 24,
+      "mejor_costo": 4278.481664
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 25,
+      "mejor_costo": 4278.481664
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 26,
+      "mejor_costo": 4278.481664
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 27,
+      "mejor_costo": 4222.558332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 28,
+      "mejor_costo": 4208.572998
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 29,
+      "mejor_costo": 4165.694332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 30,
+      "mejor_costo": 4164.681999
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 31,
+      "mejor_costo": 4164.681999
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 32,
+      "mejor_costo": 4158.562999
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 33,
+      "mejor_costo": 4158.562999
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 34,
+      "mejor_costo": 4158.562999
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 35,
+      "mejor_costo": 4158.562999
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 36,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 37,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 38,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 39,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 40,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 41,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 42,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 43,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 44,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 45,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 46,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 47,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 48,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 49,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 50,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 51,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 52,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 53,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 54,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 55,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 56,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 57,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 58,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 59,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "iteracion": 60,
+      "mejor_costo": 4099.946332
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 1,
+      "mejor_costo": 5022.64733
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 2,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 3,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 4,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 5,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 6,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 7,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 8,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 9,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 10,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 11,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 12,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 13,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 14,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 15,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 16,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 17,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 18,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 19,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 20,
+      "mejor_costo": 4622.765667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 21,
+      "mejor_costo": 4480.101335
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 22,
+      "mejor_costo": 4480.101335
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 23,
+      "mejor_costo": 4410.954667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 24,
+      "mejor_costo": 4410.954667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 25,
+      "mejor_costo": 4410.954667
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 26,
+      "mejor_costo": 4409.865334
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 27,
+      "mejor_costo": 4336.107001
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 28,
+      "mejor_costo": 4336.107001
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 29,
+      "mejor_costo": 4331.424333
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 30,
+      "mejor_costo": 4286.900999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 31,
+      "mejor_costo": 4286.900999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 32,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 33,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 34,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 35,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 36,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 37,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 38,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 39,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 40,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 41,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 42,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 43,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 44,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 45,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 46,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 47,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 48,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 49,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 50,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 51,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 52,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 53,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 54,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 55,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 56,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 57,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 58,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 59,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "iteracion": 60,
+      "mejor_costo": 4256.518999
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 1,
+      "mejor_costo": 4846.557999
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 2,
+      "mejor_costo": 4846.557999
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 3,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 4,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 5,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 6,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 7,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 8,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 9,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 10,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 11,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 12,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 13,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 14,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 15,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 16,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 17,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 18,
+      "mejor_costo": 4753.533333
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 19,
+      "mejor_costo": 4569.725004
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 20,
+      "mejor_costo": 4569.725004
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 21,
+      "mejor_costo": 4569.725004
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 22,
+      "mejor_costo": 4435.185336
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 23,
+      "mejor_costo": 4435.185336
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 24,
+      "mejor_costo": 4435.185336
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 25,
+      "mejor_costo": 4435.185336
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 26,
+      "mejor_costo": 4434.32667
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 27,
+      "mejor_costo": 4434.32667
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 28,
+      "mejor_costo": 4415.881668
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 29,
+      "mejor_costo": 4274.135669
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 30,
+      "mejor_costo": 4274.135669
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 31,
+      "mejor_costo": 4274.135669
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 32,
+      "mejor_costo": 4142.467334
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 33,
+      "mejor_costo": 4138.700335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 34,
+      "mejor_costo": 4138.700335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 35,
+      "mejor_costo": 4138.700335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 36,
+      "mejor_costo": 4138.700335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 37,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 38,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 39,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 40,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 41,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 42,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 43,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 44,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 45,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 46,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 47,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 48,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 49,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 50,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 51,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 52,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 53,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 54,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 55,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 56,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 57,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 58,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 59,
+      "mejor_costo": 4102.613335
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "iteracion": 60,
+      "mejor_costo": 4102.613335
+    }
+  ],
+  "resumen": [
+    {
+      "experimento": "beta_1",
+      "beta": 3.0,
+      "hormigas": 40,
+      "mejor_costo_tour": 4471.569332,
+      "iteraciones": 60,
+      "seed": 42
+    },
+    {
+      "experimento": "beta_2",
+      "beta": 4.0,
+      "hormigas": 40,
+      "mejor_costo_tour": 4213.071667,
+      "iteraciones": 60,
+      "seed": 42
+    },
+    {
+      "experimento": "beta_3",
+      "beta": 5.0,
+      "hormigas": 40,
+      "mejor_costo_tour": 4099.946332,
+      "iteraciones": 60,
+      "seed": 42
+    },
+    {
+      "experimento": "beta_4",
+      "beta": 6.0,
+      "hormigas": 40,
+      "mejor_costo_tour": 4256.518999,
+      "iteraciones": 60,
+      "seed": 42
+    },
+    {
+      "experimento": "beta_5",
+      "beta": 7.0,
+      "hormigas": 40,
+      "mejor_costo_tour": 4102.613335,
+      "iteraciones": 60,
+      "seed": 42
+    }
+  ]
+}

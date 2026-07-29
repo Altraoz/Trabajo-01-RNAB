@@ -46,5 +46,8 @@
     "reporte_tecnico.html": "e5a7436e",
     "reporte_tecnico.tex": "98339dc5",
     "reporte_tecnico.docx": "24654a82"
+  },
+  "prompts.qmd": {
+    "prompts.html": "a36570e3"
   }
 }

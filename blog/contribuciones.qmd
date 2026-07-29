@@ -1,0 +1,9 @@
+# 7. Contribuciones Individuales
+
+## Video Reporte de Contribucion Individual
+
+<video controls style="max-width: 100%; height: auto;">
+  <source src="assets\video\aporte.mp4" type="video/mp4">
+</video>
+
+En esta entrega, el desarrollo real del trabajo recayo principalmente en Carlos. Aunque inicialmente se contaba con un equipo de trabajo, no fue posible concretar una conciliacion suficiente para avanzar de manera conjunta y consistente en la construccion completa del proyecto. Debido a ello, gran parte del resultado final se apoyo en la reutilizacion, adaptacion y extension del material que ya se habia entregado en la primera entrega.

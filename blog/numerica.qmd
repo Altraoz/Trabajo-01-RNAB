@@ -7,7 +7,8 @@ bibliography: referencias.bib
 
 ## Funciones de prueba
 
-Para evaluar el comportamiento de los métodos de optimización numérica, se seleccionaron varias funciones de prueba ampliamente utilizadas en la literatura. En conjunto, estas funciones benchmark ofrecen paisajes de optimización con propiedades diversas, como multimodalidad, distintos niveles de separabilidad y valles estrechos, por lo que constituyen una base adecuada para comparar la convergencia y la robustez de distintos algoritmos frente a problemas de diferente dificultad (Jamil & Yang, 2013).
+Para evaluar el comportamiento de los métodos de optimización numérica, se seleccionaron varias funciones de prueba ampliamente utilizadas en la literatura. En conjunto, estas funciones benchmark ofrecen paisajes de optimización con propiedades diversas, como multimodalidad, distintos niveles de separabilidad y valles estrechos, por lo que constituyen una base adecuada para comparar la convergencia y la robustez de distintos algoritmos frente a problemas de diferente dificultad [@jamil2013].
+
 ### Función de Rosenbrock
 
 La función de Rosenbrock es un caso clásico en optimización continua. Su principal dificultad es la presencia de un valle largo, curvo y angosto que conduce al mínimo global. Aunque la función no es extremadamente multimodal, muchos algoritmos tienen dificultades para avanzar de manera estable dentro de este valle y acercarse con precisión a la solución.
@@ -86,7 +87,7 @@ Una vez definidas las funciones de prueba, el siguiente paso consiste en estudia
 $$
 x_{k+1} = x_k - \alpha \nabla f(x_k),
 $$
-donde $x_k$ es la solución en la iteración $k$, $\alpha$ es la tasa de aprendizaje y $\nabla f(x_k)$ es el gradiente de la función objetivo evaluado en ese punto. En cada paso, el método avanza en la dirección opuesta al gradiente para reducir el valor de la función y aproximarse a un mínimo. Aunque suele ser eficiente en funciones suaves, su desempeño depende en gran medida de la geometría de la función objetivo y de la condición inicial elegida (Nocedal & Wright, 2006).
+donde $x_k$ es la solución en la iteración $k$, $\alpha$ es la tasa de aprendizaje y $\nabla f(x_k)$ es el gradiente de la función objetivo evaluado en ese punto. En cada paso, el método avanza en la dirección opuesta al gradiente para reducir el valor de la función y aproximarse a un mínimo. Aunque suele ser eficiente en funciones suaves, su desempeño depende en gran medida de la geometría de la función objetivo y de la condición inicial elegida [@nocedal2006].
 
 ### Metodología
 

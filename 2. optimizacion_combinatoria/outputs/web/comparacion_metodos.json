@@ -1,8 +1,8 @@
 {
   "mejor_metodo": "GA",
-  "costo_aco": 4471.569332,
-  "costo_ga": 4303.602999,
-  "mejor_costo": 4303.602999,
-  "diferencia_absoluta": 167.966333,
-  "diferencia_relativa_pct": 3.7563
+  "costo_aco": 4022.039333,
+  "costo_ga": 3975.266333,
+  "mejor_costo": 3975.266333,
+  "diferencia_absoluta": 46.773,
+  "diferencia_relativa_pct": 1.1629
 }

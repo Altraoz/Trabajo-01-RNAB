@@ -1,0 +1,59 @@
+# Parte 4: Uso de Inteligencia Artificial en el Proyecto
+
+## 4.1 Prompts principales utilizados
+
+Los prompts reportados en esta seccion son una reconstruccion fiel de los usos principales que tuvo la IA durante el proyecto. No buscan ser una transcripcion literal de cada chat, sino resumir de forma clara las solicitudes que realmente influyeron en la implementacion, el analisis de resultados y la presentacion final del trabajo.
+
+### Prompt 1: diseno de experimentos para ACO y GA
+
+```text
+Estoy comparando colonia de hormigas y algoritmo genetico para el TSP de las capitales departamentales de Francia. Ayudame a decidir que hiperparametros vale la pena experimentar en cada metodo y a escribir el codigo para correr esos barridos, guardar resultados y graficar la convergencia.
+```
+
+**Impacto en el resultado final.** Este tipo de prompt permitio estructurar de manera mas rapida los experimentos de `mutation_rate`, `population_size` e `inject_aco_seed` en `GA`, y de `ants`, `beta` y `evaporation_rate` en `ACO`. Gracias a ello se pudieron comparar configuraciones reales en vez de dejar la seleccion de parametros a prueba y error informal.
+
+### Prompt 2: interpretacion de curvas y seleccion de configuracion final
+
+```text
+Ya tengo las graficas y tablas de los experimentos de ACO y GA. Ayudame a interpretarlas y a escoger una configuracion balanceada, explicando que parametros mejoran el costo final, cuales aceleran la convergencia y cuales solo aumentan el costo computacional.
+```
+
+**Impacto en el resultado final.** La IA se uso como apoyo para leer las curvas de convergencia y justificar mejor la eleccion final de configuraciones. En particular, ayudo a identificar el efecto positivo de `inject_aco_seed`, el papel de `mutation_rate` en la velocidad de refinamiento de `GA` y el compromiso entre calidad y costo computacional en `ACO`.
+
+### Prompt 3: visualizacion de la mejor ruta sobre el mapa de Francia
+
+```text
+Quiero mostrar la mejor ruta final sobre un mapa de Francia dentro del notebook y no solo como un SVG estilizado. Ayudame a construir una visualizacion con folium o plotly, exportarla para el reporte y dejarla lista para incrustarla junto con la curva de convergencia.
+```
+
+**Impacto en el resultado final.** Este prompt mejoro de forma directa la calidad de la presentacion. La mejor solucion ya no quedo solo como una polilinea abstracta, sino como una ruta visible sobre un mapa, lo que hace mucho mas clara la interpretacion geografica del recorrido final y fortalece la calidad del reporte.
+
+### Prompt 4: integracion de tablas, figuras y texto en el reporte tecnico
+
+```text
+Ayudame a convertir los resultados de los notebooks en una seccion de reporte tecnico en Quarto. Quiero una tabla comparativa final entre metodos, una explicacion breve de la convergencia y una redaccion clara de los hallazgos mas importantes.
+```
+
+**Impacto en el resultado final.** La IA ayudo a pasar de resultados dispersos en notebooks a una narrativa tecnica mas ordenada. Esto facilito integrar tablas, figuras y conclusiones en un formato consistente para el informe final, especialmente en la comparacion entre metodos y en la lectura de la convergencia.
+
+### Prompt 5: organizacion e interpretacion de resultados en optimizacion numerica
+
+```text
+Necesito resumir los resultados de descenso por gradiente y de los metodos heuristicos en tablas y figuras comparables. Ayudame a insertar las tablas reales, escoger visualizaciones utiles e interpretar que se observa en terminos de calidad de solucion, estabilidad y numero de evaluaciones.
+```
+
+**Impacto en el resultado final.** Este tipo de prompt sirvio para mejorar la lectura comparativa en la parte numerica. La IA ayudo a seleccionar que figuras eran mas utiles, como presentar los histogramas y como traducir los resultados cuantitativos en una discusion mas clara sobre robustez, multimodalidad y costo computacional.
+
+### Prompt 6: redaccion de introducciones, metodologia y cierre
+
+```text
+Ayudame a redactar una introduccion breve, la metodologia y las conclusiones de un reporte academico sobre optimizacion numerica y combinatoria, manteniendo un tono tecnico y conectando bien los resultados con la discusion final.
+```
+
+**Impacto en el resultado final.** La IA se uso como apoyo de escritura tecnica para ordenar el documento y reducir tiempo de redaccion. Esto no sustituyo el analisis propio, pero si ayudo a que el informe final tuviera una estructura mas coherente y una mejor transicion entre problema, metodologia, resultados y conclusiones.
+
+## 4.2 Impacto global de la IA en el proyecto
+
+En conjunto, la IA tuvo cuatro aportes principales dentro del trabajo. Primero, acelero la implementacion y depuracion de codigo para experimentos y visualizaciones. Segundo, ayudo a disenar mejor los barridos de parametros y a interpretar las curvas de convergencia, lo que tuvo impacto directo en la seleccion de configuraciones para `ACO` y `GA`. Tercero, mejoro la presentacion de resultados, especialmente en la ruta final sobre el mapa y en la organizacion de tablas y figuras. Cuarto, sirvio como apoyo para estructurar el reporte tecnico y redactar secciones de forma mas clara.
+
+Por tanto, el uso de IA no consistio en delegar automaticamente la solucion del trabajo, sino en utilizarla como herramienta de apoyo para programacion, analisis y escritura tecnica. Las decisiones finales, la ejecucion de los experimentos, la seleccion de configuraciones y la revision del contenido quedaron bajo control del desarrollo realizado en el proyecto.

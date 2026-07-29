@@ -1,0 +1,1841 @@
+{
+  "historial": [
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 1,
+      "mejor_costo": 6855.457334
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 2,
+      "mejor_costo": 6670.609333
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 3,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 4,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 5,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 6,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 7,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 8,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 9,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 10,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 11,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 12,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 13,
+      "mejor_costo": 6376.811329
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 14,
+      "mejor_costo": 6376.811329
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 15,
+      "mejor_costo": 6376.811329
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 16,
+      "mejor_costo": 5984.55
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 17,
+      "mejor_costo": 5981.778329
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 18,
+      "mejor_costo": 5560.657665
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 19,
+      "mejor_costo": 5560.657665
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 20,
+      "mejor_costo": 5466.565329
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 21,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 22,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 23,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 24,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 25,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 26,
+      "mejor_costo": 4801.819663
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 27,
+      "mejor_costo": 4689.647331
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 28,
+      "mejor_costo": 4566.908664
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 29,
+      "mejor_costo": 4565.905331
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 30,
+      "mejor_costo": 4534.004332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 31,
+      "mejor_costo": 4534.004332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 32,
+      "mejor_costo": 4534.004332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 33,
+      "mejor_costo": 4505.030666
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 34,
+      "mejor_costo": 4505.030666
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 35,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 36,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 37,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 38,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 39,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 40,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 41,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 42,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 43,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 44,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 45,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 46,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 47,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 48,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 49,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 50,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 51,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 52,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 53,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 54,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 55,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 56,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 57,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 58,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 59,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "iteracion": 60,
+      "mejor_costo": 4471.569332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 1,
+      "mejor_costo": 6670.609333
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 2,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 3,
+      "mejor_costo": 6499.688664
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 4,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 5,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 6,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 7,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 8,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 9,
+      "mejor_costo": 6380.165662
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 10,
+      "mejor_costo": 6380.165662
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 11,
+      "mejor_costo": 6380.165662
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 12,
+      "mejor_costo": 6206.107998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 13,
+      "mejor_costo": 6206.107998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 14,
+      "mejor_costo": 6206.107998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 15,
+      "mejor_costo": 6206.107998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 16,
+      "mejor_costo": 5754.393
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 17,
+      "mejor_costo": 5754.393
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 18,
+      "mejor_costo": 5754.393
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 19,
+      "mejor_costo": 5713.551998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 20,
+      "mejor_costo": 5627.961
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 21,
+      "mejor_costo": 5325.227664
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 22,
+      "mejor_costo": 5215.206335
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 23,
+      "mejor_costo": 5215.206335
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 24,
+      "mejor_costo": 5020.399665
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 25,
+      "mejor_costo": 5010.135998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 26,
+      "mejor_costo": 4954.892332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 27,
+      "mejor_costo": 4872.346664
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 28,
+      "mejor_costo": 4772.329668
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 29,
+      "mejor_costo": 4772.329668
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 30,
+      "mejor_costo": 4738.116997
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 31,
+      "mejor_costo": 4552.143998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 32,
+      "mejor_costo": 4552.143998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 33,
+      "mejor_costo": 4552.143998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 34,
+      "mejor_costo": 4552.143998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 35,
+      "mejor_costo": 4552.143998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 36,
+      "mejor_costo": 4552.143998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 37,
+      "mejor_costo": 4552.143998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 38,
+      "mejor_costo": 4480.341998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 39,
+      "mejor_costo": 4438.039331
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 40,
+      "mejor_costo": 4399.796998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 41,
+      "mejor_costo": 4374.938998
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 42,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 43,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 44,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 45,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 46,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 47,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 48,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 49,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 50,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 51,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 52,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 53,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 54,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 55,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 56,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 57,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 58,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 59,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "iteracion": 60,
+      "mejor_costo": 4359.832332
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 1,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 2,
+      "mejor_costo": 6499.688664
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 3,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 4,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 5,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 6,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 7,
+      "mejor_costo": 6299.647005
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 8,
+      "mejor_costo": 6299.647005
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 9,
+      "mejor_costo": 6136.943661
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 10,
+      "mejor_costo": 6136.943661
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 11,
+      "mejor_costo": 6136.943661
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 12,
+      "mejor_costo": 6023.360995
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 13,
+      "mejor_costo": 6023.360995
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 14,
+      "mejor_costo": 5992.078999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 15,
+      "mejor_costo": 5992.078999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 16,
+      "mejor_costo": 5992.078999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 17,
+      "mejor_costo": 5992.078999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 18,
+      "mejor_costo": 5502.294664
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 19,
+      "mejor_costo": 5502.294664
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 20,
+      "mejor_costo": 5502.294664
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 21,
+      "mejor_costo": 5182.860999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 22,
+      "mejor_costo": 5068.669999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 23,
+      "mejor_costo": 5068.669999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 24,
+      "mejor_costo": 5068.669999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 25,
+      "mejor_costo": 4898.037664
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 26,
+      "mejor_costo": 4845.902333
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 27,
+      "mejor_costo": 4691.601999
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 28,
+      "mejor_costo": 4630.502
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 29,
+      "mejor_costo": 4610.842667
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 30,
+      "mejor_costo": 4451.250667
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 31,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 32,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 33,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 34,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 35,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 36,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 37,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 38,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 39,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 40,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 41,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 42,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 43,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 44,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 45,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 46,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 47,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 48,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 49,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 50,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 51,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 52,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 53,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 54,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 55,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 56,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 57,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 58,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 59,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "iteracion": 60,
+      "mejor_costo": 4434.687001
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 1,
+      "mejor_costo": 6549.810999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 2,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 3,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 4,
+      "mejor_costo": 6266.375666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 5,
+      "mejor_costo": 6266.375666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 6,
+      "mejor_costo": 6167.504994
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 7,
+      "mejor_costo": 6167.504994
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 8,
+      "mejor_costo": 6167.504994
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 9,
+      "mejor_costo": 6167.504994
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 10,
+      "mejor_costo": 6167.504994
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 11,
+      "mejor_costo": 6167.504994
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 12,
+      "mejor_costo": 6167.504994
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 13,
+      "mejor_costo": 6167.504994
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 14,
+      "mejor_costo": 6043.784999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 15,
+      "mejor_costo": 6043.784999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 16,
+      "mejor_costo": 6019.115001
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 17,
+      "mejor_costo": 5634.892
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 18,
+      "mejor_costo": 5572.267001
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 19,
+      "mejor_costo": 5048.953999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 20,
+      "mejor_costo": 4984.550668
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 21,
+      "mejor_costo": 4984.550668
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 22,
+      "mejor_costo": 4899.196332
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 23,
+      "mejor_costo": 4796.092334
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 24,
+      "mejor_costo": 4792.330333
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 25,
+      "mejor_costo": 4497.826333
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 26,
+      "mejor_costo": 4497.826333
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 27,
+      "mejor_costo": 4437.924332
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 28,
+      "mejor_costo": 4400.637332
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 29,
+      "mejor_costo": 4328.825332
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 30,
+      "mejor_costo": 4283.143334
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 31,
+      "mejor_costo": 4283.143334
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 32,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 33,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 34,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 35,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 36,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 37,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 38,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 39,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 40,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 41,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 42,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 43,
+      "mejor_costo": 4281.479666
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 44,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 45,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 46,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 47,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 48,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 49,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 50,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 51,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 52,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 53,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 54,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 55,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 56,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 57,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 58,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 59,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "iteracion": 60,
+      "mejor_costo": 4270.248999
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 1,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 2,
+      "mejor_costo": 6431.513667
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 3,
+      "mejor_costo": 6266.375666
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 4,
+      "mejor_costo": 6266.375666
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 5,
+      "mejor_costo": 5970.229323
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 6,
+      "mejor_costo": 5970.229323
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 7,
+      "mejor_costo": 5970.229323
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 8,
+      "mejor_costo": 5827.310001
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 9,
+      "mejor_costo": 5827.310001
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 10,
+      "mejor_costo": 5827.310001
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 11,
+      "mejor_costo": 5827.310001
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 12,
+      "mejor_costo": 5827.310001
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 13,
+      "mejor_costo": 5827.310001
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 14,
+      "mejor_costo": 5827.310001
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 15,
+      "mejor_costo": 5827.310001
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 16,
+      "mejor_costo": 5827.310001
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 17,
+      "mejor_costo": 5495.752998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 18,
+      "mejor_costo": 5495.752998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 19,
+      "mejor_costo": 5314.231
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 20,
+      "mejor_costo": 5278.683336
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 21,
+      "mejor_costo": 4997.456331
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 22,
+      "mejor_costo": 4958.185666
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 23,
+      "mejor_costo": 4847.191667
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 24,
+      "mejor_costo": 4821.416332
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 25,
+      "mejor_costo": 4669.260668
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 26,
+      "mejor_costo": 4656.760998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 27,
+      "mejor_costo": 4499.459333
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 28,
+      "mejor_costo": 4454.214999
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 29,
+      "mejor_costo": 4294.346333
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 30,
+      "mejor_costo": 4294.346333
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 31,
+      "mejor_costo": 4294.346333
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 32,
+      "mejor_costo": 4294.346333
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 33,
+      "mejor_costo": 4290.778665
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 34,
+      "mejor_costo": 4290.778665
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 35,
+      "mejor_costo": 4290.778665
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 36,
+      "mejor_costo": 4244.062665
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 37,
+      "mejor_costo": 4178.349998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 38,
+      "mejor_costo": 4178.349998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 39,
+      "mejor_costo": 4156.558999
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 40,
+      "mejor_costo": 4156.558999
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 41,
+      "mejor_costo": 4156.558999
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 42,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 43,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 44,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 45,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 46,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 47,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 48,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 49,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 50,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 51,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 52,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 53,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 54,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 55,
+      "mejor_costo": 4141.753998
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 56,
+      "mejor_costo": 4123.499333
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 57,
+      "mejor_costo": 4123.499333
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 58,
+      "mejor_costo": 4123.499333
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 59,
+      "mejor_costo": 4123.499333
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "iteracion": 60,
+      "mejor_costo": 4123.499333
+    }
+  ],
+  "resumen": [
+    {
+      "experimento": "ants_10",
+      "hormigas": 40,
+      "mejor_costo_tour": 4471.569332,
+      "iteraciones": 60,
+      "seed": 42
+    },
+    {
+      "experimento": "ants_20",
+      "hormigas": 60,
+      "mejor_costo_tour": 4359.832332,
+      "iteraciones": 60,
+      "seed": 42
+    },
+    {
+      "experimento": "ants_40",
+      "hormigas": 100,
+      "mejor_costo_tour": 4434.687001,
+      "iteraciones": 60,
+      "seed": 42
+    },
+    {
+      "experimento": "ants_60",
+      "hormigas": 150,
+      "mejor_costo_tour": 4270.248999,
+      "iteraciones": 60,
+      "seed": 42
+    },
+    {
+      "experimento": "ants_80",
+      "hormigas": 250,
+      "mejor_costo_tour": 4123.499333,
+      "iteraciones": 60,
+      "seed": 42
+    }
+  ]
+}

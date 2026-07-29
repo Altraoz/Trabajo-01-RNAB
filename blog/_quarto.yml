@@ -8,6 +8,7 @@ project:
     - numerica.qmd
     - combinatoria.qmd
     - reporte_tecnico.qmd
+    - prompts.qmd
     - notebooks/**/*.ipynb
     - presentacion/**/*.ipynb
 
@@ -21,8 +22,10 @@ website:
         text: Numerica
       - href: combinatoria.qmd
         text: Combinatoria
-      - href: reporte_tecnico.qmd
-        text: Reporte Tecnico
+      - href: conclusiones.qmd
+        text: Conclusiones
+      - href: prompts.qmd
+        text: Uso de IA
   sidebar:
     style: docked
     search: true
@@ -31,6 +34,7 @@ website:
       - numerica.qmd
       - combinatoria.qmd
       - reporte_tecnico.qmd
+      - prompts.qmd
 
 format:
   html:

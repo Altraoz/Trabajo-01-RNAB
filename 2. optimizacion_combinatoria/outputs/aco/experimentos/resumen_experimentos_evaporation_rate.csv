@@ -1,0 +1,6 @@
+experimento,evaporation_rate,hormigas,mejor_costo_tour,iteraciones,seed
+evap_015,0.15,40,4274.693667,100,42
+evap_025,0.25,40,4067.228332,100,42
+evap_035,0.35,40,4471.569332,100,42
+evap_045,0.45,40,4481.515666,100,42
+evap_055,0.55,40,4721.023999,100,42

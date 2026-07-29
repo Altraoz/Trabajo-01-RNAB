@@ -1,0 +1,6 @@
+experimento,hormigas,mejor_costo_tour,iteraciones,seed
+ants_10,40,4471.569332,60,42
+ants_20,60,4359.832332,60,42
+ants_40,100,4434.687001,60,42
+ants_60,150,4270.248999,60,42
+ants_80,250,4123.499333,60,42
