@@ -155,8 +155,12 @@ window.Quarto = {
 <span class="menu-text">Combinatoria</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./reporte_tecnico.html"> 
-<span class="menu-text">Reporte Tecnico</span></a>
+    <a class="nav-link" href="./conclusiones.qmd"> 
+<span class="menu-text">Conclusiones</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./prompts.html"> 
+<span class="menu-text">Uso de IA</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -204,13 +208,19 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./combinatoria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Optimizacion combinatoria</span></a>
+ <span class="menu-text">Optimización combinatoria</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./reporte_tecnico.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reporte tecnico - Trabajo 01</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prompts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Parte 4: Uso de Inteligencia Artificial en el Proyecto</span></a>
   </div>
 </li>
     </ul>
@@ -227,6 +237,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#funciones-de-prueba" id="toc-funciones-de-prueba" class="nav-link" data-scroll-target="#funciones-de-prueba">Funciones de prueba</a>
   <ul class="collapse">
+  <li><a href="#función-de-rosenbrock" id="toc-función-de-rosenbrock" class="nav-link" data-scroll-target="#función-de-rosenbrock">Función de Rosenbrock</a></li>
   <li><a href="#función-de-rastrigin" id="toc-función-de-rastrigin" class="nav-link" data-scroll-target="#función-de-rastrigin">Función de Rastrigin</a></li>
   <li><a href="#función-de-schwefel" id="toc-función-de-schwefel" class="nav-link" data-scroll-target="#función-de-schwefel">Función de Schwefel</a></li>
   <li><a href="#función-de-griewank" id="toc-función-de-griewank" class="nav-link" data-scroll-target="#función-de-griewank">Función de Griewank</a></li>
@@ -290,12 +301,15 @@ window.Quarto = {
 <h1>Parte 1: Optimización Numérica</h1>
 <section id="funciones-de-prueba" class="level2">
 <h2 class="anchored" data-anchor-id="funciones-de-prueba">Funciones de prueba</h2>
-<p>Para evaluar el comportamiento de los métodos de optimización numérica, se seleccionaron varias funciones de prueba ampliamente utilizadas en la literatura. En conjunto, estas funciones benchmark ofrecen paisajes de optimización con propiedades diversas, como multimodalidad, distintos niveles de separabilidad y valles estrechos, por lo que constituyen una base adecuada para comparar la convergencia y la robustez de distintos algoritmos frente a problemas de diferente dificultad (Jamil &amp; Yang, 2013). ### Función de Rosenbrock</p>
+<p>Para evaluar el comportamiento de los métodos de optimización numérica, se seleccionaron varias funciones de prueba ampliamente utilizadas en la literatura. En conjunto, estas funciones benchmark ofrecen paisajes de optimización con propiedades diversas, como multimodalidad, distintos niveles de separabilidad y valles estrechos, por lo que constituyen una base adecuada para comparar la convergencia y la robustez de distintos algoritmos frente a problemas de diferente dificultad <span class="citation" data-cites="jamil2013">(<a href="#ref-jamil2013" role="doc-biblioref">Jamil and Yang 2013</a>)</span>.</p>
+<section id="función-de-rosenbrock" class="level3">
+<h3 class="anchored" data-anchor-id="función-de-rosenbrock">Función de Rosenbrock</h3>
 <p>La función de Rosenbrock es un caso clásico en optimización continua. Su principal dificultad es la presencia de un valle largo, curvo y angosto que conduce al mínimo global. Aunque la función no es extremadamente multimodal, muchos algoritmos tienen dificultades para avanzar de manera estable dentro de este valle y acercarse con precisión a la solución.</p>
 <p><span class="math display">\[
 f(x, y) = (1 - x)^2 + 100(y - x^2)^2
 \]</span></p>
 <p>Su mínimo global se encuentra en <span class="math inline">\((1,1)\)</span>, donde <span class="math inline">\(f(x,y)=0\)</span>.</p>
+</section>
 <section id="función-de-rastrigin" class="level3">
 <h3 class="anchored" data-anchor-id="función-de-rastrigin">Función de Rastrigin</h3>
 <p>La función de Rastrigin es ampliamente usada para evaluar algoritmos en escenarios multimodales. Su superficie contiene una gran cantidad de mínimos locales distribuidos periódicamente, lo que dificulta la búsqueda del mínimo global. Por esta razón, resulta muy útil para analizar la capacidad de exploración de un método de optimización.</p>
@@ -353,7 +367,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <h2 class="anchored" data-anchor-id="optimización-con-descenso-por-gradiente">Optimización con Descenso por Gradiente</h2>
 <p>Una vez definidas las funciones de prueba, el siguiente paso consiste en estudiar el comportamiento del descenso por gradiente sobre cada una de ellas. El descenso por gradiente es un método de optimización local que busca minimizar una función objetivo mediante actualizaciones sucesivas de la forma <span class="math display">\[
 x_{k+1} = x_k - \alpha \nabla f(x_k),
-\]</span> donde <span class="math inline">\(x_k\)</span> es la solución en la iteración <span class="math inline">\(k\)</span>, <span class="math inline">\(\alpha\)</span> es la tasa de aprendizaje y <span class="math inline">\(\nabla f(x_k)\)</span> es el gradiente de la función objetivo evaluado en ese punto. En cada paso, el método avanza en la dirección opuesta al gradiente para reducir el valor de la función y aproximarse a un mínimo. Aunque suele ser eficiente en funciones suaves, su desempeño depende en gran medida de la geometría de la función objetivo y de la condición inicial elegida (Nocedal &amp; Wright, 2006).</p>
+\]</span> donde <span class="math inline">\(x_k\)</span> es la solución en la iteración <span class="math inline">\(k\)</span>, <span class="math inline">\(\alpha\)</span> es la tasa de aprendizaje y <span class="math inline">\(\nabla f(x_k)\)</span> es el gradiente de la función objetivo evaluado en ese punto. En cada paso, el método avanza en la dirección opuesta al gradiente para reducir el valor de la función y aproximarse a un mínimo. Aunque suele ser eficiente en funciones suaves, su desempeño depende en gran medida de la geometría de la función objetivo y de la condición inicial elegida <span class="citation" data-cites="nocedal2006">(<a href="#ref-nocedal2006" role="doc-biblioref">Nocedal and Wright 2006</a>)</span>.</p>
 <section id="metodología" class="level3">
 <h3 class="anchored" data-anchor-id="metodología">Metodología</h3>
 <p>Para evaluar la estabilidad del método y evitar conclusiones basadas en una sola corrida, se realizaron múltiples ejecuciones con condiciones iniciales aleatorias. En cada experimento, el algoritmo parte de un punto inicial generado dentro del dominio de la función. A partir de allí, se calcula el gradiente de la función objetivo para determinar la dirección de mayor descenso, y luego se actualiza iterativamente la solución. El criterio de parada se estableció mediante una tolerancia sobre la norma del cambio entre iteraciones, de modo que el algoritmo se detiene cuando dicho cambio es menor que 10^-6; en caso contrario, la corrida finaliza al alcanzar el número máximo de iteraciones definido para cada función.</p>
@@ -1628,6 +1642,12 @@ x_{k+1} = x_k - \alpha \nabla f(x_k),
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-jamil2013" class="csl-entry" role="listitem">
+Jamil, Momin, and Xin-She Yang. 2013. <span>“A Literature Survey of Benchmark Functions for Global Optimisation Problems.”</span> <em>International Journal of Mathematical Modelling and Numerical Optimisation</em> 4 (2): 150–94. <a href="https://doi.org/10.1504/IJMMNO.2013.055204">https://doi.org/10.1504/IJMMNO.2013.055204</a>.
+</div>
+<div id="ref-nocedal2006" class="csl-entry" role="listitem">
+Nocedal, Jorge, and Stephen J. Wright. 2006. <em>Numerical Optimization</em>. 2nd ed. Springer. <a href="https://doi.org/10.1007/978-0-387-40065-5">https://doi.org/10.1007/978-0-387-40065-5</a>.
+</div>
 <div id="ref-storn1997" class="csl-entry" role="listitem">
 Storn, Rainer, and Kenneth Price. 1997. <span>“Differential Evolution – a Simple and Efficient Heuristic for Global Optimization over Continuous Spaces.”</span> <em>Journal of Global Optimization</em> 11 (4): 341–59. <a href="https://doi.org/10.1023/A:1008202821328">https://doi.org/10.1023/A:1008202821328</a>.
 </div>
