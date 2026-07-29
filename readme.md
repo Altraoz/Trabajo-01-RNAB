@@ -1,96 +1,57 @@
-# Trabajo 1 - RNA y Algoritmos Bioinspirados
+# Estructura general del proyecto
 
-Repositorio del Trabajo 1 del curso RNA y Algoritmos Bioinspirados. El proyecto integra dos bloques principales:
+Este documento resume la organizacion del proyecto segun la estructura visible en el repositorio. Dentro se concentran los desarrollos de optimizacion numerica, optimizacion combinatoria y la construccion del blog final en Quarto.
 
-- optimizacion numerica sobre funciones de prueba
-- optimizacion combinatoria aplicada al problema del agente viajero
+## Blog desplegado
 
-Ademas, incluye un sitio en Quarto con la presentacion final de resultados.
-
-## Sitio publicado
-
-La version publicada del proyecto puede consultarse aqui:
+El blog final desplegado del proyecto puede consultarse aqui:
 
 [https://altraoz.github.io/Trabajo-01-RNAB/](https://altraoz.github.io/Trabajo-01-RNAB/)
 
-## Estructura del proyecto
+## Estructura principal
 
-```text
-Trabajo-01-RNAB/
-|-- 1. optimizacion_numerica/
-|   |-- gradiente/
-|   |-- heuristicos/
-|   |-- 12_comparacion_final_metodos.ipynb
-|   |-- animacion_de_rastrigin_2d.ipynb
-|   `-- reporte_estructura.md
-|-- 2. optimizacion_combinatoria/
-|   |-- data/
-|   |-- docs/
-|   |-- entrega_final/
-|   |-- notebooks/
-|   |-- outputs/
-|   |-- scripts/
-|   `-- src/
-|-- blog/
-|   |-- assets/
-|   |-- docs/
-|   |-- notebooks/
-|   |-- presentacion/
-|   |-- scripts/
-|   |-- _quarto.yml
-|   |-- index.qmd
-|   |-- numerica.qmd
-|   |-- comparacion_final_numerica.qmd
-|   `-- combinatoria.qmd
-|-- docs/
-|   `-- sitio renderizado para GitHub Pages
-`-- .github/
-    `-- workflows/
-        `-- publish-quarto.yml
-```
+- `1. optimizacion_numerica/`
+  Reune todo lo relacionado con la solucion del bloque de optimizacion numerica del enunciado.
 
-## Descripcion por carpetas
+  Incluye:
+  - `gradiente/`: notebooks, funciones y datos para descenso por gradiente.
+  - `heuristicos/`: implementaciones y resultados de algoritmo evolutivo, PSO y evolucion diferencial.
+  - notebooks de integracion o comparacion final, como la comparacion entre metodos y animaciones.
 
-### `1. optimizacion_numerica/`
+- `2. optimizacion_combinatoria/`
+  Reune el desarrollo asociado al bloque de optimizacion combinatoria del enunciado.
 
-Reune el desarrollo del bloque de optimizacion numerica.
+  Incluye:
+  - `src/`: funciones principales del modelo y algoritmos.
+  - `scripts/`: scripts auxiliares de ejecucion, postproceso y construccion de salidas.
+  - `outputs/`: resultados generados, incluyendo archivos para visualizacion y datos web.
 
-- `gradiente/`: implementacion de funciones objetivo y gradientes, notebooks de generacion y analisis, y salidas reproducibles en `datos/`.
-- `heuristicos/`: implementacion central de EA, PSO y DE, junto con notebooks y resultados experimentales.
-- `12_comparacion_final_metodos.ipynb`: consolida la comparacion entre metodos.
-- `animacion_de_rastrigin_2d.ipynb`: genera material visual del comportamiento de los algoritmos.
+- `blog/`
+  Contiene el sitio en Quarto usado para presentar la entrega final del proyecto.
 
-### `2. optimizacion_combinatoria/`
+  Incluye:
+  - `numerica.qmd`: pagina de optimizacion numerica.
+  - `combinatoria.qmd`: pagina de optimizacion combinatoria.
+  - `comparacion_final_numerica.qmd`: apoyo para consolidar la comparacion final.
+  - `notebooks/`: notebooks conectados con las secciones del blog.
+  - `assets/`: imagenes, gifs y figuras usadas en la publicacion.
+  - `_quarto.yml`: configuracion general del sitio.
 
-Contiene el pipeline del bloque de optimizacion combinatoria.
+- `presentacion/`
+  Guarda notebooks o materiales preparados para la version de presentacion del proyecto.
 
-- `src/`: modulos principales para preprocesamiento, matrices, grafo, ACO, GA, resultados y visualizacion.
-- `scripts/`: ejecuciones auxiliares para correr experimentos y generar artefactos finales.
-- `notebooks/`: flujo documentado del proceso, desde la construccion del grafo hasta los resultados finales.
-- `entrega_final/`: archivos finales recomendados para reporte y presentacion.
-- `outputs/` y `data/`: resultados, rutas, figuras y datos intermedios.
-- `docs/`: documentos de apoyo y comparativos.
+## Logica general del flujo
 
-### `blog/`
+La organizacion del proyecto sigue esta logica:
 
-Contiene las fuentes del sitio en Quarto.
+1. En `1. optimizacion_numerica/` y `2. optimizacion_combinatoria/` se desarrolla el codigo base, se ejecutan experimentos y se generan resultados para cada parte del enunciado.
+2. Esos resultados se transforman en tablas, figuras, gifs o resumenes.
+3. Luego, en `blog/`, se integran esos productos en las paginas `.qmd` para construir la version final publicada.
 
-- `index.qmd`, `numerica.qmd`, `combinatoria.qmd` y `comparacion_final_numerica.qmd`: paginas principales del proyecto.
-- `notebooks/` y `presentacion/`: cuadernos integrados al sitio.
-- `assets/`: imagenes, gifs, videos y otros recursos usados en la publicacion.
-- `_quarto.yml`: configuracion del sitio y del proceso de render.
+## Recomendacion de lectura
 
-### `docs/`
+Si alguien quiere entender rapido el proyecto, el orden mas natural es:
 
-Guarda la version renderizada del sitio. Esta carpeta se conserva en el repositorio porque funciona como salida lista para publicar en GitHub Pages.
-
-## Ruta recomendada para recorrer el repositorio
-
-1. Revisar el sitio publicado para ver la entrega consolidada.
-2. Explorar `blog/` si se quiere entender como se organiza la presentacion final.
-3. Entrar a `1. optimizacion_numerica/` y `2. optimizacion_combinatoria/` para revisar codigo, notebooks y resultados.
-4. Consultar `2. optimizacion_combinatoria/entrega_final/` si se necesitan artefactos listos para reporte.
-
-## Nota
-
-El repositorio incluye tanto codigo fuente como resultados generados y material de publicacion. Por eso varias carpetas contienen notebooks, figuras, tablas y archivos ya renderizados.
+1. Entrar al blog desplegado del proyecto.
+2. Revisar dentro de `blog/` los archivos `numerica.qmd` y `combinatoria.qmd`.
+3. Si se necesita mas detalle tecnico, bajar a las carpetas `1. optimizacion_numerica/` y `2. optimizacion_combinatoria/`.
