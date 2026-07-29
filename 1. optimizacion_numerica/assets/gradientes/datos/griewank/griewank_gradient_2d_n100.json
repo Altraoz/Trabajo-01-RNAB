@@ -1,0 +1,2802 @@
+[
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 1,
+    "semilla": 2017,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -9.580795491877652,
+      5.341403293649755
+    ],
+    "posicion_final": [
+      -9.420067898169613,
+      4.4386430226757305
+    ],
+    "valor_final": 0.027125394264165825,
+    "iteraciones": 1686,
+    "evaluaciones": 1688,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 2,
+    "semilla": 2018,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      7.64698623507892,
+      -7.913445242790447
+    ],
+    "posicion_final": [
+      6.280045258578358,
+      -8.876690253545352
+    ],
+    "valor_final": 0.029584171085339617,
+    "iteraciones": 1762,
+    "evaluaciones": 1764,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 3,
+    "semilla": 2019,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      8.069644288385486,
+      -2.1383898669951495
+    ],
+    "posicion_final": [
+      9.420067734559366,
+      -4.437912954924459
+    ],
+    "valor_final": 0.027125455083237493,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 4,
+    "semilla": 2020,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      9.725536577231978,
+      7.467838916413093
+    ],
+    "posicion_final": [
+      9.420067902733383,
+      4.438696227709647
+    ],
+    "valor_final": 0.027125400260629595,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 5,
+    "semilla": 2021,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      2.1195655761480943,
+      4.667387223869962
+    ],
+    "posicion_final": [
+      3.14002200637329,
+      4.4386426683509725
+    ],
+    "valor_final": 0.007396050163637535,
+    "iteraciones": 1433,
+    "evaluaciones": 1435,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 6,
+    "semilla": 2022,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -9.812827723844705,
+      -0.01884378296024103
+    ],
+    "posicion_final": [
+      -12.560055464155296,
+      -0.00018538956003328244
+    ],
+    "valor_final": 0.03945869741118535,
+    "iteraciones": 1254,
+    "evaluaciones": 1256,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 7,
+    "semilla": 2023,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -3.5602339201606448,
+      7.808449035789614
+    ],
+    "posicion_final": [
+      -3.1400228354803468,
+      4.439143179380199
+    ],
+    "valor_final": 0.007396162500373338,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 8,
+    "semilla": 2024,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.7602903779079586,
+      3.982174953631649
+    ],
+    "posicion_final": [
+      3.1400224478296646,
+      4.438246196725398
+    ],
+    "valor_final": 0.007396050173055002,
+    "iteraciones": 1600,
+    "evaluaciones": 1602,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 9,
+    "semilla": 2025,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -7.290236726440764,
+      7.7570340546075585
+    ],
+    "posicion_final": [
+      -6.280045243490358,
+      8.876690292181275
+    ],
+    "valor_final": 0.02958417108149869,
+    "iteraciones": 1767,
+    "evaluaciones": 1769,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 10,
+    "semilla": 2065,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.249160274972056,
+      -3.193479868378688
+    ],
+    "posicion_final": [
+      3.140022659667445,
+      -4.438246159586026
+    ],
+    "valor_final": 0.007396050176724289,
+    "iteraciones": 1990,
+    "evaluaciones": 1992,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 11,
+    "semilla": 2066,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -6.8765392884067555,
+      -2.0778587660606895
+    ],
+    "posicion_final": [
+      -6.2800452895762415,
+      -0.00019797138331335533
+    ],
+    "valor_final": 0.009864681868923308,
+    "iteraciones": 1908,
+    "evaluaciones": 1910,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 12,
+    "semilla": 2067,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -6.174639862093041,
+      -9.967316272968018
+    ],
+    "posicion_final": [
+      -6.280045218447996,
+      -8.877086826569759
+    ],
+    "valor_final": 0.029584171016805993,
+    "iteraciones": 1727,
+    "evaluaciones": 1729,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 13,
+    "semilla": 2068,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.728184628627314,
+      6.235133291767426
+    ],
+    "posicion_final": [
+      6.280045198696871,
+      8.876680209130916
+    ],
+    "valor_final": 0.02958417210912878,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 14,
+    "semilla": 2069,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.086183510780414,
+      -3.069068587880417
+    ],
+    "posicion_final": [
+      3.140022658398539,
+      -4.438245746968256
+    ],
+    "valor_final": 0.007396050217722827,
+    "iteraciones": 1979,
+    "evaluaciones": 1981,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 15,
+    "semilla": 2070,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -2.845286242103871,
+      5.946299313653121
+    ],
+    "posicion_final": [
+      -3.1400226277777197,
+      4.438643171484611
+    ],
+    "valor_final": 0.007396050213410277,
+    "iteraciones": 1804,
+    "evaluaciones": 1806,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 16,
+    "semilla": 2071,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      4.48575210830321,
+      -9.337361886186503
+    ],
+    "posicion_final": [
+      6.28004503888123,
+      -8.87708725547891
+    ],
+    "valor_final": 0.029584171059359288,
+    "iteraciones": 1644,
+    "evaluaciones": 1646,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 17,
+    "semilla": 2072,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.734892143473708,
+      -6.41414195119178
+    ],
+    "posicion_final": [
+      3.1400226111912852,
+      -4.438665245973901
+    ],
+    "valor_final": 0.007396052530528774,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 18,
+    "semilla": 2073,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.300594469359158,
+      0.5582926806547235
+    ],
+    "posicion_final": [
+      3.8151803707869083e-08,
+      0.00019834315313162478
+    ],
+    "valor_final": 9.844837389749728e-09,
+    "iteraciones": 1588,
+    "evaluaciones": 1590,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 19,
+    "semilla": 2074,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.990837304138541,
+      -0.8182924820333959
+    ],
+    "posicion_final": [
+      6.280045260647458,
+      -0.00019869579182256057
+    ],
+    "valor_final": 0.00986468194083212,
+    "iteraciones": 1667,
+    "evaluaciones": 1669,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 20,
+    "semilla": 2066,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -6.8765392884067555,
+      -2.0778587660606895
+    ],
+    "posicion_final": [
+      -6.2800452895762415,
+      -0.00019797138331335533
+    ],
+    "valor_final": 0.009864681868923308,
+    "iteraciones": 1908,
+    "evaluaciones": 1910,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 21,
+    "semilla": 2067,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -6.174639862093041,
+      -9.967316272968018
+    ],
+    "posicion_final": [
+      -6.280045218447996,
+      -8.877086826569759
+    ],
+    "valor_final": 0.029584171016805993,
+    "iteraciones": 1727,
+    "evaluaciones": 1729,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 22,
+    "semilla": 2068,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.728184628627314,
+      6.235133291767426
+    ],
+    "posicion_final": [
+      6.280045198696871,
+      8.876680209130916
+    ],
+    "valor_final": 0.02958417210912878,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 23,
+    "semilla": 2069,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.086183510780414,
+      -3.069068587880417
+    ],
+    "posicion_final": [
+      3.140022658398539,
+      -4.438245746968256
+    ],
+    "valor_final": 0.007396050217722827,
+    "iteraciones": 1979,
+    "evaluaciones": 1981,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 24,
+    "semilla": 2070,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -2.845286242103871,
+      5.946299313653121
+    ],
+    "posicion_final": [
+      -3.1400226277777197,
+      4.438643171484611
+    ],
+    "valor_final": 0.007396050213410277,
+    "iteraciones": 1804,
+    "evaluaciones": 1806,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 25,
+    "semilla": 2071,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      4.48575210830321,
+      -9.337361886186503
+    ],
+    "posicion_final": [
+      6.28004503888123,
+      -8.87708725547891
+    ],
+    "valor_final": 0.029584171059359288,
+    "iteraciones": 1644,
+    "evaluaciones": 1646,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 26,
+    "semilla": 2072,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.734892143473708,
+      -6.41414195119178
+    ],
+    "posicion_final": [
+      3.1400226111912852,
+      -4.438665245973901
+    ],
+    "valor_final": 0.007396052530528774,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 27,
+    "semilla": 2073,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.300594469359158,
+      0.5582926806547235
+    ],
+    "posicion_final": [
+      3.8151803707869083e-08,
+      0.00019834315313162478
+    ],
+    "valor_final": 9.844837389749728e-09,
+    "iteraciones": 1588,
+    "evaluaciones": 1590,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 28,
+    "semilla": 2074,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.990837304138541,
+      -0.8182924820333959
+    ],
+    "posicion_final": [
+      6.280045260647458,
+      -0.00019869579182256057
+    ],
+    "valor_final": 0.00986468194083212,
+    "iteraciones": 1667,
+    "evaluaciones": 1669,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 29,
+    "semilla": 2075,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      3.153015291822019,
+      -5.284325856125371
+    ],
+    "posicion_final": [
+      3.1400226357948977,
+      -4.438642527888995
+    ],
+    "valor_final": 0.007396050149512168,
+    "iteraciones": 1672,
+    "evaluaciones": 1674,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 30,
+    "semilla": 2067,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -6.174639862093041,
+      -9.967316272968018
+    ],
+    "posicion_final": [
+      -6.280045218447996,
+      -8.877086826569759
+    ],
+    "valor_final": 0.029584171016805993,
+    "iteraciones": 1727,
+    "evaluaciones": 1729,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 31,
+    "semilla": 2068,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.728184628627314,
+      6.235133291767426
+    ],
+    "posicion_final": [
+      6.280045198696871,
+      8.876680209130916
+    ],
+    "valor_final": 0.02958417210912878,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 32,
+    "semilla": 2069,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.086183510780414,
+      -3.069068587880417
+    ],
+    "posicion_final": [
+      3.140022658398539,
+      -4.438245746968256
+    ],
+    "valor_final": 0.007396050217722827,
+    "iteraciones": 1979,
+    "evaluaciones": 1981,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 33,
+    "semilla": 2070,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -2.845286242103871,
+      5.946299313653121
+    ],
+    "posicion_final": [
+      -3.1400226277777197,
+      4.438643171484611
+    ],
+    "valor_final": 0.007396050213410277,
+    "iteraciones": 1804,
+    "evaluaciones": 1806,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 34,
+    "semilla": 2071,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      4.48575210830321,
+      -9.337361886186503
+    ],
+    "posicion_final": [
+      6.28004503888123,
+      -8.87708725547891
+    ],
+    "valor_final": 0.029584171059359288,
+    "iteraciones": 1644,
+    "evaluaciones": 1646,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 35,
+    "semilla": 2072,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.734892143473708,
+      -6.41414195119178
+    ],
+    "posicion_final": [
+      3.1400226111912852,
+      -4.438665245973901
+    ],
+    "valor_final": 0.007396052530528774,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 36,
+    "semilla": 2073,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.300594469359158,
+      0.5582926806547235
+    ],
+    "posicion_final": [
+      3.8151803707869083e-08,
+      0.00019834315313162478
+    ],
+    "valor_final": 9.844837389749728e-09,
+    "iteraciones": 1588,
+    "evaluaciones": 1590,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 37,
+    "semilla": 2074,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.990837304138541,
+      -0.8182924820333959
+    ],
+    "posicion_final": [
+      6.280045260647458,
+      -0.00019869579182256057
+    ],
+    "valor_final": 0.00986468194083212,
+    "iteraciones": 1667,
+    "evaluaciones": 1669,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 38,
+    "semilla": 2075,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      3.153015291822019,
+      -5.284325856125371
+    ],
+    "posicion_final": [
+      3.1400226357948977,
+      -4.438642527888995
+    ],
+    "valor_final": 0.007396050149512168,
+    "iteraciones": 1672,
+    "evaluaciones": 1674,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 39,
+    "semilla": 2076,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -7.860602114323867,
+      6.911236614313964
+    ],
+    "posicion_final": [
+      -6.280045260520676,
+      8.876563305373285
+    ],
+    "valor_final": 0.029584187738490475,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 40,
+    "semilla": 2068,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.728184628627314,
+      6.235133291767426
+    ],
+    "posicion_final": [
+      6.280045198696871,
+      8.876680209130916
+    ],
+    "valor_final": 0.02958417210912878,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 41,
+    "semilla": 2069,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.086183510780414,
+      -3.069068587880417
+    ],
+    "posicion_final": [
+      3.140022658398539,
+      -4.438245746968256
+    ],
+    "valor_final": 0.007396050217722827,
+    "iteraciones": 1979,
+    "evaluaciones": 1981,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 42,
+    "semilla": 2070,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -2.845286242103871,
+      5.946299313653121
+    ],
+    "posicion_final": [
+      -3.1400226277777197,
+      4.438643171484611
+    ],
+    "valor_final": 0.007396050213410277,
+    "iteraciones": 1804,
+    "evaluaciones": 1806,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 43,
+    "semilla": 2071,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      4.48575210830321,
+      -9.337361886186503
+    ],
+    "posicion_final": [
+      6.28004503888123,
+      -8.87708725547891
+    ],
+    "valor_final": 0.029584171059359288,
+    "iteraciones": 1644,
+    "evaluaciones": 1646,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 44,
+    "semilla": 2072,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.734892143473708,
+      -6.41414195119178
+    ],
+    "posicion_final": [
+      3.1400226111912852,
+      -4.438665245973901
+    ],
+    "valor_final": 0.007396052530528774,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 45,
+    "semilla": 2073,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.300594469359158,
+      0.5582926806547235
+    ],
+    "posicion_final": [
+      3.8151803707869083e-08,
+      0.00019834315313162478
+    ],
+    "valor_final": 9.844837389749728e-09,
+    "iteraciones": 1588,
+    "evaluaciones": 1590,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 46,
+    "semilla": 2074,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.990837304138541,
+      -0.8182924820333959
+    ],
+    "posicion_final": [
+      6.280045260647458,
+      -0.00019869579182256057
+    ],
+    "valor_final": 0.00986468194083212,
+    "iteraciones": 1667,
+    "evaluaciones": 1669,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 47,
+    "semilla": 2075,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      3.153015291822019,
+      -5.284325856125371
+    ],
+    "posicion_final": [
+      3.1400226357948977,
+      -4.438642527888995
+    ],
+    "valor_final": 0.007396050149512168,
+    "iteraciones": 1672,
+    "evaluaciones": 1674,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 48,
+    "semilla": 2076,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -7.860602114323867,
+      6.911236614313964
+    ],
+    "posicion_final": [
+      -6.280045260520676,
+      8.876563305373285
+    ],
+    "valor_final": 0.029584187738490475,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 49,
+    "semilla": 2077,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.23596304939072432,
+      -8.77090387500794
+    ],
+    "posicion_final": [
+      7.951484892340629e-07,
+      -8.876691041738747
+    ],
+    "valor_final": 0.019719499047946676,
+    "iteraciones": 1254,
+    "evaluaciones": 1256,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 50,
+    "semilla": 2069,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.086183510780414,
+      -3.069068587880417
+    ],
+    "posicion_final": [
+      3.140022658398539,
+      -4.438245746968256
+    ],
+    "valor_final": 0.007396050217722827,
+    "iteraciones": 1979,
+    "evaluaciones": 1981,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 51,
+    "semilla": 2070,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -2.845286242103871,
+      5.946299313653121
+    ],
+    "posicion_final": [
+      -3.1400226277777197,
+      4.438643171484611
+    ],
+    "valor_final": 0.007396050213410277,
+    "iteraciones": 1804,
+    "evaluaciones": 1806,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 52,
+    "semilla": 2071,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      4.48575210830321,
+      -9.337361886186503
+    ],
+    "posicion_final": [
+      6.28004503888123,
+      -8.87708725547891
+    ],
+    "valor_final": 0.029584171059359288,
+    "iteraciones": 1644,
+    "evaluaciones": 1646,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 53,
+    "semilla": 2072,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.734892143473708,
+      -6.41414195119178
+    ],
+    "posicion_final": [
+      3.1400226111912852,
+      -4.438665245973901
+    ],
+    "valor_final": 0.007396052530528774,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 54,
+    "semilla": 2073,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.300594469359158,
+      0.5582926806547235
+    ],
+    "posicion_final": [
+      3.8151803707869083e-08,
+      0.00019834315313162478
+    ],
+    "valor_final": 9.844837389749728e-09,
+    "iteraciones": 1588,
+    "evaluaciones": 1590,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 55,
+    "semilla": 2074,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.990837304138541,
+      -0.8182924820333959
+    ],
+    "posicion_final": [
+      6.280045260647458,
+      -0.00019869579182256057
+    ],
+    "valor_final": 0.00986468194083212,
+    "iteraciones": 1667,
+    "evaluaciones": 1669,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 56,
+    "semilla": 2075,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      3.153015291822019,
+      -5.284325856125371
+    ],
+    "posicion_final": [
+      3.1400226357948977,
+      -4.438642527888995
+    ],
+    "valor_final": 0.007396050149512168,
+    "iteraciones": 1672,
+    "evaluaciones": 1674,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 57,
+    "semilla": 2076,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -7.860602114323867,
+      6.911236614313964
+    ],
+    "posicion_final": [
+      -6.280045260520676,
+      8.876563305373285
+    ],
+    "valor_final": 0.029584187738490475,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 58,
+    "semilla": 2077,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.23596304939072432,
+      -8.77090387500794
+    ],
+    "posicion_final": [
+      7.951484892340629e-07,
+      -8.876691041738747
+    ],
+    "valor_final": 0.019719499047946676,
+    "iteraciones": 1254,
+    "evaluaciones": 1256,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 59,
+    "semilla": 2078,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.18915000047188357,
+      4.29433483895944
+    ],
+    "posicion_final": [
+      3.140022320300863,
+      4.438246671488928
+    ],
+    "valor_final": 0.007396050126027287,
+    "iteraciones": 1805,
+    "evaluaciones": 1807,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 60,
+    "semilla": 2070,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -2.845286242103871,
+      5.946299313653121
+    ],
+    "posicion_final": [
+      -3.1400226277777197,
+      4.438643171484611
+    ],
+    "valor_final": 0.007396050213410277,
+    "iteraciones": 1804,
+    "evaluaciones": 1806,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 61,
+    "semilla": 2071,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      4.48575210830321,
+      -9.337361886186503
+    ],
+    "posicion_final": [
+      6.28004503888123,
+      -8.87708725547891
+    ],
+    "valor_final": 0.029584171059359288,
+    "iteraciones": 1644,
+    "evaluaciones": 1646,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 62,
+    "semilla": 2072,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.734892143473708,
+      -6.41414195119178
+    ],
+    "posicion_final": [
+      3.1400226111912852,
+      -4.438665245973901
+    ],
+    "valor_final": 0.007396052530528774,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 63,
+    "semilla": 2073,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.300594469359158,
+      0.5582926806547235
+    ],
+    "posicion_final": [
+      3.8151803707869083e-08,
+      0.00019834315313162478
+    ],
+    "valor_final": 9.844837389749728e-09,
+    "iteraciones": 1588,
+    "evaluaciones": 1590,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 64,
+    "semilla": 2074,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.990837304138541,
+      -0.8182924820333959
+    ],
+    "posicion_final": [
+      6.280045260647458,
+      -0.00019869579182256057
+    ],
+    "valor_final": 0.00986468194083212,
+    "iteraciones": 1667,
+    "evaluaciones": 1669,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 65,
+    "semilla": 2075,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      3.153015291822019,
+      -5.284325856125371
+    ],
+    "posicion_final": [
+      3.1400226357948977,
+      -4.438642527888995
+    ],
+    "valor_final": 0.007396050149512168,
+    "iteraciones": 1672,
+    "evaluaciones": 1674,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 66,
+    "semilla": 2076,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -7.860602114323867,
+      6.911236614313964
+    ],
+    "posicion_final": [
+      -6.280045260520676,
+      8.876563305373285
+    ],
+    "valor_final": 0.029584187738490475,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 67,
+    "semilla": 2077,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.23596304939072432,
+      -8.77090387500794
+    ],
+    "posicion_final": [
+      7.951484892340629e-07,
+      -8.876691041738747
+    ],
+    "valor_final": 0.019719499047946676,
+    "iteraciones": 1254,
+    "evaluaciones": 1256,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 68,
+    "semilla": 2078,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.18915000047188357,
+      4.29433483895944
+    ],
+    "posicion_final": [
+      3.140022320300863,
+      4.438246671488928
+    ],
+    "valor_final": 0.007396050126027287,
+    "iteraciones": 1805,
+    "evaluaciones": 1807,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 69,
+    "semilla": 2079,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -3.1042231416280286,
+      9.352776269807801
+    ],
+    "posicion_final": [
+      -3.1400224107287533,
+      13.314478177186961
+    ],
+    "valor_final": 0.04683520155709853,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 70,
+    "semilla": 2071,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      4.48575210830321,
+      -9.337361886186503
+    ],
+    "posicion_final": [
+      6.28004503888123,
+      -8.87708725547891
+    ],
+    "valor_final": 0.029584171059359288,
+    "iteraciones": 1644,
+    "evaluaciones": 1646,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 71,
+    "semilla": 2072,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.734892143473708,
+      -6.41414195119178
+    ],
+    "posicion_final": [
+      3.1400226111912852,
+      -4.438665245973901
+    ],
+    "valor_final": 0.007396052530528774,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 72,
+    "semilla": 2073,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.300594469359158,
+      0.5582926806547235
+    ],
+    "posicion_final": [
+      3.8151803707869083e-08,
+      0.00019834315313162478
+    ],
+    "valor_final": 9.844837389749728e-09,
+    "iteraciones": 1588,
+    "evaluaciones": 1590,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 73,
+    "semilla": 2074,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.990837304138541,
+      -0.8182924820333959
+    ],
+    "posicion_final": [
+      6.280045260647458,
+      -0.00019869579182256057
+    ],
+    "valor_final": 0.00986468194083212,
+    "iteraciones": 1667,
+    "evaluaciones": 1669,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 74,
+    "semilla": 2075,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      3.153015291822019,
+      -5.284325856125371
+    ],
+    "posicion_final": [
+      3.1400226357948977,
+      -4.438642527888995
+    ],
+    "valor_final": 0.007396050149512168,
+    "iteraciones": 1672,
+    "evaluaciones": 1674,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 75,
+    "semilla": 2076,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -7.860602114323867,
+      6.911236614313964
+    ],
+    "posicion_final": [
+      -6.280045260520676,
+      8.876563305373285
+    ],
+    "valor_final": 0.029584187738490475,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 76,
+    "semilla": 2077,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.23596304939072432,
+      -8.77090387500794
+    ],
+    "posicion_final": [
+      7.951484892340629e-07,
+      -8.876691041738747
+    ],
+    "valor_final": 0.019719499047946676,
+    "iteraciones": 1254,
+    "evaluaciones": 1256,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 77,
+    "semilla": 2078,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.18915000047188357,
+      4.29433483895944
+    ],
+    "posicion_final": [
+      3.140022320300863,
+      4.438246671488928
+    ],
+    "valor_final": 0.007396050126027287,
+    "iteraciones": 1805,
+    "evaluaciones": 1807,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 78,
+    "semilla": 2079,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -3.1042231416280286,
+      9.352776269807801
+    ],
+    "posicion_final": [
+      -3.1400224107287533,
+      13.314478177186961
+    ],
+    "valor_final": 0.04683520155709853,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 79,
+    "semilla": 2080,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -4.357724407303483,
+      -2.9064324182833445
+    ],
+    "posicion_final": [
+      -3.1400226552199264,
+      -4.438245909072312
+    ],
+    "valor_final": 0.0073960502016056084,
+    "iteraciones": 1871,
+    "evaluaciones": 1873,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 80,
+    "semilla": 2072,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.734892143473708,
+      -6.41414195119178
+    ],
+    "posicion_final": [
+      3.1400226111912852,
+      -4.438665245973901
+    ],
+    "valor_final": 0.007396052530528774,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 81,
+    "semilla": 2073,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.300594469359158,
+      0.5582926806547235
+    ],
+    "posicion_final": [
+      3.8151803707869083e-08,
+      0.00019834315313162478
+    ],
+    "valor_final": 9.844837389749728e-09,
+    "iteraciones": 1588,
+    "evaluaciones": 1590,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 82,
+    "semilla": 2074,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.990837304138541,
+      -0.8182924820333959
+    ],
+    "posicion_final": [
+      6.280045260647458,
+      -0.00019869579182256057
+    ],
+    "valor_final": 0.00986468194083212,
+    "iteraciones": 1667,
+    "evaluaciones": 1669,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 83,
+    "semilla": 2075,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      3.153015291822019,
+      -5.284325856125371
+    ],
+    "posicion_final": [
+      3.1400226357948977,
+      -4.438642527888995
+    ],
+    "valor_final": 0.007396050149512168,
+    "iteraciones": 1672,
+    "evaluaciones": 1674,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 84,
+    "semilla": 2076,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -7.860602114323867,
+      6.911236614313964
+    ],
+    "posicion_final": [
+      -6.280045260520676,
+      8.876563305373285
+    ],
+    "valor_final": 0.029584187738490475,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 85,
+    "semilla": 2077,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.23596304939072432,
+      -8.77090387500794
+    ],
+    "posicion_final": [
+      7.951484892340629e-07,
+      -8.876691041738747
+    ],
+    "valor_final": 0.019719499047946676,
+    "iteraciones": 1254,
+    "evaluaciones": 1256,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 86,
+    "semilla": 2078,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.18915000047188357,
+      4.29433483895944
+    ],
+    "posicion_final": [
+      3.140022320300863,
+      4.438246671488928
+    ],
+    "valor_final": 0.007396050126027287,
+    "iteraciones": 1805,
+    "evaluaciones": 1807,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 87,
+    "semilla": 2079,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -3.1042231416280286,
+      9.352776269807801
+    ],
+    "posicion_final": [
+      -3.1400224107287533,
+      13.314478177186961
+    ],
+    "valor_final": 0.04683520155709853,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 88,
+    "semilla": 2080,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -4.357724407303483,
+      -2.9064324182833445
+    ],
+    "posicion_final": [
+      -3.1400226552199264,
+      -4.438245909072312
+    ],
+    "valor_final": 0.0073960502016056084,
+    "iteraciones": 1871,
+    "evaluaciones": 1873,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 89,
+    "semilla": 2081,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.249735229572787,
+      1.5420334099517774
+    ],
+    "posicion_final": [
+      6.2800452581820085,
+      0.00019797665280681603
+    ],
+    "valor_final": 0.009864681869445557,
+    "iteraciones": 1853,
+    "evaluaciones": 1855,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 90,
+    "semilla": 2073,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.300594469359158,
+      0.5582926806547235
+    ],
+    "posicion_final": [
+      3.8151803707869083e-08,
+      0.00019834315313162478
+    ],
+    "valor_final": 9.844837389749728e-09,
+    "iteraciones": 1588,
+    "evaluaciones": 1590,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 91,
+    "semilla": 2074,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.990837304138541,
+      -0.8182924820333959
+    ],
+    "posicion_final": [
+      6.280045260647458,
+      -0.00019869579182256057
+    ],
+    "valor_final": 0.00986468194083212,
+    "iteraciones": 1667,
+    "evaluaciones": 1669,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 92,
+    "semilla": 2075,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      3.153015291822019,
+      -5.284325856125371
+    ],
+    "posicion_final": [
+      3.1400226357948977,
+      -4.438642527888995
+    ],
+    "valor_final": 0.007396050149512168,
+    "iteraciones": 1672,
+    "evaluaciones": 1674,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 93,
+    "semilla": 2076,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -7.860602114323867,
+      6.911236614313964
+    ],
+    "posicion_final": [
+      -6.280045260520676,
+      8.876563305373285
+    ],
+    "valor_final": 0.029584187738490475,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 94,
+    "semilla": 2077,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.23596304939072432,
+      -8.77090387500794
+    ],
+    "posicion_final": [
+      7.951484892340629e-07,
+      -8.876691041738747
+    ],
+    "valor_final": 0.019719499047946676,
+    "iteraciones": 1254,
+    "evaluaciones": 1256,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 95,
+    "semilla": 2078,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      0.18915000047188357,
+      4.29433483895944
+    ],
+    "posicion_final": [
+      3.140022320300863,
+      4.438246671488928
+    ],
+    "valor_final": 0.007396050126027287,
+    "iteraciones": 1805,
+    "evaluaciones": 1807,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 96,
+    "semilla": 2079,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -3.1042231416280286,
+      9.352776269807801
+    ],
+    "posicion_final": [
+      -3.1400224107287533,
+      13.314478177186961
+    ],
+    "valor_final": 0.04683520155709853,
+    "iteraciones": 2000,
+    "evaluaciones": 2002,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 97,
+    "semilla": 2080,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -4.357724407303483,
+      -2.9064324182833445
+    ],
+    "posicion_final": [
+      -3.1400226552199264,
+      -4.438245909072312
+    ],
+    "valor_final": 0.0073960502016056084,
+    "iteraciones": 1871,
+    "evaluaciones": 1873,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 98,
+    "semilla": 2081,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      5.249735229572787,
+      1.5420334099517774
+    ],
+    "posicion_final": [
+      6.2800452581820085,
+      0.00019797665280681603
+    ],
+    "valor_final": 0.009864681869445557,
+    "iteraciones": 1853,
+    "evaluaciones": 1855,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 99,
+    "semilla": 2082,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      1.9380036944111936,
+      5.134604977470353
+    ],
+    "posicion_final": [
+      3.140022555411625,
+      4.438643051479614
+    ],
+    "valor_final": 0.007396050201483151,
+    "iteraciones": 1673,
+    "evaluaciones": 1675,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  },
+  {
+    "funcion": "griewank",
+    "nombre_funcion": "Griewank",
+    "corrida": 100,
+    "semilla": 2113,
+    "metodo": "gradient",
+    "dimension": 2,
+    "limites": [
+      -10.0,
+      10.0
+    ],
+    "posicion_inicial": [
+      -0.9730472733744087,
+      -8.431904134444487
+    ],
+    "posicion_final": [
+      -1.6375528487771303e-07,
+      -8.876690529607108
+    ],
+    "valor_final": 0.019719499098431292,
+    "iteraciones": 1566,
+    "evaluaciones": 1568,
+    "parametros": {
+      "rate": 0.01,
+      "max_iterations": 2000,
+      "tolerance": 1e-06
+    }
+  }
+]

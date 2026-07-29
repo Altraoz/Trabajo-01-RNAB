@@ -1,0 +1,5 @@
+Metodo,Mejor valor,Promedio valor,Mediana valor,Promedio evaluaciones,Promedio iteraciones,Mejor en valor,Mejor en evaluaciones
+Evolucion diferencial,0.0,7.57183116206761e-12,6.927791673660978e-14,4840.0,120.0,Si,
+PSO,0.0,1.3398568299294308e-10,1.7532642004880472e-12,4840.0,120.0,Si,
+Algoritmo evolutivo,1.6069251902450787e-05,0.501282607010326,0.4182683824012336,4840.0,120.0,,
+Descenso por gradiente,0.9949590572911564,16.481399189166886,16.914202849848696,29.045,27.045,,Si

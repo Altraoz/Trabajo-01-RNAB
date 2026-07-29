@@ -1,0 +1,12 @@
+| Caso | Mejor metodo en valor final o distancia al optimo | Mejor metodo en evaluaciones | Comentario corto |
+| --- | --- | --- | --- |
+| Goldstein-Price 2D | Evolucion diferencial | Evolucion diferencial | Evolucion diferencial logra el mejor valor y tambien el menor costo. |
+| Griewank 2D | PSO | Descenso por gradiente | PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Griewank 3D | PSO | Descenso por gradiente | PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Rastrigin 2D | Evolucion diferencial | Descenso por gradiente | Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Rastrigin 3D | Evolucion diferencial | Descenso por gradiente | Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Rosenbrock 2D | Evolucion diferencial | Descenso por gradiente | Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Rosenbrock 3D | Evolucion diferencial | Descenso por gradiente | Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |
+| Schwefel 2D | Evolucion diferencial | Evolucion diferencial | Evolucion diferencial logra el mejor valor y tambien el menor costo. |
+| Schwefel 3D | Evolucion diferencial | Evolucion diferencial | Evolucion diferencial logra el mejor valor y tambien el menor costo. |
+| Six-Hump Camel 2D | PSO | Descenso por gradiente | PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones. |

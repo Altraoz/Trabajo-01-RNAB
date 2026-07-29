@@ -41,5 +41,10 @@
   },
   "notebooks/numerica/13_tablas_comparacion_final.ipynb": {
     "13_tablas_comparacion_final.html": "0572c5e1"
+  },
+  "reporte_tecnico.qmd": {
+    "reporte_tecnico.html": "e5a7436e",
+    "reporte_tecnico.tex": "98339dc5",
+    "reporte_tecnico.docx": "24654a82"
   }
 }

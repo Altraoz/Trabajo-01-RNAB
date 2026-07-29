@@ -1,0 +1,4 @@
+funcion,nombre_funcion,metodo,dimension,n_corridas,mejor_valor_final,peor_valor_final,promedio_valor_final,mediana_valor_final,desviacion_valor_final,promedio_evaluaciones,mediana_evaluaciones,promedio_iteraciones,mediana_iteraciones
+six_hump_camel,Six-Hump Camel,gradient,2,100,-1.0316283903742194,2.104250378666193,-0.4538573834973101,-1.03162838991136,1.0752417564063843,989.1,1078.0,987.1,1076.0
+six_hump_camel,Six-Hump Camel,gradient,2,500,-1.0316283939615924,2.1042503793877443,-0.1360582217102089,-1.0316283897606628,1.3437511231903856,996.392,1029.0,994.392,1027.0
+six_hump_camel,Six-Hump Camel,gradient,2,1000,-1.0316283939615924,2.1042503793877443,-0.1148797477671514,-1.0316283897606628,1.3708160006411327,986.337,984.0,984.337,982.0

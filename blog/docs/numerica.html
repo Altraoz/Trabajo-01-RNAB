@@ -26,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -125,19 +144,19 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Inicio</span></a>
+<span class="menu-text">Inicioo</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./numerica.html"> 
 <span class="menu-text">Numerica</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./comparacion_final_numerica.html"> 
-<span class="menu-text">Comparacion final</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./combinatoria.html"> 
 <span class="menu-text">Combinatoria</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./reporte_tecnico.html"> 
+<span class="menu-text">Reporte Tecnico</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -188,6 +207,12 @@ window.Quarto = {
  <span class="menu-text">Optimizacion combinatoria</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reporte_tecnico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reporte tecnico - Trabajo 01</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -198,51 +223,43 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#parte-1-optimizacion-numerica" id="toc-parte-1-optimizacion-numerica" class="nav-link active" data-scroll-target="#parte-1-optimizacion-numerica">Parte 1: Optimizacion Numerica</a>
+  <li><a href="#parte-1-optimización-numérica" id="toc-parte-1-optimización-numérica" class="nav-link active" data-scroll-target="#parte-1-optimización-numérica">Parte 1: Optimización Numérica</a>
   <ul class="collapse">
-  <li><a href="#funciones-de-prueba" id="toc-funciones-de-prueba" class="nav-link" data-scroll-target="#funciones-de-prueba">2.1 Funciones de prueba</a>
+  <li><a href="#funciones-de-prueba" id="toc-funciones-de-prueba" class="nav-link" data-scroll-target="#funciones-de-prueba">Funciones de prueba</a>
   <ul class="collapse">
-  <li><a href="#funcion-de-rosenbrock" id="toc-funcion-de-rosenbrock" class="nav-link" data-scroll-target="#funcion-de-rosenbrock">Funcion de Rosenbrock</a></li>
-  <li><a href="#funcion-de-rastrigin" id="toc-funcion-de-rastrigin" class="nav-link" data-scroll-target="#funcion-de-rastrigin">Funcion de Rastrigin</a></li>
-  <li><a href="#funcion-de-schwefel" id="toc-funcion-de-schwefel" class="nav-link" data-scroll-target="#funcion-de-schwefel">Funcion de Schwefel</a></li>
-  <li><a href="#funcion-de-griewank" id="toc-funcion-de-griewank" class="nav-link" data-scroll-target="#funcion-de-griewank">Funcion de Griewank</a></li>
-  <li><a href="#funcion-de-goldstein-price" id="toc-funcion-de-goldstein-price" class="nav-link" data-scroll-target="#funcion-de-goldstein-price">Funcion de Goldstein-Price</a></li>
-  <li><a href="#funcion-six-hump-camel" id="toc-funcion-six-hump-camel" class="nav-link" data-scroll-target="#funcion-six-hump-camel">Funcion Six-Hump Camel</a></li>
-  <li><a href="#graficos-de-superficie-y-contorno" id="toc-graficos-de-superficie-y-contorno" class="nav-link" data-scroll-target="#graficos-de-superficie-y-contorno">Graficos de superficie y contorno</a></li>
+  <li><a href="#función-de-rastrigin" id="toc-función-de-rastrigin" class="nav-link" data-scroll-target="#función-de-rastrigin">Función de Rastrigin</a></li>
+  <li><a href="#función-de-schwefel" id="toc-función-de-schwefel" class="nav-link" data-scroll-target="#función-de-schwefel">Función de Schwefel</a></li>
+  <li><a href="#función-de-griewank" id="toc-función-de-griewank" class="nav-link" data-scroll-target="#función-de-griewank">Función de Griewank</a></li>
+  <li><a href="#función-de-goldstein-price" id="toc-función-de-goldstein-price" class="nav-link" data-scroll-target="#función-de-goldstein-price">Función de Goldstein-Price</a></li>
+  <li><a href="#función-six-hump-camel" id="toc-función-six-hump-camel" class="nav-link" data-scroll-target="#función-six-hump-camel">Función Six-Hump Camel</a></li>
+  <li><a href="#gráficos-de-superficie-y-contorno" id="toc-gráficos-de-superficie-y-contorno" class="nav-link" data-scroll-target="#gráficos-de-superficie-y-contorno">Gráficos de superficie y contorno</a></li>
   </ul></li>
-  <li><a href="#optimizacion-con-descenso-por-gradiente" id="toc-optimizacion-con-descenso-por-gradiente" class="nav-link" data-scroll-target="#optimizacion-con-descenso-por-gradiente">2.2 Optimizacion con Descenso por Gradiente</a>
+  <li><a href="#optimización-con-descenso-por-gradiente" id="toc-optimización-con-descenso-por-gradiente" class="nav-link" data-scroll-target="#optimización-con-descenso-por-gradiente">Optimización con Descenso por Gradiente</a>
   <ul class="collapse">
-  <li><a href="#metodologia" id="toc-metodologia" class="nav-link" data-scroll-target="#metodologia">Metodologia</a></li>
+  <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología">Metodología</a></li>
   <li><a href="#visualización-de-la-función-objetivo" id="toc-visualización-de-la-función-objetivo" class="nav-link" data-scroll-target="#visualización-de-la-función-objetivo">Visualización de la función objetivo</a></li>
-  <li><a href="#tabla-resumen-de-desempeno" id="toc-tabla-resumen-de-desempeno" class="nav-link" data-scroll-target="#tabla-resumen-de-desempeno">Tabla resumen de desempeno</a></li>
+  <li><a href="#tabla-resumen-de-desempeño" id="toc-tabla-resumen-de-desempeño" class="nav-link" data-scroll-target="#tabla-resumen-de-desempeño">Tabla resumen de desempeño</a></li>
   <li><a href="#histogramas-de-valor-final" id="toc-histogramas-de-valor-final" class="nav-link" data-scroll-target="#histogramas-de-valor-final">Histogramas de valor final</a></li>
   <li><a href="#histogramas-de-evaluaciones" id="toc-histogramas-de-evaluaciones" class="nav-link" data-scroll-target="#histogramas-de-evaluaciones">Histogramas de evaluaciones</a></li>
-  <li><a href="#resultados-e-interpretación-por-función" id="toc-resultados-e-interpretación-por-función" class="nav-link" data-scroll-target="#resultados-e-interpretación-por-función">Resultados e interpretación por función</a></li>
+  <li><a href="#conclusión-parcial" id="toc-conclusión-parcial" class="nav-link" data-scroll-target="#conclusión-parcial">Conclusión Parcial</a></li>
   </ul></li>
-  <li><a href="#optimizacion-con-metodos-heuristicos" id="toc-optimizacion-con-metodos-heuristicos" class="nav-link" data-scroll-target="#optimizacion-con-metodos-heuristicos">2.3 Optimizacion con Metodos Heuristicos</a>
+  <li><a href="#optimización-con-métodos-heurísticos" id="toc-optimización-con-métodos-heurísticos" class="nav-link" data-scroll-target="#optimización-con-métodos-heurísticos">Optimización con Métodos Heurísticos</a>
   <ul class="collapse">
-  <li><a href="#metodologia-1" id="toc-metodologia-1" class="nav-link" data-scroll-target="#metodologia-1">Metodologia</a></li>
-  <li><a href="#parametros-de-los-algoritmos" id="toc-parametros-de-los-algoritmos" class="nav-link" data-scroll-target="#parametros-de-los-algoritmos">Parametros de los algoritmos</a></li>
-  <li><a href="#tabla-resumen-comparativa" id="toc-tabla-resumen-comparativa" class="nav-link" data-scroll-target="#tabla-resumen-comparativa">Tabla resumen comparativa</a></li>
-  <li><a href="#comparacion-grafica-de-desempeno" id="toc-comparacion-grafica-de-desempeno" class="nav-link" data-scroll-target="#comparacion-grafica-de-desempeno">Comparacion grafica de desempeno</a></li>
-  <li><a href="#resultados-por-funcion" id="toc-resultados-por-funcion" class="nav-link" data-scroll-target="#resultados-por-funcion">Resultados por funcion</a></li>
-  <li><a href="#convergencia-por-funcion" id="toc-convergencia-por-funcion" class="nav-link" data-scroll-target="#convergencia-por-funcion">Convergencia Por Funcion</a></li>
+  <li><a href="#metodología-1" id="toc-metodología-1" class="nav-link" data-scroll-target="#metodología-1">Metodología</a></li>
+  <li><a href="#parámetros-de-los-algoritmos" id="toc-parámetros-de-los-algoritmos" class="nav-link" data-scroll-target="#parámetros-de-los-algoritmos">Parámetros de los algoritmos</a></li>
+  <li><a href="#tablas-de-resumen-comparativo" id="toc-tablas-de-resumen-comparativo" class="nav-link" data-scroll-target="#tablas-de-resumen-comparativo">Tablas de resumen comparativo</a></li>
+  <li><a href="#comparación-gráfica-de-desempeño" id="toc-comparación-gráfica-de-desempeño" class="nav-link" data-scroll-target="#comparación-gráfica-de-desempeño">Comparación gráfica de desempeño</a></li>
+  <li><a href="#comparación-gráfica-de-la-mediana-del-valor-final" id="toc-comparación-gráfica-de-la-mediana-del-valor-final" class="nav-link" data-scroll-target="#comparación-gráfica-de-la-mediana-del-valor-final">Comparación gráfica de la mediana del valor final</a></li>
+  <li><a href="#convergencia-por-función" id="toc-convergencia-por-función" class="nav-link" data-scroll-target="#convergencia-por-función">Convergencia por función</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#comparacion-final-entre-metodos" id="toc-comparacion-final-entre-metodos" class="nav-link" data-scroll-target="#comparacion-final-entre-metodos">Comparacion final entre metodos</a>
+  <li><a href="#comparación-final-entre-métodos" id="toc-comparación-final-entre-métodos" class="nav-link" data-scroll-target="#comparación-final-entre-métodos">Comparación final entre métodos</a>
   <ul class="collapse">
-  <li><a href="#criterios-de-comparacion" id="toc-criterios-de-comparacion" class="nav-link" data-scroll-target="#criterios-de-comparacion">Criterios de comparacion</a></li>
-  <li><a href="#regla-de-lectura" id="toc-regla-de-lectura" class="nav-link" data-scroll-target="#regla-de-lectura">Regla de lectura</a></li>
-  <li><a href="#tabla-maestra-sugerida" id="toc-tabla-maestra-sugerida" class="nav-link" data-scroll-target="#tabla-maestra-sugerida">Tabla maestra sugerida</a></li>
+  <li><a href="#tabla-comparativa-global" id="toc-tabla-comparativa-global" class="nav-link" data-scroll-target="#tabla-comparativa-global">Tabla comparativa global</a></li>
   <li><a href="#conteo-global-de-victorias" id="toc-conteo-global-de-victorias" class="nav-link" data-scroll-target="#conteo-global-de-victorias">Conteo global de victorias</a></li>
-  <li><a href="#conclusiones-sugeridas" id="toc-conclusiones-sugeridas" class="nav-link" data-scroll-target="#conclusiones-sugeridas">Conclusiones sugeridas</a>
-  <ul class="collapse">
-  <li><a href="#conclusion-1" id="toc-conclusion-1" class="nav-link" data-scroll-target="#conclusion-1">Conclusion 1</a></li>
-  <li><a href="#conclusion-2" id="toc-conclusion-2" class="nav-link" data-scroll-target="#conclusion-2">Conclusion 2</a></li>
-  <li><a href="#conclusion-3" id="toc-conclusion-3" class="nav-link" data-scroll-target="#conclusion-3">Conclusion 3</a></li>
-  </ul></li>
-  <li><a href="#animacion-representativa-del-metodo-ganador" id="toc-animacion-representativa-del-metodo-ganador" class="nav-link" data-scroll-target="#animacion-representativa-del-metodo-ganador">Animacion representativa del metodo ganador</a></li>
+  <li><a href="#conclusiones" id="toc-conclusiones" class="nav-link" data-scroll-target="#conclusiones">Conclusiones</a></li>
+  <li><a href="#animación-representativa-del-método-ganador" id="toc-animación-representativa-del-método-ganador" class="nav-link" data-scroll-target="#animación-representativa-del-método-ganador">Animación representativa del método ganador</a></li>
   <li><a href="#fuente-de-datos" id="toc-fuente-de-datos" class="nav-link" data-scroll-target="#fuente-de-datos">Fuente de datos</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -269,138 +286,242 @@ window.Quarto = {
 </header>
 
 
-<section id="parte-1-optimizacion-numerica" class="level1">
-<h1>Parte 1: Optimizacion Numerica</h1>
+<section id="parte-1-optimización-numérica" class="level1">
+<h1>Parte 1: Optimización Numérica</h1>
 <section id="funciones-de-prueba" class="level2">
-<h2 class="anchored" data-anchor-id="funciones-de-prueba">2.1 Funciones de prueba</h2>
-<p>Para evaluar el comportamiento de los metodos de optimizacion numerica, se seleccionaron varias funciones de prueba ampliamente utilizadas en la literatura. Estas funciones permiten estudiar paisajes de optimizacion con caracteristicas muy distintas, como valles estrechos, abundancia de minimos locales, oscilaciones periodicas y superficies altamente no lineales. Gracias a ello, sirven como una base adecuada para comparar el desempeno de distintos algoritmos y analizar tanto su capacidad de convergencia como su robustez frente a problemas de diferente dificultad.</p>
-<section id="funcion-de-rosenbrock" class="level3">
-<h3 class="anchored" data-anchor-id="funcion-de-rosenbrock">Funcion de Rosenbrock</h3>
-<p>La funcion de Rosenbrock es un caso clasico en optimizacion continua. Su principal dificultad es la presencia de un valle largo, curvo y angosto que conduce al minimo global. Aunque la funcion no es extremadamente multimodal, muchos algoritmos tienen dificultades para avanzar de manera estable dentro de este valle y acercarse con precision a la solucion.</p>
+<h2 class="anchored" data-anchor-id="funciones-de-prueba">Funciones de prueba</h2>
+<p>Para evaluar el comportamiento de los métodos de optimización numérica, se seleccionaron varias funciones de prueba ampliamente utilizadas en la literatura. En conjunto, estas funciones benchmark ofrecen paisajes de optimización con propiedades diversas, como multimodalidad, distintos niveles de separabilidad y valles estrechos, por lo que constituyen una base adecuada para comparar la convergencia y la robustez de distintos algoritmos frente a problemas de diferente dificultad (Jamil &amp; Yang, 2013). ### Función de Rosenbrock</p>
+<p>La función de Rosenbrock es un caso clásico en optimización continua. Su principal dificultad es la presencia de un valle largo, curvo y angosto que conduce al mínimo global. Aunque la función no es extremadamente multimodal, muchos algoritmos tienen dificultades para avanzar de manera estable dentro de este valle y acercarse con precisión a la solución.</p>
 <p><span class="math display">\[
 f(x, y) = (1 - x)^2 + 100(y - x^2)^2
 \]</span></p>
-<p>Su minimo global se encuentra en <span class="math inline">\((1,1)\)</span>, donde <span class="math inline">\(f(x,y)=0\)</span>.</p>
-</section>
-<section id="funcion-de-rastrigin" class="level3">
-<h3 class="anchored" data-anchor-id="funcion-de-rastrigin">Funcion de Rastrigin</h3>
-<p>La funcion de Rastrigin es ampliamente usada para evaluar algoritmos en escenarios multimodales. Su superficie contiene una gran cantidad de minimos locales distribuidos periodicamente, lo que dificulta la busqueda del minimo global. Por esta razon, resulta muy util para analizar la capacidad de exploracion de un metodo de optimizacion.</p>
+<p>Su mínimo global se encuentra en <span class="math inline">\((1,1)\)</span>, donde <span class="math inline">\(f(x,y)=0\)</span>.</p>
+<section id="función-de-rastrigin" class="level3">
+<h3 class="anchored" data-anchor-id="función-de-rastrigin">Función de Rastrigin</h3>
+<p>La función de Rastrigin es ampliamente usada para evaluar algoritmos en escenarios multimodales. Su superficie contiene una gran cantidad de mínimos locales distribuidos periódicamente, lo que dificulta la búsqueda del mínimo global. Por esta razón, resulta muy útil para analizar la capacidad de exploración de un método de optimización.</p>
 <p><span class="math display">\[
 f(\mathbf{x}) = 10n + \sum_{i=1}^{n} \left(x_i^2 - 10 \cos(2\pi x_i)\right)
 \]</span></p>
-<p>Su minimo global se encuentra en <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>, donde <span class="math inline">\(f(\mathbf{x})=0\)</span>.</p>
+<p>Su mínimo global se encuentra en <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>, donde <span class="math inline">\(f(\mathbf{x})=0\)</span>.</p>
 </section>
-<section id="funcion-de-schwefel" class="level3">
-<h3 class="anchored" data-anchor-id="funcion-de-schwefel">Funcion de Schwefel</h3>
-<p>La funcion de Schwefel representa un reto importante debido a que su minimo global esta alejado del origen y la superficie presenta muchas irregularidades. Esto obliga a los algoritmos a explorar con cuidado el dominio de busqueda y evita que una estrategia demasiado local encuentre con facilidad la mejor solucion.</p>
+<section id="función-de-schwefel" class="level3">
+<h3 class="anchored" data-anchor-id="función-de-schwefel">Función de Schwefel</h3>
+<p>La función de Schwefel representa un reto importante debido a que su mínimo global está alejado del origen y la superficie presenta muchas irregularidades. Esto obliga a los algoritmos a explorar con cuidado el dominio de búsqueda y evita que una estrategia demasiado local encuentre con facilidad la mejor solución.</p>
 <p><span class="math display">\[
 f(\mathbf{x}) = 418.9829\,n - \sum_{i=1}^{n} x_i \sin\left(\sqrt{|x_i|}\right)
 \]</span></p>
-<p>Su minimo global se alcanza aproximadamente cuando <span class="math inline">\(x_i = 420.9687\)</span> para todo <span class="math inline">\(i\)</span>.</p>
+<p>Su mínimo global se alcanza aproximadamente cuando <span class="math inline">\(x_i = 420.9687\)</span> para todo <span class="math inline">\(i\)</span>.</p>
 </section>
-<section id="funcion-de-griewank" class="level3">
-<h3 class="anchored" data-anchor-id="funcion-de-griewank">Funcion de Griewank</h3>
-<p>La funcion de Griewank combina un crecimiento cuadratico moderado con un componente oscilatorio multiplicativo. Esta estructura genera varios minimos locales, aunque de una forma menos agresiva que en Rastrigin. Por ello, es util para estudiar el comportamiento de los algoritmos en superficies multimodales con una complejidad intermedia.</p>
+<section id="función-de-griewank" class="level3">
+<h3 class="anchored" data-anchor-id="función-de-griewank">Función de Griewank</h3>
+<p>La función de Griewank combina un crecimiento cuadrático moderado con un componente oscilatorio multiplicativo. Esta estructura genera varios mínimos locales, aunque de una forma menos agresiva que en Rastrigin. Por ello, es útil para estudiar el comportamiento de los algoritmos en superficies multimodales con una complejidad intermedia.</p>
 <p><span class="math display">\[
 f(\mathbf{x}) = 1 + \sum_{i=1}^{n}\frac{x_i^2}{4000} - \prod_{i=1}^{n}\cos\left(\frac{x_i}{\sqrt{i}}\right)
 \]</span></p>
-<p>Su minimo global se encuentra en <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>, donde <span class="math inline">\(f(\mathbf{x})=0\)</span>.</p>
+<p>Su mínimo global se encuentra en <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>, donde <span class="math inline">\(f(\mathbf{x})=0\)</span>.</p>
 </section>
-<section id="funcion-de-goldstein-price" class="level3">
-<h3 class="anchored" data-anchor-id="funcion-de-goldstein-price">Funcion de Goldstein-Price</h3>
-<p>La funcion de Goldstein-Price es una funcion bidimensional con una superficie compleja y altamente irregular. Presenta cambios pronunciados en la curvatura y varias zonas que pueden desviar la trayectoria de busqueda, por lo que es adecuada para evaluar la precision y estabilidad de los algoritmos en problemas no triviales.</p>
+<section id="función-de-goldstein-price" class="level3">
+<h3 class="anchored" data-anchor-id="función-de-goldstein-price">Función de Goldstein-Price</h3>
+<p>La función de Goldstein-Price es una función bidimensional con una superficie compleja y altamente irregular. Presenta cambios pronunciados en la curvatura y varias zonas que pueden desviar la trayectoria de búsqueda, por lo que es adecuada para evaluar la precisión y estabilidad de los algoritmos en problemas no triviales.</p>
 <p><span class="math display">\[
 \begin{aligned}
 f(x,y) &amp;= \left[1 + (x+y+1)^2(19 - 14x + 3x^2 - 14y + 6xy + 3y^2)\right] \\
 &amp;\quad \cdot \left[30 + (2x-3y)^2(18 - 32x + 12x^2 + 48y - 36xy + 27y^2)\right]
 \end{aligned}
 \]</span></p>
-<p>Su minimo global se encuentra en <span class="math inline">\((0,-1)\)</span>, donde el valor de la funcion es <span class="math inline">\(3\)</span>.</p>
+<p>Su mínimo global se encuentra en <span class="math inline">\((0,-1)\)</span>, donde el valor de la función es <span class="math inline">\(3\)</span>.</p>
 </section>
-<section id="funcion-six-hump-camel" class="level3">
-<h3 class="anchored" data-anchor-id="funcion-six-hump-camel">Funcion Six-Hump Camel</h3>
-<p>La funcion Six-Hump Camel es otro ejemplo clasico en dos dimensiones. Su interes principal radica en que posee varios puntos criticos y dos minimos globales simetricos. Esto permite evaluar si un algoritmo logra identificar soluciones equivalentes en distintas regiones del espacio de busqueda.</p>
+<section id="función-six-hump-camel" class="level3">
+<h3 class="anchored" data-anchor-id="función-six-hump-camel">Función Six-Hump Camel</h3>
+<p>La función Six-Hump Camel es otro ejemplo clásico en dos dimensiones. Su interés principal radica en que posee varios puntos críticos y dos mínimos globales simétricos. Esto permite evaluar si un algoritmo logra identificar soluciones equivalentes en distintas regiones del espacio de búsqueda.</p>
 <p><span class="math display">\[
 f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right)y^2
 \]</span></p>
-<p>Sus minimos globales se encuentran aproximadamente en <span class="math inline">\((0.0898,-0.7126)\)</span> y <span class="math inline">\((-0.0898,0.7126)\)</span>.</p>
+<p>Sus mínimos globales se encuentran aproximadamente en <span class="math inline">\((0.0898,-0.7126)\)</span> y <span class="math inline">\((-0.0898,0.7126)\)</span>.</p>
 </section>
-<section id="graficos-de-superficie-y-contorno" class="level3">
-<h3 class="anchored" data-anchor-id="graficos-de-superficie-y-contorno">Graficos de superficie y contorno</h3>
-<p>Para cada una de estas funciones se deben incluir dos tipos de visualizacion:</p>
+<section id="gráficos-de-superficie-y-contorno" class="level3">
+<h3 class="anchored" data-anchor-id="gráficos-de-superficie-y-contorno">Gráficos de superficie y contorno</h3>
+<p>Para cada una de estas funciones se deben incluir dos tipos de visualización:</p>
 <ul>
-<li>un grafico de superficie en 3D, para observar la forma general del paisaje de optimizacion</li>
-<li>un grafico de contorno en 2D, para identificar valles, picos, minimos locales y zonas de mayor dificultad</li>
+<li>un gráfico de superficie en 3D, para observar la forma general del paisaje de optimización</li>
+<li>un gráfico de contorno en 2D, para identificar valles, picos, mínimos locales y zonas de mayor dificultad</li>
 </ul>
-<p>Estas figuras complementan la descripcion matematica, ya que permiten entender visualmente por que ciertas funciones favorecen la convergencia rapida y por que otras representan un reto mayor para los algoritmos estudiados.</p>
+<p>Estas figuras complementan la descripción matemática, ya que permiten entender visualmente por qué ciertas funciones favorecen la convergencia rápida y por qué otras representan un reto mayor para los algoritmos estudiados.</p>
 </section>
 </section>
-<section id="optimizacion-con-descenso-por-gradiente" class="level2">
-<h2 class="anchored" data-anchor-id="optimizacion-con-descenso-por-gradiente">2.2 Optimizacion con Descenso por Gradiente</h2>
-<p>Una vez definidas las funciones de prueba, el siguiente paso consiste en estudiar el comportamiento del descenso por gradiente sobre cada una de ellas. Este metodo actualiza iterativamente la solucion en la direccion opuesta al gradiente de la funcion objetivo, buscando reducir su valor de manera progresiva. Su mayor ventaja es que utiliza informacion local de la superficie para orientar la busqueda, lo que lo hace eficiente en problemas suaves o bien estructurados, aunque tambien lo vuelve sensible a la forma del paisaje y a la condicion inicial.</p>
-<section id="metodologia" class="level3">
-<h3 class="anchored" data-anchor-id="metodologia">Metodologia</h3>
-<p>Para evaluar la estabilidad del metodo y evitar conclusiones basadas en una sola corrida, se realizaron multiples ejecuciones con condiciones iniciales aleatorias. En cada experimento, el algoritmo parte de un punto inicial generado dentro del dominio de la funcion y luego avanza siguiendo la direccion de mayor descenso hasta alcanzar el criterio de parada establecido.</p>
-<p>El enunciado propone comparar corridas para <span class="math inline">\(n = 100\)</span>, <span class="math inline">\(500\)</span> y <span class="math inline">\(1000\)</span>. En los cuadernos de analisis ya se consolidan especialmente resultados para varios casos en 2D y 3D, con enfasis en funciones como Rosenbrock, Schwefel y Rastrigin, y con resúmenes organizados por funcion, dimension y numero de corridas. Este procedimiento permite observar no solo si el metodo encuentra soluciones cercanas al minimo global, sino tambien con que frecuencia lo hace, cuanta dispersion presentan los resultados finales y cual es el costo computacional asociado.</p>
-<p>En problemas de optimizacion no convexa este analisis es clave, porque una misma regla de actualizacion puede producir trayectorias muy distintas dependiendo del punto inicial y de la geometria local de la funcion.</p>
+<section id="optimización-con-descenso-por-gradiente" class="level2">
+<h2 class="anchored" data-anchor-id="optimización-con-descenso-por-gradiente">Optimización con Descenso por Gradiente</h2>
+<p>Una vez definidas las funciones de prueba, el siguiente paso consiste en estudiar el comportamiento del descenso por gradiente sobre cada una de ellas. El descenso por gradiente es un método de optimización local que busca minimizar una función objetivo mediante actualizaciones sucesivas de la forma <span class="math display">\[
+x_{k+1} = x_k - \alpha \nabla f(x_k),
+\]</span> donde <span class="math inline">\(x_k\)</span> es la solución en la iteración <span class="math inline">\(k\)</span>, <span class="math inline">\(\alpha\)</span> es la tasa de aprendizaje y <span class="math inline">\(\nabla f(x_k)\)</span> es el gradiente de la función objetivo evaluado en ese punto. En cada paso, el método avanza en la dirección opuesta al gradiente para reducir el valor de la función y aproximarse a un mínimo. Aunque suele ser eficiente en funciones suaves, su desempeño depende en gran medida de la geometría de la función objetivo y de la condición inicial elegida (Nocedal &amp; Wright, 2006).</p>
+<section id="metodología" class="level3">
+<h3 class="anchored" data-anchor-id="metodología">Metodología</h3>
+<p>Para evaluar la estabilidad del método y evitar conclusiones basadas en una sola corrida, se realizaron múltiples ejecuciones con condiciones iniciales aleatorias. En cada experimento, el algoritmo parte de un punto inicial generado dentro del dominio de la función. A partir de allí, se calcula el gradiente de la función objetivo para determinar la dirección de mayor descenso, y luego se actualiza iterativamente la solución. El criterio de parada se estableció mediante una tolerancia sobre la norma del cambio entre iteraciones, de modo que el algoritmo se detiene cuando dicho cambio es menor que 10^-6; en caso contrario, la corrida finaliza al alcanzar el número máximo de iteraciones definido para cada función.</p>
+<p>El enunciado propone comparar corridas para <span class="math inline">\(n = 100\)</span>, <span class="math inline">\(500\)</span> y <span class="math inline">\(1000\)</span>. En los cuadernos de análisis se consolidaron resultados para varios casos en 2D y 3D, con énfasis en las funciones de Rosenbrock, Rastrigin, Schwefel, Griewank, Goldstein-Price y la función de las seis jorobas de camello, que pasaremos a llamar Six-Hump Camel. Además, el contenido se organizó en resúmenes por función, dimensión y número de corridas.</p>
+<p>Este procedimiento permite observar no solo si el método encuentra soluciones cercanas al mínimo global, sino también con qué frecuencia lo hace, cuánta dispersión presentan los resultados finales y cuál es el costo computacional asociado.</p>
 </section>
 <section id="visualización-de-la-función-objetivo" class="level3">
 <h3 class="anchored" data-anchor-id="visualización-de-la-función-objetivo">Visualización de la función objetivo</h3>
 <section id="rosenbrock" class="level4">
 <h4 class="anchored" data-anchor-id="rosenbrock">Rosenbrock</h4>
-<p><img src="assets/superficies/rosenbrock_mapa_calor_y_superficie.png" class="img-fluid"></p>
-</section>
-<section id="rastrigin" class="level4">
-<h4 class="anchored" data-anchor-id="rastrigin">Rastrigin</h4>
-<p><img src="assets/superficies/rastrigin_mapa_calor_y_superficie.png" class="img-fluid"></p>
-</section>
-<section id="schwefel" class="level4">
-<h4 class="anchored" data-anchor-id="schwefel">Schwefel</h4>
-<p><img src="assets/superficies/schwefel_mapa_calor_y_superficie.png" class="img-fluid"></p>
-</section>
-<section id="griewank" class="level4">
-<h4 class="anchored" data-anchor-id="griewank">Griewank</h4>
-<p><img src="assets/superficies/griewank_mapa_calor_y_superficie.png" class="img-fluid"></p>
-</section>
-<section id="goldstein-price" class="level4">
-<h4 class="anchored" data-anchor-id="goldstein-price">Goldstein-Price</h4>
-<p><img src="assets/superficies/goldstein_price_mapa_calor_y_superficie.png" class="img-fluid"></p>
-</section>
-<section id="six-hump-camel" class="level4">
-<h4 class="anchored" data-anchor-id="six-hump-camel">Six-Hump Camel</h4>
-<p><img src="assets/superficies/six_hump_camel_mapa_calor_y_superficie.png" class="img-fluid"></p>
-</section>
-</section>
-<section id="tabla-resumen-de-desempeno" class="level3">
-<h3 class="anchored" data-anchor-id="tabla-resumen-de-desempeno">Tabla resumen de desempeno</h3>
-<p>A continuacion se muestra el detalle especifico de las funciones evaluadas en ambas dimensiones o una dependiendo el caso. Esto nos permite leer mejor como cambia el desempeño del metodo cuando aumenta el numero de corridas y como se distribuyen los resultados finales.</p>
-<section id="rosenbrock-1" class="level4">
-<h4 class="anchored" data-anchor-id="rosenbrock-1">Rosenbrock</h4>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">Corridas</th>
-<th style="text-align: right;">Mejor valor final</th>
-<th style="text-align: right;">Peor valor final</th>
-<th style="text-align: right;">Promedio valor final</th>
-<th style="text-align: right;">Mediana valor final</th>
-<th style="text-align: right;">Desv. valor final</th>
-<th style="text-align: right;">Promedio evaluaciones</th>
-<th style="text-align: right;">Promedio iteraciones</th>
+<th style="text-align: left;">Gradiente en 2D</th>
+<th style="text-align: left;">Gradiente en 3D</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y) = \begin{bmatrix} -400x(y - x^2) - 2(1 - x) \\ 200(y - x^2) \end{bmatrix} \]</span></td>
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y, z) = \begin{bmatrix} -400x(y - x^2) - 2(1 - x) \\ 200(y - x^2) - 400y(z - y^2) - 2(1 - y) \\ 200(z - y^2) \end{bmatrix} \]</span></td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/numerica/gradientes/images/rosenbrock/rosenbrock_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="rastrigin" class="level4">
+<h4 class="anchored" data-anchor-id="rastrigin">Rastrigin</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gradiente en 2D</th>
+<th style="text-align: left;">Gradiente en 3D</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y) = \begin{bmatrix} 2x + 20\pi \sin(2\pi x) \\ 2y + 20\pi \sin(2\pi y) \end{bmatrix} \]</span></td>
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y, z) = \begin{bmatrix} 2x + 20\pi \sin(2\pi x) \\ 2y + 20\pi \sin(2\pi y) \\ 2z + 20\pi \sin(2\pi z) \end{bmatrix} \]</span></td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/numerica/gradientes/images/rastrigin/rastrigin_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="schwefel" class="level4">
+<h4 class="anchored" data-anchor-id="schwefel">Schwefel</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gradiente en 2D</th>
+<th style="text-align: left;">Gradiente en 3D</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y) = \begin{bmatrix} -\sin\left(\sqrt{|x|}\right) - \frac{x \cos\left(\sqrt{|x|}\right)}{2\sqrt{|x|}} \\ -\sin\left(\sqrt{|y|}\right) - \frac{y \cos\left(\sqrt{|y|}\right)}{2\sqrt{|y|}} \end{bmatrix} \]</span></td>
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y, z) = \begin{bmatrix} -\sin\left(\sqrt{|x|}\right) - \frac{x \cos\left(\sqrt{|x|}\right)}{2\sqrt{|x|}} \\ -\sin\left(\sqrt{|y|}\right) - \frac{y \cos\left(\sqrt{|y|}\right)}{2\sqrt{|y|}} \\ -\sin\left(\sqrt{|z|}\right) - \frac{z \cos\left(\sqrt{|z|}\right)}{2\sqrt{|z|}} \end{bmatrix} \]</span></td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/numerica/gradientes/images/schwefel/schwefel_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="griewank" class="level4">
+<h4 class="anchored" data-anchor-id="griewank">Griewank</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gradiente en 2D</th>
+<th style="text-align: left;">Gradiente en 3D</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y) = \begin{bmatrix} \frac{x}{2000} + \frac{1}{\sqrt{1}} \sin\left(\frac{x}{\sqrt{1}}\right) \cos\left(\frac{y}{\sqrt{2}}\right) \\ \frac{y}{2000} + \frac{1}{\sqrt{2}} \cos\left(\frac{x}{\sqrt{1}}\right) \sin\left(\frac{y}{\sqrt{2}}\right) \end{bmatrix} \]</span></td>
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y, z) = \begin{bmatrix} \frac{x}{2000} + \frac{1}{\sqrt{1}} \sin\left(\frac{x}{\sqrt{1}}\right) \cos\left(\frac{y}{\sqrt{2}}\right) \cos\left(\frac{z}{\sqrt{3}}\right) \\ \frac{y}{2000} + \frac{1}{\sqrt{2}} \cos\left(\frac{x}{\sqrt{1}}\right) \sin\left(\frac{y}{\sqrt{2}}\right) \cos\left(\frac{z}{\sqrt{3}}\right) \\ \frac{z}{2000} + \frac{1}{\sqrt{3}} \cos\left(\frac{x}{\sqrt{1}}\right) \cos\left(\frac{y}{\sqrt{2}}\right) \sin\left(\frac{z}{\sqrt{3}}\right) \end{bmatrix} \]</span></td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/numerica/gradientes/images/griewank/griewank_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="goldstein-price" class="level4">
+<h4 class="anchored" data-anchor-id="goldstein-price">Goldstein-Price</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gradiente en 2D</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y) = \begin{bmatrix} \frac{\partial f}{\partial x} \\ \frac{\partial f}{\partial y} \end{bmatrix} \]</span></td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets\numerica\gradientes\images\goldstein_price\goldstein_price_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+<section id="six-hump-camel" class="level4">
+<h4 class="anchored" data-anchor-id="six-hump-camel">Six-Hump Camel</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gradiente en 2D</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math display">\[ \nabla f(x, y) = \begin{bmatrix} (8 - 8.4x^2 + 2x^4)x + y \\ x + (-8 + 16y^2)y \end{bmatrix} \]</span></td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/numerica/gradientes/images/six_hump_camel/six_hump_camel_mapa_calor_y_superficie.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="tabla-resumen-de-desempeño" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-resumen-de-desempeño">Tabla resumen de desempeño</h3>
+<p>A continuación se muestra el detalle específico de las funciones evaluadas en ambas dimensiones, o en una sola cuando corresponde. Esto permite observar con mayor claridad cómo cambia el desempeño del método cuando aumenta el número de corridas y cómo se distribuyen los resultados finales.</p>
+<section id="rosenbrock-1" class="level4">
+<h4 class="anchored" data-anchor-id="rosenbrock-1">Rosenbrock</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Dimensión</th>
+<th style="text-align: right;">Corridas</th>
+<th style="text-align: right;">Mejor valor final</th>
+<th style="text-align: right;">Peor valor final</th>
+<th style="text-align: right;">Promedio del valor final</th>
+<th style="text-align: right;">Mediana del valor final</th>
+<th style="text-align: right;">Desv. del valor final</th>
+<th style="text-align: right;">Promedio de evaluaciones</th>
+<th style="text-align: right;">Promedio de iteraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;">5.20</td>
@@ -411,6 +532,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">1000.00</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;">5.65</td>
@@ -421,6 +543,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">1000.00</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;">5.65</td>
@@ -431,6 +554,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">1000.00</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">0.09</td>
 <td style="text-align: right;">4.32</td>
@@ -441,6 +565,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">1000.00</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">0.09</td>
 <td style="text-align: right;">4.79</td>
@@ -451,6 +576,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">1000.00</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">0.03</td>
 <td style="text-align: right;">4.79</td>
@@ -462,34 +588,38 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 </tr>
 </tbody>
 </table>
+<p>Se evidencia que encuentra soluciones muy cercanas al óptimo en 2D, pero el valle estrecho y el acoplamiento en 3D dificultan ligeramente el desempeño promedio.</p>
 </section>
 <section id="rastrigin-1" class="level4">
 <h4 class="anchored" data-anchor-id="rastrigin-1">Rastrigin</h4>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="header">
+<th style="text-align: right;">Dimensión</th>
 <th style="text-align: right;">Corridas</th>
 <th style="text-align: right;">Mejor valor final</th>
 <th style="text-align: right;">Peor valor final</th>
-<th style="text-align: right;">Promedio valor final</th>
-<th style="text-align: right;">Mediana valor final</th>
-<th style="text-align: right;">Desv. valor final</th>
-<th style="text-align: right;">Promedio evaluaciones</th>
-<th style="text-align: right;">Promedio iteraciones</th>
+<th style="text-align: right;">Promedio del valor final</th>
+<th style="text-align: right;">Mediana del valor final</th>
+<th style="text-align: right;">Desv. del valor final</th>
+<th style="text-align: right;">Promedio de evaluaciones</th>
+<th style="text-align: right;">Promedio de iteraciones</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">1.99</td>
 <td style="text-align: right;">40.79</td>
@@ -500,6 +630,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">27.04</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">40.79</td>
@@ -510,6 +641,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">26.85</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">40.79</td>
@@ -520,6 +652,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">27.05</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">1.99</td>
 <td style="text-align: right;">58.70</td>
@@ -530,6 +663,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">28.10</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">1.99</td>
 <td style="text-align: right;">58.70</td>
@@ -540,6 +674,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">29.92</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">58.70</td>
@@ -551,34 +686,38 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 </tr>
 </tbody>
 </table>
+<p>Se observa que sufre severamente debido a sus múltiples mínimos locales; converge rápido pero se evidencia que queda atrapado casi de inmediato.</p>
 </section>
 <section id="schwefel-1" class="level4">
 <h4 class="anchored" data-anchor-id="schwefel-1">Schwefel</h4>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="header">
+<th style="text-align: right;">Dimensión</th>
 <th style="text-align: right;">Corridas</th>
 <th style="text-align: right;">Mejor valor final</th>
 <th style="text-align: right;">Peor valor final</th>
-<th style="text-align: right;">Promedio valor final</th>
-<th style="text-align: right;">Mediana valor final</th>
-<th style="text-align: right;">Desv. valor final</th>
-<th style="text-align: right;">Promedio evaluaciones</th>
-<th style="text-align: right;">Promedio iteraciones</th>
+<th style="text-align: right;">Promedio del valor final</th>
+<th style="text-align: right;">Mediana del valor final</th>
+<th style="text-align: right;">Desv. del valor final</th>
+<th style="text-align: right;">Promedio de evaluaciones</th>
+<th style="text-align: right;">Promedio de iteraciones</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">-15.32</td>
 <td style="text-align: right;">985.87</td>
@@ -589,6 +728,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">10000.00</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">-15.32</td>
 <td style="text-align: right;">1225.63</td>
@@ -599,6 +739,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">10000.00</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">-15.32</td>
 <td style="text-align: right;">1225.63</td>
@@ -609,6 +750,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">10000.00</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">-7.73</td>
 <td style="text-align: right;">1203.50</td>
@@ -619,6 +761,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">10000.00</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">-7.73</td>
 <td style="text-align: right;">1450.16</td>
@@ -629,6 +772,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">10000.00</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">-7.73</td>
 <td style="text-align: right;">1450.16</td>
@@ -640,34 +784,38 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 </tr>
 </tbody>
 </table>
+<p>Se denota un comportamiento muy polarizado y altamente dependiente del punto inicial; se evidencia que consume el total de las iteraciones con una desviación estándar altísima.</p>
 </section>
 <section id="griewank-1" class="level4">
 <h4 class="anchored" data-anchor-id="griewank-1">Griewank</h4>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="header">
+<th style="text-align: right;">Dimensión</th>
 <th style="text-align: right;">Corridas</th>
 <th style="text-align: right;">Mejor valor final</th>
 <th style="text-align: right;">Peor valor final</th>
-<th style="text-align: right;">Promedio valor final</th>
-<th style="text-align: right;">Mediana valor final</th>
-<th style="text-align: right;">Desv. valor final</th>
-<th style="text-align: right;">Promedio evaluaciones</th>
-<th style="text-align: right;">Promedio iteraciones</th>
+<th style="text-align: right;">Promedio del valor final</th>
+<th style="text-align: right;">Mediana del valor final</th>
+<th style="text-align: right;">Desv. del valor final</th>
+<th style="text-align: right;">Promedio de evaluaciones</th>
+<th style="text-align: right;">Promedio de iteraciones</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0.05</td>
@@ -678,6 +826,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">1764.94</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0.05</td>
@@ -688,6 +837,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">1730.03</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0.05</td>
@@ -698,6 +848,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">1739.05</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">0.01</td>
 <td style="text-align: right;">0.99</td>
@@ -708,6 +859,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">2000.00</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">0.01</td>
 <td style="text-align: right;">0.99</td>
@@ -718,6 +870,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">2000.00</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">3D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">0.01</td>
 <td style="text-align: right;">0.99</td>
@@ -729,34 +882,38 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 </tr>
 </tbody>
 </table>
+<p>Se aprecia un desempeño sobresaliente y muy consistente; se demuestra que su estructura global guía con éxito al gradiente hacia valores cercanos a cero con mínima dispersión.</p>
 </section>
 <section id="goldstein-price-1" class="level4">
 <h4 class="anchored" data-anchor-id="goldstein-price-1">Goldstein-Price</h4>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="header">
+<th style="text-align: right;">Dimensión</th>
 <th style="text-align: right;">Corridas</th>
 <th style="text-align: right;">Mejor valor final</th>
 <th style="text-align: right;">Peor valor final</th>
-<th style="text-align: right;">Promedio valor final</th>
-<th style="text-align: right;">Mediana valor final</th>
-<th style="text-align: right;">Desv. valor final</th>
-<th style="text-align: right;">Promedio evaluaciones</th>
-<th style="text-align: right;">Promedio iteraciones</th>
+<th style="text-align: right;">Promedio del valor final</th>
+<th style="text-align: right;">Mediana del valor final</th>
+<th style="text-align: right;">Desv. del valor final</th>
+<th style="text-align: right;">Promedio de evaluaciones</th>
+<th style="text-align: right;">Promedio de iteraciones</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">10.49</td>
 <td style="text-align: right;">988.65</td>
@@ -767,6 +924,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">5000.00</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">10.49</td>
 <td style="text-align: right;">989.72</td>
@@ -777,6 +935,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">5000.00</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">10.49</td>
 <td style="text-align: right;">989.72</td>
@@ -788,34 +947,38 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 </tr>
 </tbody>
 </table>
+<p>Se evidencia una alta inestabilidad y dependencia crítica del punto de partida; se observa que acierta solo si cae en la cuenca de atracción correcta, alcanzando errores cercanos a 1000.</p>
 </section>
 <section id="six-hump-camel-1" class="level4">
 <h4 class="anchored" data-anchor-id="six-hump-camel-1">Six-Hump Camel</h4>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="header">
+<th style="text-align: right;">Dimensión</th>
 <th style="text-align: right;">Corridas</th>
 <th style="text-align: right;">Mejor valor final</th>
 <th style="text-align: right;">Peor valor final</th>
-<th style="text-align: right;">Promedio valor final</th>
-<th style="text-align: right;">Mediana valor final</th>
-<th style="text-align: right;">Desv. valor final</th>
-<th style="text-align: right;">Promedio evaluaciones</th>
-<th style="text-align: right;">Promedio iteraciones</th>
+<th style="text-align: right;">Promedio del valor final</th>
+<th style="text-align: right;">Mediana del valor final</th>
+<th style="text-align: right;">Desv. del valor final</th>
+<th style="text-align: right;">Promedio de evaluaciones</th>
+<th style="text-align: right;">Promedio de iteraciones</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">100</td>
 <td style="text-align: right;">-1.03</td>
 <td style="text-align: right;">2.10</td>
@@ -826,6 +989,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">987.10</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">500</td>
 <td style="text-align: right;">-1.03</td>
 <td style="text-align: right;">2.10</td>
@@ -836,6 +1000,7 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">994.39</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">2D</td>
 <td style="text-align: right;">1000</td>
 <td style="text-align: right;">-1.03</td>
 <td style="text-align: right;">2.10</td>
@@ -847,221 +1012,190 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 </tr>
 </tbody>
 </table>
+<p>Se constata que es muy estable y exitoso; se evidencia que su mediana se fija consistentemente en el óptimo global (<span class="math inline">\(-1.03\)</span>) a pesar de sus mínimos secundarios.</p>
 </section>
 </section>
 <section id="histogramas-de-valor-final" class="level3">
 <h3 class="anchored" data-anchor-id="histogramas-de-valor-final">Histogramas de valor final</h3>
-<p>Los histogramas del valor final permiten visualizar la distribucion de las soluciones obtenidas despues de todas las corridas. Esta grafica es especialmente importante porque muestra si el algoritmo converge repetidamente hacia una misma region del espacio de soluciones o si, por el contrario, termina en distintos minimos locales segun la inicializacion.</p>
-<p>Cuando la mayor parte de los valores finales se concentra cerca del minimo global, se puede interpretar que el metodo es relativamente estable para esa funcion. En cambio, cuando la distribucion es amplia, sesgada o presenta varios grupos, ello sugiere que el descenso por gradiente es sensible al punto inicial o que la funcion contiene regiones donde la busqueda local no logra llegar siempre a la mejor solucion.</p>
-<p>En el reporte, estos histogramas deben acompaniarse con una breve lectura interpretativa, ya que no solo interesa mostrar la figura, sino explicar que revela sobre la robustez del metodo.</p>
+<p>Los histogramas del valor final permiten visualizar la distribución de las soluciones obtenidas después de todas las corridas. Esta gráfica es especialmente importante porque muestra si el algoritmo converge repetidamente hacia una misma región del espacio de soluciones o si, por el contrario, termina en distintos mínimos locales según la inicialización.</p>
+<p>Cuando la mayor parte de los valores finales se concentra cerca del mínimo global, se puede interpretar que el método es relativamente estable para esa función. En cambio, cuando la distribución es amplia, sesgada o presenta varios grupos, ello sugiere que el descenso por gradiente es sensible al punto inicial o que la función contiene regiones donde la búsqueda local no logra llegar siempre a la mejor solución.</p>
 <section id="rosenbrock-2" class="level4">
 <h4 class="anchored" data-anchor-id="rosenbrock-2">Rosenbrock</h4>
 <section id="d" class="level5">
 <h5 class="anchored" data-anchor-id="d">2D</h5>
-<p><img src="assets/histogramas/rosenbrock_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/rosenbrock/rosenbrock_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
 </section>
 <section id="d-1" class="level5">
 <h5 class="anchored" data-anchor-id="d-1">3D</h5>
-<p><img src="assets/histogramas/rosenbrock_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/rosenbrock/rosenbrock_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Rosenbrock 2D</strong>, los histogramas muestran una fuerte concentración de frecuencias en los valores cercanos a cero (especialmente a medida que aumentan las corridas <span class="math inline">\(n = 500\)</span> y <span class="math inline">\(n = 1000\)</span>), lo que evidencia que el algoritmo logra converger exitosamente en repetidas ocasiones hacia la región del óptimo global, aunque persisten algunos valores dispersos debido a la dificultad de su valle parabólico. Por otro lado, en <strong>Rosenbrock 3D</strong>, se denota que la distribución se dispersa significativamente a lo largo del eje de valores finales y aparecen múltiples grupos de frecuencias separadas; esto evidencia que el incremento dimensional amplifica la sensibilidad al punto inicial, provocando que el descenso por gradiente termine con mayor frecuencia en distintas regiones o sub-óptimos locales en lugar de consolidarse en una única zona de convergencia.</p>
 </section>
 </section>
 <section id="rastrigin-2" class="level4">
 <h4 class="anchored" data-anchor-id="rastrigin-2">Rastrigin</h4>
 <section id="d-2" class="level5">
 <h5 class="anchored" data-anchor-id="d-2">2D</h5>
-<p><img src="assets/histogramas/rastrigin_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/rastrigin/rastrigin_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
 </section>
 <section id="d-3" class="level5">
 <h5 class="anchored" data-anchor-id="d-3">3D</h5>
-<p><img src="assets/histogramas/rastrigin_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/rastrigin/rastrigin_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Rastrigin 2D</strong>, los histogramas muestran múltiples grupos de frecuencia distribuidos en diversos rangos de valores finales (con picos notables alrededor de los rangos de 0-5 y 15-20), lo que evidencia que el algoritmo es altamente sensible a la inicialización y se estanca frecuentemente en diferentes mínimos locales. Por su parte, en <strong>Rastrigin 3D</strong>, se denota que la distribución se amplía y desplaza hacia valores finales más altos, dispersando las frecuencias a lo largo de un espectro más amplio; esto evidencia que el aumento de dimensionalidad incrementa exponencialmente la cantidad de trampas multimodales, dificultando que el descenso por gradiente converja de manera consistente hacia el óptimo global.</p>
 </section>
 </section>
 <section id="schwefel-2" class="level4">
 <h4 class="anchored" data-anchor-id="schwefel-2">Schwefel</h4>
 <section id="d-4" class="level5">
 <h5 class="anchored" data-anchor-id="d-4">2D</h5>
-<p><img src="assets/histogramas/schwefel_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/schwefel/schwefel_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
 </section>
 <section id="d-5" class="level5">
 <h5 class="anchored" data-anchor-id="d-5">3D</h5>
-<p><img src="assets/histogramas/schwefel_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/schwefel/schwefel_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Schwefel 2D</strong>, los histogramas muestran una dispersión muy amplia de las frecuencias a lo largo de un gran rango de valores finales (con concentraciones intermedias y altas cifras que superan los 1000), lo que evidencia que el algoritmo es sumamente inestable y depende críticamente del punto de inicialización. Por otro lado, en <strong>Schwefel 3D</strong>, se denota que la distribución se desplaza aún más hacia la derecha y amplía su dispersión alcanzando valores finales cercanos a 1400; esto evidencia que la severa complejidad de su paisaje sinusoidal y el incremento dimensional provocan que el descenso por gradiente quede atrapado de forma masiva en mínimos locales pobres en lugar de hallar el óptimo global.</p>
 </section>
 </section>
 <section id="griewank-2" class="level4">
 <h4 class="anchored" data-anchor-id="griewank-2">Griewank</h4>
 <section id="d-6" class="level5">
 <h5 class="anchored" data-anchor-id="d-6">2D</h5>
-<p><img src="assets/histogramas/griewank_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/griewank/griewank_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
 </section>
 <section id="d-7" class="level5">
 <h5 class="anchored" data-anchor-id="d-7">3D</h5>
-<p><img src="assets/histogramas/griewank_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/griewank/griewank_figura_a_histograma_solucion_final_3d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Griewank 2D</strong>, los histogramas muestran una concentración de frecuencias muy estrecha y compacta en valores extremadamente cercanos a cero (con un rango limitado que apenas alcanza los 0.05), lo que evidencia que el algoritmo posee una excelente consistencia y estabilidad para converger repetidamente cerca del óptimo global. Por otro lado, en <strong>Griewank 3D</strong>, se denota que las frecuencias se concentran fuertemente en el primer tramo inferior cercano a cero (con picos muy altos en las corridas de <span class="math inline">\(n = 500\)</span> y <span class="math inline">\(n = 1000\)</span>), aunque con una ligera dispersión que se extiende hacia valores cercanos a 1.0; esto evidencia que, a pesar de un leve incremento en la variabilidad debido a la dimensión, la estructura global de la función permite que el descenso por gradiente mantenga una alta efectividad y robustez en la búsqueda de la solución.</p>
 </section>
 </section>
 <section id="goldstein-price-2" class="level4">
 <h4 class="anchored" data-anchor-id="goldstein-price-2">Goldstein-Price</h4>
 <section id="d-8" class="level5">
 <h5 class="anchored" data-anchor-id="d-8">2D</h5>
-<p><img src="assets/histogramas/goldstein_price_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/goldstein_price/goldstein_price_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Goldstein-Price 2D</strong>, los histogramas muestran una clara polarización de las frecuencias en dos extremos muy separados (con concentraciones en los valores bajos iniciales y grandes picos que rozan o alcanzan los 1000 en las corridas de <span class="math inline">\(n = 500\)</span> y <span class="math inline">\(n = 1000\)</span>); esto evidencia una alta inestabilidad y dependencia crítica del punto de partida, lo que demuestra que el descenso por gradiente solo acierta y converge con éxito si cae exactamente dentro de la cuenca de atracción correcta, terminando en mínimos locales deficientes o divergiendo cuando esto no ocurre.</p>
 </section>
 </section>
 <section id="six-hump-camel-2" class="level4">
 <h4 class="anchored" data-anchor-id="six-hump-camel-2">Six-Hump Camel</h4>
 <section id="d-9" class="level5">
 <h5 class="anchored" data-anchor-id="d-9">2D</h5>
-<p><img src="assets/histogramas/six_hump_camel_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/six_hump_camel/six_hump_camel_figura_a_histograma_solucion_final_2d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Six-Hump Camel 2D</strong>, los histogramas muestran una fuerte concentración de las frecuencias en el valor de -1.0 (el óptimo global) a lo largo de las distintas corridas (<span class="math inline">\(n = 100\)</span>, <span class="math inline">\(n = 500\)</span> y <span class="math inline">\(n = 1000\)</span>), complementada por un grupo secundario menor ubicado alrededor de 2.0; esto evidencia que el algoritmo es robusto y converge de manera mayoritaria hacia la mejor solución, a pesar de que la presencia de mínimos locales secundarios en su topología desvía ocasionalmente algunas ejecuciones hacia el otro valor final.</p>
 </section>
 </section>
 </section>
 <section id="histogramas-de-evaluaciones" class="level3">
 <h3 class="anchored" data-anchor-id="histogramas-de-evaluaciones">Histogramas de evaluaciones</h3>
-<p>Ademas de la calidad de la solucion, es fundamental medir cuantas evaluaciones de la funcion objetivo fueron necesarias para alcanzar el resultado final. Para ello se emplean histogramas del numero de evaluaciones, que permiten estudiar la eficiencia del metodo en cada caso.</p>
-<p>Estos histogramas muestran si la convergencia ocurre de manera uniforme o si existen corridas mucho mas costosas que otras. Una distribucion concentrada en valores bajos suele indicar una convergencia mas predecible y economica. En cambio, una distribucion dispersa o con cola larga sugiere que algunas ejecuciones requieren muchos mas pasos para estabilizarse, lo cual puede estar asociado a zonas complicadas del paisaje de optimizacion.</p>
-<p>La interpretacion conjunta entre histogramas de valor final e histogramas de evaluaciones es especialmente importante: un metodo puede converger rapido pero hacia soluciones pobres, o puede requerir mas evaluaciones pero acercarse mejor al minimo global. Por eso, ambos indicadores deben analizarse en conjunto y no por separado.</p>
+<p>Además de la calidad de la solución, es fundamental medir cuántas evaluaciones de la función objetivo fueron necesarias para alcanzar el resultado final. Para ello se emplean histogramas del número de evaluaciones, que permiten estudiar la eficiencia del método en cada caso.</p>
+<p>Estos histogramas muestran si la convergencia ocurre de manera uniforme o si existen corridas mucho más costosas que otras. Una distribución concentrada en valores bajos suele indicar una convergencia más predecible y económica. En cambio, una distribución dispersa o con cola larga sugiere que algunas ejecuciones requieren muchos más pasos para estabilizarse, lo cual puede estar asociado a zonas complicadas del paisaje de optimización.</p>
+<p>La interpretación conjunta entre histogramas de valor final e histogramas de evaluaciones es especialmente importante: un método puede converger rápido pero hacia soluciones pobres, o puede requerir más evaluaciones para acercarse mejor al mínimo global. Por eso, ambos indicadores deben analizarse en conjunto y no por separado.</p>
 <section id="rosenbrock-3" class="level4">
 <h4 class="anchored" data-anchor-id="rosenbrock-3">Rosenbrock</h4>
 <section id="d-10" class="level5">
 <h5 class="anchored" data-anchor-id="d-10">2D</h5>
-<p><img src="assets/histogramas/rosenbrock_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/rosenbrock/rosenbrock_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
 </section>
 <section id="d-11" class="level5">
 <h5 class="anchored" data-anchor-id="d-11">3D</h5>
-<p><img src="assets/histogramas/rosenbrock_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/rosenbrock/rosenbrock_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Rosenbrock (tanto en 2D como en 3D)</strong>, los histogramas muestran una frecuencia absoluta concentrada de manera idéntica en un único valor fijo de 1002 evaluaciones; esto evidencia un comportamiento de convergencia totalmente uniforme y predecible, indicando que el algoritmo consume siempre exactamente el mismo esfuerzo computacional para agotar o cumplir su criterio de parada sin importar el tamaño de las corridas.</p>
 </section>
 </section>
 <section id="rastrigin-3" class="level4">
 <h4 class="anchored" data-anchor-id="rastrigin-3">Rastrigin</h4>
 <section id="d-12" class="level5">
 <h5 class="anchored" data-anchor-id="d-12">2D</h5>
-<p><img src="assets/histogramas/rastrigin_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/rastrigin/rastrigin_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
 </section>
 <section id="d-13" class="level5">
 <h5 class="anchored" data-anchor-id="d-13">3D</h5>
-<p><img src="assets/histogramas/rastrigin_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/rastrigin/rastrigin_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Rastrigin 2D y 3D</strong>, los histogramas muestran una distribución compacta y centrada de las frecuencias en un rango bajo de evaluaciones (principalmente entre 26 y 32 pasos), lo que evidencia que el algoritmo converge de manera muy rápida y predecible; sin embargo, en 3D se denota una ligera extensión hacia la derecha con frecuencias más dispersas, lo que evidencia que el aumento de dimensionalidad incrementa ligeramente el esfuerzo computacional y la variabilidad en algunas ejecuciones debido a los mínimos locales.</p>
 </section>
 </section>
 <section id="schwefel-3" class="level4">
 <h4 class="anchored" data-anchor-id="schwefel-3">Schwefel</h4>
 <section id="d-14" class="level5">
 <h5 class="anchored" data-anchor-id="d-14">2D</h5>
-<p><img src="assets/histogramas/schwefel_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/schwefel/schwefel_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
 </section>
 <section id="d-15" class="level5">
 <h5 class="anchored" data-anchor-id="d-15">3D</h5>
-<p><img src="assets/histogramas/schwefel_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/schwefel/schwefel_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Schwefel (tanto en 2D como en 3D)</strong>, los histogramas muestran una frecuencia absoluta concentrada de manera idéntica en un único valor fijo de aproximadamente 20000 evaluaciones (el tope máximo configurado); esto evidencia un comportamiento de convergencia totalmente uniforme donde el algoritmo agota por completo sus iteraciones en todas las corridas, reflejando que no logra un criterio de parada temprano debido a la complejidad de su búsqueda.</p>
 </section>
 </section>
 <section id="griewank-3" class="level4">
 <h4 class="anchored" data-anchor-id="griewank-3">Griewank</h4>
 <section id="d-16" class="level5">
 <h5 class="anchored" data-anchor-id="d-16">2D</h5>
-<p><img src="assets/histogramas/griewank_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/griewank/griewank_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
 </section>
 <section id="d-17" class="level5">
 <h5 class="anchored" data-anchor-id="d-17">3D</h5>
-<p><img src="assets/histogramas/griewank_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/griewank/griewank_figura_b_histograma_evaluaciones_3d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Griewank 2D</strong>, los histogramas muestran una distribución dispersa de las frecuencias a lo largo de un rango amplio de evaluaciones (con un grupo notable acumulándose cerca del límite superior de 2000 pasos), lo que evidencia que el algoritmo experimenta una variabilidad considerable en su esfuerzo computacional según la inicialización. Por otro lado, en <strong>Griewank 3D</strong>, se denota que la frecuencia se concentra de manera absoluta en un único valor fijo de aproximadamente 2002 evaluaciones en todas las corridas; esto evidencia que al incrementar la dimensión, el algoritmo consume siempre el tope máximo de pasos establecidos para cumplir su convergencia, volviéndose completamente uniforme en su costo computacional.</p>
 </section>
 </section>
 <section id="goldstein-price-3" class="level4">
 <h4 class="anchored" data-anchor-id="goldstein-price-3">Goldstein-Price</h4>
 <section id="d-18" class="level5">
 <h5 class="anchored" data-anchor-id="d-18">2D</h5>
-<p><img src="assets/histogramas/goldstein_price_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/goldstein_price/goldstein_price_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Goldstein-Price 2D</strong>, los histogramas muestran una frecuencia absoluta concentrada en un único valor fijo de 5002 evaluaciones, lo que evidencia que el algoritmo consume siempre el tope máximo de iteraciones de manera totalmente uniforme.</p>
 </section>
 </section>
 <section id="six-hump-camel-3" class="level4">
 <h4 class="anchored" data-anchor-id="six-hump-camel-3">Six-Hump Camel</h4>
 <section id="d-19" class="level5">
 <h5 class="anchored" data-anchor-id="d-19">2D</h5>
-<p><img src="assets/histogramas/six_hump_camel_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+<p><img src="assets/numerica/gradientes/images/six_hump_camel/six_hump_camel_figura_b_histograma_evaluaciones_2d.png" class="img-fluid"></p>
+<p>Se observa que en <strong>Six-Hump Camel 2D</strong>, los histogramas muestran una distribución dispersa y variada de las frecuencias a lo largo de un rango amplio de evaluaciones (concentrándose principalmente entre los 800 y 1300 pasos), lo que evidencia que el algoritmo experimenta un esfuerzo computacional heterogéneo y dependiente de la ruta de búsqueda inicial para alcanzar la convergencia.</p>
 </section>
 </section>
 </section>
-<section id="resultados-e-interpretación-por-función" class="level3">
-<h3 class="anchored" data-anchor-id="resultados-e-interpretación-por-función">Resultados e interpretación por función</h3>
-<p>Los notebooks correspondientes al descenso por gradiente organizan el análisis según cada función de prueba, lo cual constituye una estructura adecuada para presentar los resultados en el informe. Cada función posee una geometría particular y, por lo tanto, plantea dificultades diferentes para el proceso de optimización.</p>
-<p>El análisis de cada caso debe considerar principalmente la calidad de las soluciones encontradas, la variabilidad entre las corridas y el costo computacional, expresado mediante el número de evaluaciones realizadas. Los histogramas permiten observar la distribución de los valores finales y determinar si el algoritmo converge de manera consistente o si presenta una alta dependencia del punto inicial.</p>
-<section id="rosenbrock-4" class="level4">
-<h4 class="anchored" data-anchor-id="rosenbrock-4">Rosenbrock</h4>
-<p>En <code>Rosenbrock</code>, el principal reto para el descenso por gradiente es la presencia de un valle estrecho y curvo que conduce al mínimo global. Aunque la función posee un único mínimo global, su geometría dificulta que el algoritmo avance directamente hacia él, debido a que la dirección del gradiente puede generar movimientos laterales o trayectorias en zigzag dentro del valle.</p>
-<p>Los resultados muestran que el descenso por gradiente puede avanzar hacia regiones favorables y obtener soluciones cercanas al óptimo en algunas corridas. Sin embargo, el proceso puede ser lento y sensible tanto al punto inicial como al tamaño de paso utilizado. Pequeñas variaciones en estos elementos pueden provocar trayectorias ineficientes o hacer que el algoritmo requiera una gran cantidad de evaluaciones antes de detenerse.</p>
-<p>En términos generales, la versión <code>2D</code> presenta un comportamiento más favorable que la versión <code>3D</code>, debido a que el aumento de la dimensionalidad introduce una mayor dificultad para recorrer correctamente el valle de la función. Por esta razón, aunque el método logra orientarse hacia el mínimo, su convergencia no siempre es rápida ni completamente robusta.</p>
-</section>
-<section id="schwefel-4" class="level4">
-<h4 class="anchored" data-anchor-id="schwefel-4">Schwefel</h4>
-<p>En <code>Schwefel</code>, el descenso por gradiente presenta una convergencia útil, pero poco robusta. El algoritmo alcanza soluciones relativamente buenas en el mejor caso, tanto en <code>2D</code> como en <code>3D</code>, lo que indica que puede aproximarse a regiones favorables de la función. Sin embargo, esta convergencia no es consistente entre las diferentes corridas, ya que los peores valores continúan siendo muy altos y los promedios permanecen alejados del mejor resultado observado.</p>
-<p>Esta dificultad se relaciona con la estructura altamente multimodal de la función, la cual contiene numerosos mínimos locales alejados entre sí. Como consecuencia, el resultado final depende considerablemente del punto inicial, pues el algoritmo puede quedar atrapado en regiones que no corresponden al óptimo global.</p>
-<p>Desde el punto de vista computacional, el costo es muy alto y completamente estable, debido a que el promedio de evaluaciones permanece fijo en todos los escenarios. Esto sugiere que, en la práctica, la mayoría de las corridas alcanza el límite máximo de iteraciones configurado, en lugar de detenerse como resultado de una convergencia clara.</p>
-<p>En conjunto, <code>Schwefel 2D</code> presenta mejores promedios y una menor dispersión que <code>Schwefel 3D</code>. Por lo tanto, el paso a tres dimensiones empeora la calidad promedio de las soluciones y refuerza la idea de que esta función representa una prueba especialmente difícil para el descenso por gradiente.</p>
-</section>
-<section id="rastrigin-4" class="level4">
-<h4 class="anchored" data-anchor-id="rastrigin-4">Rastrigin</h4>
-<p>En <code>Rastrigin</code>, la presencia de una gran cantidad de mínimos locales convierte la función en una prueba exigente para cualquier método de optimización local. En este caso, los histogramas resultan especialmente útiles para identificar si el descenso por gradiente converge hacia diferentes mínimos o si los resultados se concentran cerca del óptimo global.</p>
-<p>Los resultados muestran una convergencia parcial y claramente dependiente del punto inicial. El algoritmo logra encontrar soluciones relativamente cercanas al óptimo en el mejor caso, tanto en <code>2D</code> como en <code>3D</code>, lo que demuestra que puede aproximarse a mínimos bajos de la función. Sin embargo, este comportamiento no se presenta de manera sistemática, debido a que la superficie multimodal facilita que el método quede atrapado en diferentes mínimos locales.</p>
-<p>En cuanto al costo computacional, el comportamiento es bajo y bastante estable en comparación con funciones como <code>Schwefel</code> o <code>Rosenbrock</code>. El promedio de evaluaciones se mantiene alrededor de <code>29</code> en <code>2D</code> y entre <code>30</code> y <code>32</code> en <code>3D</code>, lo que indica que el algoritmo se detiene con mayor rapidez.</p>
-<p>En conjunto, <code>Rastrigin 2D</code> presenta mejores soluciones promedio, menor variabilidad y un costo computacional ligeramente inferior al de <code>Rastrigin 3D</code>. Aunque la versión tridimensional conserva un mejor caso competitivo, sus promedios son más altos y sus resultados presentan una mayor dispersión.</p>
-</section>
-<section id="griewank-4" class="level4">
-<h4 class="anchored" data-anchor-id="griewank-4">Griewank</h4>
-<p>En <code>Griewank</code>, aunque también existen múltiples mínimos locales, la estructura de la función es menos agresiva que la de <code>Rastrigin</code>. Esto permite estudiar un escenario intermedio en el que el descenso por gradiente enfrenta multimodalidad, pero sobre una superficie más regular.</p>
-<p>Los resultados muestran una convergencia adecuada en comparación con las demás funciones del experimento. En <code>2D</code>, el mejor valor alcanza prácticamente el óptimo global, mientras que en <code>3D</code> también se obtienen soluciones muy cercanas. Además, los promedios permanecen bajos en ambos casos, especialmente en <code>2D</code>, lo que indica que el método logra encontrar con regularidad regiones favorables del espacio de búsqueda.</p>
-<p>Respecto al costo computacional, el comportamiento es intermedio y estable. En <code>2D</code>, el promedio de evaluaciones se encuentra aproximadamente entre <code>1730</code> y <code>1767</code>, mientras que en <code>3D</code> permanece prácticamente fijo alrededor de <code>2002</code>. Esta estabilidad sugiere una influencia importante del criterio de parada configurado, especialmente en la versión tridimensional.</p>
-<p>En conjunto, <code>Griewank 2D</code> presenta mejores valores promedio, menor dispersión y un menor costo computacional que <code>Griewank 3D</code>. No obstante, en ambas dimensiones el descenso por gradiente logra aproximarse al óptimo con una regularidad considerable.</p>
-</section>
-<section id="goldstein-price-4" class="level4">
-<h4 class="anchored" data-anchor-id="goldstein-price-4">Goldstein-Price</h4>
-<p>En <code>Goldstein-Price 2D</code>, el descenso por gradiente presenta una convergencia limitada e inestable. Aunque el mejor valor encontrado resulta relativamente favorable dentro de las corridas observadas, todavía permanece alejado del óptimo global de la función y convive con valores finales considerablemente altos.</p>
-<p>Este comportamiento indica que el método puede aproximarse a regiones favorables en algunas ejecuciones, pero no conserva esa capacidad de manera consistente. La solución obtenida depende fuertemente de la condición inicial y de la región de atracción en la que comienza cada corrida.</p>
-<p>La dispersión de los resultados es elevada y los promedios del valor final incluso empeoran al aumentar el número de corridas. Esto no significa que incrementar el número de ejecuciones deteriore el algoritmo, sino que una muestra más amplia permite observar con mayor claridad la presencia de corridas que finalizan en soluciones de baja calidad.</p>
-<p>Desde el punto de vista computacional, el costo es alto y completamente fijo, debido a que el promedio de evaluaciones permanece constante en todos los escenarios. Esto sugiere que la mayoría de las corridas alcanza el límite máximo de iteraciones establecido.</p>
-<p>Como <code>Goldstein-Price</code> solamente se estudia en <code>2D</code>, no es posible realizar una comparación con una versión tridimensional. Aun así, los resultados evidencian que esta función representa una dificultad mayor para el descenso por gradiente que otras funciones como <code>Rosenbrock</code> o <code>Griewank</code>.</p>
-</section>
-<section id="six-hump-camel-4" class="level4">
-<h4 class="anchored" data-anchor-id="six-hump-camel-4">Six-Hump Camel</h4>
-<p>En <code>Six-Hump Camel 2D</code>, el descenso por gradiente muestra una convergencia parcialmente adecuada. El mejor valor encontrado es muy cercano al óptimo global conocido de la función, lo que demuestra que el método posee la capacidad de alcanzar soluciones de alta calidad.</p>
-<p>Sin embargo, este buen resultado no representa el comportamiento de todas las corridas. También se observan valores finales claramente superiores, lo que evidencia una sensibilidad considerable frente a la condición inicial. Dependiendo del punto de partida, el algoritmo puede dirigirse hacia alguno de los mínimos globales o quedar atrapado en otros puntos estacionarios de menor calidad.</p>
-<p>En cuanto al costo computacional, el comportamiento es moderado y bastante estable, con un promedio de evaluaciones cercano a <code>990</code> para los diferentes tamaños de muestra. Este resultado es más favorable que el observado en funciones más costosas, como <code>Goldstein-Price</code> o <code>Schwefel</code>, aunque continúa mostrando que muchas corridas requieren una cantidad similar de trabajo antes de finalizar.</p>
-<p>En conjunto, <code>Six-Hump Camel 2D</code> demuestra que el descenso por gradiente puede encontrar soluciones muy cercanas al óptimo global. No obstante, la dispersión de los resultados impide considerar que el método sea completamente confiable en todas las corridas.</p>
-<p>En consecuencia, esta subsección no debe limitarse a presentar tablas, histogramas y figuras. También debe explicar de manera puntual qué se observa en cada función, cuál es la calidad de las soluciones obtenidas, qué tan robusto resulta el descenso por gradiente y en qué casos el método presenta sus principales limitaciones.</p>
+<section id="conclusión-parcial" class="level3">
+<h3 class="anchored" data-anchor-id="conclusión-parcial">Conclusión Parcial</h3>
+<p>En síntesis, el descenso por gradiente demostró ser un método eficiente y de bajo costo en términos de evaluaciones cuando se enfrenta a paisajes regulares (como Rosenbrock o zonas específicas de Griewank). Sin embargo, evidenció limitaciones severas en funciones altamente multimodales (Rastrigin y Schwefel) y superficies con valles complejos o dependencia crítica de la inicialización (Goldstein-Price), donde el algoritmo tiende a estancarse en mínimos locales deficientes o a consumir el tope máximo de iteraciones sin garantizar el óptimo global.</p>
+<p>Estas limitaciones, derivadas de su naturaleza determinista y estrictamente local, justifican la transición hacia métodos heurísticos de búsqueda poblacional y estocástica, los cuales favorecen un mejor balance entre exploración y explotación del espacio de búsqueda y resultan especialmente útiles en problemas multimodales o con paisajes de optimización complejos <span class="citation" data-cites="talbi2009">(<a href="#ref-talbi2009" role="doc-biblioref">Talbi 2009</a>)</span>.</p>
 </section>
 </section>
+<section id="optimización-con-métodos-heurísticos" class="level2">
+<h2 class="anchored" data-anchor-id="optimización-con-métodos-heurísticos">Optimización con Métodos Heurísticos</h2>
+<p>Una vez analizado el descenso por gradiente, el siguiente paso consiste en estudiar métodos de optimización heurística que no dependan de información derivativa de la función objetivo. En esta parte se emplearon tres estrategias de búsqueda poblacional: <strong>algoritmo evolutivo</strong>, <strong>optimización por enjambre de partículas (PSO)</strong> y <strong>evolución diferencial</strong>. Estos métodos resultan especialmente útiles en funciones multimodales o con paisajes complejos, donde una estrategia puramente local puede quedar atrapada en mínimos no globales.</p>
+<p>El objetivo de esta subsección es comparar la calidad de las soluciones obtenidas por estos métodos, así como su costo computacional medido en número de evaluaciones de la función objetivo. De esta manera, la discusión no se centra solo en quién alcanza el mejor valor final, sino también en qué tan robusto y eficiente resulta cada enfoque frente a funciones de distinta dificultad y dimensionalidad.</p>
+<section id="metodología-1" class="level3">
+<h3 class="anchored" data-anchor-id="metodología-1">Metodología</h3>
+<p>Para el experimento heurístico se evaluaron las funciones <code>Rosenbrock</code>, <code>Rastrigin</code>, <code>Schwefel</code> y <code>Griewank</code> en <code>2D</code> y <code>3D</code>. Adicionalmente, <code>Goldstein-Price</code> y <code>Six-Hump Camel</code> se trabajaron solo en <code>2D</code>, ya que en el proyecto fueron implementadas en su formulación clásica bidimensional. En todos los casos se realizaron varias corridas con semillas distintas, registrando el mejor valor encontrado, la mejor solución, el número de iteraciones y el número de evaluaciones de la función objetivo.</p>
+<p>Los resultados consolidados de esta parte fueron generados desde el bloque <code>heuristicos/</code>, utilizando una implementación unificada para los tres métodos y un criterio consistente de conteo de evaluaciones. Esto permite realizar comparaciones directas entre algoritmos bajo condiciones experimentales equivalentes.</p>
 </section>
-<section id="optimizacion-con-metodos-heuristicos" class="level2">
-<h2 class="anchored" data-anchor-id="optimizacion-con-metodos-heuristicos">2.3 Optimizacion con Metodos Heuristicos</h2>
-<p>Una vez analizado el descenso por gradiente, el siguiente paso consiste en estudiar metodos de optimizacion heuristica que no dependan de informacion derivativa de la funcion objetivo. En esta parte se emplearon tres estrategias de busqueda poblacional: <strong>algoritmo evolutivo</strong>, <strong>optimizacion por enjambre de particulas (PSO)</strong> y <strong>evolucion diferencial</strong>. Estos metodos resultan especialmente utiles en funciones multimodales o con paisajes complejos, donde una estrategia puramente local puede quedar atrapada en minimos no globales.</p>
-<p>El objetivo de esta subseccion es comparar la calidad de las soluciones obtenidas por estos metodos, asi como su costo computacional medido en numero de evaluaciones de la funcion objetivo. De esta manera, la discusion no se centra solo en quien alcanza el mejor valor final, sino tambien en que tan robusto y eficiente resulta cada enfoque frente a funciones de distinta dificultad y dimensionalidad.</p>
-<section id="metodologia-1" class="level3">
-<h3 class="anchored" data-anchor-id="metodologia-1">Metodologia</h3>
-<p>Para el experimento heuristico se evaluaron las funciones <code>Rosenbrock</code>, <code>Rastrigin</code>, <code>Schwefel</code> y <code>Griewank</code> en <code>2D</code> y <code>3D</code>. Adicionalmente, <code>Goldstein-Price</code> y <code>Six-Hump Camel</code> se trabajaron solo en <code>2D</code>, ya que en el proyecto fueron implementadas en su formulacion clasica bidimensional. En todos los casos se realizaron varias corridas con semillas distintas, registrando el mejor valor encontrado, la mejor solucion, el numero de iteraciones y el numero de evaluaciones de la funcion objetivo.</p>
-<p>Los resultados consolidados de esta parte fueron generados desde el bloque <code>heuristicos/</code>, utilizando una implementacion unificada para los tres metodos y un criterio consistente de conteo de evaluaciones. Esto permite realizar comparaciones directas entre algoritmos bajo condiciones experimentales equivalentes.</p>
-</section>
-<section id="parametros-de-los-algoritmos" class="level3">
-<h3 class="anchored" data-anchor-id="parametros-de-los-algoritmos">Parametros de los algoritmos</h3>
-<p>La configuracion general utilizada para los experimentos heuristicos se resume a continuacion, separando los parametros de cada metodo para facilitar su lectura e interpretacion.</p>
+<section id="parámetros-de-los-algoritmos" class="level3">
+<h3 class="anchored" data-anchor-id="parámetros-de-los-algoritmos">Parámetros de los algoritmos</h3>
+<p>La configuración general utilizada para los experimentos heurísticos se resume a continuación, separando los parámetros de cada método para facilitar su lectura e interpretación.</p>
 <section id="algoritmo-evolutivo" class="level4">
 <h4 class="anchored" data-anchor-id="algoritmo-evolutivo">Algoritmo evolutivo</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Parametro</th>
+<th>Parámetro</th>
 <th style="text-align: right;">Valor</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Tamano de poblacion</td>
+<td>Tamaño de población</td>
 <td style="text-align: right;">40</td>
 </tr>
 <tr class="even">
-<td>Fraccion de elitismo</td>
+<td>Fracción de elitismo</td>
 <td style="text-align: right;">0.2</td>
 </tr>
 <tr class="odd">
-<td>Fraccion de mutacion</td>
+<td>Fracción de mutación</td>
 <td style="text-align: right;">0.1</td>
 </tr>
 <tr class="even">
-<td>Maximo de iteraciones</td>
+<td>Máximo de iteraciones</td>
 <td style="text-align: right;">100</td>
 </tr>
 </tbody>
@@ -1072,13 +1206,13 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Parametro</th>
+<th>Parámetro</th>
 <th style="text-align: right;">Valor</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Numero de particulas</td>
+<td>Número de partículas</td>
 <td style="text-align: right;">40</td>
 </tr>
 <tr class="even">
@@ -1094,28 +1228,28 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">1.5</td>
 </tr>
 <tr class="odd">
-<td>Maximo de iteraciones</td>
+<td>Máximo de iteraciones</td>
 <td style="text-align: right;">100</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="evolucion-diferencial" class="level4">
-<h4 class="anchored" data-anchor-id="evolucion-diferencial">Evolucion diferencial</h4>
+<section id="evolución-diferencial" class="level4">
+<h4 class="anchored" data-anchor-id="evolución-diferencial">Evolución diferencial</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Parametro</th>
+<th>Parámetro</th>
 <th style="text-align: right;">Valor</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Tamano de poblacion</td>
+<td>Tamaño de población</td>
 <td style="text-align: right;">40</td>
 </tr>
 <tr class="even">
-<td>Factor de mutacion</td>
+<td>Factor de mutación</td>
 <td style="text-align: right;">0.8</td>
 </tr>
 <tr class="odd">
@@ -1123,912 +1257,321 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 <td style="text-align: right;">0.7</td>
 </tr>
 <tr class="even">
-<td>Maximo de iteraciones</td>
+<td>Máximo de iteraciones</td>
 <td style="text-align: right;">100</td>
 </tr>
 </tbody>
 </table>
 </section>
 </section>
-<section id="tabla-resumen-comparativa" class="level3">
-<h3 class="anchored" data-anchor-id="tabla-resumen-comparativa">Tabla resumen comparativa</h3>
-<p>La tabla principal de esta subseccion debe consolidar, para cada funcion, dimension y metodo, el mejor valor promedio, el mejor valor minimo alcanzado y el promedio de evaluaciones realizadas. Esta tabla permite comparar de manera global tanto la calidad de las soluciones como el costo computacional.</p>
+<section id="tablas-de-resumen-comparativo" class="level3">
+<h3 class="anchored" data-anchor-id="tablas-de-resumen-comparativo">Tablas de resumen comparativo</h3>
+<p>La tabla principal de esta subsección debe consolidar, para cada función, dimensión y método, el mejor valor promedio, el mejor valor mínimo alcanzado y el promedio de evaluaciones realizadas. Esta tabla permite comparar de manera global tanto la calidad de las soluciones como el costo computacional.</p>
 <p>La siguiente tabla fue construida a partir de <code>trabajo_carlos/1. optimizacion_numerica/heuristicos/datos/figuras/tabla_resumen_heuristicos.csv</code>.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Funcion</th>
-<th>Dimension</th>
-<th>Metodo</th>
-<th>Corridas</th>
-<th>Mejor valor minimo</th>
+<th>Función</th>
+<th>Dimensión</th>
+<th>Mejor método</th>
+<th>Mejor valor mínimo</th>
 <th>Mejor valor promedio</th>
 <th>Promedio de evaluaciones</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Goldstein-Price</td>
+<td>Rosenbrock</td>
 <td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>100</td>
-<td>3.011752</td>
-<td>3.338019</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Goldstein-Price</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>500</td>
-<td>3.007420</td>
-<td>3.208080</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Goldstein-Price</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>1000</td>
-<td>3.007420</td>
-<td>3.199833</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Goldstein-Price</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>100</td>
-<td>3.000000</td>
-<td>3.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Goldstein-Price</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>500</td>
-<td>3.000000</td>
-<td>3.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Goldstein-Price</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>1000</td>
-<td>3.000000</td>
-<td>3.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Goldstein-Price</td>
-<td>2</td>
-<td>PSO</td>
-<td>100</td>
-<td>3.000000</td>
-<td>3.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Goldstein-Price</td>
-<td>2</td>
-<td>PSO</td>
-<td>500</td>
-<td>3.000000</td>
-<td>3.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Goldstein-Price</td>
-<td>2</td>
-<td>PSO</td>
-<td>1000</td>
-<td>3.000000</td>
-<td>3.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Griewank</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>100</td>
-<td>0.023408</td>
-<td>0.174526</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Griewank</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>500</td>
-<td>0.023408</td>
-<td>0.185783</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Griewank</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>1000</td>
-<td>0.023408</td>
-<td>0.182617</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Griewank</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>100</td>
+<td>Evolución diferencial</td>
 <td>0.000000</td>
-<td>0.002150</td>
-<td>7050.0</td>
+<td>0.000000</td>
+<td>4840.0</td>
 </tr>
 <tr class="even">
-<td>Griewank</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>500</td>
-<td>0.000000</td>
-<td>0.003609</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Griewank</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>1000</td>
-<td>0.000000</td>
-<td>0.003672</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Griewank</td>
-<td>2</td>
-<td>PSO</td>
-<td>100</td>
-<td>0.000000</td>
-<td>0.004464</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Griewank</td>
-<td>2</td>
-<td>PSO</td>
-<td>500</td>
-<td>0.000000</td>
-<td>0.003019</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Griewank</td>
-<td>2</td>
-<td>PSO</td>
-<td>1000</td>
-<td>0.000000</td>
-<td>0.002583</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Griewank</td>
+<td>Rosenbrock</td>
 <td>3</td>
-<td>Algoritmo evolutivo</td>
-<td>100</td>
-<td>0.043549</td>
-<td>0.317831</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Griewank</td>
-<td>3</td>
-<td>Algoritmo evolutivo</td>
-<td>500</td>
-<td>0.043549</td>
-<td>0.294296</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Griewank</td>
-<td>3</td>
-<td>Algoritmo evolutivo</td>
-<td>1000</td>
-<td>0.043549</td>
-<td>0.280114</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Griewank</td>
-<td>3</td>
-<td>Evolucion diferencial</td>
-<td>100</td>
-<td>0.013144</td>
-<td>0.045171</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Griewank</td>
-<td>3</td>
-<td>Evolucion diferencial</td>
-<td>500</td>
-<td>0.008405</td>
-<td>0.046863</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Griewank</td>
-<td>3</td>
-<td>Evolucion diferencial</td>
-<td>1000</td>
-<td>0.008405</td>
-<td>0.046312</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Griewank</td>
-<td>3</td>
-<td>PSO</td>
-<td>100</td>
-<td>0.000000</td>
-<td>0.009003</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Griewank</td>
-<td>3</td>
-<td>PSO</td>
-<td>500</td>
-<td>0.000000</td>
-<td>0.015270</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Griewank</td>
-<td>3</td>
-<td>PSO</td>
-<td>1000</td>
-<td>0.000000</td>
-<td>0.015423</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Rastrigin</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>100</td>
-<td>0.000016</td>
-<td>0.369705</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Rastrigin</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>500</td>
-<td>0.000016</td>
-<td>0.476122</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Rastrigin</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>1000</td>
-<td>0.000016</td>
-<td>0.501283</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Rastrigin</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>100</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Rastrigin</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>500</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Rastrigin</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>1000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Rastrigin</td>
-<td>2</td>
-<td>PSO</td>
-<td>100</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Rastrigin</td>
-<td>2</td>
-<td>PSO</td>
-<td>500</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Rastrigin</td>
-<td>2</td>
-<td>PSO</td>
-<td>1000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Rastrigin</td>
-<td>3</td>
-<td>Algoritmo evolutivo</td>
-<td>100</td>
-<td>0.066868</td>
-<td>1.162023</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Rastrigin</td>
-<td>3</td>
-<td>Algoritmo evolutivo</td>
-<td>500</td>
-<td>0.066868</td>
-<td>0.814044</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Rastrigin</td>
-<td>3</td>
-<td>Algoritmo evolutivo</td>
-<td>1000</td>
-<td>0.066868</td>
-<td>0.818432</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Rastrigin</td>
-<td>3</td>
-<td>Evolucion diferencial</td>
-<td>100</td>
+<td>Evolución diferencial</td>
 <td>0.000002</td>
-<td>0.015972</td>
+<td>0.000242</td>
 <td>4840.0</td>
 </tr>
 <tr class="odd">
 <td>Rastrigin</td>
-<td>3</td>
-<td>Evolucion diferencial</td>
-<td>500</td>
-<td>0.000002</td>
-<td>0.022538</td>
+<td>2</td>
+<td>Evolución diferencial</td>
+<td>0.000000</td>
+<td>0.000000</td>
 <td>4840.0</td>
 </tr>
 <tr class="even">
 <td>Rastrigin</td>
 <td>3</td>
-<td>Evolucion diferencial</td>
-<td>1000</td>
+<td>Evolución diferencial</td>
 <td>0.000002</td>
 <td>0.038206</td>
 <td>4840.0</td>
 </tr>
 <tr class="odd">
-<td>Rastrigin</td>
+<td>Schwefel</td>
+<td>2</td>
+<td>Evolución diferencial</td>
+<td>0.000025</td>
+<td>0.000025</td>
+<td>7050.0</td>
+</tr>
+<tr class="even">
+<td>Schwefel</td>
 <td>3</td>
+<td>Evolución diferencial</td>
+<td>0.000038</td>
+<td>0.000038</td>
+<td>7050.0</td>
+</tr>
+<tr class="odd">
+<td>Griewank</td>
+<td>2</td>
 <td>PSO</td>
-<td>100</td>
 <td>0.000000</td>
-<td>0.119398</td>
-<td>4840.0</td>
+<td>0.002583</td>
+<td>7050.0</td>
 </tr>
 <tr class="even">
-<td>Rastrigin</td>
+<td>Griewank</td>
 <td>3</td>
 <td>PSO</td>
-<td>500</td>
 <td>0.000000</td>
-<td>0.225021</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Rastrigin</td>
-<td>3</td>
-<td>PSO</td>
-<td>1000</td>
-<td>0.000000</td>
-<td>0.206074</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Rosenbrock</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>100</td>
-<td>0.001981</td>
-<td>0.068190</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Rosenbrock</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>100</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Schwefel</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>100</td>
-<td>0.006247</td>
-<td>0.483469</td>
+<td>0.009003</td>
 <td>7050.0</td>
 </tr>
 <tr class="odd">
-<td>Schwefel</td>
+<td>Goldstein-Price</td>
 <td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>500</td>
-<td>0.005284</td>
-<td>0.637866</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Schwefel</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>1000</td>
-<td>0.005284</td>
-<td>0.841185</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Schwefel</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>100</td>
-<td>0.000025</td>
-<td>0.000025</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Schwefel</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>500</td>
-<td>0.000025</td>
-<td>0.000025</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Schwefel</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>1000</td>
-<td>0.000025</td>
-<td>0.000025</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Schwefel</td>
-<td>2</td>
-<td>PSO</td>
-<td>100</td>
-<td>0.000025</td>
-<td>8.296265</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Schwefel</td>
-<td>2</td>
-<td>PSO</td>
-<td>500</td>
-<td>0.000025</td>
-<td>15.871873</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Schwefel</td>
-<td>2</td>
-<td>PSO</td>
-<td>1000</td>
-<td>0.000025</td>
-<td>13.265675</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Schwefel</td>
-<td>3</td>
-<td>Algoritmo evolutivo</td>
-<td>100</td>
-<td>0.063615</td>
-<td>3.713479</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Schwefel</td>
-<td>3</td>
-<td>Algoritmo evolutivo</td>
-<td>500</td>
-<td>0.012548</td>
-<td>4.483891</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Schwefel</td>
-<td>3</td>
-<td>Algoritmo evolutivo</td>
-<td>1000</td>
-<td>0.012548</td>
-<td>4.713732</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Schwefel</td>
-<td>3</td>
-<td>Evolucion diferencial</td>
-<td>100</td>
-<td>0.000038</td>
-<td>0.000038</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Schwefel</td>
-<td>3</td>
-<td>Evolucion diferencial</td>
-<td>500</td>
-<td>0.000038</td>
-<td>0.000038</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Schwefel</td>
-<td>3</td>
-<td>Evolucion diferencial</td>
-<td>1000</td>
-<td>0.000038</td>
-<td>0.000038</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Schwefel</td>
-<td>3</td>
-<td>PSO</td>
-<td>100</td>
-<td>0.000038</td>
-<td>41.498987</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Schwefel</td>
-<td>3</td>
-<td>PSO</td>
-<td>500</td>
-<td>0.000038</td>
-<td>76.520309</td>
-<td>7050.0</td>
-</tr>
-<tr class="odd">
-<td>Schwefel</td>
-<td>3</td>
-<td>PSO</td>
-<td>1000</td>
-<td>0.000038</td>
-<td>78.410769</td>
-<td>7050.0</td>
-</tr>
-<tr class="even">
-<td>Six-Hump Camel</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>100</td>
-<td>-1.031556</td>
-<td>-1.027307</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Six-Hump Camel</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>500</td>
-<td>-1.031556</td>
-<td>-1.029222</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Six-Hump Camel</td>
-<td>2</td>
-<td>Algoritmo evolutivo</td>
-<td>1000</td>
-<td>-1.031585</td>
-<td>-1.029417</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Six-Hump Camel</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>100</td>
-<td>-1.031628</td>
-<td>-1.031628</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Six-Hump Camel</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>500</td>
-<td>-1.031628</td>
-<td>-1.031628</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Six-Hump Camel</td>
-<td>2</td>
-<td>Evolucion diferencial</td>
-<td>1000</td>
-<td>-1.031628</td>
-<td>-1.031628</td>
+<td>Evolución diferencial</td>
+<td>3.000000</td>
+<td>3.000000</td>
 <td>4840.0</td>
 </tr>
 <tr class="even">
 <td>Six-Hump Camel</td>
 <td>2</td>
 <td>PSO</td>
-<td>100</td>
-<td>-1.031628</td>
-<td>-1.031628</td>
-<td>4840.0</td>
-</tr>
-<tr class="odd">
-<td>Six-Hump Camel</td>
-<td>2</td>
-<td>PSO</td>
-<td>500</td>
-<td>-1.031628</td>
-<td>-1.031628</td>
-<td>4840.0</td>
-</tr>
-<tr class="even">
-<td>Six-Hump Camel</td>
-<td>2</td>
-<td>PSO</td>
-<td>1000</td>
 <td>-1.031628</td>
 <td>-1.031628</td>
 <td>4840.0</td>
 </tr>
 </tbody>
 </table>
+<p>En general, la tabla resume un patrón bastante claro: <code>Evolución diferencial</code> es el método más sólido en la mayoría de las funciones analizadas. En <code>Rosenbrock</code>, <code>Rastrigin</code>, <code>Schwefel</code> y <code>Goldstein-Price</code>, este método alcanza los mejores valores promedio y, al mismo tiempo, mantiene un costo computacional estable, lo que sugiere una buena combinación entre precisión y robustez frente a distintos paisajes de optimización.</p>
+<p>Por su parte, <code>PSO</code> sobresale en <code>Griewank</code> y <code>Six-Hump Camel</code>. En estos casos logra los mejores valores promedio, lo que indica que su dinámica de exploración y ajuste colectivo se adapta especialmente bien a superficies con múltiples mínimos, pero con una estructura más favorable. Esto muestra que no existe un único método universalmente superior, aunque sí se observa una ventaja general de <code>Evolución diferencial</code> en los problemas más exigentes.</p>
+<p>También se nota que la dimensión influye de manera importante en la dificultad. Al pasar de <code>2D</code> a <code>3D</code>, funciones como <code>Rosenbrock</code>, <code>Rastrigin</code>, <code>Schwefel</code> y <code>Griewank</code> presentan un deterioro en el valor promedio, lo que refleja que el aumento de dimensionalidad hace más compleja la búsqueda del óptimo global. Aun así, los métodos mejor posicionados conservan un desempeño competitivo, lo que refuerza la utilidad de estos enfoques heurísticos para problemas no convexos y multimodales.</p>
+<p>En síntesis, los resultados sugieren que <code>Evolución diferencial</code> es la alternativa más consistente como método general, mientras que <code>PSO</code> puede ser preferible en funciones específicas donde la estructura del paisaje favorece su estrategia de búsqueda.</p>
 </section>
-<section id="comparacion-grafica-de-desempeno" class="level3">
-<h3 class="anchored" data-anchor-id="comparacion-grafica-de-desempeno">Comparacion grafica de desempeno</h3>
-<p>Para evitar una presentacion excesivamente fragmentada, en la parte heuristica conviene resumir los resultados con unas pocas figuras comparativas de alto valor interpretativo. En lugar de repetir una grafica por cada funcion y por cada metodo, es preferible usar figuras consolidadas que permitan identificar rapidamente tendencias generales.</p>
-<section id="mejor-valor-promedio-por-metodo" class="level4">
-<h4 class="anchored" data-anchor-id="mejor-valor-promedio-por-metodo">Mejor valor promedio por metodo</h4>
-<p>Esta figura debe mostrar, para cada funcion, el mejor valor promedio alcanzado por cada metodo heuristico. La recomendacion es presentar una figura para <code>2D</code> y otra para <code>3D</code>, usando colores distintos para <code>algoritmo evolutivo</code>, <code>PSO</code> y <code>evolucion diferencial</code>.</p>
-<pre class="text"><code>[Insertar imagen: grafica de barras del mejor valor promedio por metodo en 2D]</code></pre>
+<section id="comparación-gráfica-de-desempeño" class="level3">
+<h3 class="anchored" data-anchor-id="comparación-gráfica-de-desempeño">Comparación gráfica de desempeño</h3>
+<p>Para evitar una presentación excesivamente fragmentada, en la parte heurística conviene resumir los resultados con unas pocas figuras comparativas de alto valor interpretativo. En lugar de repetir una gráfica por cada función y por cada método, es preferible usar figuras consolidadas que permitan identificar rápidamente tendencias generales.</p>
 </section>
+<section id="comparación-gráfica-de-la-mediana-del-valor-final" class="level3">
+<h3 class="anchored" data-anchor-id="comparación-gráfica-de-la-mediana-del-valor-final">Comparación gráfica de la mediana del valor final</h3>
+<section id="función-rosenbrock" class="level4">
+<h4 class="anchored" data-anchor-id="función-rosenbrock">Función Rosenbrock</h4>
+<p><img src="assets/numerica/heuristicos/images/rosenbrock/rosenbrock_2d_3d_corridas.png" class="img-fluid"></p>
+<p>En <code>Rosenbrock</code>, <code>Evolución diferencial</code> logra los mejores resultados en <code>2D</code> y <code>3D</code>, con valores muy cercanos al óptimo. Al aumentar la dimensión, <code>PSO</code> y el <code>Algoritmo evolutivo</code> pierden algo de precisión.</p>
 </section>
-<section id="resultados-por-funcion" class="level3">
-<h3 class="anchored" data-anchor-id="resultados-por-funcion">Resultados por funcion</h3>
-<section id="funcion-rosenbrock" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-rosenbrock">Funcion Rosenbrock</h4>
-<p><img src="assets/histogramas/rosenbrock_2d_3d_corridas.png" class="img-fluid"></p>
+<section id="función-rastrigin" class="level4">
+<h4 class="anchored" data-anchor-id="función-rastrigin">Función Rastrigin</h4>
+<p><img src="assets/numerica/heuristicos/images/rastrigin/rastrigin_2d_3d_corridas.png" class="img-fluid"></p>
+<p>En <code>Rastrigin</code>, <code>Evolución diferencial</code> y <code>PSO</code> mantienen valores casi nulos en ambas dimensiones. El <code>Algoritmo evolutivo</code> muestra mayores dificultades, sobre todo en <code>3D</code>.</p>
 </section>
-<section id="funcion-schwefel" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-schwefel">Funcion Schwefel</h4>
-<p><img src="assets/histogramas/schwefel_2d_3d_corridas.png" class="img-fluid"></p>
+<section id="función-schwefel" class="level4">
+<h4 class="anchored" data-anchor-id="función-schwefel">Función Schwefel</h4>
+<p><img src="assets/numerica/heuristicos/images/schwefel/schwefel_2d_3d_corridas.png" class="img-fluid"></p>
+<p>En <code>Schwefel</code>, <code>Evolución diferencial</code> es el método más estable y preciso en <code>2D</code> y <code>3D</code>. En cambio, <code>PSO</code> empeora con fuerza en <code>3D</code>, mostrando la mayor sensibilidad a la dimensión.</p>
 </section>
-<section id="funcion-rastrigin" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-rastrigin">Funcion Rastrigin</h4>
-<p><img src="assets/histogramas/rastrigin_2d_3d_corridas.png" class="img-fluid"></p>
+<section id="función-griewank" class="level4">
+<h4 class="anchored" data-anchor-id="función-griewank">Función Griewank</h4>
+<p><img src="assets/numerica/heuristicos/images/griewank/griewank_2d_3d_corridas.png" class="img-fluid"></p>
+<p>En <code>Griewank</code>, <code>PSO</code> presenta el mejor desempeño general, con valores más cercanos al óptimo en <code>2D</code> y <code>3D</code>. <code>Evolución diferencial</code> también responde bien, mientras que el <code>Algoritmo evolutivo</code> queda más rezagado.</p>
 </section>
-<section id="funcion-griewank" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-griewank">Funcion Griewank</h4>
-<p><img src="assets/histogramas/griewank_2d_3d_corridas.png" class="img-fluid"></p>
+<section id="función-goldstein-price" class="level4">
+<h4 class="anchored" data-anchor-id="función-goldstein-price">Función Goldstein-Price</h4>
+<p><img src="assets/numerica/heuristicos/images/goldstein-price/goldstein-price_2d_3d_corridas.png" class="img-fluid"></p>
+<p>En <code>Goldstein-Price</code>, los tres métodos tienen resultados parecidos, aunque <code>Evolución diferencial</code> y <code>PSO</code> se mantienen más cerca del valor óptimo. El <code>Algoritmo evolutivo</code> presenta una precisión ligeramente menor.</p>
 </section>
-<section id="funcion-goldstein-price" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-goldstein-price">Funcion Goldstein-Price</h4>
-<p><img src="assets\histogramas\goldstein-price_2d_3d_corridas.png" class="img-fluid"></p>
-</section>
-<section id="funcion-six-hump-camel-1" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-six-hump-camel-1">Funcion Six-Hump Camel</h4>
-<p><img src="assets/histogramas/six-hump camel_2d_3d_corridas.png" class="img-fluid"></p>
-</section>
-</section>
-<section id="convergencia-por-funcion" class="level3">
-<h3 class="anchored" data-anchor-id="convergencia-por-funcion">Convergencia Por Funcion</h3>
-<section id="funcion-rosenbrock-1" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-rosenbrock-1">Funcion Rosenbrock</h4>
-<p><img src="assets/histogramas/convergencia_rosenbrock_2d_3d.png" class="img-fluid"></p>
-</section>
-<section id="funcion-schwefel-1" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-schwefel-1">Funcion Schwefel</h4>
-<p><img src="assets/histogramas/convergencia_schwefel_2d_3d.png" class="img-fluid"></p>
-</section>
-<section id="funcion-rastrigin-1" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-rastrigin-1">Funcion Rastrigin</h4>
-<p><img src="assets/histogramas/convergencia_rastrigin_2d_3d.png" class="img-fluid"></p>
-</section>
-<section id="funcion-griewank-1" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-griewank-1">Funcion Griewank</h4>
-<p><img src="assets/histogramas/convergencia_griewank_2d_3d.png" class="img-fluid"></p>
-</section>
-<section id="funcion-goldstein-price-1" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-goldstein-price-1">Funcion Goldstein-Price</h4>
-<p><img src="assets/histogramas/convergencia_goldstein-price_2d_3d.png" class="img-fluid"></p>
-</section>
-<section id="funcion-six-hump-camel-2" class="level4">
-<h4 class="anchored" data-anchor-id="funcion-six-hump-camel-2">Funcion Six-Hump Camel</h4>
-<p><img src="assets/histogramas/convergencia_six-hump camel_2d_3d.png" class="img-fluid"></p>
-<p><strong>Interpretacion general de los resultados heuristicos</strong></p>
-<p>En terminos generales, los resultados actualizados muestran que la evolucion diferencial mantiene el mejor desempeno global en la mayoria de los casos analizados, especialmente cuando el criterio principal es la cercania al optimo en el valor final promedio. Este comportamiento es particularmente claro en funciones como Rosenbrock, Rastrigin, Goldstein-Price y Schwefel, donde dicho metodo alcanza valores muy cercanos al optimo tanto en 2D como en 3D, con una estabilidad alta entre corridas.</p>
-<p>PSO tambien presenta un desempeno competitivo y, en algunos escenarios, incluso supera a la evolucion diferencial. Esto ocurre de forma visible en Griewank 3D y en Six-Hump Camel 2D, donde obtiene los mejores valores promedio observados. Ademas, en varios problemas PSO muestra trayectorias de convergencia consistentes, lo que sugiere una buena capacidad de exploracion y ajuste fino en funciones con superficies complejas.</p>
-<p>Por su parte, el algoritmo evolutivo simple suele quedar en tercer lugar en calidad de solucion final. Aunque en algunos casos encuentra soluciones razonables, sus valores promedio tienden a estar mas alejados del optimo y su variabilidad entre corridas es mayor. Esto se nota con mas fuerza en funciones como Griewank y Rastrigin, sobre todo al pasar de 2D a 3D, donde la dificultad del espacio de busqueda aumenta y los otros metodos muestran una adaptacion mas robusta.</p>
-<p>Otro aspecto importante es que el aumento de dimension generalmente hace mas exigente el problema. En varias funciones los valores promedio empeoran al pasar de 2D a 3D, y esta diferencia se observa con mayor intensidad en PSO y en el algoritmo evolutivo para ciertos casos particulares. Sin embargo, la evolucion diferencial conserva un comportamiento mas estable en la transicion de dimension, lo cual refuerza su posicion como el metodo mas solido del conjunto evaluado.</p>
-<p>Finalmente, esta interpretacion no debe limitarse a identificar que metodo alcanza el menor valor promedio. Tambien es necesario contrastar la calidad de la solucion con el numero de evaluaciones empleadas y con la dificultad intrinseca de cada funcion. Bajo esa lectura conjunta, los resultados sugieren que la evolucion diferencial ofrece el mejor balance global de precision y robustez, mientras que PSO aparece como una alternativa muy competitiva en funciones especificas. Esta comparacion sera clave en la discusion posterior para valorar que aportan los metodos heurististicos frente al descenso por gradiente.</p>
+<section id="función-six-hump-camel-1" class="level4">
+<h4 class="anchored" data-anchor-id="función-six-hump-camel-1">Función Six-Hump Camel</h4>
+<p><img src="assets/numerica/heuristicos/images/six-hump camel/six-hump camel_2d_3d_corridas.png" class="img-fluid"></p>
+<p>En <code>Six-Hump Camel</code>, los tres métodos alcanzan resultados casi idénticos y muy cercanos al óptimo. Esto sugiere que la función puede resolverse con alta estabilidad sin grandes diferencias entre enfoques.</p>
 </section>
 </section>
+<section id="convergencia-por-función" class="level3">
+<h3 class="anchored" data-anchor-id="convergencia-por-función">Convergencia por función</h3>
+<section id="función-rosenbrock-1" class="level4">
+<h4 class="anchored" data-anchor-id="función-rosenbrock-1">Función Rosenbrock</h4>
+<p><img src="assets/numerica/heuristicos/images/rosenbrock/convergencia_rosenbrock_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="función-schwefel-1" class="level4">
+<h4 class="anchored" data-anchor-id="función-schwefel-1">Función Schwefel</h4>
+<p><img src="assets/numerica/heuristicos/images/schwefel/convergencia_schwefel_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="función-rastrigin-1" class="level4">
+<h4 class="anchored" data-anchor-id="función-rastrigin-1">Función Rastrigin</h4>
+<p><img src="assets/numerica/heuristicos/images/rastrigin/convergencia_rastrigin_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="función-griewank-1" class="level4">
+<h4 class="anchored" data-anchor-id="función-griewank-1">Función Griewank</h4>
+<p><img src="assets/numerica/heuristicos/images/griewank/convergencia_griewank_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="función-goldstein-price-1" class="level4">
+<h4 class="anchored" data-anchor-id="función-goldstein-price-1">Función Goldstein-Price</h4>
+<p><img src="assets\numerica\heuristicos\images\goldstein-price\convergencia_goldstein-price_2d_3d.png" class="img-fluid"></p>
+</section>
+<section id="función-six-hump-camel-2" class="level4">
+<h4 class="anchored" data-anchor-id="función-six-hump-camel-2">Función Six-Hump Camel</h4>
+<p><img src="assets\numerica\heuristicos\images\six-hump camel\convergencia_six-hump camel_2d_3d.png" class="img-fluid"></p>
+<p>En general, las curvas muestran que <code>Evolución diferencial</code> es el método más consistente, ya que converge con rapidez y suele terminar más cerca del óptimo en la mayoría de las funciones. <code>PSO</code> también presenta un muy buen desempeño, especialmente en <code>Rastrigin</code>, <code>Griewank</code> y <code>Six-Hump Camel</code>, donde desciende con rapidez y alcanza soluciones competitivas.</p>
+<p>Por su parte, el <code>Algoritmo evolutivo</code> tiende a converger de forma más lenta y en varios casos queda más alejado del mejor valor final. En conjunto, los resultados refuerzan que <code>Evolución diferencial</code> y <code>PSO</code> ofrecen el comportamiento de convergencia más favorable dentro del estudio.</p>
+</section>
+<section id="conclusión-parcial-1" class="level4">
+<h4 class="anchored" data-anchor-id="conclusión-parcial-1">Conclusión Parcial</h4>
+<p>Los resultados obtenidos muestran que los métodos heurísticos evaluados son capaces de aproximarse con buena precisión a los óptimos de varias funciones de prueba, aunque su desempeño depende de la complejidad del paisaje y de la dimensión del problema. En general, <code>Evolución diferencial</code> fue el método más consistente, ya que alcanzó valores promedio de <code>0.000000</code> en <code>Rosenbrock 2D</code>, <code>Rastrigin 2D</code> y <code>Goldstein-Price 2D</code>, además de <code>0.000025</code> en <code>Schwefel 2D</code> y <code>0.000038</code> en <code>Schwefel 3D</code>.</p>
+<p>Por su parte, <code>PSO</code> también presentó un comportamiento muy competitivo, especialmente en <code>Griewank</code>, donde obtuvo el mejor valor promedio con <code>0.002583</code> en <code>2D</code> y <code>0.009003</code> en <code>3D</code>, y en <code>Six-Hump Camel 2D</code>, donde igualó el mejor resultado con <code>-1.031628</code>. En contraste, el <code>Algoritmo evolutivo</code> mostró un desempeño más variable, con promedios más altos como <code>0.527946</code> en <code>Rosenbrock 3D</code>, <code>0.818432</code> en <code>Rastrigin 3D</code> y <code>4.713732</code> en <code>Schwefel 3D</code>.</p>
+<p>Además, se observó que el aumento de dimensionalidad tiende a hacer más difícil la búsqueda del óptimo. Por ejemplo, en <code>Rosenbrock</code> el mejor promedio pasó de <code>0.000000</code> en <code>2D</code> a <code>0.000242</code> en <code>3D</code>, en <code>Rastrigin</code> de <code>0.000000</code> a <code>0.038206</code>, y en <code>Griewank</code> de <code>0.002583</code> a <code>0.009003</code>. Esto confirma que la complejidad del problema influye directamente en la estabilidad y eficacia de los métodos empleados.</p>
+<p>En conjunto, el análisis confirma que los métodos heurísticos son una alternativa efectiva para problemas de optimización no lineal y multimodal, pero también evidencia que no existe un único enfoque universalmente superior para todos los casos. Aun así, dentro de este estudio, <code>Evolución diferencial</code> se perfila como la opción más robusta y equilibrada, mientras que <code>PSO</code> destaca en funciones específicas donde alcanza resultados iguales o incluso mejores.</p>
 </section>
 </section>
-<section id="comparacion-final-entre-metodos" class="level1">
-<h1>Comparacion final entre metodos</h1>
-<p>Esta pagina esta pensada para comparar los metodos <strong>dentro del mismo caso</strong>, no entre funciones distintas. La comparacion correcta es:</p>
+</section>
+<section id="comparación-final-entre-métodos" class="level2">
+<h2 class="anchored" data-anchor-id="comparación-final-entre-métodos">Comparación final entre métodos</h2>
+<p>Esta página está pensada para comparar los métodos <strong>dentro del mismo caso</strong>, no entre funciones distintas. La comparación correcta es:</p>
 <ul>
-<li><code>Rosenbrock 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/rosenbrock_lineas_por_n.png" class="img-fluid"></li>
-<li><code>Rastrigin 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/rastrigin_lineas_por_n.png" class="img-fluid"></li>
-<li><code>Schwefel 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/schwefel_lineas_por_n.png" class="img-fluid"></li>
-<li><code>Griewank 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/griewank_lineas_por_n.png" class="img-fluid"></li>
-<li><code>Goldstein-Price 2D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/goldstein_price_lineas_por_n.png" class="img-fluid"></li>
-<li><code>Six-Hump Camel 2D</code>: gradiente vs EA vs PSO vs DE <img src="notebooks/numerica/salidas_tablas_comparacion_final/six_hump_camel_lineas_por_n.png" class="img-fluid"></li>
+<li><code>Rosenbrock 2D y 3D</code>: comparación entre descenso por gradiente, algoritmo evolutivo, PSO y evolución diferencial <img src="assets/comparacion/rosenbrock_lineas_por_n.png" class="img-fluid"> <img src="assets/comparacion/rosenbrock_lineas_desviacion_por_n.png" class="img-fluid"></li>
 </ul>
-<section id="criterios-de-comparacion" class="level2">
-<h2 class="anchored" data-anchor-id="criterios-de-comparacion">Criterios de comparacion</h2>
-<p>Para cada caso, la comparacion debe hacerse con estas metricas:</p>
+<p>En la función Rosenbrock, PSO y, especialmente, Evolución diferencial muestran el mejor desempeño, ya que alcanzan valores finales medianos muy cercanos al óptimo tanto en 2D como en 3D y, además, presentan una variabilidad muy baja.</p>
+<p>El Algoritmo evolutivo se ubica en un nivel intermedio: mejora con claridad frente a Descenso por gradiente, pero todavía queda algo más alejado del valor óptimo, sobre todo en 3D. En cambio, Descenso por gradiente registra los valores finales más altos y una mayor dispersión, por lo que resulta ser el método menos preciso y menos estable en esta comparación.</p>
 <ul>
-<li>calidad de solucion:
-<ul>
-<li><code>valor final</code>, solo dentro del mismo caso</li>
-<li>o mejor aun, <code>distancia al optimo</code></li>
-</ul></li>
-<li>costo computacional:
-<ul>
-<li><code>numero de evaluaciones</code></li>
-</ul></li>
+<li><code>Rastrigin 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="assets/comparacion/rastrigin_lineas_por_n.png" class="img-fluid"> <img src="assets/comparacion/rastrigin_lineas_desviacion_por_n.png" class="img-fluid"></li>
 </ul>
-</section>
-<section id="regla-de-lectura" class="level2">
-<h2 class="anchored" data-anchor-id="regla-de-lectura">Regla de lectura</h2>
-<p>La idea no es mezclar todas las funciones en una sola escala bruta, porque cada funcion tiene un paisaje y una escala diferentes. Por eso:</p>
+<p>Para la función Rastrigin, la diferencia entre métodos es aún más evidente. Evolución diferencial y PSO vuelven a destacar como las alternativas más efectivas, al mantener valores finales muy próximos al óptimo y desviaciones reducidas, incluso cuando aumenta la dimensión del problema.</p>
+<p>El Algoritmo evolutivo ofrece un comportamiento aceptable, pero sigue mostrando una brecha frente a los mejores métodos. Por su parte, Descenso por gradiente presenta los peores resultados, con valores finales claramente más altos y una variabilidad mayor, lo que indica menor capacidad para converger de forma precisa en esta función.</p>
 <ul>
-<li><code>valor final</code> se interpreta <strong>solo dentro de la misma funcion y dimension</strong></li>
-<li><code>distancia al optimo</code> sirve mejor para comparar comportamiento relativo</li>
-<li><code>evaluaciones</code> permite ver que tan costoso fue cada metodo</li>
+<li><code>Schwefel 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="assets/comparacion/schwefel_lineas_por_n.png" class="img-fluid"> <img src="assets/comparacion/schwefel_lineas_desviacion_por_n.png" class="img-fluid"></li>
 </ul>
-</section>
-<section id="tabla-maestra-sugerida" class="level2">
-<h2 class="anchored" data-anchor-id="tabla-maestra-sugerida">Tabla maestra sugerida</h2>
-<p>Usa una fila por caso:</p>
+<p>En la función Schwefel, <code>Evolución diferencial</code> es el método más sólido en ambas dimensiones, ya que mantiene valores finales medianos prácticamente sobre el óptimo y, además, exhibe la menor desviación entre todos los enfoques. El <code>Algoritmo evolutivo</code> también presenta un muy buen comportamiento, con resultados cercanos al óptimo y una variabilidad bastante baja, aunque sin alcanzar la consistencia de <code>DE</code>. En contraste, <code>PSO</code> y, sobre todo, <code>Descenso por gradiente</code> muestran un desempeño más débil: <code>PSO</code> se deteriora con claridad en 3D, mientras que <code>Descenso por gradiente</code> conserva los valores finales más altos y la mayor dispersión, por lo que resulta el método menos preciso y menos estable en esta comparación.</p>
+<ul>
+<li><code>Griewank 2D y 3D</code>: gradiente vs EA vs PSO vs DE <img src="assets/comparacion/griewank_lineas_por_n.png" class="img-fluid"> <img src="assets/comparacion/griewank_lineas_desviacion_por_n.png" class="img-fluid"></li>
+</ul>
+<p>En la función Griewank se observa un comportamiento menos uniforme entre métodos que en los casos anteriores. En 2D, <code>Evolución diferencial</code> logra el mejor resultado, ya que se mantiene prácticamente sobre el óptimo y con la menor desviación, mientras que <code>PSO</code> también presenta un desempeño bastante sólido.</p>
+<p>En 3D, el método que mejor se comporta es <code>PSO</code>, porque alcanza los valores medianos más bajos y conserva una variabilidad reducida; <code>Evolución diferencial</code> se mantiene competitivo, aunque ya no domina con la misma claridad que en 2D.</p>
+<p>Por otro lado, el <code>Algoritmo evolutivo</code> es el más débil en ambas dimensiones, al registrar los valores finales más altos y la mayor dispersión, mientras que <code>Descenso por gradiente</code> queda en una posición intermedia.</p>
+<ul>
+<li><code>Goldstein-Price 2D</code>: gradiente vs EA vs PSO vs DE
+<p style="display: flex; gap: 12px;">
+<img src="assets/comparacion/goldstein_price_lineas_por_n.png" width="49%"> <img src="assets/comparacion/goldstein_price_lineas_desviacion_por_n.png" width="49%">
+</p></li>
+</ul>
+<p>En la función <code>Goldstein-Price 2D</code>, <code>PSO</code> y <code>Evolución diferencial</code> muestran el mejor comportamiento, ya que alcanzan valores finales medianos prácticamente coincidentes con el óptimo y, además, presentan una variabilidad extremadamente baja. El <code>Algoritmo evolutivo</code> también logra aproximarse bien al valor óptimo, aunque con una dispersión mayor que estos dos métodos. En contraste, <code>Descenso por gradiente</code> es claramente el más débil, porque se mantiene muy alejado del óptimo y exhibe la mayor desviación, lo que refleja menor precisión y menor estabilidad.</p>
+<ul>
+<li><code>Six-Hump Camel 2D</code>: gradiente vs EA vs PSO vs DE
+<p style="display: flex; gap: 12px;">
+<img src="assets/comparacion/six_hump_camel_lineas_por_n.png" width="49%"> <img src="assets\comparacion\six_hump_camel_lineas_desviacion_por_n.png" width="49%">
+</p></li>
+</ul>
+<p>En la función <code>Six-Hump Camel 2D</code>, <code>PSO</code> y <code>Evolución diferencial</code> son los métodos más precisos, ya que se mantienen prácticamente sobre el valor óptimo y presentan una dispersión extremadamente baja. El <code>Algoritmo evolutivo</code> también logra resultados cercanos, aunque sus valores medianos quedan ligeramente por encima del óptimo y muestran una variabilidad mayor.</p>
+<p>Por su parte, <code>Descenso por gradiente</code> es el enfoque menos estable, al registrar con diferencia la desviación más alta entre todos los métodos comparados.</p>
+<section id="tabla-comparativa-global" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-comparativa-global">Tabla comparativa global</h3>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Caso</th>
-<th>Mejor metodo en valor final o distancia al optimo</th>
-<th>Mejor metodo en evaluaciones</th>
-<th>Comentario corto</th>
+<th>Mejor método en valor final o distancia al óptimo</th>
+<th>Mejor método en evaluaciones</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Goldstein-Price 2D</td>
-<td>Evolucion diferencial</td>
-<td>Evolucion diferencial</td>
-<td>Evolucion diferencial logra el mejor valor y tambien el menor costo.</td>
+<td>Evolución diferencial</td>
+<td>Evolución diferencial</td>
 </tr>
 <tr class="even">
 <td>Griewank 2D</td>
 <td>PSO</td>
 <td>Descenso por gradiente</td>
-<td>PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
 </tr>
 <tr class="odd">
 <td>Griewank 3D</td>
 <td>PSO</td>
 <td>Descenso por gradiente</td>
-<td>PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
 </tr>
 <tr class="even">
 <td>Rastrigin 2D</td>
-<td>Evolucion diferencial</td>
+<td>Evolución diferencial</td>
 <td>Descenso por gradiente</td>
-<td>Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
 </tr>
 <tr class="odd">
 <td>Rastrigin 3D</td>
-<td>Evolucion diferencial</td>
+<td>Evolución diferencial</td>
 <td>Descenso por gradiente</td>
-<td>Evolucion diferencial da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
 </tr>
 <tr class="even">
 <td>Rosenbrock 2D</td>
+<td>Evolución diferencial</td>
 <td>Descenso por gradiente</td>
-<td>Descenso por gradiente</td>
-<td>Comparacion parcial: solo hay 1 metodo(s) cargados; mejor valor Descenso por gradiente y mejor costo Descenso por gradiente.</td>
 </tr>
 <tr class="odd">
 <td>Rosenbrock 3D</td>
+<td>Evolución diferencial</td>
 <td>Descenso por gradiente</td>
-<td>Descenso por gradiente</td>
-<td>Comparacion parcial: solo hay 1 metodo(s) cargados; mejor valor Descenso por gradiente y mejor costo Descenso por gradiente.</td>
 </tr>
 <tr class="even">
 <td>Schwefel 2D</td>
-<td>Evolucion diferencial</td>
-<td>Evolucion diferencial</td>
-<td>Evolucion diferencial logra el mejor valor y tambien el menor costo.</td>
+<td>Evolución diferencial</td>
+<td>Evolución diferencial</td>
 </tr>
 <tr class="odd">
 <td>Schwefel 3D</td>
-<td>Evolucion diferencial</td>
-<td>Evolucion diferencial</td>
-<td>Evolucion diferencial logra el mejor valor y tambien el menor costo.</td>
+<td>Evolución diferencial</td>
+<td>Evolución diferencial</td>
 </tr>
 <tr class="even">
 <td>Six-Hump Camel 2D</td>
 <td>PSO</td>
 <td>Descenso por gradiente</td>
-<td>PSO da la mejor calidad, mientras Descenso por gradiente usa menos evaluaciones.</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="conteo-global-de-victorias" class="level2">
-<h2 class="anchored" data-anchor-id="conteo-global-de-victorias">Conteo global de victorias</h2>
-<p>Aqui puedes hacer un cierre simple contando cuantas veces gano cada metodo.</p>
+<section id="conteo-global-de-victorias" class="level3">
+<h3 class="anchored" data-anchor-id="conteo-global-de-victorias">Conteo global de victorias</h3>
+<p>Aquí se presenta un cierre simple contando cuántas veces ganó cada método.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Metodo</th>
-<th style="text-align: right;">Veces que gano en calidad</th>
-<th style="text-align: right;">Veces que gano en evaluaciones</th>
+<th>Método</th>
+<th style="text-align: right;">Veces que ganó en calidad</th>
+<th style="text-align: right;">Veces que ganó en evaluaciones</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Gradiente</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">7</td>
 </tr>
 <tr class="even">
 <td>EA</td>
@@ -2042,36 +1585,36 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 </tr>
 <tr class="even">
 <td>DE</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">3</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="conclusiones-sugeridas" class="level2">
-<h2 class="anchored" data-anchor-id="conclusiones-sugeridas">Conclusiones sugeridas</h2>
-<section id="conclusion-1" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion-1">Conclusion 1</h3>
-<p>En terminos de calidad de solucion, la <code>evolucion diferencial</code> fue el metodo mas solido del conjunto. Gano en <code>Goldstein-Price 2D</code>, <code>Rastrigin 2D</code>, <code>Rastrigin 3D</code>, <code>Schwefel 2D</code> y <code>Schwefel 3D</code>, lo que muestra un comportamiento especialmente robusto en funciones multimodales o con paisajes complejos. <code>PSO</code> tambien tuvo un desempeno fuerte, sobre todo en <code>Griewank 2D</code>, <code>Griewank 3D</code> y <code>Six-Hump Camel 2D</code>, mientras que el <code>algoritmo evolutivo</code> no logro imponerse en ninguno de los casos comparados.</p>
+<section id="conclusiones" class="level3">
+<h3 class="anchored" data-anchor-id="conclusiones">Conclusiones</h3>
+<section id="conclusión-1-mejor-calidad-de-solución-en-los-métodos-heurísticos" class="level4">
+<h4 class="anchored" data-anchor-id="conclusión-1-mejor-calidad-de-solución-en-los-métodos-heurísticos"><strong>Conclusión 1: Mejor calidad de solución en los métodos heurísticos</strong></h4>
+<p>En términos de calidad de solución, los métodos heurísticos dominaron la comparación: ganaron en los <code>10 de 10</code> casos analizados. Dentro de ese grupo, <code>Evolución diferencial</code> obtuvo el mejor resultado en <code>7</code> casos y <code>PSO</code> en <code>3</code>, mientras que <code>Algoritmo evolutivo</code> y <code>Descenso por gradiente</code> no lideraron ningún caso en esta métrica.</p>
 </section>
-<section id="conclusion-2" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion-2">Conclusion 2</h3>
-<p>Desde el punto de vista del costo computacional, el <code>descenso por gradiente</code> fue el metodo mas eficiente en numero de evaluaciones en varios casos, especialmente en <code>Rastrigin</code>, <code>Griewank</code> y <code>Six-Hump Camel</code>. Sin embargo, esa ventaja en costo no siempre vino acompanada de la mejor calidad de solucion. Por su parte, la <code>evolucion diferencial</code> tambien destaco en eficiencia en <code>Goldstein-Price</code> y <code>Schwefel</code>, donde ademas de encontrar mejores soluciones mantuvo un costo competitivo.</p>
+<section id="conclusión-2-mayor-eficiencia-computacional-del-descenso-por-gradiente" class="level4">
+<h4 class="anchored" data-anchor-id="conclusión-2-mayor-eficiencia-computacional-del-descenso-por-gradiente"><strong>Conclusión 2: Mayor eficiencia computacional del descenso por gradiente</strong></h4>
+<p>En costo computacional, medido por el número de evaluaciones de la función objetivo, <code>Descenso por gradiente</code> fue el método más eficiente en <code>7 de 10</code> casos. Los <code>3</code> casos restantes fueron ganados por <code>Evolución diferencial</code>, lo que muestra que gradiente suele ser más barato, aunque no necesariamente el más preciso.</p>
 </section>
-<section id="conclusion-3" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion-3">Conclusion 3</h3>
-<p>En conjunto, los resultados sugieren que el <code>descenso por gradiente</code> conviene cuando se prioriza rapidez y bajo costo, siempre que la geometria del problema permita una convergencia local razonable. En cambio, los metodos heuristicos, y en particular la <code>evolucion diferencial</code>, resultan mas convenientes cuando la funcion presenta multiples minimos locales, alta irregularidad o una fuerte dependencia del punto inicial. La comparacion de <code>Rosenbrock</code> debe leerse con cautela, porque en la tabla consolidada actual solo aparece cargado <code>descenso por gradiente</code>, de modo que ese caso todavia no representa una comparacion completa frente a <code>EA</code>, <code>PSO</code> y <code>DE</code>.</p>
+<section id="conclusión-3-aporte-comparado-entre-descenso-por-gradiente-y-métodos-heurísticos" class="level4">
+<h4 class="anchored" data-anchor-id="conclusión-3-aporte-comparado-entre-descenso-por-gradiente-y-métodos-heurísticos"><strong>Conclusión 3: Aporte comparado entre descenso por gradiente y métodos heurísticos</strong></h4>
+<p>Los resultados muestran un patrón claro: los métodos heurísticos aportaron mejor precisión global, mientras que <code>Descenso por gradiente</code> aportó mayor rapidez en la mayoría de los casos. Además, <code>Evolución diferencial</code> fue el único método que logró combinar ambas ventajas en algunos problemas, siendo el mejor tanto en calidad como en evaluaciones en <code>3</code> casos: <code>Goldstein-Price 2D</code>, <code>Schwefel 2D</code> y <code>Schwefel 3D</code>.</p>
 </section>
 </section>
-<section id="animacion-representativa-del-metodo-ganador" class="level2">
-<h2 class="anchored" data-anchor-id="animacion-representativa-del-metodo-ganador">Animacion representativa del metodo ganador</h2>
-<p>Como cierre visual de la comparacion numerica, se incluye una animacion de <code>evolucion diferencial</code> sobre la funcion <code>Rastrigin 2D</code>. Este caso se eligio porque <code>DE</code> fue el metodo con mejor desempeno global en la comparacion final y porque <code>Rastrigin</code> presenta una superficie altamente multimodal, con muchos minimos locales, lo que permite visualizar con claridad la capacidad de exploracion del algoritmo.</p>
-<p>En la animacion se observa la evolucion de la poblacion a lo largo de las iteraciones, junto con la trayectoria de la mejor solucion encontrada hasta converger hacia el minimo global. Esta figura resume de manera intuitiva por que los metodos heuristicos, y en particular la <code>evolucion diferencial</code>, pueden superar a un metodo local cuando el paisaje de optimizacion es complejo.</p>
+<section id="animación-representativa-del-método-ganador" class="level3">
+<h3 class="anchored" data-anchor-id="animación-representativa-del-método-ganador">Animación representativa del método ganador</h3>
+<p>Como cierre visual de la comparación numérica, se incluye una animación de <code>evolución diferencial</code> sobre la función <code>Rastrigin 2D</code>. Este caso se eligió porque <code>DE</code> fue el método con mejor desempeño global en la comparación final y porque <code>Rastrigin</code> presenta una superficie altamente multimodal, con muchos mínimos locales, lo que permite visualizar con claridad la capacidad de exploración del algoritmo.</p>
+<p>La animación resume de manera intuitiva por qué los métodos heurísticos, y en particular la evolución diferencial, pueden ofrecer ventajas frente a un método local cuando el paisaje de optimización es complejo, ya que fueron diseñados para la optimización global en espacios continuos y favorecen una exploración más robusta del espacio de búsqueda <span class="citation" data-cites="storn1997">(<a href="#ref-storn1997" role="doc-biblioref">Storn and Price 1997</a>)</span>.</p>
 <p><img src="assets/histogramas/animacion_de_rastrigin_2d_semilla_1612.gif" class="img-fluid"></p>
 </section>
-<section id="fuente-de-datos" class="level2">
-<h2 class="anchored" data-anchor-id="fuente-de-datos">Fuente de datos</h2>
-<p>Esta comparacion debe salir de:</p>
+<section id="fuente-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="fuente-de-datos">Fuente de datos</h3>
+<p>Esta comparación debe salir de:</p>
 <ul>
 <li><a href="./notebooks/numerica/gradiente/analisis_resultados.html">analisis_resultados.ipynb</a></li>
 <li><a href="./notebooks/numerica/heuristicos/analisis_resultados.html">analisis_resultados.ipynb</a></li>
@@ -2079,10 +1622,19 @@ f(x,y) = \left(4 - 2.1x^2 + \frac{x^4}{3}\right)x^2 + xy + \left(-4 + 4y^2\right
 </ul>
 
 
+
+</section>
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-storn1997" class="csl-entry" role="listitem">
+Storn, Rainer, and Kenneth Price. 1997. <span>“Differential Evolution – a Simple and Efficient Heuristic for Global Optimization over Continuous Spaces.”</span> <em>Journal of Global Optimization</em> 11 (4): 341–59. <a href="https://doi.org/10.1023/A:1008202821328">https://doi.org/10.1023/A:1008202821328</a>.
+</div>
+<div id="ref-talbi2009" class="csl-entry" role="listitem">
+Talbi, El-Ghazali. 2009. <em>Metaheuristics: From Design to Implementation</em>. John Wiley &amp; Sons. <a href="https://doi.org/10.1002/9780470496916">https://doi.org/10.1002/9780470496916</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

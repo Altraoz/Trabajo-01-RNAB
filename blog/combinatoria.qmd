@@ -9,25 +9,15 @@ title: "Optimizacion combinatoria"
 
 En la segunda parte del trabajo se aborda una variante del **Problema del Viajante (TSP)** aplicada al recorrido de las **96 capitales departamentales de Francia metropolitana**. El objetivo consiste en encontrar un orden de visita para todas las ciudades tal que se minimice el costo total del recorrido, cumpliendo la condicion clasica del TSP: cada ciudad debe visitarse exactamente una vez y, al finalizar, se debe completar el circuito regresando al punto de partida o cerrando la gira definida para la evaluacion. Debido a que el numero de rutas posibles crece de forma factorial con respecto al numero de ciudades, se trata de un problema combinatorio de muy alta complejidad, para el cual resulta poco practico aplicar metodos exactos en tiempos razonables.
 
-En este contexto, cada solucion candidata puede representarse como una permutacion de las 96 ciudades, donde el orden de los elementos define la ruta seguida por el vendedor. A partir de esa secuencia se calcula la distancia total recorrida y, con ella, el costo economico asociado al viaje. De esta manera, el problema no se limita a encontrar la ruta mas corta en kilometros, sino la ruta de **menor costo total**, incorporando factores operativos mas cercanos a una situacion real de desplazamiento.
+En este contexto, cada solucion candidata puede representarse como una permutacion de las 96 ciudades, donde el orden de los elementos define la ruta seguida por el vendedor. Sin embargo, la evaluacion de esa ruta no se realiza directamente sobre el grafo parcial original, sino sobre una matriz completa de costos minimos entre todas las parejas de ciudades. De esta manera, el problema no se limita a encontrar la ruta mas corta en kilometros, sino la ruta de **menor costo total**, incorporando factores operativos mas cercanos a una situacion real de desplazamiento y dejando la instancia lista para ser tratada como un TSP clasico.
 
-La funcion objetivo utilizada considera tres componentes principales. El primero es el **costo del tiempo del vendedor**, calculado a partir de la duracion estimada del recorrido y una tarifa horaria fija. El segundo corresponde a los **peajes**, que dependen de los tramos recorridos y se acumulan a lo largo de la ruta. El tercero es el **costo de combustible**, estimado segun la distancia total y el vehiculo seleccionado para realizar el viaje, ya que cada tipo de vehiculo presenta un consumo y un costo operativo diferente. En forma general, el costo total puede expresarse como:
-
-$$
-\text{Costo total} = \text{Costo por tiempo} + \text{Costo por peajes} + \text{Costo por combustible}
-$$
-
-donde:
+La funcion objetivo utilizada en la implementacion combina directamente tres componentes por tramo: **peajes**, **gasolina** y **costo del tiempo del vendedor**. En particular, el componente de combustible no se estima como distancia por costo por kilometro, sino que se toma directamente de la columna `gasolina(euros)` recuperada del dataset. A esto se suma el costo temporal del vendedor, calculado a partir del tiempo de viaje y una tarifa fija de **12.02 EUR/h**. En forma compacta, la expresion empleada es:
 
 $$
-\text{Costo por tiempo} = (\text{horas totales del recorrido}) \times (\text{tarifa por hora})
+\text{Costo total} = \text{peajes(euros)} + \text{gasolina(euros)} + \left(\frac{\text{tiempo(min)}}{60}\right)\times 12.02
 $$
 
-$$
-\text{Costo por combustible} = (\text{distancia total recorrida}) \times (\text{costo por kilometro del vehiculo})
-$$
-
-Bajo esta formulacion, el reto de optimizacion consiste en explorar un espacio enorme de posibles recorridos y encontrar una ruta que balancee de manera eficiente distancia, tiempo y costo monetario. Esto hace que el problema sea especialmente adecuado para el uso de metaheuristicas, ya que estos metodos permiten aproximar soluciones de alta calidad en escenarios donde la busqueda exhaustiva resulta inviable.
+Bajo esta formulacion, el costo total de un tour se obtiene acumulando ese valor sobre los tramos recorridos en la ruta. Esto hace que el problema sea especialmente adecuado para el uso de metaheuristicas, ya que el reto consiste en explorar un espacio enorme de posibles recorridos y encontrar una secuencia que balancee de manera eficiente tiempo y costo monetario en una red vial real.
 
 ## 3.2 Construccion y preprocesamiento de datos
 
@@ -36,6 +26,8 @@ La construccion del conjunto de datos para esta parte del trabajo se realizo en 
 Posteriormente, este grafo fue ajustado y validado manualmente con apoyo de visualizaciones sobre mapa, con el fin de identificar conexiones plausibles dentro de la red y corregir aquellas que no representaban trayectos razonables. Esta etapa fue importante porque la cercania geografica por si sola no garantiza que dos ciudades esten conectadas por una ruta real o conveniente dentro de la red vial.
 
 Una vez consolidada esta red base, se realizo el proceso de `web scraping` sobre el sitio [VINCI Autoroutes](https://www.vinci-autoroutes.com/fr/mon-trajet/), utilizando las rutas previamente definidas para consultar y completar informacion real de los trayectos. En particular, para cada conexion se obtuvo la distancia recorrida, el tiempo estimado de viaje y el valor de los peajes. Para mantener consistencia en la recoleccion de la informacion, en VINCI Autoroutes se utilizo la categoria **Clase 1 - Vehiculos ligeros**, correspondiente a automoviles particulares y vehiculos de uso ligero. Estos datos sirvieron como base para estructurar el conjunto final utilizado en la optimizacion combinatoria.
+
+Como paso previo a la optimizacion, se ejecuto **Dijkstra desde cada ciudad** sobre el grafo ponderado de conexiones directas para construir una matriz completa de costos minimos entre todas las parejas de nodos. Este cierre sobre el grafo fue el puente metodologico que permitio pasar de una red vial parcial a una instancia TSP de `96 x 96`, de modo que ACO y GA no optimizan sobre el grafo original, sino sobre la matriz consolidada resultante. Sobre esa matriz se verifico que la estructura fuera cuadrada, que la diagonal quedara en cero y que no existieran valores infinitos fuera de la diagonal, asegurando asi que ambos metodos pudieran trabajar sobre una representacion consistente del problema.
 
 <a href="notebooks/combinatoria/00_construccion_grafo_inicial.ipynb" class="notebook-card-link">
   <span class="notebook-card-icon">
@@ -104,6 +96,8 @@ La comparacion final entre metodos puede resumirse en la siguiente tabla:
 El **costo total optimo encontrado** fue de **4303.602999 euros**, calculado con la funcion de costo definida a partir de peajes, combustible y tiempo del vendedor. Este resultado se obtuvo usando como vehiculo de referencia un **Renault Clio**, con combustible tipo gasolina, y una tarifa del vendedor de **12.02 euros por hora**, de acuerdo con la formulacion del modelo.
 
 En cuanto a la comparacion entre metodos, ACO alcanzo un mejor costo de **4471.569332 euros**, mientras que GA obtuvo **4303.602999 euros**. En otras palabras, **GA mejoro a ACO en 167.966333 euros, equivalente a una mejora relativa de 3.7563 %**. Este comportamiento sugiere que ACO fue efectivo para construir una buena ruta inicial, pero que GA tuvo una mayor capacidad de refinamiento al recombinar y ajustar soluciones candidatas a lo largo de las generaciones.
+
+Desde el punto de vista de la convergencia, esta dinamica resulta especialmente interesante: ACO encuentra rapidamente una solucion base competitiva para una instancia grande del TSP, mientras que GA aprovecha esa referencia inicial y la sigue refinando hasta obtener una mejora final del **3.7563 %**. Esto refuerza la idea de que ambos metodos no solo compiten entre si, sino que tambien pueden complementarse dentro del flujo de optimizacion.
 
 La **mejor ruta encontrada** puede leerse de forma mas clara si se resume por tramos geograficos:
 

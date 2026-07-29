@@ -1,0 +1,50 @@
+[
+  {
+    "funcion": "goldstein_price",
+    "nombre_funcion": "Goldstein-Price",
+    "metodo": "gradient",
+    "dimension": 2,
+    "n_corridas": 100,
+    "mejor_valor_final": 10.492143026389963,
+    "peor_valor_final": 988.6495094412548,
+    "promedio_valor_final": 148.9517572805867,
+    "mediana_valor_final": 62.27278537698101,
+    "desviacion_valor_final": 264.2927270925542,
+    "promedio_evaluaciones": 5002.0,
+    "mediana_evaluaciones": 5002.0,
+    "promedio_iteraciones": 5000.0,
+    "mediana_iteraciones": 5000.0
+  },
+  {
+    "funcion": "goldstein_price",
+    "nombre_funcion": "Goldstein-Price",
+    "metodo": "gradient",
+    "dimension": 2,
+    "n_corridas": 500,
+    "mejor_valor_final": 10.492143026389963,
+    "peor_valor_final": 989.7183747779673,
+    "promedio_valor_final": 288.4188480053516,
+    "mediana_valor_final": 80.67982273035967,
+    "desviacion_valor_final": 361.56126780400456,
+    "promedio_evaluaciones": 5002.0,
+    "mediana_evaluaciones": 5002.0,
+    "promedio_iteraciones": 5000.0,
+    "mediana_iteraciones": 5000.0
+  },
+  {
+    "funcion": "goldstein_price",
+    "nombre_funcion": "Goldstein-Price",
+    "metodo": "gradient",
+    "dimension": 2,
+    "n_corridas": 1000,
+    "mejor_valor_final": 10.492143026389963,
+    "peor_valor_final": 989.7183747779673,
+    "promedio_valor_final": 328.0776327375795,
+    "mediana_valor_final": 81.16439520638166,
+    "desviacion_valor_final": 382.51968502052824,
+    "promedio_evaluaciones": 5002.0,
+    "mediana_evaluaciones": 5002.0,
+    "promedio_iteraciones": 5000.0,
+    "mediana_iteraciones": 5000.0
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "modulo": "heuristicos",
+  "funciones": [
+    "rosenbrock",
+    "rastrigin",
+    "schwefel",
+    "griewank",
+    "goldstein_price",
+    "six_hump_camel"
+  ],
+  "metodos": [
+    "ea",
+    "pso",
+    "de"
+  ],
+  "consumer_notebook": "analisis_resultados.ipynb",
+  "descripcion": "Datos generados sin graficas ni animaciones.",
+  "fecha_referencia": "2026-07-24",
+  "filtros_ejecucion": {
+    "selected_functions": [
+      "rosenbrock"
+    ],
+    "selected_dimensions": null,
+    "selected_methods": null,
+    "selected_n_corridas": null,
+    "skip_existing_files": true
+  },
+  "directorios": {
+    "datos_base": "assets/heuristicos/datos"
+  },
+  "organizacion_corridas": "assets/heuristicos/datos/<funcion>/<archivo>.json|csv",
+  "organizacion_resumenes": "assets/heuristicos/datos/<funcion>/resumen_<funcion>.json|csv",
+  "campos_corridas": [
+    "funcion",
+    "nombre_funcion",
+    "corrida",
+    "semilla",
+    "metodo",
+    "nombre_metodo",
+    "dimension",
+    "limites",
+    "optimo_conocido",
+    "mejor_solucion",
+    "mejor_valor",
+    "distancia_al_optimo",
+    "iteraciones",
+    "evaluaciones",
+    "best_values_history",
+    "parametros"
+  ],
+  "campos_resumen": [
+    "funcion",
+    "nombre_funcion",
+    "metodo",
+    "nombre_metodo",
+    "dimension",
+    "n_corridas",
+    "mejor_valor",
+    "peor_valor",
+    "promedio_valor",
+    "mediana_valor",
+    "desviacion_valor",
+    "mejor_distancia_al_optimo",
+    "promedio_distancia_al_optimo",
+    "promedio_evaluaciones",
+    "mediana_evaluaciones",
+    "promedio_iteraciones",
+    "mediana_iteraciones"
+  ]
+}
