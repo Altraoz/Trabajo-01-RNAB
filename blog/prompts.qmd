@@ -1,4 +1,4 @@
-# Parte 4: Uso de Inteligencia Artificial en el Proyecto
+# Uso de Inteligencia Artificial en el Proyecto
 
 ## 4.1 Prompts principales utilizados
 

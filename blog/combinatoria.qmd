@@ -1,5 +1,5 @@
 ---
-title: "Optimización combinatoria"
+title: "Optimización Combinatoria"
 bibliography: referencias.bib
 ---
 

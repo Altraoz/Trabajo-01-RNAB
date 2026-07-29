@@ -7,6 +7,7 @@ project:
     - index.qmd
     - numerica.qmd
     - combinatoria.qmd
+    - conclusiones.qmd
     - reporte_tecnico.qmd
     - prompts.qmd
     - notebooks/**/*.ipynb
@@ -17,7 +18,7 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Inicioo
+        text: Inicio
       - href: numerica.qmd
         text: Numerica
       - href: combinatoria.qmd
@@ -33,7 +34,7 @@ website:
       - index.qmd
       - numerica.qmd
       - combinatoria.qmd
-      - reporte_tecnico.qmd
+      - conclusiones.qmd
       - prompts.qmd
 
 format:
